@@ -13,7 +13,9 @@ let core,bundle,launched=false,stopping=false,busy=false,loopId=0,options={},mus
 let escapeSerial=0,stick={x:0,y:0},direct=null,actionButtons=0;
 const keyboard=createBrowserKeyboard({accept:code=>!!scanCodes[code],send:(code,down)=>core?._th075_key(scanCodes[code],+down)});
 const emit=(event,fields={})=>parent.postMessage({protocol,game,epoch,event,...fields},location.origin);
-const updateDisplay=attachDisplay(canvas,()=>options.displayScaleMode==='fit'?'fit':'integer');
+// The common Launcher fits other games to the available 4:3 player area.
+// Keep integer scaling only when an older host explicitly requests it.
+const updateDisplay=attachDisplay(canvas,()=>options.displayScaleMode==='integer'?'integer':'fit');
 const error=()=>core.UTF8ToString(core._th075_error());
 const call=(name,types=[],args=[])=>core.ccall('th075_'+name,'number',types,args,{async:true});
 const sync=createSaveSync(()=>core);
