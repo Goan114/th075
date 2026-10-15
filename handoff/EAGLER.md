@@ -102,3 +102,27 @@ snapshot; integrating a new localization profile is a separate experiment lane.
 Formal all-title Runtime Release and Hosted/External/Import release assembly
 still require the other registered titles' matching build inputs. The local
 TH075 launcher/Package Store path is executable independently of those inputs.
+## 2026-10-15 camera and rapid-input regression fixes
+
+A loaded StoryEnvironment must be attached before BattleScene::initialize, so
+its non-story initialization can release cinematic camera overrides. Destroying
+character/session resources also clears the retained story environment. Camera
+math and character/game logic remain unchanged.
+
+`npm run test:camera` builds a separate, non-publishable `--test-harness` using
+the same release game objects, then verifies fresh Practice against Story →
+title → Practice. This requires the private imported assets and the sibling
+Launcher's Chromium/Puppeteer dependencies. The original implementation fails
+this regression because the Story lock remains enabled; the fixed camera is
+unlocked at y=300, matching a fresh Practice session. `npm run build` followed
+by `npm run package:runtime` still produces a code-only Runtime with no probe
+exports; the test build never replaces production build provenance.
+
+The Runtime uses the Launcher's optional, epoch-bound same-origin immediate
+input bridge, with the same dispatcher and postMessage fallback. Input requests
+with reply IDs retain the queued/RPC path. The Launcher drops redundant capture
+release packets and batches native button HUD notifications per animation frame;
+native down/up edges remain immediate. Emulated-mobile browser regression
+covers actual menus and battles, all 240 edges from 120 rapid taps, zero queued
+input messages, and stale bridge epoch rejection. This is not a physical-phone
+frame-rate guarantee.

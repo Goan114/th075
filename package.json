@@ -11,6 +11,7 @@
     "package:runtime": "node portable/package-eagler.mjs",
     "prepare:content": "node portable/prepare-content.mjs",
     "check:common": "node tools/sync-common.mjs --check",
+    "test:camera": "node th075_web/scripts/build-sdl.mjs --release --eagler --test-harness && node --test tests/eagler/camera-transition.browser.mjs",
     "test:adapter": "node --test tests/eagler/*.test.mjs",
     "dev": "node tools/dev-launcher.mjs"
   }

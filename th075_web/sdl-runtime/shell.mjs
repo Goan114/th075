@@ -87,7 +87,23 @@ function loop(){
   };requestAnimationFrame(frame);
 }
 
-async function command(m){switch(m.command){
+// Share one input owner across the same-origin fast path and postMessage fallback.
+function dispatchInput(m){switch(m.command){
+  case 'keyboard':if(launched&&!document.hidden&&!stopping)inputKey(m,!!m.down,'hosted');return true;
+  case 'keyboard-clear':clearKeyboard();return true;
+  case 'touch-controls':if(launched&&!document.hidden&&!stopping)touch(m);return true;
+  case 'touch-cancel':cancelTouch();return true;
+  case 'direct-touch':if(launched&&!document.hidden&&!stopping)directTouch(m);return true;
+  default:return false;
+}}
+if(validEpoch)Object.defineProperty(window,'__eaglerDirectInputBridge',{configurable:true,value:Object.freeze({
+  schema:'eagler-touhou/direct-input/1',protocol,game,epoch,origin:location.origin,
+  submit(m){
+    if(!core||!launched||stopping||!m||m.protocol!==protocol||m.game!==game||m.epoch!==epoch||m.request!=null)return false;
+    return dispatchInput(m);
+  },
+})});
+async function command(m){if(dispatchInput(m))return {};switch(m.command){
   case 'configure':
     if(launched)throw Error('Cannot configure a running game');
     if(!['ogg','none'].includes(m.music))throw Error('Unsupported TH075 music mode');
@@ -103,11 +119,6 @@ async function command(m){switch(m.command){
     if(!await call('initialize',['number'],[options.renderScale===1?1:2]))throw Error(error());
     launched=true;$('#loading').textContent='';updateDisplay();core._th075_loop_pause(0);
     emit('runtime-info',{renderer:'SDL3 / WebGL2 / C++',...build});loop();return {};
-  case 'keyboard':if(launched&&!document.hidden&&!stopping)inputKey(m,!!m.down,'hosted');return {};
-  case 'keyboard-clear':clearKeyboard();return {};
-  case 'touch-controls':if(launched&&!document.hidden&&!stopping)touch(m);return {};
-  case 'touch-cancel':cancelTouch();return {};
-  case 'direct-touch':if(launched&&!document.hidden&&!stopping)directTouch(m);return {};
   case 'sync':await save();return {};
   case 'exit':await stop();return {};
   case 'list':{const files=[];for(const directory of ['','/replay'])for(const name of core.FS.readdir('/save'+directory)){const path=(directory+'/'+name).slice(1);try{userPath(path);}catch{continue;}const stat=core.FS.stat('/save/'+path);if(core.FS.isFile(stat.mode))files.push({path,size:stat.size});}return {files};}

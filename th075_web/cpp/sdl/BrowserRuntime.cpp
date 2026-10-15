@@ -39,6 +39,7 @@ EMSCRIPTEN_KEEPALIVE void th075_touch_cancel(){using namespace th075::sdl;touchB
 EMSCRIPTEN_KEEPALIVE const unsigned* th075_audio_statistics(){using namespace th075::sdl;return app?app->audio.statistics():nullptr;}
 EMSCRIPTEN_KEEPALIVE void th075_audio_close(){using namespace th075::sdl;if(app)app->audio.close();}
 #if TH075_DEVELOPMENT_HARNESS
+EMSCRIPTEN_KEEPALIVE const float* th075_probe_camera(){using namespace th075::sdl;static float v[8]{};if(app){const auto& loaded=app->loading.story.camera;v[0]=loaded.fixed;v[1]=loaded.fixedY;if(app->battle){const auto& c=app->battle->simulation.story.camera;v[2]=c.fixed;v[3]=c.x;v[4]=c.y;v[5]=c.span;v[6]=c.fixedY;v[7]=c.smoothY;}}return v;}
 // Verify the real shared renderer, including texture alpha times vertex alpha.
 EMSCRIPTEN_KEEPALIVE unsigned th075_probe_alpha(unsigned color){using namespace th075;using namespace th075::sdl;if(!app)return 0;auto& d=app->graphics;auto& g=app->zun;const auto image=d.create_surface(1,1);const u32 white=0xffffffff;d.update_pixels(image,&white,4);d.clear(0xffff0000);g.blend(SpriteBlend::Alpha);g.depth(DepthMode::Disabled);g.textured_quad(rectangle_quad(0,0,64,64),{0,0,1,1},color,image);const auto* pixels=d.capture_pixels();u32 result=0;std::memcpy(&result,pixels+(32*640+32)*4,4);d.destroy(image);return result;}
 EMSCRIPTEN_KEEPALIVE const unsigned char* th075_probe_pixels(){using namespace th075::sdl;return app?app->graphics.capture_pixels():nullptr;}
