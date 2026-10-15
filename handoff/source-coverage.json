@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "files": 710,
+  "missing": [],
+  "scope": "All TH075 C++ / runtime / launcher / scripts / tests; shared SDL3/input; source hashes match published build"
+}

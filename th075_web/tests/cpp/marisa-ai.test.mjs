@@ -1,0 +1,19 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {core,oracle,memory,report} from './helpers.mjs';
+test('Marisa duel and story AI match original decisions, RNG consumption and persistent movement plans',async()=>{
+ const c=await core(),m=await oracle(),actor=m.allocate(0x1000),other=m.allocate(0x1000),thread=m.allocate(0x100),cf=c.core_alloc(0x1000),co=c.core_alloc(0x1000);let seed=0x7475affe,checks=0;
+ const next=()=>{seed^=seed<<13;seed^=seed>>>17;seed^=seed<<5;return seed>>>0;};m.replace(0x646196,'native AI RNG thread',()=>thread);
+ const actions=[0,1,50,60,93,94,95,98,99,149,150,200,300,301,302,303,307,308,309,310,390,391,392,393,400,401,450,499,500,501,506,600,630,699,700,701,720,730,741,751,761,795];const dxs=[0,0.00001,59.9,60,79.9,80,99.9,100,119.9,120,139.9,140,149.9,150,199.9,200,249.9,299.9,300,319.9,320,349.9,350,399.9,400,449.9,450,499.9,500,559.9,560,599.9,600,699.9,700,1000],ys=[-1,0,0.00001,79.9,80,99.9,100,149.9,150,199.9,200,249.9,250,350],spirits=[0,200,250,251,300,350,351,500,501,990,1000];
+ try{for(const story of [0,1]){const outcomes=new Map();for(let sample=0;sample<50000;sample++){
+  const p=Buffer.alloc(0x1000),o=Buffer.alloc(0x1000);const action=actions[next()%actions.length],target=actions[next()%actions.length],phase=next()%4;
+  p.writeInt16LE(action,0x60);o.writeInt16LE(target,0x60);p[0x66]=next()%2?1:255;p[0x511]=next()%256;
+  p.writeFloatLE([100,319.9,320,480,960,960.1,1100][next()%7],0x44);p.writeFloatLE(ys[next()%ys.length],0x48);o.writeFloatLE(Math.fround(p.readFloatLE(0x44)+(next()%2?1:-1)*dxs[next()%dxs.length]),0x44);o.writeFloatLE(ys[next()%ys.length],0x48);
+  p.writeInt16LE([2000,2999,3000,3999,4000,10000][next()%6],0x324);p.writeFloatLE([0,99.9,100,100.1,300,300.1,900][next()%7],0x36c);p[0x39c]=next()%2;p[0x39d]=phase;p.writeInt16LE([0,1,2][next()%3],0x398);p.writeInt16LE([0,1,2][next()%3],0x39a);p.writeInt16LE([-1,0,1,90][next()%4],0x3a0);p.writeInt16LE(spirits[next()%spirits.length],0x3b0);p.writeInt32LE(next()%5,0x7c);p.writeInt16LE([0,4,6][next()%3],0xf14);
+  p.writeInt16LE([-32768,-2,-1,0,1,2,20,32767][next()%8],0x512);p.writeInt16LE(next()%8,0x514);p.writeInt16LE([-32768,-2,-1,0,1,2,20,32767][next()%8],0x516);for(let i=0;i<13;i++)p[0x370+i]=next()%6;
+  for(const at of [0x4dc,0x4e0,0x4e8,0x4ec,0x4f0,0x4f4])p.writeInt32LE(next()%8-2,at);
+  const rng=next(),walk=sample%3===0?0:(next()%201-100);m.write(actor,p);m.u32(actor+0x2e8,other);m.write(other,o);m.u32(thread+0x14,rng);m.i32(story?0x68d628:0x68d624,walk);memory(c,cf,0x1000).set(m.bytes(actor,0x1000));memory(c,co,0x1000).set(o);c.marisa_load(cf,0x1000,sample%4);m.view(0x6714d0,1)[0]=sample%4;c.replay_stream_bind(0,0,rng);c.marisa_ai_load(walk,walk);
+  m.call(story?0x49b070:0x499030,{ecx:actor});c.marisa_ai_advance(co,story);const actual=Buffer.from(memory(c,c.marisa_snapshot(),0x1000)),expected=Buffer.from(m.bytes(actor,0x1000));
+  for(let at=0;at<0x1000;at++){if((at>=8&&at<12)||(at>=0x74&&at<0x7c))continue;if(actual[at]!==expected[at])assert.fail('AI '+story+' sample '+sample+' own '+action+' other '+target+' phase '+phase+' field '+at.toString(16)+' cpp '+actual.subarray(Math.max(0,at-3),at+5).toString('hex')+' native '+expected.subarray(Math.max(0,at-3),at+5).toString('hex')+' initial '+p.subarray(Math.max(0,at-3),at+5).toString('hex'));}
+  assert.equal(c.replay_stream_state()>>>0,m.u32(thread+0x14),'RNG AI '+story+' sample '+sample+' own '+action+' other '+target);assert.equal(c.marisa_ai_walk(story),m.i32(story?0x68d628:0x68d624));checks+=3;const key=actual.subarray(0x4dc,0x518).toString('hex');outcomes.set(key,(outcomes.get(key)||0)+1);
+ }report(story?'marisa-story-ai-original':'marisa-duel-ai-original',{passed:true,samples:50000,checks:150000,distinctDecisions:outcomes.size,scope:'full original decisions; spell and hurt branches, edge distances/resources, persistent plans, all input fields and exact native RNG state'});}
+ }finally{m.close();}
+});

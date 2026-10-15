@@ -1,0 +1,17 @@
+import fs from 'node:fs';import {recoverSceneDrawing} from './scene-drawing-recovery-tools.mjs';
+const fields=new Map([[0x8c,'view.slide'],[0x98,'view.healthFade[0]'],[0x99,'view.healthFade[1]'],[0x18,'view.phase'],[0xa0,'view.paused'],[0xa1,'view.pauseFade'],[0x118,'view.pauseChoice']]);
+const globals={DAT_0066c239:'view.hudAlpha[0]',DAT_0066c23a:'view.hudAlpha[1]',DAT_006714b4:'u8(view.mode)',DAT_006714b0:'view.highScore',DAT_00671622:'view.remainingLives',DAT_0066c238:'view.replayMode',DAT_00671623:'view.continueCredits',DAT_00671624:'view.continued'};
+let cpp='#include "BattleHud.hpp"\nnamespace th075 {\n';
+const custom=(c,{side,prefix,fargs})=>{
+ // These two call sites push digit style 10 before the x87 conversion.
+ if(c.name==='FUN_00446b60'&&c.args.length===4){if(!['00440631','00440689'].includes(c.instruction))throw Error('unreviewed missing digit style '+c.instruction);return `number(images,${fargs(c.args,[0,1]).join(',')},10)`;}
+ if(c.name==='FUN_004420b0')return `selectedActor=&${side(c.instruction)===0?'first':'second'};selectedSequence=${c.args[0]}`;
+ if(c.name==='FUN_00442060')return `hud_frame(*selectedActor,selectedSequence,${c.args[0]})`;
+ if(c.name==='FUN_0043d570'){const p=prefix(c.instruction);const last=p.at(-1);const index=/\+ 0x50\]/.test(last)?0:/\+ 0x54\]/.test(last)?1:null;if(index===null)throw Error('combo receiver '+last);return `render_combo(images,combos[${index}])`;}
+ if(c.name==='FUN_00448710')return 'render_training_menu(images,view)';return null;
+};
+const post=s=>s.replace('int iVar4;','i32 iVar4;const PatternFrame* selectedFrame;').replace(/iVar4 = hud_frame/g,'selectedFrame = hud_frame').replace('short *psVar5;','const PatternFrame* psVar5;').replaceAll('(short *)hud_frame','hud_frame').replace(/\*\(short \*\)\(iVar4 \+ 6\)/g,'i16(selectedFrame->sprite)').replaceAll('*psVar5','psVar5->originX');
+cpp+='namespace {const PatternFrame* hud_frame(const FighterActor& actor,i32 sequence,i32 frame){static const PatternFrame empty{};if(!actor.animation.pattern||sequence<0||u32(sequence)>=actor.animation.pattern->sequences.size())return &empty;const auto& s=actor.animation.pattern->sequences[sequence];return frame>=0&&u32(frame)<s.frames.size()?&s.frames[frame]:&empty;}}\n';
+cpp+='void BattleHud::render_status(ImageRenderer& images,ImageRenderer& firstImages,ImageRenderer& secondImages,const BattleHudView& view){\n const auto& first=*view.fighters[0];const auto& second=*view.fighters[1];const FighterActor* selectedActor=&first;i32 selectedSequence=0;\n'+recoverSceneDrawing('0043e040',{fields,globals,custom,post,ftol:['i32(double(first.combat.spellExtent)/100.0)','i32(double(first.combat.spellExtent)*10.0)','i32(double(second.combat.spellExtent)/100.0)','i32(double(second.combat.spellExtent)*10.0)','i32(double(first.combat.spellExtent)/100.0)','i32(double(second.combat.spellExtent)/100.0)']})+'\n}\n';
+cpp+='void BattleHud::render_training_menu(ImageRenderer& images,const BattleHudView& view){const auto& first=*view.fighters[0];const auto& second=*view.fighters[1];\n'+recoverSceneDrawing('00448710',{fields,globals,custom})+'\n}\n';
+cpp+='void BattleHud::render_pause_menu(ImageRenderer& images,ImageRenderer& firstImages,ImageRenderer& secondImages,const BattleHudView& view){const auto& first=*view.fighters[0];const auto& second=*view.fighters[1];\n'+recoverSceneDrawing('00441910',{fields,globals,custom})+'\n}\n';cpp+='}\n';fs.writeFileSync('th075_web/cpp/game/BattleHudStatus.cpp',cpp);

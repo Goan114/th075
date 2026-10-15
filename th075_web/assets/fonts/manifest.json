@@ -1,0 +1,16 @@
+{
+  "format": "GG75-v1",
+  "method": "CreateFont original parameters and GetGlyphOutlineA GGO_GRAY4_BITMAP",
+  "face": "ＭＳ ゴシック",
+  "heights": [
+    12,
+    16,
+    20,
+    24,
+    32
+  ],
+  "count": 48815,
+  "bytes": 20171832,
+  "sha256": "e92b9c5be390325fb551aa55bf31ec0cea0223efed5222b4fc770787bb6e7147",
+  "fontSha256": "4bde3e6392b96910fb59094c6c1a4dbfae18fee78d0bf13dc30616837c4f95db"
+}

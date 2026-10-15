@@ -1,0 +1,2907 @@
+{
+  "game": "th075",
+  "version": "1.11",
+  "archives": [
+    {
+      "path": "th075.dat",
+      "bytes": 749862735,
+      "count": 215,
+      "entries": [
+        {
+          "name": "data/system/battle.dat",
+          "bytes": 1477692,
+          "offset": 23222,
+          "header": "000004000000010000000400002028f20500810200000000000003000000c999",
+          "sha256": "c1a73d4ba4a3f7c5cc5c3012440f8ecf6de95fa2d59d1fa32537fb5ea86dbc66"
+        },
+        {
+          "name": "data/system/select.dat",
+          "bytes": 3171217,
+          "offset": 1500914,
+          "header": "0080020000e0010000800200001850b817000600000000000000010000001100",
+          "sha256": "e495c918ae6efde691f7192ddb118df8897c96512c7bb4894b44a1742102e0e2"
+        },
+        {
+          "name": "data/system/selectbg.dat",
+          "bytes": 13798337,
+          "offset": 4672131,
+          "header": "0000010000e0010000000100002070f60c0001000000f7e7d81901000000f7e7",
+          "sha256": "b544a8c20e7aeafacb2c345e9f412e667bfcc3e8afb2a0d33264bcddf4fea617"
+        },
+        {
+          "name": "data/system/selectchar.dat",
+          "bytes": 24649741,
+          "offset": 18470468,
+          "header": "000002000000020000000200002038ae0800ae08000000000000010000000000",
+          "sha256": "3c73c9cb97a918d8d28f6dcb384a3a88fe928e49508a52a723a9d0b5f2d878c3"
+        },
+        {
+          "name": "data/system/load.dat",
+          "bytes": 1695626,
+          "offset": 43120209,
+          "header": "0080020000e0010000800200001878df1900020000000a0606ff040000000a07",
+          "sha256": "75c54c7b6a0c28a15154d17a14c8df228bdb77960a1de21e421932eb2593a743"
+        },
+        {
+          "name": "data/system/logo.dat",
+          "bytes": 1800178,
+          "offset": 44815835,
+          "header": "0080020000e00100008002000018e0771b004f00000000000000010000001f00",
+          "sha256": "a82ea18da474f5d096b25a878c2e7086b380bec191e13cb387f9310ee7fb08ac"
+        },
+        {
+          "name": "data/system/option.dat",
+          "bytes": 1917676,
+          "offset": 46616013,
+          "header": "0080020000e0010000800200001898011b0001000000000004ff050000000000",
+          "sha256": "97ba575acf722d0400dd24080c5d02ccc73aa53bb7f8947001f21f657500de21"
+        },
+        {
+          "name": "data/system/replay.dat",
+          "bytes": 2137468,
+          "offset": 48533689,
+          "header": "0080020000e0010000800200001838a816000600000000000000010000000302",
+          "sha256": "528404be4bcc338ea24db5897faffea3732979a6903e58daf4cb284bcc6af07d"
+        },
+        {
+          "name": "data/system/result.dat",
+          "bytes": 2444396,
+          "offset": 50671157,
+          "header": "0080020000e00100008002000018804f2300010000000c0202ff010000000f01",
+          "sha256": "6c72427fbecbc5f2269acb032d59499f2916e958318f497fd588e7014f7bf345"
+        },
+        {
+          "name": "data/system/title.dat",
+          "bytes": 1910917,
+          "offset": 53115553,
+          "header": "0080020000e00100008002000018585916000700000000000000010000000000",
+          "sha256": "64b910ae44bdc3929a60c0ce1b76e145814a8f658b2e5398943b9fb5438daf45"
+        },
+        {
+          "name": "data/system/window.dat",
+          "bytes": 127706,
+          "offset": 55026470,
+          "header": "003b0200004e0000003c02000020c8f201003f020000000000b5010000000000",
+          "sha256": "d86ea470ac66c6503959d22607d512c4820bcbdb6351ce05535fce37b2bc305d"
+        },
+        {
+          "name": "data/system/music.dat",
+          "bytes": 1558827,
+          "offset": 55154176,
+          "header": "0080020000e0010000800200001820ba16000600000000000000010000000309",
+          "sha256": "721ceaecd5e9ea6f219bc70207cfc3035b8c73d32ef0a7da64e0736d594f1b50"
+        },
+        {
+          "name": "data/system/staffroll.dat",
+          "bytes": 3070524,
+          "offset": 56713003,
+          "header": "00400000004000000040000000180800000000100000ffffffff400000004000",
+          "sha256": "befc93c05354e5a3b2a5119407fd5390088ca55788fb6e6c01db95e91b7842bc"
+        },
+        {
+          "name": "data/system/opening.dat",
+          "bytes": 11572721,
+          "offset": 59783527,
+          "header": "00400000004000000040000000180800000000100000010101ff000200004000",
+          "sha256": "70507f27c4c6a46e5fa9bea3506b86520dd23c173e2ee327b2e3b27c1b5ac460"
+        },
+        {
+          "name": "data/system/resultlist.dat",
+          "bytes": 2006317,
+          "offset": 71356248,
+          "header": "0080020000e00100008002000018e8de16000600000000000000010000000d05",
+          "sha256": "b40e62ec049b5f64e843836c2235748257a0fd5019bf6b37aff9f4d3887e29b4"
+        },
+        {
+          "name": "musicroom.dat",
+          "bytes": 9494,
+          "offset": 73362565,
+          "header": "68866103d6429d614960bb796cd1c585b89ca6802b93a0cd13c872eec5030e6f",
+          "sha256": "def9f1a0ca28a7a91f72286d9a56bc56a6982c622e815b353d1dbe01d33f4d3a"
+        },
+        {
+          "name": "data/background/BG00a.dat",
+          "bytes": 10567052,
+          "offset": 73372059,
+          "header": "0078050000840300007805000020d8e47500010000001f32225f01000000141d",
+          "sha256": "6977bd79660ea111e477bd1e20535df4e241e21a636e2215253f37ccfcfc5525"
+        },
+        {
+          "name": "data/background/BG00x.dat",
+          "bytes": 8430795,
+          "offset": 83939111,
+          "header": "00bc02000084030000bc02000018002c400001000000a6a38dff010000002f35",
+          "sha256": "a398e154d3552361215be7dfaa158dca5c7c34cf99b28b81ce1f8b9ac420d5a4"
+        },
+        {
+          "name": "data/background/BG00b.dat",
+          "bytes": 10031925,
+          "offset": 92369906,
+          "header": "0078050000840300007805000020006b7200010000001b1c135f01000000120e",
+          "sha256": "f459e483101365aa4afe5d9fb97ab36da308250f29f3dc7b6c675124fa7e194a"
+        },
+        {
+          "name": "data/background/BG00y.dat",
+          "bytes": 7959531,
+          "offset": 102401831,
+          "header": "00bc02000084030000bc02000018c04d3c0001000000332e27ff010000001612",
+          "sha256": "7ff49321959a0e484dc799d579ae3fcb0727b6f0df4aeeadad57a50609f2fc5b"
+        },
+        {
+          "name": "data/background/BG00c.dat",
+          "bytes": 10468348,
+          "offset": 110361362,
+          "header": "007805000084030000780500002090be7300010000000112445f01000000000c",
+          "sha256": "4153a27af46d437f30af53e06592d8de30c700a4dbc382ec7fee260b6a6e7fc3"
+        },
+        {
+          "name": "data/background/BG00z.dat",
+          "bytes": 8284971,
+          "offset": 120829710,
+          "header": "00bc02000084030000bc0200001858513f0001000000208ebaff010000000319",
+          "sha256": "7d952443b7fdf826514249c3352bbc7521ad62b73f360c9999a4d1dbd1f2c2b1"
+        },
+        {
+          "name": "data/background/BG01a.dat",
+          "bytes": 10184284,
+          "offset": 129114681,
+          "header": "0078050000840300007805000020c02b70009ecf00004e60430001000000586b",
+          "sha256": "b0a1a4f36d6f31456cd5472eec41a79b059729c9326a4c4b77d0fdce2350a1c9"
+        },
+        {
+          "name": "data/background/BG01x.dat",
+          "bytes": 8365859,
+          "offset": 139298965,
+          "header": "00bc02000084030000bc020000184826400001000000f5e1c5ff01000000f4e0",
+          "sha256": "c0529e08e375a2ab23bdd36c252ac3694ecd2eb397a8a6726819947f19ec5688"
+        },
+        {
+          "name": "data/background/BG01b.dat",
+          "bytes": 10917028,
+          "offset": 147664824,
+          "header": "0078050000840300007805000020502a8000630400003a443300010000003a43",
+          "sha256": "94aedde5aa362dc1e9f5fb03aee9d8396e3286413e9241c3539d8d4ce092d51c"
+        },
+        {
+          "name": "data/background/BG01y.dat",
+          "bytes": 8478883,
+          "offset": 158581852,
+          "header": "00bc02000084030000bc020000186865400002000000463b39ff0a000000463a",
+          "sha256": "54c0cf7901848a90bf31a5a7e7ee533dba1d2242a1f0cef5555cea45df84f3dc"
+        },
+        {
+          "name": "data/background/BG02a.dat",
+          "bytes": 7527582,
+          "offset": 167060735,
+          "header": "0078050000840300007805000020e0e0580053020000eeb37f0001000000edb3",
+          "sha256": "b6aa0fae7e1a50d4cb2a964b3b3158deebe6c2ffbe95bd3e312d2f3ff1453561"
+        },
+        {
+          "name": "data/background/BG02x.dat",
+          "bytes": 7604723,
+          "offset": 174588317,
+          "header": "00bc02000084030000bc02000018983b360001000000ffe0c2ff01000000ffdf",
+          "sha256": "cef01727c71f74e4b1aee3e6bbdbf45880e5e882ae9fa157130da1da24df30ca"
+        },
+        {
+          "name": "data/background/BG02b.dat",
+          "bytes": 6891894,
+          "offset": 182193040,
+          "header": "007805000084030000780500002050955300570200003b220d00010000003b22",
+          "sha256": "dbe0c356f3e552bc90db2c4f6339668a203e44fee1f4b6357534bd7b499150b3"
+        },
+        {
+          "name": "data/background/BG02y.dat",
+          "bytes": 5920139,
+          "offset": 189084934,
+          "header": "00bc02000084030000bc02000018b89b270006000000301c0bff0e000000311c",
+          "sha256": "576c30268f30d1140852fb3a0605b91d4d4fdff52e961cf56aa802c97873198c"
+        },
+        {
+          "name": "data/background/BG02c.dat",
+          "bytes": 6891534,
+          "offset": 195005073,
+          "header": "0078050000840300007805000020e8935300570200003b220d00010000003b22",
+          "sha256": "6bcb44466fe593143e47d3c7eb9842d47f7674090fb2c4c3bcaa6c44ef0fdd20"
+        },
+        {
+          "name": "data/background/BG02z.dat",
+          "bytes": 5919787,
+          "offset": 201896607,
+          "header": "00bc02000084030000bc02000018409b270006000000301c0bff0e000000311c",
+          "sha256": "c5d45a7cfe6993c7a079f68c701dbd1758bb1b0e1c0409b0ecd606d2923e2081"
+        },
+        {
+          "name": "data/background/BG03a.dat",
+          "bytes": 9999316,
+          "offset": 207816394,
+          "header": "007805000084030000780500002088596d00bbe601004c565700020000004b56",
+          "sha256": "8b422c5cbb75f2ce90d8f8184b841198bd046480ea0c5227e0d1a10c1fff64a3"
+        },
+        {
+          "name": "data/background/BG03x.dat",
+          "bytes": 8242179,
+          "offset": 217815710,
+          "header": "00bc02000084030000bc02000018986d3e0001000000f5e1c6ff01000000f5e1",
+          "sha256": "bfe0952ffcb7ea8976f595e1714fd81b3e50599de5c8f21b87f83eada5c543f6"
+        },
+        {
+          "name": "data/background/BG03b.dat",
+          "bytes": 9274940,
+          "offset": 226057889,
+          "header": "0078050000840300007805000020e8366900aaf1010042322c00010000004132",
+          "sha256": "2b0a7728ca162a8bedabfe02cd5ef5e604752fccf9be3a2109a00ae46b7a8ace"
+        },
+        {
+          "name": "data/background/BG03y.dat",
+          "bytes": 7225875,
+          "offset": 235332829,
+          "header": "00bc02000084030000bc02000018980e36000100000034322eff0c0000003332",
+          "sha256": "c9ce6053f958871d2514bf7b9073811ae9d5c881d62d4df549944d5399fee6b5"
+        },
+        {
+          "name": "data/background/BG04a.dat",
+          "bytes": 9822531,
+          "offset": 242558704,
+          "header": "007805000084030000780500001838438a00010000003f4e59ff010000003143",
+          "sha256": "0bb28eb2dcf95bf68ff0daa519242468c62106dd395e4c623f6ecd8782e94ba9"
+        },
+        {
+          "name": "data/background/BG04x.dat",
+          "bytes": 9211955,
+          "offset": 252381235,
+          "header": "00bc02000084030000bc02000018c8434600010000003f4e59ff010000003143",
+          "sha256": "d1510e1105bb92db6dcab3ae3aef80d2a33c0f096be6776750afd8491faa68b5"
+        },
+        {
+          "name": "data/background/BG04b.dat",
+          "bytes": 9367571,
+          "offset": 261593190,
+          "header": "007805000084030000780500002068998e00010000004e687fe1010000003b56",
+          "sha256": "23cd97a67a4bf9dd6364d50d5dc1e948164a4e0f267b48754e8a5e1269ee0dfa"
+        },
+        {
+          "name": "data/background/BG04y.dat",
+          "bytes": 9351539,
+          "offset": 270960761,
+          "header": "00bc02000084030000bc02000018286c4700010000004e687fff010000003b56",
+          "sha256": "22353359b8f5ec94a3f651d8d62527b5c1f0b10646c00932e9957d00d905a308"
+        },
+        {
+          "name": "data/background/BG05a.dat",
+          "bytes": 8534893,
+          "offset": 280312300,
+          "header": "0078050000840300007805000020606c4a00f40100002c523000010000002b50",
+          "sha256": "6d2485245a877023db883a1f3e193dcd6692ea6630799a8019758767679a99de"
+        },
+        {
+          "name": "data/background/BG05x.dat",
+          "bytes": 7593683,
+          "offset": 288847193,
+          "header": "00bc02000084030000bc0200001838b03d0005000000f7f0e9ff07000000f7f0",
+          "sha256": "404dcc864d29ce60b16b4ef6680bbed58391fb88319edc86a66b302f0ab10ac9"
+        },
+        {
+          "name": "data/background/BG05b.dat",
+          "bytes": 8091083,
+          "offset": 296440876,
+          "header": "0078050000840300007805000020d0294900f10100003d333200010000003c32",
+          "sha256": "7e8219b28607edb4f8eeb7789bbfda1e0d415b40023cfc13bcbb6353fad9f015"
+        },
+        {
+          "name": "data/background/BG05y.dat",
+          "bytes": 6703763,
+          "offset": 304531959,
+          "header": "00bc02000084030000bc0200001810463700050000004d4949ff060000004e4a",
+          "sha256": "891923e32f9e4fccb151ed86f1415c396f20697e9ccf35d002f8708da26aeb8b"
+        },
+        {
+          "name": "data/background/BG06a.dat",
+          "bytes": 9276822,
+          "offset": 311235722,
+          "header": "0078050000840300007805000018c87d870001000000060b4dff01000000060c",
+          "sha256": "7d7d4135f6b5e19889ffb5d17c044716231b90329f43ac66851b644af74c3d33"
+        },
+        {
+          "name": "data/background/BG06x.dat",
+          "bytes": 8839547,
+          "offset": 320512544,
+          "header": "00bc02000084030000bc02000018e094430001000000060b4dff01000000060c",
+          "sha256": "c462b404b54a0eee4cc67e9872f453af9b78ebf95f3e3bc56a7ee1d26d3500f4"
+        },
+        {
+          "name": "data/background/BG07a.dat",
+          "bytes": 4052029,
+          "offset": 329352091,
+          "header": "0078050000900100007805000020d8213300360e000020222300010000001f21",
+          "sha256": "7aed7d59b33e1abd807f9e286a572b1631aa7de199610ffb3281d5f60be8ebf0"
+        },
+        {
+          "name": "data/background/BG07x.dat",
+          "bytes": 4726611,
+          "offset": 333404120,
+          "header": "00bc02000084030000bc02000018d871230001000000292b2fff040000001b1d",
+          "sha256": "0909f721b9cfd2478b13a6fd8ba2968deb6f8b27e77451b2f8911a8081e95b10"
+        },
+        {
+          "name": "data/background/BG08a.dat",
+          "bytes": 14965399,
+          "offset": 338130731,
+          "header": "0078050000840300007805000020e823810001000000228dbb5f010000000325",
+          "sha256": "d56c231d44e8ac3455698ed1586d782337cf89449a8d33fb8e76e89092d64262"
+        },
+        {
+          "name": "data/background/BG08x.dat",
+          "bytes": 8472707,
+          "offset": 353096130,
+          "header": "00bc02000084030000bc020000183050440001000000228dbbff010000000325",
+          "sha256": "5de3f475d7823706e75ecfb9b772adb6079e08c7531d600205e52b072393183c"
+        },
+        {
+          "name": "data/background/BG09a.dat",
+          "bytes": 10659843,
+          "offset": 361568837,
+          "header": "0000040000000200000004000020a8f33b000100000067531500010000006954",
+          "sha256": "08b316e738dbeb090962e7df5433f6562baad642e90542314dde2f2fca3aaadf"
+        },
+        {
+          "name": "data/background/BG09x.dat",
+          "bytes": 7851627,
+          "offset": 372228680,
+          "header": "00bc02000084030000bc02000018882b3b00040000004b4500ff030000004a45",
+          "sha256": "c404e6d6612fbf97946a5b5096012608bc1ce69c670f5438bd25b6fae04e51c5"
+        },
+        {
+          "name": "data/character/00.dat",
+          "bytes": 22022322,
+          "offset": 380080307,
+          "header": "02f10179ffb1fe89e5c0c020f840dc00c800b4fffffcdef5bd4da5ebff07fbc0",
+          "sha256": "4081143db2e9785de1b81316e0e04b1d753e5411f99888fe963e778aaf97c0da"
+        },
+        {
+          "name": "data/character/002.dat",
+          "bytes": 5197699,
+          "offset": 402102629,
+          "header": "0000020000000200000002000020e8ad0700b31c000000000000010000000000",
+          "sha256": "94d718733ada402d887af7883ff7b9f26f9e9d8834c60dce3ed2254aa41d149d"
+        },
+        {
+          "name": "data/character/reimu/reimu.pat",
+          "bytes": 226410,
+          "offset": 407300328,
+          "header": "e70300001001000000000000000000000a00000002005a00ea00060000000000",
+          "sha256": "cbdd68330c085f432758b311b77ec0d95c42cd6cdf8e472c3021a3ea3b39c894"
+        },
+        {
+          "name": "data/character/reimu/reimu.sce",
+          "bytes": 21188,
+          "offset": 407526738,
+          "header": "404631cc1260d6f8fc2cdccddc59383950d5f1d62afd3208d077011fa70b597f",
+          "sha256": "e9ec79650e8693da3453b099923ea800cdee9c83c8a29630a8a4ba8f37241765"
+        },
+        {
+          "name": "data/character/reimu/cardlist.dat",
+          "bytes": 3123,
+          "offset": 407547926,
+          "header": "f545e18ae224f42907b514dc2f404ae76b018899b12bdec00f453c307534b046",
+          "sha256": "4acb752bd1c12246bda760c45a63e664114e7eb454fbcb792d488ed41703b456"
+        },
+        {
+          "name": "data/character/reimu/stage1.dat",
+          "bytes": 230421,
+          "offset": 407551049,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "fe95121cde26616dde3154d5e90b1a4a1f3a6a81db838b98b7422e17088c4a43"
+        },
+        {
+          "name": "data/character/reimu/stage2.dat",
+          "bytes": 216173,
+          "offset": 407781470,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "4cef0527d9629ae5e0b22918b950f3743391711e54cbeb34b5db422b5d6fa84a"
+        },
+        {
+          "name": "data/character/reimu/stage3.dat",
+          "bytes": 224773,
+          "offset": 407997643,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "10ac823185a1e7781717263f03f15aebce1715217b57a90defa837bdaf4ff8d0"
+        },
+        {
+          "name": "data/character/reimu/stage4.dat",
+          "bytes": 216021,
+          "offset": 408222416,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "1b9f490db7396930b1639382441cedf2b57716161bf5e469c93d5b51a9601f4d"
+        },
+        {
+          "name": "data/character/reimu/stage5.dat",
+          "bytes": 236597,
+          "offset": 408438437,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "3589c4e58595f55010bd43fd7e6c0509488ac37a9cf72463eb92a3a738bf89af"
+        },
+        {
+          "name": "data/character/reimu/stage6.dat",
+          "bytes": 209581,
+          "offset": 408675034,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "01e2c231af0c7f06bb2832ff016ecc03e29fd4a30a39bf8570ba424b730c5a07"
+        },
+        {
+          "name": "data/character/reimu/stage7.dat",
+          "bytes": 233397,
+          "offset": 408884615,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "19e855a0f61a6be64401d22d43831eb612a6869749fa78a1b44bca572ed37d33"
+        },
+        {
+          "name": "data/character/reimu/stage8.dat",
+          "bytes": 1886122,
+          "offset": 409118012,
+          "header": "0080020000e0010000800200001898c71c00010000000c0902ff010000000f0b",
+          "sha256": "101480e35aad9bf2b6d66caeca371fd2615cd0d86e1341f5baa8768e75b66477"
+        },
+        {
+          "name": "data/character/reimu/stage9.dat",
+          "bytes": 1992746,
+          "offset": 411004134,
+          "header": "0080020000e0010000800200001818681e00010000000c0902ff010000000f0b",
+          "sha256": "b02599ec74f61c09c412584aa03aa348d89d0157a16d765a27e0d5b72540fad9"
+        },
+        {
+          "name": "data/character/reimu/stage10.dat",
+          "bytes": 5801868,
+          "offset": 412996880,
+          "header": "0080020000e0010000800200001870cf1c0001000000b9d4deff01000000b7d3",
+          "sha256": "37d98c1f81cb1b82a3e9bc3264add21bb2d5b468e517e5017b65ba2d9f0d9b14"
+        },
+        {
+          "name": "data/character/01.dat",
+          "bytes": 16006814,
+          "offset": 418798748,
+          "header": "02f1019bffb1fe89e5c0c0ffffbbda0080cfb9c79885900080ffffaeff4ae642",
+          "sha256": "75e653c9d29aa8be630e569e300ef837eb0a92713b14dc855536c4182f280e32"
+        },
+        {
+          "name": "data/character/012.dat",
+          "bytes": 5096523,
+          "offset": 434805562,
+          "header": "0000020000000200000002000020d0260a00ae18000000000000010000000000",
+          "sha256": "c3eba87d2652ceb210b22ade0ce6ee3c213761b921127f5dd538d36c3495822c"
+        },
+        {
+          "name": "data/character/marisa/marisa.pat",
+          "bytes": 278998,
+          "offset": 439902085,
+          "header": "e80300002901000000000000000000000a00000000003f00d600060000000000",
+          "sha256": "531935fbf695c425d2d7b887393eab01d913b063caac397a65898512b0f0997f"
+        },
+        {
+          "name": "data/character/marisa/marisa.sce",
+          "bytes": 17199,
+          "offset": 440181083,
+          "header": "40e521265a8de218c027f1efd75b696f50db939b25b17d4b9b6d0117a7192504",
+          "sha256": "f64620b2b0f79695d64c2bf3da03aae1cb370a85eff479b3d58c0512328a4b99"
+        },
+        {
+          "name": "data/character/marisa/cardlist.dat",
+          "bytes": 3075,
+          "offset": 440198282,
+          "header": "f545e18ae224f42907ac16d92d7e4afa6b2d8875b1c7ded70f963ce47728b046",
+          "sha256": "aaa81b84f21938562ea627c8b9aeb39f54e5f0f32ee0d1dacc2e4f1bc3811252"
+        },
+        {
+          "name": "data/character/marisa/stage1.dat",
+          "bytes": 226965,
+          "offset": 440201357,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "6abfce52696f5bdfe24f582f439ff92c0c127f7cd4bd136b936e12ed0c798175"
+        },
+        {
+          "name": "data/character/marisa/stage2.dat",
+          "bytes": 225029,
+          "offset": 440428322,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "7d2539d01ddc0e4fa6ec4301b67f64d2831acdcd6c14d16d479fc5d7075d8bde"
+        },
+        {
+          "name": "data/character/marisa/stage3.dat",
+          "bytes": 209989,
+          "offset": 440653351,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "f44efeb7bf1a7957748169253b63befd6261424218eef3e29351342c6447b38d"
+        },
+        {
+          "name": "data/character/marisa/stage4.dat",
+          "bytes": 227437,
+          "offset": 440863340,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "dba1755b89cd6fd40d073910536f2a62fdc8d60801b29366109a4659cd560227"
+        },
+        {
+          "name": "data/character/marisa/stage5.dat",
+          "bytes": 237229,
+          "offset": 441090777,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "7a341747d090254dabf8797241f014f9fa1ec01c140bab25f0421d14b68aa5ec"
+        },
+        {
+          "name": "data/character/marisa/stage6.dat",
+          "bytes": 209581,
+          "offset": 441328006,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "01e2c231af0c7f06bb2832ff016ecc03e29fd4a30a39bf8570ba424b730c5a07"
+        },
+        {
+          "name": "data/character/marisa/stage7.dat",
+          "bytes": 233397,
+          "offset": 441537587,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "19e855a0f61a6be64401d22d43831eb612a6869749fa78a1b44bca572ed37d33"
+        },
+        {
+          "name": "data/character/marisa/stage8.dat",
+          "bytes": 1886122,
+          "offset": 441770984,
+          "header": "0080020000e0010000800200001898c71c00010000000c0902ff010000000f0b",
+          "sha256": "101480e35aad9bf2b6d66caeca371fd2615cd0d86e1341f5baa8768e75b66477"
+        },
+        {
+          "name": "data/character/marisa/stage9.dat",
+          "bytes": 1992746,
+          "offset": 443657106,
+          "header": "0080020000e0010000800200001818681e00010000000c0902ff010000000f0b",
+          "sha256": "b02599ec74f61c09c412584aa03aa348d89d0157a16d765a27e0d5b72540fad9"
+        },
+        {
+          "name": "data/character/marisa/stage10.dat",
+          "bytes": 5840940,
+          "offset": 445649852,
+          "header": "0080020000e00100008002000018888a1b0001000000b9d4deff01000000b7d3",
+          "sha256": "82b8d1caee835534a4cbdfbf651d6d1d61aff559e0ec935eeeb54a8321f5a74b"
+        },
+        {
+          "name": "data/character/02.dat",
+          "bytes": 18722766,
+          "offset": 451490792,
+          "header": "02f1019bffb1fe89e5c0c0ffff38ef14be0a9dd6dacfb9c7988590f18c4b8826",
+          "sha256": "57bfd5b8a80c25c196542c71bd8debe3038bdf11b59e5de88b18f6147f75717e"
+        },
+        {
+          "name": "data/character/022.dat",
+          "bytes": 4700779,
+          "offset": 470213558,
+          "header": "000002000000020000000200002038690700db38000000000000010000000000",
+          "sha256": "dc0f286eccf6aab9e904c3388df73f2f52f4d23570358dcbf102f18660b5cc7b"
+        },
+        {
+          "name": "data/character/sakuya/sakuya.pat",
+          "bytes": 217397,
+          "offset": 474914337,
+          "header": "e80300000501000000000000000000000600000023014000fe00060000000000",
+          "sha256": "48932363a4e47cdc0b9e88b80eb25e6d729cccd8b2f9f4ed6ed97ce23068b493"
+        },
+        {
+          "name": "data/character/sakuya/sakuya.sce",
+          "bytes": 17152,
+          "offset": 475131734,
+          "header": "404631cc1260d6f8fc2cdccddc59383950d5f1d62afd3208d077011fa70b597f",
+          "sha256": "660d693afa34c639c8ef8ef7f4726ce5d3611d00993e6036e4f5cb41d23ed77a"
+        },
+        {
+          "name": "data/character/sakuya/cardlist.dat",
+          "bytes": 2931,
+          "offset": 475148886,
+          "header": "f545e18ae224f429125f06f838b6475470188a881fe23c27f528b2b063f7b3fc",
+          "sha256": "1283852ad24cb9e59244497e8d139de3a240ecd8a970fd533fb34e99b551e7ca"
+        },
+        {
+          "name": "data/character/sakuya/stage1.dat",
+          "bytes": 224989,
+          "offset": 475151817,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "a7950bdacb794cb0a00b2dd00f6c05284adcefeb9fb4dba148fe468171410579"
+        },
+        {
+          "name": "data/character/sakuya/stage2.dat",
+          "bytes": 209509,
+          "offset": 475376806,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "45f43b52bff0c4cdb49f48e779bcd6939465b255d377ab476bffdd924303be4b"
+        },
+        {
+          "name": "data/character/sakuya/stage3.dat",
+          "bytes": 243141,
+          "offset": 475586315,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "14f2c9333e584935011fe91b3166cc9df7ed4827ed704576e91f0ce894eba68b"
+        },
+        {
+          "name": "data/character/sakuya/stage4.dat",
+          "bytes": 214325,
+          "offset": 475829456,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "429839929de2fb052877eb10f369a44b1a61ccf47d39d4494d84740586b72f88"
+        },
+        {
+          "name": "data/character/sakuya/stage5.dat",
+          "bytes": 231005,
+          "offset": 476043781,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "587e7826593f59073999d383795a53bc1d147db881d4fd8171f07127e934c0ca"
+        },
+        {
+          "name": "data/character/sakuya/stage6.dat",
+          "bytes": 209581,
+          "offset": 476274786,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "01e2c231af0c7f06bb2832ff016ecc03e29fd4a30a39bf8570ba424b730c5a07"
+        },
+        {
+          "name": "data/character/sakuya/stage7.dat",
+          "bytes": 233397,
+          "offset": 476484367,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "19e855a0f61a6be64401d22d43831eb612a6869749fa78a1b44bca572ed37d33"
+        },
+        {
+          "name": "data/character/sakuya/stage8.dat",
+          "bytes": 1886122,
+          "offset": 476717764,
+          "header": "0080020000e0010000800200001898c71c00010000000c0902ff010000000f0b",
+          "sha256": "101480e35aad9bf2b6d66caeca371fd2615cd0d86e1341f5baa8768e75b66477"
+        },
+        {
+          "name": "data/character/sakuya/stage9.dat",
+          "bytes": 1992746,
+          "offset": 478603886,
+          "header": "0080020000e0010000800200001818681e00010000000c0902ff010000000f0b",
+          "sha256": "b02599ec74f61c09c412584aa03aa348d89d0157a16d765a27e0d5b72540fad9"
+        },
+        {
+          "name": "data/character/sakuya/stage10.dat",
+          "bytes": 6052028,
+          "offset": 480596632,
+          "header": "0080020000e00100008002000018c86d1e0001000000b9d4deff01000000b7d3",
+          "sha256": "a1119b4a1a37390deb6190b21ca1677bb0b8b4c96d66ceb0baab5c785bae7382"
+        },
+        {
+          "name": "data/character/03.dat",
+          "bytes": 10764950,
+          "offset": 486648660,
+          "header": "02ad320080008000800080008000800080008000800080008000800080008000",
+          "sha256": "0cd13df537cc4a106bf4aeb12a4836805e8ff4f750e0d2a87e28fad0f5b3ffdc"
+        },
+        {
+          "name": "data/character/032.dat",
+          "bytes": 5283939,
+          "offset": 497413610,
+          "header": "0000020000000200000002000020e0620800c92e000000000000050000000000",
+          "sha256": "5f6e97c9aeba909845700c45983ae7688581518330ed634e43d1cc1f518714b7"
+        },
+        {
+          "name": "data/character/alice/alice.pat",
+          "bytes": 174195,
+          "offset": 502697549,
+          "header": "e80300000001000000000000000000001000000053023300e000060000000000",
+          "sha256": "9c19b256689ca56f818ad2513bb1ab98e99a5859d1e07d6383a8f43d34be472a"
+        },
+        {
+          "name": "data/character/alice/alice.sce",
+          "bytes": 17887,
+          "offset": 502871744,
+          "header": "404631cc1260d6f8fc2cdccddc59383950d5f1d62afd3208d077011fa70b597f",
+          "sha256": "06d40d1d14198ff0081a5c94427005b8e68448c5861ca3ae7329b00fc792919a"
+        },
+        {
+          "name": "data/character/alice/cardlist.dat",
+          "bytes": 3059,
+          "offset": 502889631,
+          "header": "f545e18ae224f429078214e02d734a346b3f88bcb1ffde1a0f8c3c297506b2bb",
+          "sha256": "20f915eb869f42c9ef98fe9c0f6caf95e9cdefc502ff0ef1cdc87b3f54290887"
+        },
+        {
+          "name": "data/character/alice/stage1.dat",
+          "bytes": 227949,
+          "offset": 502892690,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "091ea7308f909f1a940ffe2d198aab9382e07ab4ef02c33675532323b608210e"
+        },
+        {
+          "name": "data/character/alice/stage2.dat",
+          "bytes": 225557,
+          "offset": 503120639,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "3d32d50435829056fe2a3fbff1f0b01b6e8142434238b47bfb3fccf7af1b530d"
+        },
+        {
+          "name": "data/character/alice/stage3.dat",
+          "bytes": 210565,
+          "offset": 503346196,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "a136bf0b653ce118913a2fe96cb6f40281f7532e8e66e20cbaa85a687901dc52"
+        },
+        {
+          "name": "data/character/alice/stage4.dat",
+          "bytes": 234469,
+          "offset": 503556761,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "6017db518c83921d258f9a99a10a503f313fe759955d17cb355bc1d482044099"
+        },
+        {
+          "name": "data/character/alice/stage5.dat",
+          "bytes": 231397,
+          "offset": 503791230,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "bdc692a414656535533a9e5c1d300f844490e202e3a31ee721c93f130c203a1f"
+        },
+        {
+          "name": "data/character/alice/stage6.dat",
+          "bytes": 203941,
+          "offset": 504022627,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "b6776e4e5acb2bf40cf014fbc464d6ea6b200f791512d6dd073f2f1c8746cdd3"
+        },
+        {
+          "name": "data/character/alice/stage7.dat",
+          "bytes": 233397,
+          "offset": 504226568,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "19e855a0f61a6be64401d22d43831eb612a6869749fa78a1b44bca572ed37d33"
+        },
+        {
+          "name": "data/character/alice/stage8.dat",
+          "bytes": 1886122,
+          "offset": 504459965,
+          "header": "0080020000e0010000800200001898c71c00010000000c0902ff010000000f0b",
+          "sha256": "101480e35aad9bf2b6d66caeca371fd2615cd0d86e1341f5baa8768e75b66477"
+        },
+        {
+          "name": "data/character/alice/stage9.dat",
+          "bytes": 1992746,
+          "offset": 506346087,
+          "header": "0080020000e0010000800200001818681e00010000000c0902ff010000000f0b",
+          "sha256": "b02599ec74f61c09c412584aa03aa348d89d0157a16d765a27e0d5b72540fad9"
+        },
+        {
+          "name": "data/character/alice/stage10.dat",
+          "bytes": 5885716,
+          "offset": 508338833,
+          "header": "0080020000e0010000800200001870cf1c0001000000b9d4deff01000000b7d3",
+          "sha256": "a381ed5694c6f5846aa98472a870e4259d2688486ff3fe66b6a66bb333d5131a"
+        },
+        {
+          "name": "data/character/04.dat",
+          "bytes": 25569669,
+          "offset": 514224549,
+          "header": "02f101bfff5aff31eee7bcffffbbda0080cfb9c79885900080aeff4ae642d1ff",
+          "sha256": "0ac87a8f22b6a458b948e35369c53b96ea7ef312865d104118c9cfb47216d221"
+        },
+        {
+          "name": "data/character/042.dat",
+          "bytes": 4882675,
+          "offset": 539794218,
+          "header": "0000020000000200000002000020f81f09009522000000000000010000000000",
+          "sha256": "742918b3e5eb39a6bd66c0c3af7da5ef03c5f701798de79ef7dff81369a5b8ff"
+        },
+        {
+          "name": "data/character/patchouli/patchouli.pat",
+          "bytes": 228383,
+          "offset": 544676893,
+          "header": "e7030000fe00000000000000000000001800000000003900d400050000000000",
+          "sha256": "a5b929ae6e9f0b8127e63486f527dd81575e52be8661008aa480813a1bdde9ba"
+        },
+        {
+          "name": "data/character/patchouli/patchouli.sce",
+          "bytes": 17195,
+          "offset": 544905276,
+          "header": "404631cc1260d6f8fc2cdccddcf0daab11b7fef289e6cf833a0da2ba0e72864b",
+          "sha256": "20474a9f019c36008152d723a3cc44d49fca88a17ed82ec13b55ce54376ffee2"
+        },
+        {
+          "name": "data/character/patchouli/cardlist.dat",
+          "bytes": 2979,
+          "offset": 544922471,
+          "header": "f545e18ae224f42907b514dc2f404ae76b018899b12bdec00f453c307534b046",
+          "sha256": "4e947274b57742a0c95b2374b2847741f180448b65f501098f65ebbcc0baf9c6"
+        },
+        {
+          "name": "data/character/patchouli/stage1.dat",
+          "bytes": 221205,
+          "offset": 544925450,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "6509289240d6930aafa69df07fdc0b4b1f7b0366b9b8e2696601f8808edb72fd"
+        },
+        {
+          "name": "data/character/patchouli/stage2.dat",
+          "bytes": 212333,
+          "offset": 545146655,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "890516e077341a5c93a171e999d5391c8617ec3ae266600da7280d550440dc29"
+        },
+        {
+          "name": "data/character/patchouli/stage3.dat",
+          "bytes": 213413,
+          "offset": 545358988,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "86a0cc67d9d14bc0fbae792a83da42ba4a1271aee78eaff46bf96f447ff1bdd1"
+        },
+        {
+          "name": "data/character/patchouli/stage4.dat",
+          "bytes": 217893,
+          "offset": 545572401,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "f8e9917889de4229e4538863487500f7ba3c4e59843f233f54c74ed0517f4497"
+        },
+        {
+          "name": "data/character/patchouli/stage5.dat",
+          "bytes": 234405,
+          "offset": 545790294,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "314e670dd86d1f2b484028ea54041913a444aee688f75e151d21dea93d4c7453"
+        },
+        {
+          "name": "data/character/patchouli/stage6.dat",
+          "bytes": 205645,
+          "offset": 546024699,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "8d8d5a5f93cbc66a82d0933279e68b9e776d5bffca664914e5a59d00f7e93d62"
+        },
+        {
+          "name": "data/character/patchouli/stage7.dat",
+          "bytes": 229277,
+          "offset": 546230344,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "5dda3094cf5ff4b5d634ffbf1241bd44b7301d73bec5d4e788cdc6d123dca14e"
+        },
+        {
+          "name": "data/character/patchouli/stage8.dat",
+          "bytes": 1886122,
+          "offset": 546459621,
+          "header": "0080020000e0010000800200001898c71c00010000000c0902ff010000000f0b",
+          "sha256": "101480e35aad9bf2b6d66caeca371fd2615cd0d86e1341f5baa8768e75b66477"
+        },
+        {
+          "name": "data/character/patchouli/stage9.dat",
+          "bytes": 1992746,
+          "offset": 548345743,
+          "header": "0080020000e0010000800200001818681e00010000000c0902ff010000000f0b",
+          "sha256": "b02599ec74f61c09c412584aa03aa348d89d0157a16d765a27e0d5b72540fad9"
+        },
+        {
+          "name": "data/character/patchouli/stage10.dat",
+          "bytes": 6323604,
+          "offset": 550338489,
+          "header": "0080020000e00100008002000018e0cd1f00010000000c0902ff010000000f0b",
+          "sha256": "baa873f0a5e658da8692b8905c56df83c546b0f997d47471ce238786abc90dc5"
+        },
+        {
+          "name": "data/character/05.dat",
+          "bytes": 18456692,
+          "offset": 556662093,
+          "header": "02f1019bffb1fe89e5c0c0008000800080008000800080008000800080008000",
+          "sha256": "bcb3a0718f3176845d000cd0b3c44c2ae21be22e3fc75e56d6b085803e377eaf"
+        },
+        {
+          "name": "data/character/052.dat",
+          "bytes": 4309435,
+          "offset": 575118785,
+          "header": "0000020000000200000002000020f0cf0600ad00000000000000010000000000",
+          "sha256": "7b47156f080f3d0e82852384c6b717ae903d40b3b15389baa70f542fa39d2936"
+        },
+        {
+          "name": "data/character/youmu/youmu.pat",
+          "bytes": 235495,
+          "offset": 579428220,
+          "header": "e80300000501000000000000000000000800000000008a00ab00060000000000",
+          "sha256": "bffc9ba97ef5f4a5e09eea260e0b97fb39d87d1ab9bb23d2d6ec8bb566061cbd"
+        },
+        {
+          "name": "data/character/youmu/youmu.sce",
+          "bytes": 17457,
+          "offset": 579663715,
+          "header": "40e5e80df6970c3ba617f2e7b710185f1c96d28527b97549e7110219a50d2703",
+          "sha256": "0b1576036e8b31b9a21f2cd29baf4c399c2eb147a7a94ca11ab0ffe6069aeb69"
+        },
+        {
+          "name": "data/character/youmu/cardlist.dat",
+          "bytes": 3195,
+          "offset": 579681172,
+          "header": "f545e18ae224f429125f06f838b6475470188a881fe23c27f528b2b063f7b3fc",
+          "sha256": "2f3edb13b756c6200c0d4750032708fdece78029627986d2b096a3d687b89aa7"
+        },
+        {
+          "name": "data/character/youmu/stage1.dat",
+          "bytes": 218253,
+          "offset": 579684367,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "bd344a5c4899e1bbc207ee981d2179ff67f3ae73242480d90484d2acda1afd5d"
+        },
+        {
+          "name": "data/character/youmu/stage2.dat",
+          "bytes": 232229,
+          "offset": 579902620,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "05d3de3d0a96e7e4b0f5dec43c53d1a5dd29136b6a7efb01bcd530e5eaf1d8d6"
+        },
+        {
+          "name": "data/character/youmu/stage3.dat",
+          "bytes": 236701,
+          "offset": 580134849,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "63b378c2c09b7620e8bc78aff37cbc05819600a0140f8bd1b0cdacf19efcccfa"
+        },
+        {
+          "name": "data/character/youmu/stage4.dat",
+          "bytes": 219141,
+          "offset": 580371550,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "fbcb274d635c8f38c84dfac62338a93d1e3123c1fd5a9fa981c6c17bc0dc3c20"
+        },
+        {
+          "name": "data/character/youmu/stage5.dat",
+          "bytes": 245597,
+          "offset": 580590691,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "d21398f7e6c42d6010e0196c09a2c59bb58885523d994478ea3dc176f0ee3b97"
+        },
+        {
+          "name": "data/character/youmu/stage6.dat",
+          "bytes": 215605,
+          "offset": 580836288,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "c3cc315cf3a7919aebffc556352fc6c223ea13f4531a3ced9abb44b99c1a6546"
+        },
+        {
+          "name": "data/character/youmu/stage7.dat",
+          "bytes": 233397,
+          "offset": 581051893,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "19e855a0f61a6be64401d22d43831eb612a6869749fa78a1b44bca572ed37d33"
+        },
+        {
+          "name": "data/character/youmu/stage8.dat",
+          "bytes": 1886122,
+          "offset": 581285290,
+          "header": "0080020000e0010000800200001898c71c00010000000c0902ff010000000f0b",
+          "sha256": "101480e35aad9bf2b6d66caeca371fd2615cd0d86e1341f5baa8768e75b66477"
+        },
+        {
+          "name": "data/character/youmu/stage9.dat",
+          "bytes": 1992746,
+          "offset": 583171412,
+          "header": "0080020000e0010000800200001818681e00010000000c0902ff010000000f0b",
+          "sha256": "b02599ec74f61c09c412584aa03aa348d89d0157a16d765a27e0d5b72540fad9"
+        },
+        {
+          "name": "data/character/youmu/stage10.dat",
+          "bytes": 5622044,
+          "offset": 585164158,
+          "header": "0080020000e0010000800200001850a3180001000000b9d4deff01000000b7d3",
+          "sha256": "5f494aa1347347c152514c46f7d899e92ba06beb933ab544e3f2f38c8ab9f06d"
+        },
+        {
+          "name": "data/character/06.dat",
+          "bytes": 18274435,
+          "offset": 590786202,
+          "header": "02f1019bffb1fe89e5c0c0ffff38ef72d20a9dc798ffbdd898ae80688cff83ff",
+          "sha256": "226ddbaa05e98332130f68fc3535766786a08bc52d61cf7c2f84884581b1d784"
+        },
+        {
+          "name": "data/character/062.dat",
+          "bytes": 5772236,
+          "offset": 609060637,
+          "header": "000002000000020000000200002088160800ba44000000000000010000000000",
+          "sha256": "34f0974a108bee652bd7a2a9843826dfad9437ffaa06d4c65718c314c823e478"
+        },
+        {
+          "name": "data/character/remilia/remilia.pat",
+          "bytes": 256527,
+          "offset": 614832873,
+          "header": "e80300001301000000000000000000000800000000009100fb00060000000000",
+          "sha256": "48bb51f5a06fdf7ac3ace8a258f68e52d40ca791080bb6207fa38c82055e5172"
+        },
+        {
+          "name": "data/character/remilia/remilia.sce",
+          "bytes": 17687,
+          "offset": 615089400,
+          "header": "404631cc1260d6f8fc2c5087a92ab8d4e51cb4b52418b2f3d90f667a015e97cb",
+          "sha256": "0d74b205d0231fe161a3ad4b25a2809048011ddfe4fd4de846f7ed70f73b8be0"
+        },
+        {
+          "name": "data/character/remilia/cardlist.dat",
+          "bytes": 2851,
+          "offset": 615107087,
+          "header": "f545e18ae224f4291cac0633205e59d46b318aa5b12cdc22a140dec98f5e3c3a",
+          "sha256": "978f0b01f4c13c42a0a207a22aaa31f8b83d88dc2c1845bbe1c272da8d4a5867"
+        },
+        {
+          "name": "data/character/remilia/stage1.dat",
+          "bytes": 213397,
+          "offset": 615109938,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "93f268628cae5ddddca45192cdd823d2901c575228657002b3be2fdea8069109"
+        },
+        {
+          "name": "data/character/remilia/stage2.dat",
+          "bytes": 220189,
+          "offset": 615323335,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "13a4ba022fca7ad41abe013e4d8ea59a83ac35b73cacfabb801cbc7007b65d61"
+        },
+        {
+          "name": "data/character/remilia/stage3.dat",
+          "bytes": 216869,
+          "offset": 615543524,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "48d3fb4c0a1d68713d2b44ad252299d681d0fd60bfa8cb34d5320343711078b0"
+        },
+        {
+          "name": "data/character/remilia/stage4.dat",
+          "bytes": 217581,
+          "offset": 615760393,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "84f4d92a6bfcff122785da95c8c19688e17b8e74b94382d5dfb99a99e1a81e4f"
+        },
+        {
+          "name": "data/character/remilia/stage5.dat",
+          "bytes": 228429,
+          "offset": 615977974,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "f3173d7f1840558afa0d7584f4a41976b4e42ac597a124631229ac265456351e"
+        },
+        {
+          "name": "data/character/remilia/stage6.dat",
+          "bytes": 184021,
+          "offset": 616206403,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "861e4b49eaf56e614e99a700bf5f779699da0d95f21d30bd109164572d4643ac"
+        },
+        {
+          "name": "data/character/remilia/stage7.dat",
+          "bytes": 240605,
+          "offset": 616390424,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "9ef516c9e645bb68015e00d9289a925d535f44f88bb3f6488ae751a08c8a1b4c"
+        },
+        {
+          "name": "data/character/remilia/stage8.dat",
+          "bytes": 1886122,
+          "offset": 616631029,
+          "header": "0080020000e0010000800200001898c71c00010000000c0902ff010000000f0b",
+          "sha256": "101480e35aad9bf2b6d66caeca371fd2615cd0d86e1341f5baa8768e75b66477"
+        },
+        {
+          "name": "data/character/remilia/stage9.dat",
+          "bytes": 1992746,
+          "offset": 618517151,
+          "header": "0080020000e0010000800200001818681e00010000000c0902ff010000000f0b",
+          "sha256": "b02599ec74f61c09c412584aa03aa348d89d0157a16d765a27e0d5b72540fad9"
+        },
+        {
+          "name": "data/character/remilia/stage10.dat",
+          "bytes": 6126700,
+          "offset": 620509897,
+          "header": "0080020000e00100008002000018f0e61e00010000000c0902ff010000000f0b",
+          "sha256": "49780c8b6aeaef44cccb7f30b24b20ec02bfd39ba48cbbf32ba6dffd901f74fd"
+        },
+        {
+          "name": "data/character/07.dat",
+          "bytes": 8194037,
+          "offset": 626636597,
+          "header": "02f10179ffb1fe89e5c0c03bff7bfa52ed8dd0dfcaffad5fa9dfa082fc80f060",
+          "sha256": "1897587e4ac8cf3830c819323d4377824c1ded20314ae87f914367c15cec461b"
+        },
+        {
+          "name": "data/character/072.dat",
+          "bytes": 5919979,
+          "offset": 634830634,
+          "header": "0000020000000200000002000020f0850900ee00000000000000010000000000",
+          "sha256": "862c2f35bed929f676cef7c4dae184bd64b6da6a23c5c009bc5d65c36699b928"
+        },
+        {
+          "name": "data/character/yuyuko/yuyuko.pat",
+          "bytes": 187326,
+          "offset": 640750613,
+          "header": "e8030000ff00000000000000000000000a00000000003f00ef00060000000000",
+          "sha256": "0385e56bec588d4be2766e3030f8fc00398b442e045af80368d44db9b749f13e"
+        },
+        {
+          "name": "data/character/yuyuko/yuyuko.sce",
+          "bytes": 17712,
+          "offset": 640937939,
+          "header": "404631cc1260d6f8fc2c5087a92aa257e547b4b52418b2f3d90f667a015e97cb",
+          "sha256": "84dbccda9e7bb89537124db38cd280089f23385ab3e2346a80c28630f5deb8bf"
+        },
+        {
+          "name": "data/character/yuyuko/cardlist.dat",
+          "bytes": 3027,
+          "offset": 640955651,
+          "header": "f545e18ae224f429171c18e62cd742527f8f8a881fe23c27f528b2b063f7b3fc",
+          "sha256": "2a4d8cb70883360b4450b5b9d4de05ac89b49ce76674959cf771c8c507a26cbe"
+        },
+        {
+          "name": "data/character/yuyuko/stage1.dat",
+          "bytes": 212965,
+          "offset": 640958678,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "8e5f32d0f3a70db65327fa17cd166b2409e1d24aae35e81af5c64d0d81b822fc"
+        },
+        {
+          "name": "data/character/yuyuko/stage2.dat",
+          "bytes": 228749,
+          "offset": 641171643,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "2981edc014fecd79526344e1d48957016f909d8f56d757a7eb6834eb8d19bcad"
+        },
+        {
+          "name": "data/character/yuyuko/stage3.dat",
+          "bytes": 220861,
+          "offset": 641400392,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "a67361937b961a824ad99c1c17098a528fd322fc0e14367713af928a30ac517c"
+        },
+        {
+          "name": "data/character/yuyuko/stage4.dat",
+          "bytes": 222181,
+          "offset": 641621253,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "672dc8834cea3d53d884aa3b45c6b6611991325ca448e72acaa7a7aa60c76e17"
+        },
+        {
+          "name": "data/character/yuyuko/stage5.dat",
+          "bytes": 239477,
+          "offset": 641843434,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "bab71845bb1b8a8f0a2b4bdf2e248a09ef67f3b5c709bbb5d8b5ac9b60c5dbc4"
+        },
+        {
+          "name": "data/character/yuyuko/stage6.dat",
+          "bytes": 204565,
+          "offset": 642082911,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "4c4515b8f757e15bdc4d705f977fb1b22ed71bf4462f5f7a239f1d13676a4196"
+        },
+        {
+          "name": "data/character/yuyuko/stage7.dat",
+          "bytes": 254901,
+          "offset": 642287476,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "5b27cc548fc01a034916dfa0c80fff172574b76813e2078268867ff1f63d8ecf"
+        },
+        {
+          "name": "data/character/yuyuko/stage8.dat",
+          "bytes": 1886122,
+          "offset": 642542377,
+          "header": "0080020000e0010000800200001898c71c00010000000c0902ff010000000f0b",
+          "sha256": "101480e35aad9bf2b6d66caeca371fd2615cd0d86e1341f5baa8768e75b66477"
+        },
+        {
+          "name": "data/character/yuyuko/stage9.dat",
+          "bytes": 1992746,
+          "offset": 644428499,
+          "header": "0080020000e0010000800200001818681e00010000000c0902ff010000000f0b",
+          "sha256": "b02599ec74f61c09c412584aa03aa348d89d0157a16d765a27e0d5b72540fad9"
+        },
+        {
+          "name": "data/character/yuyuko/stage10.dat",
+          "bytes": 5694868,
+          "offset": 646421245,
+          "header": "0080020000e0010000800200001850a3180001000000b9d4deff01000000b7d3",
+          "sha256": "fd6651c3f896720654ba9ab4d72aedca142077bf8be6a0f84b22bbb66dd50f97"
+        },
+        {
+          "name": "data/character/08.dat",
+          "bytes": 11172579,
+          "offset": 652116113,
+          "header": "02f10179ffb1fe89e5c0c020f840dc00c800b4fffffcdef5bd4da5ebff07fbc0",
+          "sha256": "0ab89ab52969f6fac544cd48b757dc2a76962f65b85570b5292c4deb9772a663"
+        },
+        {
+          "name": "data/character/082.dat",
+          "bytes": 7760821,
+          "offset": 663288692,
+          "header": "000002000000020000000200002090000c00b708000000000000010000000000",
+          "sha256": "a901ff137101abfa036cb1de4b2826682aeac73a0b0187aac0653765ace44063"
+        },
+        {
+          "name": "data/character/yukari/yukari.pat",
+          "bytes": 220218,
+          "offset": 671049513,
+          "header": "e80300001301000000000000000000000900000000008e00e300060000000000",
+          "sha256": "2e84eed5cf4b746067785851d077f741552b300a0b912e902bf1429868c8d606"
+        },
+        {
+          "name": "data/character/yukari/yukari.sce",
+          "bytes": 16941,
+          "offset": 671269731,
+          "header": "40e521265a8de218c027f1efd75b696f50db939b25b17d4b9b6d0117a7192504",
+          "sha256": "71ba7e210cf0aa9d6d85ee44f471f0377f9a3c0b89b4bdc3f5ce1f59b83b34a5"
+        },
+        {
+          "name": "data/character/yukari/cardlist.dat",
+          "bytes": 3059,
+          "offset": 671286672,
+          "header": "f545e18ae224f429078214e02d734a346b3f88bcb1ffde1a0f8c3c297506b2bb",
+          "sha256": "20f915eb869f42c9ef98fe9c0f6caf95e9cdefc502ff0ef1cdc87b3f54290887"
+        },
+        {
+          "name": "data/character/yukari/stage1.dat",
+          "bytes": 224261,
+          "offset": 671289731,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "212d6262b86e918563ff46b733e40a8ec8443f6ab60237813862f58fb3e965bc"
+        },
+        {
+          "name": "data/character/yukari/stage2.dat",
+          "bytes": 221293,
+          "offset": 671513992,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "d6ac288aceaa631836c33acd8a6ab281abc7db8bbf0fed38064172191f1f8313"
+        },
+        {
+          "name": "data/character/yukari/stage3.dat",
+          "bytes": 214069,
+          "offset": 671735285,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "44d18519e4c5ee72d131fde81c83d0433f91b30325618768d3aec577544f37b2"
+        },
+        {
+          "name": "data/character/yukari/stage4.dat",
+          "bytes": 239093,
+          "offset": 671949354,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "5314e2fea6bb69adf7d73a8a9341f654438e29dfc97ac4f08a3c3ae79ca06589"
+        },
+        {
+          "name": "data/character/yukari/stage5.dat",
+          "bytes": 225333,
+          "offset": 672188447,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "42c813db0bfc535212b05e35a7122f12d8aa8398db498a03adfdf28ef70b0e01"
+        },
+        {
+          "name": "data/character/yukari/stage6.dat",
+          "bytes": 239245,
+          "offset": 672413780,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "3dbf6c92216c5c46c01316ec5524fbad853b0f21869a7ee1e88a5a90c7484463"
+        },
+        {
+          "name": "data/character/yukari/stage7.dat",
+          "bytes": 239237,
+          "offset": 672653025,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "0fd84c787c6b1f988bba7864d5cd5671cb652b878dd3362447cb2cf8f6ddde0f"
+        },
+        {
+          "name": "data/character/yukari/stage8.dat",
+          "bytes": 1886122,
+          "offset": 672892262,
+          "header": "0080020000e0010000800200001898c71c00010000000c0902ff010000000f0b",
+          "sha256": "101480e35aad9bf2b6d66caeca371fd2615cd0d86e1341f5baa8768e75b66477"
+        },
+        {
+          "name": "data/character/yukari/stage9.dat",
+          "bytes": 1992746,
+          "offset": 674778384,
+          "header": "0080020000e0010000800200001818681e00010000000c0902ff010000000f0b",
+          "sha256": "b02599ec74f61c09c412584aa03aa348d89d0157a16d765a27e0d5b72540fad9"
+        },
+        {
+          "name": "data/character/yukari/stage10.dat",
+          "bytes": 6053700,
+          "offset": 676771130,
+          "header": "0080020000e0010000800200001898c71c00010000000c0902ff010000000f0b",
+          "sha256": "cc81f53809967e79df8e8b9cdec6cfd84a6499bde7c6442d3e7ee0fb4a031a19"
+        },
+        {
+          "name": "data/character/09.dat",
+          "bytes": 16692725,
+          "offset": 682824830,
+          "header": "02f1019bffb1fe89e5c0c0f9fd00800080008000800080008000800080008000",
+          "sha256": "641b1d35fa9e4f8a6ac8842fa6773d840f5e1c6a269d066bda7475ef7a32a6b2"
+        },
+        {
+          "name": "data/character/092.dat",
+          "bytes": 5926547,
+          "offset": 699517555,
+          "header": "0000020000000200000002000020502a09004c02000000000000010000000000",
+          "sha256": "1311fd0b1b77233e49fa770fe8e5b239bbe342f5b567f2e763f98d20d5ca8a47"
+        },
+        {
+          "name": "data/character/suika/suika.pat",
+          "bytes": 239560,
+          "offset": 705444102,
+          "header": "e80300001101000000000000000000001200000000009100d300070000000000",
+          "sha256": "26b663c936c3fa32e444a0da36721d3304dd0fa921f4f1212d3d0a33f44b159c"
+        },
+        {
+          "name": "data/character/suika/suika.sce",
+          "bytes": 17344,
+          "offset": 705683662,
+          "header": "40e521265a8de218c027f1efd75b696f50db939b25b17d4b9b6d0117a7192504",
+          "sha256": "1d603baf9f9328e724da21b8fd0f153872895039a40b96a22a3d8b31968399ff"
+        },
+        {
+          "name": "data/character/suika/cardlist.dat",
+          "bytes": 3235,
+          "offset": 705701006,
+          "header": "f545e18ae224f4291cac0633205e59d46b318aa5b12cdc22a140dec98f5e3c3a",
+          "sha256": "d1afdd96fce71ac54d658c43fecc5dc1989fd2c7fee8a30b1c9f2df9b51e54f1"
+        },
+        {
+          "name": "data/character/suika/stage1.dat",
+          "bytes": 221565,
+          "offset": 705704241,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "4a9a843471264d6293c76a6c7f9ce6e16a7b71d6bdc3d01312cf3c53841b0f62"
+        },
+        {
+          "name": "data/character/suika/stage2.dat",
+          "bytes": 224357,
+          "offset": 705925806,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "159ba30a83a9f8b3a538aea8b181385ea11f95511eb1e2354d8cf7d0f9acf48b"
+        },
+        {
+          "name": "data/character/suika/stage3.dat",
+          "bytes": 222397,
+          "offset": 706150163,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "5c8df569445fcb6ec36323b7204395f6644d5920887e1c1357abe229badb2a17"
+        },
+        {
+          "name": "data/character/suika/stage4.dat",
+          "bytes": 241197,
+          "offset": 706372560,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "9670690d73a5bc3c63a4de8d9cbb0dc0973486d9822926121fd65c12320665d7"
+        },
+        {
+          "name": "data/character/suika/stage5.dat",
+          "bytes": 235909,
+          "offset": 706613757,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "583dd974f93a731a1e550396fdbaf4ff72df21d1c4214d1be54251bae1f12848"
+        },
+        {
+          "name": "data/character/suika/stage6.dat",
+          "bytes": 252821,
+          "offset": 706849666,
+          "header": "0000040000200000000004000020b04d0000fe08000000000000010000000404",
+          "sha256": "77b3cd18a6c088b5edc04ecff02a7653f8237e062513b779e70d83f450e01358"
+        },
+        {
+          "name": "data/character/suika/stage7.dat",
+          "bytes": 249357,
+          "offset": 707102487,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "d381f65746a6d372d3506d4cf64a6708fbdc84ea6941da38e949985980c0c4cb"
+        },
+        {
+          "name": "data/character/suika/stage8.dat",
+          "bytes": 1886122,
+          "offset": 707351844,
+          "header": "0080020000e0010000800200001898c71c00010000000c0902ff010000000f0b",
+          "sha256": "101480e35aad9bf2b6d66caeca371fd2615cd0d86e1341f5baa8768e75b66477"
+        },
+        {
+          "name": "data/character/suika/stage9.dat",
+          "bytes": 1992746,
+          "offset": 709237966,
+          "header": "0080020000e0010000800200001818681e00010000000c0902ff010000000f0b",
+          "sha256": "b02599ec74f61c09c412584aa03aa348d89d0157a16d765a27e0d5b72540fad9"
+        },
+        {
+          "name": "data/character/suika/stage10.dat",
+          "bytes": 5782092,
+          "offset": 711230712,
+          "header": "0080020000e0010000800200001870cf1c0001000000b9d4deff01000000b7d3",
+          "sha256": "09918dd9ec07bdf3218fe95c626bf8b391910c111a33cc5c5a30b67a5e18176e"
+        },
+        {
+          "name": "data/system/effect.dat",
+          "bytes": 5185661,
+          "offset": 717012804,
+          "header": "0080000000800000008000000010885c0000c003000001000080010000840200",
+          "sha256": "1b38a881692a5ef84907f9ce489772c790d391d1141d84c1e200b17936b2b454"
+        },
+        {
+          "name": "data/system/effect/effect.pat",
+          "bytes": 5674,
+          "offset": 722198465,
+          "header": "9200000044000000000000000100000000000000000001000001000000020000",
+          "sha256": "8fc3a1aa07a01d38032ef8d69f4ae943b40883da19d4837160b259fce595ff6d"
+        },
+        {
+          "name": "wave/se00.dat",
+          "bytes": 2059842,
+          "offset": 722204139,
+          "header": "3200000001008201000100010044ac000088580100020010000000000018ffc8",
+          "sha256": "48125cd37d543f7ab72fd1778d39173914afa7514e2db0f096442691195ec413"
+        },
+        {
+          "name": "wave/se01.dat",
+          "bytes": 3159836,
+          "offset": 724263981,
+          "header": "3200000001e03607000100010044ac0000885801000200100000002af7c0f9f1",
+          "sha256": "20846a9fd9a1561e3e746d0683bda832be6c0c58b27830c0ee492e5e19fd5493"
+        },
+        {
+          "name": "wave/se02.dat",
+          "bytes": 1881020,
+          "offset": 727423817,
+          "header": "320000000160b600000100010044ac0000885801000200100000007bff9bffdf",
+          "sha256": "12c961ccd0dbe30e978308a9efe3a3e60a911d0df18ce19035c353e63cbd314d"
+        },
+        {
+          "name": "wave/se03.dat",
+          "bytes": 1383224,
+          "offset": 729304837,
+          "header": "320000000118e600000100010044ac0000885801000200100000009500e1005d",
+          "sha256": "8c5f7331e903742bac53455fc4dcb6a28a5b60a77231411279bc97a1c463e97c"
+        },
+        {
+          "name": "wave/se04.dat",
+          "bytes": 2976484,
+          "offset": 730688061,
+          "header": "3200000001908800000100010044ac000088580100020010000000d2ff040080",
+          "sha256": "9d17602d2b36410a5c457aad717693c4a88745d6d9b1db9b4555b1302a9c195f"
+        },
+        {
+          "name": "wave/se05.dat",
+          "bytes": 1969688,
+          "offset": 733664545,
+          "header": "320000000100c301000100020044ac000010b102000400100000009e2a9f2acb",
+          "sha256": "274f0fb8359465afdd281985e0bcb4201e3b99f45a49fcfc4d1ab84ff98dd58f"
+        },
+        {
+          "name": "wave/se06.dat",
+          "bytes": 3047178,
+          "offset": 735634233,
+          "header": "3200000001742901000100010044ac0000885801000200100000002c00140014",
+          "sha256": "05d90b20218d3b19be69878dfe2ab8d72c885f4c84456974aa0ef525b58ae872"
+        },
+        {
+          "name": "wave/se07.dat",
+          "bytes": 1851498,
+          "offset": 738681411,
+          "header": "3200000001fa88000001000100225600002256000001000800000091727ba78d",
+          "sha256": "6e08e578ac4a009ff42cb0092b55ec4a6530539fbc2799cfb370128fdcbd3e9a"
+        },
+        {
+          "name": "wave/se08.dat",
+          "bytes": 2081386,
+          "offset": 740532909,
+          "header": "3200000001e41601000100010044ac0000885801000200100000000000000000",
+          "sha256": "5f43d504f1c6da8dc7a0ae28e4cdcc906a199d31d33821225b39f02c4bc785a4"
+        },
+        {
+          "name": "wave/se09.dat",
+          "bytes": 4144134,
+          "offset": 742614295,
+          "header": "32000000010ee700000100010044ac000088580100020010000000450038002b",
+          "sha256": "c8c3c5a1f40513e3fc537245d7c894798fa84dced716418993e9add136d48ad7"
+        },
+        {
+          "name": "wave/se.dat",
+          "bytes": 3104306,
+          "offset": 746758429,
+          "header": "640000000001607f00000100010044ac00008858010002001000000000000000",
+          "sha256": "9199761bb1168a397728a99489203aa8144c0dabc38ac961261110290d66f68f"
+        }
+      ],
+      "histogram": {
+        ".dat": 194,
+        ".pat": 11,
+        ".sce": 10
+      }
+    },
+    {
+      "path": "th075b.dat",
+      "bytes": 149693705,
+      "count": 37,
+      "entries": [
+        {
+          "name": "data/character/reimu/reimu.pat",
+          "bytes": 226950,
+          "offset": 3998,
+          "header": "e70300001001000000000000000000000a00000002005a00ea00060000000000",
+          "sha256": "79198371d89209f0b424661f418c98ff7edcb95354f8c249c3e43fb51cff1649"
+        },
+        {
+          "name": "data/character/reimu/reimu.sce",
+          "bytes": 21242,
+          "offset": 230948,
+          "header": "404631cc1260d6f8fc2cdccddc59383950d5f1d62afd3208d077011fa70b597f",
+          "sha256": "db7da59ade9a9810d75f56e6c2739b214c8b31a48402882c29cd65d8e194f4dc"
+        },
+        {
+          "name": "data/character/marisa/marisa.pat",
+          "bytes": 280415,
+          "offset": 252190,
+          "header": "e80300002c01000000000000000000000a00000000003f00d600060000000000",
+          "sha256": "17388b17cb34261f84091319fa12bae62bbccdf9323f13911def876b1f22de2f"
+        },
+        {
+          "name": "data/character/marisa/marisa.sce",
+          "bytes": 17303,
+          "offset": 532605,
+          "header": "40e521265a8de218c027f1efd75b696f50db939b25b17d4b9b6d0117a7192504",
+          "sha256": "2206d483c127c77f6532b32410caefbaa1d0f2e15e859d8fa1381666ff7dc4d6"
+        },
+        {
+          "name": "data/character/sakuya/sakuya.pat",
+          "bytes": 219451,
+          "offset": 549908,
+          "header": "e80300000701000000000000000000000600000023014000fe00060000000000",
+          "sha256": "4f807784bc993655343d97ea2dbc00fb3cc8cad549842ba6deb5656ec4c9a94d"
+        },
+        {
+          "name": "data/character/sakuya/sakuya.sce",
+          "bytes": 17262,
+          "offset": 769359,
+          "header": "404631cc1260d6f8fc2cdccddc59383950d5f1d62afd3208d077011fa70b597f",
+          "sha256": "d8c9c752ce27a3a860b4d8d5a5fc9df7d5fbd550c00d7d1d62b77d64af295e33"
+        },
+        {
+          "name": "data/character/alice/alice.pat",
+          "bytes": 175732,
+          "offset": 786621,
+          "header": "e80300000101000000000000000000001000000053023300e000060000000000",
+          "sha256": "52903732926ff45f6ba57b7ed1c9f78e6a9a71538f8d81a1da8ecac2928ae6ef"
+        },
+        {
+          "name": "data/character/alice/alice.sce",
+          "bytes": 17941,
+          "offset": 962353,
+          "header": "404631cc1260d6f8fc2cdccddc59383950d5f1d62afd3208d077011fa70b597f",
+          "sha256": "ac7a8ba14c7d2cf1a2863f8b2c0b6181465b9dabfff0d143cfd3ce17c4aeba9e"
+        },
+        {
+          "name": "data/character/patchouli/patchouli.pat",
+          "bytes": 261510,
+          "offset": 980294,
+          "header": "e70300001a01000000000000000000001800000000003900d400050000000000",
+          "sha256": "59ea999ad2594fef3188f9033647fd51d5b5eefadce09ca5eeca8bb753f5d3fd"
+        },
+        {
+          "name": "data/character/patchouli/patchouli.sce",
+          "bytes": 17303,
+          "offset": 1241804,
+          "header": "404631cc1260d6f8fc2cdccddcf0daab11b7fef289e6cf833a0da2ba0e72864b",
+          "sha256": "d353e44786ef5a4f53f440e1b10cd8c04b277d8e28c9f4cda4e75e92ac9a4467"
+        },
+        {
+          "name": "data/character/youmu/youmu.pat",
+          "bytes": 243062,
+          "offset": 1259107,
+          "header": "e80300000a01000000000000000000000800000000008a00ab00060000000000",
+          "sha256": "97baf7bf4b8d25f236034a002d7ae68f45d84fd029cf3ed9ab9190f084c31c35"
+        },
+        {
+          "name": "data/character/youmu/youmu.sce",
+          "bytes": 17398,
+          "offset": 1502169,
+          "header": "40e5e80df6970c3ba617f2e7b710185f1c96d28527b97549e7110219a50d2703",
+          "sha256": "94ec3bf603cb127f9d5fad3b415cc17b7d561f0a3c103bd72ee13c20e5dfd911"
+        },
+        {
+          "name": "data/character/remilia/remilia.pat",
+          "bytes": 265585,
+          "offset": 1519567,
+          "header": "e80300001901000000000000000000000800000000009100fb00060000000000",
+          "sha256": "dcb544c57fbc885ebf9b35d7ec63345dac5793022db01f406f7e11d7d1a99a0d"
+        },
+        {
+          "name": "data/character/remilia/remilia.sce",
+          "bytes": 17793,
+          "offset": 1785152,
+          "header": "404631cc1260d6f8fc2c5087a92ab8d4e51cb4b52418b2f3d90f667a015e97cb",
+          "sha256": "4e985e3c662560b38a6a24c27ab8464251928fd1b78f9759639c06707278b339"
+        },
+        {
+          "name": "data/character/yuyuko/yuyuko.pat",
+          "bytes": 189250,
+          "offset": 1802945,
+          "header": "e80300000101000000000000000000000a00000000003f00ef00060000000000",
+          "sha256": "263a8127565c445a1b632395dfe3e06dff3223eea9c7fa7e808786249da650db"
+        },
+        {
+          "name": "data/character/yuyuko/yuyuko.sce",
+          "bytes": 17806,
+          "offset": 1992195,
+          "header": "404631cc1260d6f8fc2c5087a92aa257e547b4b52418b2f3d90f667a015e97cb",
+          "sha256": "86e724b73eaf0fcae327939901f35cdbf59c623762c4668bbdc0f834e9570938"
+        },
+        {
+          "name": "data/character/yukari/yukari.pat",
+          "bytes": 255771,
+          "offset": 2010001,
+          "header": "e80300003301000000000000000000000900000000008e00e300060000000000",
+          "sha256": "9e1f7345efb0743f189a8678ed9fd980eb516dffed28a03ab6004e60b6019b0a"
+        },
+        {
+          "name": "data/character/yukari/yukari.sce",
+          "bytes": 17057,
+          "offset": 2265772,
+          "header": "40e521265a8de218c027f1efd75b696f50db939b25b17d4b9b6d0117a7192504",
+          "sha256": "9d8e2a2a61c281d784d2ab703d6e9c7aa1ff8622323e4163e16a3afea517de37"
+        },
+        {
+          "name": "data/character/suika/suika.pat",
+          "bytes": 243565,
+          "offset": 2282829,
+          "header": "e80300001501000000000000000000001200000000009100d300070000000000",
+          "sha256": "9728e09ca6e23e9fcc66c196489cb0427571321356e79e9cf0e366678a9186d7"
+        },
+        {
+          "name": "data/character/suika/suika.sce",
+          "bytes": 17452,
+          "offset": 2526394,
+          "header": "40e521265a8de218c027f1efd75b696f50db939b25b17d4b9b6d0117a7192504",
+          "sha256": "b73e13fa0a0222bcb0448947635ec88844c0dd6cd8817551920e6625abd38dda"
+        },
+        {
+          "name": "data/character/meiling/meiling.pat",
+          "bytes": 217212,
+          "offset": 2543846,
+          "header": "e70300000301000000000000000000000600000000004500fc00070000000000",
+          "sha256": "fdeddfbf0390e76b23cb38a2d8b5debf55079a2c8cb5ca416ca03ad91bc17006"
+        },
+        {
+          "name": "data/character/meiling/meiling.sce",
+          "bytes": 2544,
+          "offset": 2761058,
+          "header": "404631cc1260d6f8fc2cdccddc59383950d5f1d62afd3208d077011fa70b597f",
+          "sha256": "d2e7e17de84b5809dc73504c28ce15cf24273ccd60df658fe83e9cb9c1a7bb50"
+        },
+        {
+          "name": "data/character/03.dat",
+          "bytes": 10764950,
+          "offset": 2763602,
+          "header": "02ad320080008000800080008000800080008000800080008000800080008000",
+          "sha256": "9de1471522af3a83ed2accee511f15cdd5341b0354c6038e62c7f70975369ac9"
+        },
+        {
+          "name": "data/character/042.dat",
+          "bytes": 4882491,
+          "offset": 13528552,
+          "header": "0000020000000200000002000020f81f09009522000000000000010000000000",
+          "sha256": "909393b9d745d44ec8b735afb0a17fc5a395da49140fd7a50267a34218f7ee4e"
+        },
+        {
+          "name": "data/character/062.dat",
+          "bytes": 5768836,
+          "offset": 18411043,
+          "header": "000002000000020000000200002088160800ba44000000000000010000000000",
+          "sha256": "c2f564e21a8065b1f39174158ffe3a808ff2b702e5b0fb7a09bd5397054eadcf"
+        },
+        {
+          "name": "data/character/072.dat",
+          "bytes": 5759459,
+          "offset": 24179879,
+          "header": "0000020000000200000002000020f0850900ee00000000000000010000000000",
+          "sha256": "60fca332e8160a038990e815b2b2d488f62d86337cec856d7a6d63022a6c68be"
+        },
+        {
+          "name": "data/character/052.dat",
+          "bytes": 4305547,
+          "offset": 29939338,
+          "header": "0000020000000200000002000020f0cf0600ad00000000000000010000000000",
+          "sha256": "15c31843c9a4604a5f31062ef6c3b190c356e6ce39506162d0aa478d397be577"
+        },
+        {
+          "name": "data/character/082.dat",
+          "bytes": 7774357,
+          "offset": 34244885,
+          "header": "000002000000020000000200002090000c00b708000000000000010000000000",
+          "sha256": "ee1aad0973f79147bfad620201e91a9a452fa9f4a9bf647298bf7d19251285ec"
+        },
+        {
+          "name": "data/character/alice/cardlist.dat",
+          "bytes": 2995,
+          "offset": 42019242,
+          "header": "f545e18ae224f42907b514dc2f404ae76b018899b12bdec00f453c307534b046",
+          "sha256": "51e33e705103a097e770ee512c55be57815dd9a8d41ed22c8a153f63fc16ed22"
+        },
+        {
+          "name": "musicroom.dat",
+          "bytes": 9566,
+          "offset": 42022237,
+          "header": "68866103d6429d614960bb796cd1c585b89ca6802b93a0cd13c872eec5030e6f",
+          "sha256": "a32106904b86c69bf6d973b2cbfb2e164ad62c749885e03902f68cf0f9f29457"
+        },
+        {
+          "name": "data/system/select.dat",
+          "bytes": 3228553,
+          "offset": 42031803,
+          "header": "0080020000e0010000800200001850b817000600000000000000010000001100",
+          "sha256": "f4bf86eec838e0c08adf1a9f215a68c2358f923c040a2ef7f3736cdc5763619b"
+        },
+        {
+          "name": "data/system/selectchar.dat",
+          "bytes": 26977751,
+          "offset": 45260356,
+          "header": "000002000000020000000200002038ae0800ae08000000000000010000000000",
+          "sha256": "14196e5e3caf17dd349eadd31626fb7a22c6fd5d8f2f10b2ae49993c58ce5ba5"
+        },
+        {
+          "name": "data/system/selectbg.dat",
+          "bytes": 14668570,
+          "offset": 72238107,
+          "header": "0000010000e0010000000100002070f60c0001000000f7e7d81901000000f7e7",
+          "sha256": "a4d711a4d63e8028a16ab0055345a30d81268c96dcea0df6215eeba451b4013b"
+        },
+        {
+          "name": "data/system/replay.dat",
+          "bytes": 2209276,
+          "offset": 86906677,
+          "header": "0080020000e0010000800200001838a816000600000000000000010000000302",
+          "sha256": "016dd56587e472b54c39b8f5dfd6e69e9b8ae19e58dd7873f8a051d20f62c4c2"
+        },
+        {
+          "name": "data/character/10.dat",
+          "bytes": 52469981,
+          "offset": 89115953,
+          "header": "02f10179ffb1fe89e5c0c02bfdc3f482e401c4fffffcded6b52f9dedffcafac0",
+          "sha256": "bbfdbb302591b92b3cad5af59d15f5aaae325beb6632bc97ddc59284ca254577"
+        },
+        {
+          "name": "data/character/102.dat",
+          "bytes": 4728699,
+          "offset": 141585934,
+          "header": "0000020000000200000002000020b0a607002a23000000000000010000000000",
+          "sha256": "631afed9d02d58ca12d1cc48ee582ed28120fc5ae6c9517d1fa17f58fd17814a"
+        },
+        {
+          "name": "wave/se10.dat",
+          "bytes": 3379072,
+          "offset": 146314633,
+          "header": "320000000168cb00000100010044ac000088580100020010000000e1fef101d0",
+          "sha256": "5eb20b035f7efaeac66b12950dc255b31c7aec5832ce27400badf42b708894a7"
+        }
+      ],
+      "histogram": {
+        ".pat": 11,
+        ".sce": 11,
+        ".dat": 15
+      }
+    },
+    {
+      "path": "th075bgm.dat",
+      "bytes": 428003126,
+      "count": 34,
+      "entries": [
+        {
+          "name": "wave/bgm/00a.wav",
+          "bytes": 14953564,
+          "offset": 3674,
+          "header": "52494646542ce40057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "5acc35aff7181e5364df472e2507b53e69c8a431ce2801bd6a700c2dcfaaa425"
+        },
+        {
+          "name": "wave/bgm/00b.wav",
+          "bytes": 12841956,
+          "offset": 14957238,
+          "header": "52494646dcf3c30057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "71eb8d7d112b6851fd28ba45d210dafaf17de425b838cd202e44d8600ab62ef6"
+        },
+        {
+          "name": "wave/bgm/00c.wav",
+          "bytes": 24676720,
+          "offset": 27799194,
+          "header": "524946466889780157415645666d7420100000000100020044ac000010b10200",
+          "sha256": "df605a8877e3ecd8292b1fe6e7624bf288c4e037516f5d20f8eadfb31ddadfd5"
+        },
+        {
+          "name": "wave/bgm/01a.wav",
+          "bytes": 11179924,
+          "offset": 52475914,
+          "header": "524946468c97aa0057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "6999672e1465faf392afbdae1f49edff37474f0133073c1e2b924990cf77e69d"
+        },
+        {
+          "name": "wave/bgm/01b.wav",
+          "bytes": 11726988,
+          "offset": 63655838,
+          "header": "5249464684f0b20057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "b8438e68d2ca29eb741ffc09ea8480c22012d9a7ce4fca5b3ec8a01419fb88b3"
+        },
+        {
+          "name": "wave/bgm/02a.wav",
+          "bytes": 18118036,
+          "offset": 75382826,
+          "header": "524946468c75140157415645666d7420100000000100020044ac000010b10200",
+          "sha256": "52cca6c48917a921c27d81bab50654fb0b108b3a282079cbca69f4d284804da5"
+        },
+        {
+          "name": "wave/bgm/02b.wav",
+          "bytes": 15250600,
+          "offset": 93500862,
+          "header": "52494646a0b4e80057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "55bc824930661c7ab73ad3c39f5c73c193e953ab65b8f7a698d9375fe02533ab"
+        },
+        {
+          "name": "wave/bgm/03a.wav",
+          "bytes": 21075460,
+          "offset": 108751462,
+          "header": "52494646fc95410157415645666d7420100000000100020044ac000010b10200",
+          "sha256": "79203b7f2ac74c8279d2b135b6267932fccaa1c699a6b4d6b713905026623086"
+        },
+        {
+          "name": "wave/bgm/03b.wav",
+          "bytes": 11446440,
+          "offset": 129826922,
+          "header": "52494646a0a8ae0057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "ec5aa181b54e8e0dc5098b3eef3ab91c13c338b95733fdad4b659e50af663f21"
+        },
+        {
+          "name": "wave/bgm/04a.wav",
+          "bytes": 18260120,
+          "offset": 141273362,
+          "header": "5249464690a0160157415645666d7420100000000100020044ac000010b10200",
+          "sha256": "29188a38c46a95c91ab8221e77235960097563a1142d2404e1968c1cd1a369b2"
+        },
+        {
+          "name": "wave/bgm/04b.wav",
+          "bytes": 15586472,
+          "offset": 159533482,
+          "header": "52494646a0d4ed0057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "892f04ecaab49f05ffe22061b7cb4d2eea067fb162612b9df7d54cb804188eb4"
+        },
+        {
+          "name": "wave/bgm/05a.wav",
+          "bytes": 12489284,
+          "offset": 175119954,
+          "header": "524946463c92be0057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "56212283842f85eba523bf89a171ef80b8e1e1eee916e143583730a2a2a39199"
+        },
+        {
+          "name": "wave/bgm/05b.wav",
+          "bytes": 15328424,
+          "offset": 187609238,
+          "header": "52494646a0e4e90057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "a22065ed951a0b9542286bdacd9bb73eaa373fa476b9e3b4a262ad93a637c6bc"
+        },
+        {
+          "name": "wave/bgm/06a.wav",
+          "bytes": 12787948,
+          "offset": 202937662,
+          "header": "52494646e420c30057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "3081f40a15e1ddc6c6618e57438a662359cd928aab25b27e76a9636c76a9958a"
+        },
+        {
+          "name": "wave/bgm/07a.wav",
+          "bytes": 9824700,
+          "offset": 215725610,
+          "header": "52494646b4e9950057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "4b5b528b62708298d1bc7412419cfefba338ce835a04f3053ff628269cf4538c"
+        },
+        {
+          "name": "wave/bgm/08a.wav",
+          "bytes": 26089892,
+          "offset": 225550310,
+          "header": "524946469c198e0157415645666d7420100000000100020044ac000010b10200",
+          "sha256": "79836e3b4b1ce6e0a4e75d64d125dbb9973ddc120e3ee3623c86a05d3c73adb2"
+        },
+        {
+          "name": "wave/bgm/09a.wav",
+          "bytes": 34637624,
+          "offset": 251640202,
+          "header": "524946463087100257415645666d7420100000000100020044ac000010b10200",
+          "sha256": "d5b46e3a8972998d24f0963ff3fdcf8ff708fe8f4fbd98bc2b36d1e6453e40cc"
+        },
+        {
+          "name": "wave/bgm/sys00_op.wav",
+          "bytes": 16924840,
+          "offset": 286277826,
+          "header": "52494646a040020157415645666d7420100000000100020044ac000010b10200",
+          "sha256": "516fd9bd5be4a6ef6338f6bd5e7b303f45e379fde0642bc5326efc081b5207f8"
+        },
+        {
+          "name": "wave/bgm/sys99_ed.wav",
+          "bytes": 14743664,
+          "offset": 303202666,
+          "header": "5249464668f8e00057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "0d1fc40e8b6ef41d22d803de8a6bf8735b8375338cf9fd10d4f3c57ab4270b6d"
+        },
+        {
+          "name": "wave/bgm/51.wav",
+          "bytes": 6002956,
+          "offset": 317946330,
+          "header": "5249464604995b0057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "64d3cd82497587db76e99d35d0377955f08f44258ba19d69f3f0a5bf4823ff43"
+        },
+        {
+          "name": "wave/bgm/52.wav",
+          "bytes": 3287752,
+          "offset": 323949286,
+          "header": "52494646c02a320057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "3da9282da01dd9a99a3c0061dc345614b54849a7426b384b0af2ab6b1ea03ca0"
+        },
+        {
+          "name": "wave/bgm/53.wav",
+          "bytes": 10276852,
+          "offset": 327237038,
+          "header": "52494646eccf9c0057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "557d0b72a0e17572d051682d275e3ac9dca16bb47a20951d23d6ce48bc486046"
+        },
+        {
+          "name": "wave/bgm/54.wav",
+          "bytes": 13418328,
+          "offset": 337513890,
+          "header": "5249464650bfcc0057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "1f2c7a1befb7db1bceeb76ee544235b6ca4bad128228a3f77c52751f41f749c4"
+        },
+        {
+          "name": "wave/bgm/56.wav",
+          "bytes": 3972532,
+          "offset": 350932218,
+          "header": "52494646ac9d3c0057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "b435659c58d4b38ad0b12333f37f3878ffc379c5d7c48ade57f9f3b5b1de5ea9"
+        },
+        {
+          "name": "wave/bgm/57.wav",
+          "bytes": 5491336,
+          "offset": 354904750,
+          "header": "5249464680ca530057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "8123983683241841c6b3ff0ed0778834e151a3599def575e5c9cf6e27f4862e2"
+        },
+        {
+          "name": "wave/bgm/58.wav",
+          "bytes": 7053696,
+          "offset": 360396086,
+          "header": "5249464678a16b0057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "8a502b5fe4467189f7ae1cfded5c4a1efbf1d06bb2b21f36c0e936706fcde5f3"
+        },
+        {
+          "name": "wave/bgm/59.wav",
+          "bytes": 6604804,
+          "offset": 367449782,
+          "header": "52494646fcc7640057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "31d8652668c8be3f057862d1903d911c37077e0338620cba68fa26a73ec60136"
+        },
+        {
+          "name": "wave/bgm/60.wav",
+          "bytes": 6508712,
+          "offset": 374054586,
+          "header": "52494646a050630057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "8382f50b5df0d98dd61fce1f869beaccbe5699ad9060f8e3dd8f04abb1bf2e4d"
+        },
+        {
+          "name": "wave/bgm/61.wav",
+          "bytes": 7247016,
+          "offset": 380563298,
+          "header": "52494646a0946e0057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "ea2e91e2d3381fa28bc50f654a97082c1245dacad9062475ce7e5502c1be9322"
+        },
+        {
+          "name": "wave/bgm/62.wav",
+          "bytes": 8291468,
+          "offset": 387810314,
+          "header": "5249464684847e0057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "6dbddbe9d0f5004bf728168b97b6a63c751a355edd5178a84748bdb665d78937"
+        },
+        {
+          "name": "wave/bgm/63.wav",
+          "bytes": 8628392,
+          "offset": 396101782,
+          "header": "52494646a0a8830057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "c443b57c8e021e823ebc0f4fa869477432fbbb322a9d1eec2cb0ac36328ba791"
+        },
+        {
+          "name": "wave/bgm/65.wav",
+          "bytes": 6537384,
+          "offset": 404730174,
+          "header": "52494646a0c0630057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "3e6b821690d21170d59a4f0ef88d53eb218d0327387dd72a9e2327c0ddf2f989"
+        },
+        {
+          "name": "wave/bgm/67.wav",
+          "bytes": 7554216,
+          "offset": 411267558,
+          "header": "52494646a044730057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "6cdf3b89adf793e0015ce8b23f1023919ec849b72be25d536c108eab22321347"
+        },
+        {
+          "name": "wave/bgm/68.wav",
+          "bytes": 9181352,
+          "offset": 418821774,
+          "header": "52494646a0188c0057415645666d7420100000000100020044ac000010b10200",
+          "sha256": "a6d1d14474fcdf0ad450bdf7473ddb8a7f61284f2cf7ee1e72db0985b90c104b"
+        }
+      ],
+      "histogram": {
+        ".wav": 34
+      }
+    },
+    {
+      "path": "th075c.dat",
+      "bytes": 349795026,
+      "count": 122,
+      "entries": [
+        {
+          "name": "data/character/00.dat",
+          "bytes": 21983770,
+          "offset": 13178,
+          "header": "02f10179ffb1fe89e5c0c020f840dc00c800b4fffffcdef5bd4da5ebff07fbc0",
+          "sha256": "1465557b490d4f051af8d84ff899a6a691daba2075607d03fe1a9b493a9aeefe"
+        },
+        {
+          "name": "data/character/002.dat",
+          "bytes": 5190627,
+          "offset": 21996948,
+          "header": "0000020000000200000002000020e8ad0700b31c000000000000010000000000",
+          "sha256": "e21857a2bc9c72b60cb46cb98eff8fd0987adcc7bd0b96e6de231e2603ca0982"
+        },
+        {
+          "name": "data/character/01.dat",
+          "bytes": 15958590,
+          "offset": 27187575,
+          "header": "02f1019bffb1fe89e5c0c0ffffbbda0080cfb9c79885900080ffffaeff4ae642",
+          "sha256": "f53d2c86d097d61e94f14c8f24360337a67ebf750a7d2ac209475da0dab9a31f"
+        },
+        {
+          "name": "data/character/012.dat",
+          "bytes": 5083787,
+          "offset": 43146165,
+          "header": "0000020000000200000002000020d0260a00ae18000000000000010000000000",
+          "sha256": "f25a6eab5ede2de8c4de0cdf3ea5946ef619950078639020f5cc4ae506bc3b85"
+        },
+        {
+          "name": "data/character/02.dat",
+          "bytes": 18670086,
+          "offset": 48229952,
+          "header": "02f1019bffb1fe89e5c0c0ffff38ef14be0a9dd6dacfb9c7988590f18c4b8826",
+          "sha256": "981401435cc4c3a3a1f85d397d28a386a35b140c27e3a911ebef0a2778bf7a2e"
+        },
+        {
+          "name": "data/character/022.dat",
+          "bytes": 4686699,
+          "offset": 66900038,
+          "header": "000002000000020000000200002038690700db38000000000000010000000000",
+          "sha256": "707bfd9cbdbb5b69c8b1d2d4ffbdf69da50d5b518040e39d7378944744cad966"
+        },
+        {
+          "name": "data/character/03.dat",
+          "bytes": 10715494,
+          "offset": 71586737,
+          "header": "02ad320080008000800080008000800080008000800080008000800080008000",
+          "sha256": "28193b7d693cb908650aa8b7086da010e2201d2e4c4fcb060b149abf2acca1ac"
+        },
+        {
+          "name": "data/character/032.dat",
+          "bytes": 5277659,
+          "offset": 82302231,
+          "header": "0000020000000200000002000020e0620800c92e000000000000050000000000",
+          "sha256": "2cdbc3190d554358575dc6b60cce26ad366ffeaa70ce4430d3deed342dee1464"
+        },
+        {
+          "name": "data/character/04.dat",
+          "bytes": 25503173,
+          "offset": 87579890,
+          "header": "02f101bfff5aff31eee7bcffffbbda0080cfb9c79885900080aeff4ae642d1ff",
+          "sha256": "898ddc5de8957ed84fea3c9b579b80760f135ebee7ccfc7754cdda6313a503b7"
+        },
+        {
+          "name": "data/character/042.dat",
+          "bytes": 4874083,
+          "offset": 113083063,
+          "header": "0000020000000200000002000020f81f09009522000000000000010000000000",
+          "sha256": "a2e7c68f946e9dcb456b30bb99c9f66ab2f5ea669b83e74916075696ae333ee2"
+        },
+        {
+          "name": "data/character/05.dat",
+          "bytes": 18405356,
+          "offset": 117957146,
+          "header": "02f1019bffb1fe89e5c0c0008000800080008000800080008000800080008000",
+          "sha256": "54c4af86b39c1bd12b9ab4fccba5766e3282ce036d2706a92f7aade1eadab819"
+        },
+        {
+          "name": "data/character/052.dat",
+          "bytes": 4298355,
+          "offset": 136362502,
+          "header": "0000020000000200000002000020f0cf0600ad00000000000000010000000000",
+          "sha256": "a4c15f83d34cada75b18a5a854512d252b9cc216595a2541218ec840ffded41d"
+        },
+        {
+          "name": "data/character/06.dat",
+          "bytes": 18233243,
+          "offset": 140660857,
+          "header": "02f1019bffb1fe89e5c0c0ffff38ef72d20a9dc798ffbdd898ae80688cff83ff",
+          "sha256": "b532f69988da1be6fe0aa23598ef5ccc07d12960be52c6cc7bb5b03afdcbd6fc"
+        },
+        {
+          "name": "data/character/062.dat",
+          "bytes": 5759780,
+          "offset": 158894100,
+          "header": "000002000000020000000200002088160800ba44000000000000010000000000",
+          "sha256": "053d994f29f25b38825f7c8527fcd8ec2f956692ed7029c3754a5e60e5cd3f4b"
+        },
+        {
+          "name": "data/character/07.dat",
+          "bytes": 8146325,
+          "offset": 164653880,
+          "header": "02f10179ffb1fe89e5c0c03bff7bfa52ed8dd0dfcaffad5fa9dfa082fc80f060",
+          "sha256": "b5f713d728288a802eebfc179aa812c498035a0a561a50ecfa03e1582110422a"
+        },
+        {
+          "name": "data/character/072.dat",
+          "bytes": 5754763,
+          "offset": 172800205,
+          "header": "0000020000000200000002000020f0850900ee00000000000000010000000000",
+          "sha256": "78c326e7e01ed8395cc2ef4d6aa05e05b08943661262e35438d3416c0bbc1dfd"
+        },
+        {
+          "name": "data/character/08.dat",
+          "bytes": 11133347,
+          "offset": 178554968,
+          "header": "02f10179ffb1fe89e5c0c020f840dc00c800b4fffffcdef5bd4da5ebff07fbc0",
+          "sha256": "967154bef558b6e660496b59d31d191584aeb39205895e8829393dba824406c3"
+        },
+        {
+          "name": "data/character/082.dat",
+          "bytes": 7764021,
+          "offset": 189688315,
+          "header": "000002000000020000000200002090000c00b708000000000000010000000000",
+          "sha256": "99afb73d1b197e46b0ccf95e64b89787bdd975b9d8d8f56d82bbe76269ba9e6a"
+        },
+        {
+          "name": "data/character/09.dat",
+          "bytes": 16650789,
+          "offset": 197452336,
+          "header": "02f1019bffb1fe89e5c0c0f9fd00800080008000800080008000800080008000",
+          "sha256": "97367f053f8aa3488150570e1f9e6b439a74638e620da80690d652fae719ff6b"
+        },
+        {
+          "name": "data/character/092.dat",
+          "bytes": 5922115,
+          "offset": 214103125,
+          "header": "0000020000000200000002000020502a09004c02000000000000010000000000",
+          "sha256": "3cf1bfe7f6c29618e44d3c593e3d288ffcd9f8423a445fff1b66f4dfcf2a6179"
+        },
+        {
+          "name": "data/character/10.dat",
+          "bytes": 52466437,
+          "offset": 220025240,
+          "header": "02f10179ffb1fe89e5c0c02bfdc3f482e401c4fffffcded6b52f9dedffcafac0",
+          "sha256": "06218db9743344cbbc16a42a0e808e33dc39edb5cf7515267e1c43ed56b2c0c5"
+        },
+        {
+          "name": "data/character/102.dat",
+          "bytes": 4723963,
+          "offset": 272491677,
+          "header": "0000020000000200000002000020b0a607002a23000000000000010000000000",
+          "sha256": "118cbb44422a4790c794a2603a7e9aa3bca5571df8cde359778910f6a25caa16"
+        },
+        {
+          "name": "data/character/alice/alice.sce",
+          "bytes": 17348,
+          "offset": 277215640,
+          "header": "40f854724adcb0469620ecfac244080e4ec884823aac605686701c0ab214381e",
+          "sha256": "f44c661806fb6a237c376dd08c3a866e4b2d724a16ec2ab93e42b48f820ac35b"
+        },
+        {
+          "name": "data/character/alice/cardlist.dat",
+          "bytes": 2751,
+          "offset": 277232988,
+          "header": "d73ab5e8b873d4e4d799f6f0ca6ebaccc80b6e8857cb2f2d2dbc92ff9700481d",
+          "sha256": "de73fcfe1d1989cc25e2ae65f1c011c00b1f9f05e91bf1577afa7e718d4f76d1"
+        },
+        {
+          "name": "data/character/alice/stage1.dat",
+          "bytes": 285981,
+          "offset": 277235739,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "312c2c90953f95045b7bf7a6b45e47f196b82aa18db5817b538fa8cf3d13c4ee"
+        },
+        {
+          "name": "data/character/alice/stage2.dat",
+          "bytes": 281173,
+          "offset": 277521720,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "0ae60a7eb24c7ec13e8f985f5627b5119d9f98916fb446a286b029c9944a1e02"
+        },
+        {
+          "name": "data/character/alice/stage3.dat",
+          "bytes": 277237,
+          "offset": 277802893,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "b28d5c0da4e95e0c485a83c3eeffd3be5a11b9a5ce2c60d8c201fe05d17fc8da"
+        },
+        {
+          "name": "data/character/alice/stage4.dat",
+          "bytes": 287693,
+          "offset": 278080130,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "229789d58462722b439151b73cb3ac7c4dd651c8519432afde0a0ddd04051728"
+        },
+        {
+          "name": "data/character/alice/stage5.dat",
+          "bytes": 288141,
+          "offset": 278367823,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "47beef8a6287be0949f7d111399fd70f05a5ba4e516fb99ec859ce099b2de031"
+        },
+        {
+          "name": "data/character/alice/stage6.dat",
+          "bytes": 267173,
+          "offset": 278655964,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "e32f763ee0e3d8a6895b4585d1864077a971912f7e6e261edf61b1d2ef84583e"
+        },
+        {
+          "name": "data/character/alice/stage7.dat",
+          "bytes": 303413,
+          "offset": 278923137,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "dfd06de806b854e95b00335e51b77121bf869909cc36776c0e0b5208a14a0a61"
+        },
+        {
+          "name": "data/character/marisa/cardlist.dat",
+          "bytes": 2795,
+          "offset": 279226550,
+          "header": "d73ab5e8b873d4e4c59fe3e4db77e9fb8038658a57d5fceda140dec98f5e3c3a",
+          "sha256": "a6fe5071727f3c1e69a71ddbd63db73a287bb69d732c23c768797f07e6868dbb"
+        },
+        {
+          "name": "data/character/marisa/marisa.sce",
+          "bytes": 16659,
+          "offset": 279229345,
+          "header": "40f854724adcb0469620ecfac244080e4ec884823aac605686701c0ab214381e",
+          "sha256": "5dadfa663faa11b6dca834f4bd66e45dcf6dc27b21c65f2eeec9b4e4e7be5b1c"
+        },
+        {
+          "name": "data/character/marisa/stage1.dat",
+          "bytes": 275925,
+          "offset": 279246004,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "b188aa8a2491418dd575e0cf3fe1fdf191dc26c8df690e95ab0d3b826fe0a9aa"
+        },
+        {
+          "name": "data/character/marisa/stage2.dat",
+          "bytes": 290357,
+          "offset": 279521929,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "d92571a7127617a093b6bafd12abe0ba4da28b549ebb004427538d6f83181b5b"
+        },
+        {
+          "name": "data/character/marisa/stage3.dat",
+          "bytes": 281917,
+          "offset": 279812286,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "e36b2adc0336729e4dfc797f9b5409065f96e826c698ae4410628f4a736fe173"
+        },
+        {
+          "name": "data/character/marisa/stage4.dat",
+          "bytes": 286493,
+          "offset": 280094203,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "8293375f2097b56595329c45323f86c91db3ee490898009e0807e610c30491d2"
+        },
+        {
+          "name": "data/character/marisa/stage5.dat",
+          "bytes": 292325,
+          "offset": 280380696,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "322138c5245f70adad8c824ef7d00b8ba7b0e387066ecc9413822cc626d034d6"
+        },
+        {
+          "name": "data/character/marisa/stage6.dat",
+          "bytes": 276037,
+          "offset": 280673021,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "97feb193db75eae173f54af05e3fe9b1a9cf67d5bad87b7cc1025141fba10ed6"
+        },
+        {
+          "name": "data/character/marisa/stage7.dat",
+          "bytes": 303413,
+          "offset": 280949058,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "dfd06de806b854e95b00335e51b77121bf869909cc36776c0e0b5208a14a0a61"
+        },
+        {
+          "name": "data/character/meiling/meiling.sce",
+          "bytes": 2532,
+          "offset": 281252471,
+          "header": "4060d0eab148edde132cdccddc59383950d5f1d62afd3208d077011fa70b597f",
+          "sha256": "dbe68995487cba8ba164546bb915bbbc7a2ff2f6b1dbf06e5670944b9fe09a02"
+        },
+        {
+          "name": "data/character/patchouli/cardlist.dat",
+          "bytes": 2747,
+          "offset": 281255003,
+          "header": "d73ab5e8b873d4e4d799f6f0ca6ebaccc80b6e8857cb2f2d2dbc92ff9700481d",
+          "sha256": "f11f8b863f7a143a42cb731139d4e9a290ba3e0a3ab0457cd7c47d56d8934a59"
+        },
+        {
+          "name": "data/character/patchouli/patchouli.sce",
+          "bytes": 16092,
+          "offset": 281257750,
+          "header": "40f854724adcb0469620ecfac244080e4ec884823aac605686701c0ab214381e",
+          "sha256": "93285bdcf0f78e16aefecc2d11941b18043de39a01bd5e7e957249bb1a3010e1"
+        },
+        {
+          "name": "data/character/patchouli/stage1.dat",
+          "bytes": 283109,
+          "offset": 281273842,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "136af7f11d7d1a9a372b0ef52c5155521ad2aa14d3433d1ba4dd0dc027c12409"
+        },
+        {
+          "name": "data/character/patchouli/stage2.dat",
+          "bytes": 274485,
+          "offset": 281556951,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "732a70397741eac99f60fff7f1a1caa11749ef644b85ccf8328991bd3889aa12"
+        },
+        {
+          "name": "data/character/patchouli/stage3.dat",
+          "bytes": 274045,
+          "offset": 281831436,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "37fb35d871edb63f40bdfaabf03cbd61b6848d9c2e78dce3b080be16199c2821"
+        },
+        {
+          "name": "data/character/patchouli/stage4.dat",
+          "bytes": 278181,
+          "offset": 282105481,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "350fcf8f3ec1b6dccb9d37342a46c162b2a1a58a4ca0c6a05031b62515c6d9e6"
+        },
+        {
+          "name": "data/character/patchouli/stage5.dat",
+          "bytes": 288965,
+          "offset": 282383662,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "1971e980a95d9e7d1a2e9dd8baaa814d09b694fe918fd10bb605440f1d7de9da"
+        },
+        {
+          "name": "data/character/patchouli/stage6.dat",
+          "bytes": 269453,
+          "offset": 282672627,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "b22b40267cf682661124eab5a7044cb91920e27469588a0dc107f3974eb591b3"
+        },
+        {
+          "name": "data/character/patchouli/stage7.dat",
+          "bytes": 300685,
+          "offset": 282942080,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "09d8b4b2c56229a6e27fb4c4060da94b5ca1680bc86bc677a50c720c5f6d6e97"
+        },
+        {
+          "name": "data/character/reimu/cardlist.dat",
+          "bytes": 2815,
+          "offset": 283242765,
+          "header": "d73ab5e8b873d4e4d799f6f0ca6ebaccc80b6e8857cb2f2d2dbc92ff9700481d",
+          "sha256": "9686b3ea58573e0ac3c7824f2277cbd0fdd1f1edff82605f4029ed69c1bd1b40"
+        },
+        {
+          "name": "data/character/reimu/reimu.sce",
+          "bytes": 19652,
+          "offset": 283245580,
+          "header": "40f854724adcb0469620ecfac244080e4ec884823aac605686701c0ab214381e",
+          "sha256": "c60ccb4eb2df0f235cfd0e1c2e24522765533b1e31ea541ff6f912c6246b68c5"
+        },
+        {
+          "name": "data/character/reimu/stage1.dat",
+          "bytes": 222197,
+          "offset": 283265232,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "145609762c5fe67c746bc00bcc2dd1f91f07de6867d925ea83e3bce737867948"
+        },
+        {
+          "name": "data/character/reimu/stage2.dat",
+          "bytes": 274477,
+          "offset": 283487429,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "87a015bf62b1afa5125080142de7fdce154bd3189e541c08468ca48d6f5d21dd"
+        },
+        {
+          "name": "data/character/reimu/stage3.dat",
+          "bytes": 279133,
+          "offset": 283761906,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "f5039d126c909ab950db6ba4ecfed4632a1d5d3d715ac3418267d94467cfd0ca"
+        },
+        {
+          "name": "data/character/reimu/stage4.dat",
+          "bytes": 284709,
+          "offset": 284041039,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "8bf6d8ccc14f82327524e35e7c4c75bc8a87566f27601b03959df1197979a45c"
+        },
+        {
+          "name": "data/character/reimu/stage5.dat",
+          "bytes": 292877,
+          "offset": 284325748,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "8fb9a4fc9145cd0df0fb05086163f8eda19ded6b9a8a0c9adc81af0835440de1"
+        },
+        {
+          "name": "data/character/reimu/stage6.dat",
+          "bytes": 276037,
+          "offset": 284618625,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "97feb193db75eae173f54af05e3fe9b1a9cf67d5bad87b7cc1025141fba10ed6"
+        },
+        {
+          "name": "data/character/reimu/stage7.dat",
+          "bytes": 303413,
+          "offset": 284894662,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "dfd06de806b854e95b00335e51b77121bf869909cc36776c0e0b5208a14a0a61"
+        },
+        {
+          "name": "data/character/remilia/cardlist.dat",
+          "bytes": 2687,
+          "offset": 285198075,
+          "header": "d73ab5e8b873d4e45baf57ef34b901732ce7ce42931e7011ed76c697fb7986cb",
+          "sha256": "10ad5b87252bc5cbcd24e1c3f03f769685279a474a77846a156bbc85eb4c7238"
+        },
+        {
+          "name": "data/character/remilia/remilia.sce",
+          "bytes": 16704,
+          "offset": 285200762,
+          "header": "40f854724adcb0469620ecfac244080e4ec884823aac605686701c0ab214381e",
+          "sha256": "d1505235f8544c0afba57fd0a32f719c5208567cf5f083dffa4e9a8ab487a24e"
+        },
+        {
+          "name": "data/character/remilia/stage1.dat",
+          "bytes": 273781,
+          "offset": 285217466,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "54b5903f363348534a3fd182fee258425d4a908d40826990f5246733f2db0690"
+        },
+        {
+          "name": "data/character/remilia/stage2.dat",
+          "bytes": 286589,
+          "offset": 285491247,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "ac320e68255b00ab36a7a2e3a9599dad3b56908b1046e0ef41b7ef8d43c69a8d"
+        },
+        {
+          "name": "data/character/remilia/stage3.dat",
+          "bytes": 278629,
+          "offset": 285777836,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "1a66eb18374f89734ef1c4ca3b545373cfdbf9d1c8255c4d8fcec3e111794fe9"
+        },
+        {
+          "name": "data/character/remilia/stage4.dat",
+          "bytes": 276581,
+          "offset": 286056465,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "7b47df1d2155cf44ff21af280d4234a848474cf0bce1161f0d58558293e6e5b3"
+        },
+        {
+          "name": "data/character/remilia/stage5.dat",
+          "bytes": 294917,
+          "offset": 286333046,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "ec576bce693b65f7657e090cac89f215ec2841207d3dd7927c6b247bb599a05f"
+        },
+        {
+          "name": "data/character/remilia/stage6.dat",
+          "bytes": 233653,
+          "offset": 286627963,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "540f8ac015c958adadd6964b6d41e99647bc3054de0acac0ea0c8b6670952073"
+        },
+        {
+          "name": "data/character/remilia/stage7.dat",
+          "bytes": 304021,
+          "offset": 286861616,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "2472b905496d6012d16049c09160555d1cc3715475155da22c551eb5a67adbf2"
+        },
+        {
+          "name": "data/character/sakuya/cardlist.dat",
+          "bytes": 2723,
+          "offset": 287165637,
+          "header": "d73ab5e8b873d4e40d1958696df51f51371baa471fe23c27f528b2b04188e79e",
+          "sha256": "c67f9af1bc8d9e062be7e4752ebeae670d7139291699ef6b7c132649f283aa45"
+        },
+        {
+          "name": "data/character/sakuya/sakuya.sce",
+          "bytes": 17016,
+          "offset": 287168360,
+          "header": "40f854724adcb0469620ecfac244080e4ec884823aac605686701c0ab214381e",
+          "sha256": "d4ffe68302797a1c5f1dfadec8503a8fca5fe2ccfdfa0ae26a25913db96b4cd3"
+        },
+        {
+          "name": "data/character/sakuya/stage1.dat",
+          "bytes": 285021,
+          "offset": 287185376,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "96c44662465ca3b8f794570afe0fe6e0705f766b643e06707bb21d7433ddcfa4"
+        },
+        {
+          "name": "data/character/sakuya/stage2.dat",
+          "bytes": 267653,
+          "offset": 287470397,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "faf3382a6177f218bbe1b9ebcf70dd6f67ef1daafdfe8fd727d20695c4927e77"
+        },
+        {
+          "name": "data/character/sakuya/stage3.dat",
+          "bytes": 290997,
+          "offset": 287738050,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "4ff84b68d3f2dda0ad5fb48c23d778f82c3f97253f7ba5041670090de369e0bd"
+        },
+        {
+          "name": "data/character/sakuya/stage4.dat",
+          "bytes": 273517,
+          "offset": 288029047,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "da4c04edfa1efcc3712762c8191d07489442ee2de7d0f4a8c95858d45706478c"
+        },
+        {
+          "name": "data/character/sakuya/stage5.dat",
+          "bytes": 286813,
+          "offset": 288302564,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "c66cee51b3e65e425114059cb10f64c0a96bd69e258079901c2f236f02fcfc09"
+        },
+        {
+          "name": "data/character/sakuya/stage6.dat",
+          "bytes": 276037,
+          "offset": 288589377,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "97feb193db75eae173f54af05e3fe9b1a9cf67d5bad87b7cc1025141fba10ed6"
+        },
+        {
+          "name": "data/character/sakuya/stage7.dat",
+          "bytes": 303413,
+          "offset": 288865414,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "dfd06de806b854e95b00335e51b77121bf869909cc36776c0e0b5208a14a0a61"
+        },
+        {
+          "name": "data/character/suika/cardlist.dat",
+          "bytes": 2863,
+          "offset": 289168827,
+          "header": "d73ab5e8b873d4e45baf57ef34b901732ce7ce42931e7011ed76c697fb7986cb",
+          "sha256": "934c7a406e8c048a50e79de84c88bce7e77b9af52b9ccd788f140714c4d43ed0"
+        },
+        {
+          "name": "data/character/suika/stage1.dat",
+          "bytes": 278253,
+          "offset": 289171690,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "d84d3b6f2827e1d58c41245105dbfaabb3181b5edf7cdc4e4e1bd8d7cbc8e799"
+        },
+        {
+          "name": "data/character/suika/stage2.dat",
+          "bytes": 274645,
+          "offset": 289449943,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "290700e9e5704a98901802020e749a5163270f7db257e14f52ecdf1d1d3f69db"
+        },
+        {
+          "name": "data/character/suika/stage3.dat",
+          "bytes": 278269,
+          "offset": 289724588,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "f2bbdc03b0803878f76f4d667be3bf2136b09470008f5a4c49ca838ccf621ab4"
+        },
+        {
+          "name": "data/character/suika/stage4.dat",
+          "bytes": 285709,
+          "offset": 290002857,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "d8b85abbd05c9899e78c24b2f3de72f1e0f265f7b7cb445598cd6927c21939bf"
+        },
+        {
+          "name": "data/character/suika/stage5.dat",
+          "bytes": 288557,
+          "offset": 290288566,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "4648c71c65da15e6fe949cb0e3624e38878afa305c706cf8ba543aa3b5d24cca"
+        },
+        {
+          "name": "data/character/suika/stage6.dat",
+          "bytes": 300973,
+          "offset": 290577123,
+          "header": "0000040000200000000004000020b04d0000fe08000000000000010000000404",
+          "sha256": "de51b10f57f3bee09d015aa33517f29a2e2eb6b25c628bf55d6e4a2fe7039a3b"
+        },
+        {
+          "name": "data/character/suika/stage7.dat",
+          "bytes": 310981,
+          "offset": 290878096,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "cf1af2e698f750983f42e91bf3bc225c1b495ed0e4d7a95c524867611a948862"
+        },
+        {
+          "name": "data/character/suika/suika.sce",
+          "bytes": 16490,
+          "offset": 291189077,
+          "header": "40f854724adcb0469620ecfac244080e4ec884823aac605686701c0ab214381e",
+          "sha256": "7fde3cfcec64ea6d3edf612ef31ab8969509a5bc6a81a7d562e843ddf211a98c"
+        },
+        {
+          "name": "data/character/youmu/cardlist.dat",
+          "bytes": 2855,
+          "offset": 291205567,
+          "header": "d73ab5e8b873d4e40d1958696df51f51371baa471fe23c27f528b2b04188e79e",
+          "sha256": "faadb792474720d8506d622f91ddc587fcf8d8f1b4f256bb60b343974379c570"
+        },
+        {
+          "name": "data/character/youmu/stage1.dat",
+          "bytes": 285477,
+          "offset": 291208422,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "49b13298c9fc5c11d5d936a14b9ef16b170d9af4b87e9eb7eed3683d9de08ffb"
+        },
+        {
+          "name": "data/character/youmu/stage2.dat",
+          "bytes": 290637,
+          "offset": 291493899,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "722efc5ffb5af92a38fbb41b98c217d66e1a32c9c2f9d50851dbda61d20179d6"
+        },
+        {
+          "name": "data/character/youmu/stage3.dat",
+          "bytes": 286533,
+          "offset": 291784536,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "7a9a7f4714c7b30c0eb0d02b238045a4cf5a83285ecb36a971f54967a975c33b"
+        },
+        {
+          "name": "data/character/youmu/stage4.dat",
+          "bytes": 279797,
+          "offset": 292071069,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "18bc626fcf21bae0f315e7b8ce11b578bf0e39dd73f7853754594ea4ace10739"
+        },
+        {
+          "name": "data/character/youmu/stage5.dat",
+          "bytes": 297981,
+          "offset": 292350866,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "302d3374e1f7edfc0dbea6e629e58bf8476ef48bf5d22db749128031d7b4c179"
+        },
+        {
+          "name": "data/character/youmu/stage6.dat",
+          "bytes": 265557,
+          "offset": 292648847,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "b864bb62eecb295cfb6c37db17ed01606919518e8bd5f6564554cad4d2117dbc"
+        },
+        {
+          "name": "data/character/youmu/stage7.dat",
+          "bytes": 303413,
+          "offset": 292914404,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "dfd06de806b854e95b00335e51b77121bf869909cc36776c0e0b5208a14a0a61"
+        },
+        {
+          "name": "data/character/youmu/youmu.sce",
+          "bytes": 17053,
+          "offset": 293217817,
+          "header": "40f854724adcb0469620ecfac244080e4ec884823aac605686701c0ab214381e",
+          "sha256": "f21f6f2aa31f348f7abaa6d6a8b4d240776015077ccbba2b264a7409cde87850"
+        },
+        {
+          "name": "data/character/yukari/cardlist.dat",
+          "bytes": 2783,
+          "offset": 293234870,
+          "header": "d73ab5e8b873d4e4c68cf3a2e27aadc1c80a688c53ca3f38e9a40697b3124249",
+          "sha256": "ceaa05e13916473f5313fddf47236dece7cd391017a577757859d96940b32d1a"
+        },
+        {
+          "name": "data/character/yukari/stage1.dat",
+          "bytes": 284221,
+          "offset": 293237653,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "2a14f19c1854611d3c38b7f57ee508b14436d5d51e40440454feb7b8ae11beb4"
+        },
+        {
+          "name": "data/character/yukari/stage2.dat",
+          "bytes": 276013,
+          "offset": 293521874,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "41743a9c659248d08dfaae2cd60b92cfaf0630772cfdfddc855d2082c0afba2c"
+        },
+        {
+          "name": "data/character/yukari/stage3.dat",
+          "bytes": 276429,
+          "offset": 293797887,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "656301cbaab038500ef470b538c0d2337f2d270d6cac5b9b1a8ecb0b1454450b"
+        },
+        {
+          "name": "data/character/yukari/stage4.dat",
+          "bytes": 288373,
+          "offset": 294074316,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "5a9ce7cb668afab32ea8b2d3a65ba695db1eb9d764db5e5440748d67758ffa17"
+        },
+        {
+          "name": "data/character/yukari/stage5.dat",
+          "bytes": 289893,
+          "offset": 294362689,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "0429d3951d889d5b15b33203df8eab6e2086840d9bd8cb98b05dafeb17f3d73a"
+        },
+        {
+          "name": "data/character/yukari/stage6.dat",
+          "bytes": 296925,
+          "offset": 294652582,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "a64d181b950cd237bc0e727ac953543009d1cad56a9c3173114a17fb9caba80d"
+        },
+        {
+          "name": "data/character/yukari/stage7.dat",
+          "bytes": 302349,
+          "offset": 294949507,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "5321c1e2f4bbc2f29ef28a21a2e55d88a5db79153f9e8ef4f98dd2079e5190fd"
+        },
+        {
+          "name": "data/character/yukari/yukari.sce",
+          "bytes": 16081,
+          "offset": 295251856,
+          "header": "40f854724adcb0469620ecfac244080e4ec884823aac605686701c0ab214381e",
+          "sha256": "df86f46753c4f05a9b2ff9590a18fdb0148bc04bd39c525791ee7c543fb8b697"
+        },
+        {
+          "name": "data/character/yuyuko/cardlist.dat",
+          "bytes": 2771,
+          "offset": 295267937,
+          "header": "d73ab5e8b873d4e43213415a11fb143e49e026bb53d42479810f084120dde38c",
+          "sha256": "a05bd53e73f4e3e4a21e12a40c02f75324f1e67e73b27364016d6845c94799fa"
+        },
+        {
+          "name": "data/character/yuyuko/stage1.dat",
+          "bytes": 269461,
+          "offset": 295270708,
+          "header": "0000040000200000000004000020d8230000fd08000000000000010000000404",
+          "sha256": "3396c8cbe053094303265dc46e549fbc3782ed2e820f2cf1689b487d7687804b"
+        },
+        {
+          "name": "data/character/yuyuko/stage2.dat",
+          "bytes": 293581,
+          "offset": 295540169,
+          "header": "000004000020000000000400002088260000fd08000000000000010000000404",
+          "sha256": "7e8a1f99ddbacf9cba799a3d5d5a07cc56094348905fb717f40e78d948dfef47"
+        },
+        {
+          "name": "data/character/yuyuko/stage3.dat",
+          "bytes": 287941,
+          "offset": 295833750,
+          "header": "000004000020000000000400002070270000fd08000000000000010000000404",
+          "sha256": "5c09c831701f0b972bfbf404144320822e4e6ac6d3a36344c7874f178a7e4138"
+        },
+        {
+          "name": "data/character/yuyuko/stage4.dat",
+          "bytes": 273469,
+          "offset": 296121691,
+          "header": "000004000020000000000400002008250000fd08000000000000010000000404",
+          "sha256": "efc4164e944bbd44685e00234d6a8a75848f6b7ebdb7b0b79fdd793691e99a32"
+        },
+        {
+          "name": "data/character/yuyuko/stage5.dat",
+          "bytes": 294677,
+          "offset": 296395160,
+          "header": "0000040000200000000004000020c8380000fd08000000000000010000000404",
+          "sha256": "fb914e43a476d305ca314ac64b0139962a3bc8b0731344e2861b849beae841ad"
+        },
+        {
+          "name": "data/character/yuyuko/stage6.dat",
+          "bytes": 273085,
+          "offset": 296689837,
+          "header": "000004000020000000000400002000330000f80c000000000000010000000f0f",
+          "sha256": "2bdd9eb3844d5a69a9986d1e3d3854cdf756f479d1b5b425ac61e613f4f3c06e"
+        },
+        {
+          "name": "data/character/yuyuko/stage7.dat",
+          "bytes": 303485,
+          "offset": 296962922,
+          "header": "0000040000200000000004000020a8870000f80c000000000000040000001515",
+          "sha256": "0da3e39c18b399311e3b164ca13f4d7d468bffd85e3408798e97e93524a6e45e"
+        },
+        {
+          "name": "data/character/yuyuko/yuyuko.sce",
+          "bytes": 16961,
+          "offset": 297266407,
+          "header": "40f854724adcb0469620ecfac244080e4ec884823aac605686701c0ab214381e",
+          "sha256": "71b566c85ad990c4d0c42e17b53033a958710786fe64a43978b16b628a5f590c"
+        },
+        {
+          "name": "data/system/battle.dat",
+          "bytes": 1458460,
+          "offset": 297283368,
+          "header": "000004000000010000000400002098430600810200000000000003000000c999",
+          "sha256": "8d539147eaddbba840b07cdf0a0e3637ed76cac0f80324b2c89f9d49698975c5"
+        },
+        {
+          "name": "data/system/opening.dat",
+          "bytes": 11503713,
+          "offset": 298741828,
+          "header": "00400000004000000040000000180800000000100000010101ff000200004000",
+          "sha256": "858594ba1b36a754a1b4dc93cb67588c8cc83118c7adb46fe6bc47216f45f7b9"
+        },
+        {
+          "name": "data/system/option.dat",
+          "bytes": 1903588,
+          "offset": 310245541,
+          "header": "0080020000e0010000800200001898011b0001000000000004ff050000000000",
+          "sha256": "6ffee427e94c598057afaa028c5af98b1ec39235070fa364599ea4ec9dbd2417"
+        },
+        {
+          "name": "data/system/replay.dat",
+          "bytes": 2117804,
+          "offset": 312149129,
+          "header": "0080020000e0010000800200001838a816000600000000000000010000000302",
+          "sha256": "a2cbce864570c6941e5a9c628198d93665307735828d539b35f90d1365b4768c"
+        },
+        {
+          "name": "data/system/resultlist.dat",
+          "bytes": 2006373,
+          "offset": 314266933,
+          "header": "0080020000e00100008002000018e8de16000600000000000000010000000d05",
+          "sha256": "b063e4b517141e08df24c374f35365ab10f59b7daa0ca0f86588cbb770e29de5"
+        },
+        {
+          "name": "data/system/select.dat",
+          "bytes": 3365713,
+          "offset": 316273306,
+          "header": "0080020000e0010000800200001850b8170006000000000000ff010000001100",
+          "sha256": "586e9ac3ba6774fea468d6ae737730d6cfaebab1ce38a7d0dccaef1b35fb0a94"
+        },
+        {
+          "name": "data/system/selectchar.dat",
+          "bytes": 27035023,
+          "offset": 319639019,
+          "header": "000002000000020000000200002038ae0800ae08000000000000010000000000",
+          "sha256": "2a66a55c0353e01304e03d199e1485a6e1e0161faf83bd05dc5fddb9d3c57430"
+        },
+        {
+          "name": "data/system/staffroll.dat",
+          "bytes": 3112220,
+          "offset": 346674042,
+          "header": "00400000004000000040000000180800000000100000ffffffff400000004000",
+          "sha256": "415901ca9e04991bfcd48b0800a75818c9b8fcb69135821fc5ed5c62f0bb2278"
+        },
+        {
+          "name": "musicroom.dat",
+          "bytes": 8764,
+          "offset": 349786262,
+          "header": "68866103ef4d822717f1bb796cd1c585b89caa0de598f100461322bef3f117c4",
+          "sha256": "a3c6eba26c57aed00be58e884b2613246101bc5d02333db74960d96de70cefe8"
+        }
+      ],
+      "histogram": {
+        ".dat": 111,
+        ".sce": 11
+      }
+    }
+  ]
+}

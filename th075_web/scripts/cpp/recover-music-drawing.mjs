@@ -1,0 +1,5 @@
+import fs from 'node:fs';import {recoverSceneDrawing} from './scene-drawing-recovery-tools.mjs';
+const fields=new Map([[0x3dc,'catalog.tracks.size()'],[0x3dd,'changeDelay'],[0x3de,'selected'],[0x3df,'firstVisible'],[0xc,'artwork.details'],[0x10,'artwork.catalog'],[0x14,'artwork.title'],[0x18,'artwork.credit']]);
+const custom=(c,{getQ,getR,fargs})=>{switch(c.name){case 'FUN_00402660':return 'true';case 'FUN_004027d0':return 'static_cast<void>(0)';case 'FUN_00427180':return 'number(images,'+fargs(c.args,[0,1]).join(',')+')';case 'FUN_004029f0':return 'images.graphics.textured_quad('+getQ(c.args[0])+','+getR(c.args[1])+','+c.args[2]+','+c.args[3]+')';default:return null;}};
+const post=s=>s.replace('float local_88;','').replaceAll('local_88','quad0[0][1]');
+const out='#include "MusicRoomScene.hpp"\nnamespace th075 {\nvoid MusicRoomScene::render(ImageRenderer& images,const MusicRoomArtwork& artwork)const{\n'+recoverSceneDrawing('00425c80',{fields,custom,post})+'\n}\n}\n';fs.writeFileSync('th075_web/cpp/game/MusicRoomDrawing.cpp',out);

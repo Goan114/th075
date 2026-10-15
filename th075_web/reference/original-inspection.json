@@ -1,0 +1,1724 @@
+{
+  "game": "th075",
+  "version": "1.11",
+  "executables": [
+    {
+      "name": "th075.exe",
+      "bytes": 2576384,
+      "sha256": "bd441e99075436e8dcad26f86ffcf5e6aac4f58b0ed3ee7442e4cb39d8e22c98",
+      "base": 4194304,
+      "entry": 6562604,
+      "size": 2699264,
+      "sections": [
+        {
+          "name": ".text",
+          "rva": 4096,
+          "virtualSize": 2449167,
+          "rawSize": 2449408,
+          "raw": 4096,
+          "flags": 1610612768
+        },
+        {
+          "name": ".rdata",
+          "rva": 2453504,
+          "virtualSize": 83950,
+          "rawSize": 86016,
+          "raw": 2453504,
+          "flags": 1073741888
+        },
+        {
+          "name": ".data",
+          "rva": 2539520,
+          "virtualSize": 146376,
+          "rawSize": 24576,
+          "raw": 2539520,
+          "flags": 3221225536
+        },
+        {
+          "name": ".data1",
+          "rva": 2686976,
+          "virtualSize": 2272,
+          "rawSize": 4096,
+          "raw": 2564096,
+          "flags": 3221225536
+        },
+        {
+          "name": ".rsrc",
+          "rva": 2691072,
+          "virtualSize": 7120,
+          "rawSize": 8192,
+          "raw": 2568192,
+          "flags": 1073741888
+        }
+      ],
+      "imports": [
+        {
+          "dll": "dinput8.dll",
+          "name": "DirectInput8Create",
+          "address": 6647824
+        },
+        {
+          "dll": "winmm.dll",
+          "name": "mmioDescend",
+          "address": 6648412
+        },
+        {
+          "dll": "winmm.dll",
+          "name": "mmioRead",
+          "address": 6648416
+        },
+        {
+          "dll": "winmm.dll",
+          "name": "timeGetTime",
+          "address": 6648420
+        },
+        {
+          "dll": "winmm.dll",
+          "name": "timeBeginPeriod",
+          "address": 6648424
+        },
+        {
+          "dll": "winmm.dll",
+          "name": "mmioOpenA",
+          "address": 6648428
+        },
+        {
+          "dll": "winmm.dll",
+          "name": "mmioClose",
+          "address": 6648432
+        },
+        {
+          "dll": "winmm.dll",
+          "name": "mmioAscend",
+          "address": 6648436
+        },
+        {
+          "dll": "d3d8.dll",
+          "name": "Direct3DCreate8",
+          "address": 6648444
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CreateEventA",
+          "address": 6647892
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetFileSize",
+          "address": 6647896
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetEvent",
+          "address": 6647900
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FindClose",
+          "address": 6647904
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FindNextFileA",
+          "address": 6647908
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FindFirstFileA",
+          "address": 6647912
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "Sleep",
+          "address": 6647916
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetCurrentDirectoryA",
+          "address": 6647920
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetModuleFileNameA",
+          "address": 6647924
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "WideCharToMultiByte",
+          "address": 6647928
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "MultiByteToWideChar",
+          "address": 6647932
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetLastError",
+          "address": 6647936
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "MapViewOfFile",
+          "address": 6647940
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CreateFileMappingA",
+          "address": 6647944
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CreateFileW",
+          "address": 6647948
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetVersionExA",
+          "address": 6647952
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "UnmapViewOfFile",
+          "address": 6647956
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "HeapFree",
+          "address": 6647960
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetProcessHeap",
+          "address": 6647964
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetProcAddress",
+          "address": 6647968
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "LoadLibraryA",
+          "address": 6647972
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetModuleHandleA",
+          "address": 6647976
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "LockResource",
+          "address": 6647980
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "LoadResource",
+          "address": 6647984
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SizeofResource",
+          "address": 6647988
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FindResourceA",
+          "address": 6647992
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FindResourceW",
+          "address": 6647996
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "IsProcessorFeaturePresent",
+          "address": 6648000
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CompareStringW",
+          "address": 6648004
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CompareStringA",
+          "address": 6648008
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FlushFileBuffers",
+          "address": 6648012
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetLocaleInfoW",
+          "address": 6648016
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetConsoleCtrlHandler",
+          "address": 6648020
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "LCMapStringW",
+          "address": 6648024
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "LCMapStringA",
+          "address": 6648028
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetStdHandle",
+          "address": 6648032
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetSystemInfo",
+          "address": 6648036
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "VirtualProtect",
+          "address": 6648040
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "InitializeCriticalSection",
+          "address": 6648044
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetOEMCP",
+          "address": 6648048
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetACP",
+          "address": 6648052
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "IsBadCodePtr",
+          "address": 6648056
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "IsBadReadPtr",
+          "address": 6648060
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "VirtualQuery",
+          "address": 6648064
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "InterlockedExchange",
+          "address": 6648068
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetStringTypeW",
+          "address": 6648072
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetStringTypeA",
+          "address": 6648076
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "IsValidCodePage",
+          "address": 6648080
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "IsValidLocale",
+          "address": 6648084
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "EnumSystemLocalesA",
+          "address": 6648088
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetLocaleInfoA",
+          "address": 6648092
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "WaitForSingleObject",
+          "address": 6648096
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "WriteFile",
+          "address": 6648100
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetFilePointer",
+          "address": 6648104
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "ReadFile",
+          "address": 6648108
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CreateFileA",
+          "address": 6648112
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "TerminateThread",
+          "address": 6648116
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CloseHandle",
+          "address": 6648120
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CreateThread",
+          "address": 6648124
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetThreadPriority",
+          "address": 6648128
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetUserDefaultLCID",
+          "address": 6648132
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetCPInfo",
+          "address": 6648136
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetDateFormatA",
+          "address": 6648140
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetTimeFormatA",
+          "address": 6648144
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "IsBadWritePtr",
+          "address": 6648148
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "VirtualAlloc",
+          "address": 6648152
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "VirtualFree",
+          "address": 6648156
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "HeapCreate",
+          "address": 6648160
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "HeapDestroy",
+          "address": 6648164
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetFileType",
+          "address": 6648168
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetHandleCount",
+          "address": 6648172
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetEnvironmentVariableA",
+          "address": 6648176
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetEnvironmentStringsW",
+          "address": 6648180
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FreeEnvironmentStringsW",
+          "address": 6648184
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "ExitProcess",
+          "address": 6648188
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "RtlUnwind",
+          "address": 6648192
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "RaiseException",
+          "address": 6648196
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetSystemTimeAsFileTime",
+          "address": 6648200
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetFileAttributesA",
+          "address": 6648204
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetStartupInfoA",
+          "address": 6648208
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetCommandLineA",
+          "address": 6648212
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "TerminateProcess",
+          "address": 6648216
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetCurrentProcess",
+          "address": 6648220
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "HeapAlloc",
+          "address": 6648224
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "QueryPerformanceCounter",
+          "address": 6648228
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetTickCount",
+          "address": 6648232
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetCurrentThreadId",
+          "address": 6648236
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetCurrentProcessId",
+          "address": 6648240
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "TlsAlloc",
+          "address": 6648244
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetLastError",
+          "address": 6648248
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetCurrentThread",
+          "address": 6648252
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "TlsFree",
+          "address": 6648256
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "TlsSetValue",
+          "address": 6648260
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "TlsGetValue",
+          "address": 6648264
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetUnhandledExceptionFilter",
+          "address": 6648268
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "DeleteCriticalSection",
+          "address": 6648272
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "LeaveCriticalSection",
+          "address": 6648276
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FatalAppExitA",
+          "address": 6648280
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "EnterCriticalSection",
+          "address": 6648284
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "HeapReAlloc",
+          "address": 6648288
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "HeapSize",
+          "address": 6648292
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetTimeZoneInformation",
+          "address": 6648296
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetStdHandle",
+          "address": 6648300
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "UnhandledExceptionFilter",
+          "address": 6648304
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FreeEnvironmentStringsA",
+          "address": 6648308
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetEnvironmentStrings",
+          "address": 6648312
+        },
+        {
+          "dll": "user32.dll",
+          "name": "LoadIconA",
+          "address": 6648320
+        },
+        {
+          "dll": "user32.dll",
+          "name": "SetWindowPos",
+          "address": 6648324
+        },
+        {
+          "dll": "user32.dll",
+          "name": "ShowCursor",
+          "address": 6648328
+        },
+        {
+          "dll": "user32.dll",
+          "name": "MessageBoxA",
+          "address": 6648332
+        },
+        {
+          "dll": "user32.dll",
+          "name": "SetRect",
+          "address": 6648336
+        },
+        {
+          "dll": "user32.dll",
+          "name": "ReleaseDC",
+          "address": 6648340
+        },
+        {
+          "dll": "user32.dll",
+          "name": "GetDC",
+          "address": 6648344
+        },
+        {
+          "dll": "user32.dll",
+          "name": "DestroyWindow",
+          "address": 6648348
+        },
+        {
+          "dll": "user32.dll",
+          "name": "DispatchMessageA",
+          "address": 6648352
+        },
+        {
+          "dll": "user32.dll",
+          "name": "TranslateMessage",
+          "address": 6648356
+        },
+        {
+          "dll": "user32.dll",
+          "name": "GetMessageA",
+          "address": 6648360
+        },
+        {
+          "dll": "user32.dll",
+          "name": "PeekMessageA",
+          "address": 6648364
+        },
+        {
+          "dll": "user32.dll",
+          "name": "UpdateWindow",
+          "address": 6648368
+        },
+        {
+          "dll": "user32.dll",
+          "name": "DrawTextW",
+          "address": 6648372
+        },
+        {
+          "dll": "user32.dll",
+          "name": "DrawTextA",
+          "address": 6648376
+        },
+        {
+          "dll": "user32.dll",
+          "name": "PostQuitMessage",
+          "address": 6648380
+        },
+        {
+          "dll": "user32.dll",
+          "name": "DefWindowProcA",
+          "address": 6648384
+        },
+        {
+          "dll": "user32.dll",
+          "name": "GetSystemMetrics",
+          "address": 6648388
+        },
+        {
+          "dll": "user32.dll",
+          "name": "LoadCursorA",
+          "address": 6648392
+        },
+        {
+          "dll": "user32.dll",
+          "name": "RegisterClassExA",
+          "address": 6648396
+        },
+        {
+          "dll": "user32.dll",
+          "name": "CreateWindowExA",
+          "address": 6648400
+        },
+        {
+          "dll": "user32.dll",
+          "name": "ShowWindow",
+          "address": 6648404
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "CreateCompatibleDC",
+          "address": 6647832
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "CreateDIBSection",
+          "address": 6647836
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "SetBkMode",
+          "address": 6647840
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "SetBkColor",
+          "address": 6647844
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "SetTextColor",
+          "address": 6647848
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "DeleteDC",
+          "address": 6647852
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "CreateFontIndirectA",
+          "address": 6647856
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "GetObjectA",
+          "address": 6647860
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "GetStockObject",
+          "address": 6647864
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "GetGlyphOutlineA",
+          "address": 6647868
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "GetTextMetricsA",
+          "address": 6647872
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "CreateFontA",
+          "address": 6647876
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "SelectObject",
+          "address": 6647880
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "DeleteObject",
+          "address": 6647884
+        },
+        {
+          "dll": "advapi32.dll",
+          "name": "RegQueryValueExA",
+          "address": 6647808
+        },
+        {
+          "dll": "advapi32.dll",
+          "name": "RegOpenKeyA",
+          "address": 6647812
+        },
+        {
+          "dll": "advapi32.dll",
+          "name": "RegCloseKey",
+          "address": 6647816
+        },
+        {
+          "dll": "ole32.dll",
+          "name": "CoInitialize",
+          "address": 6648452
+        },
+        {
+          "dll": "ole32.dll",
+          "name": "CoCreateInstance",
+          "address": 6648456
+        },
+        {
+          "dll": "ole32.dll",
+          "name": "CoUninitialize",
+          "address": 6648460
+        }
+      ],
+      "versionStrings": [
+        "ver1.11",
+        "ver1.11",
+        "ver1.11"
+      ]
+    },
+    {
+      "name": "th075c.exe",
+      "bytes": 2580480,
+      "sha256": "f34b8613b7f300dd3250bc1a3212a37f3971b4555a76d1adc8b4d1647d863951",
+      "base": 4194304,
+      "entry": 6562604,
+      "size": 2703360,
+      "sections": [
+        {
+          "name": ".text",
+          "rva": 4096,
+          "virtualSize": 2449167,
+          "rawSize": 2449408,
+          "raw": 4096,
+          "flags": 1610612768
+        },
+        {
+          "name": ".rdata",
+          "rva": 2453504,
+          "virtualSize": 83950,
+          "rawSize": 86016,
+          "raw": 2453504,
+          "flags": 1073741888
+        },
+        {
+          "name": ".data",
+          "rva": 2539520,
+          "virtualSize": 146376,
+          "rawSize": 24576,
+          "raw": 2539520,
+          "flags": 3221225536
+        },
+        {
+          "name": ".data1",
+          "rva": 2686976,
+          "virtualSize": 2272,
+          "rawSize": 4096,
+          "raw": 2564096,
+          "flags": 3221225536
+        },
+        {
+          "name": ".rsrc",
+          "rva": 2691072,
+          "virtualSize": 7120,
+          "rawSize": 8192,
+          "raw": 2568192,
+          "flags": 1073741888
+        },
+        {
+          "name": ".topo0",
+          "rva": 2699264,
+          "virtualSize": 1000,
+          "rawSize": 4096,
+          "raw": 2576384,
+          "flags": 3758096416
+        }
+      ],
+      "imports": [
+        {
+          "dll": "dinput8.dll",
+          "name": "DirectInput8Create",
+          "address": 6647824
+        },
+        {
+          "dll": "winmm.dll",
+          "name": "mmioDescend",
+          "address": 6648412
+        },
+        {
+          "dll": "winmm.dll",
+          "name": "mmioRead",
+          "address": 6648416
+        },
+        {
+          "dll": "winmm.dll",
+          "name": "timeGetTime",
+          "address": 6648420
+        },
+        {
+          "dll": "winmm.dll",
+          "name": "timeBeginPeriod",
+          "address": 6648424
+        },
+        {
+          "dll": "winmm.dll",
+          "name": "mmioOpenA",
+          "address": 6648428
+        },
+        {
+          "dll": "winmm.dll",
+          "name": "mmioClose",
+          "address": 6648432
+        },
+        {
+          "dll": "winmm.dll",
+          "name": "mmioAscend",
+          "address": 6648436
+        },
+        {
+          "dll": "d3d8.dll",
+          "name": "Direct3DCreate8",
+          "address": 6648444
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CreateEventA",
+          "address": 6647892
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetFileSize",
+          "address": 6647896
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetEvent",
+          "address": 6647900
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FindClose",
+          "address": 6647904
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FindNextFileA",
+          "address": 6647908
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FindFirstFileA",
+          "address": 6647912
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "Sleep",
+          "address": 6647916
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetCurrentDirectoryA",
+          "address": 6647920
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetModuleFileNameA",
+          "address": 6647924
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "WideCharToMultiByte",
+          "address": 6647928
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "MultiByteToWideChar",
+          "address": 6647932
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetLastError",
+          "address": 6647936
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "MapViewOfFile",
+          "address": 6647940
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CreateFileMappingA",
+          "address": 6647944
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CreateFileW",
+          "address": 6647948
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetVersionExA",
+          "address": 6647952
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "UnmapViewOfFile",
+          "address": 6647956
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "HeapFree",
+          "address": 6647960
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetProcessHeap",
+          "address": 6647964
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetProcAddress",
+          "address": 6647968
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "LoadLibraryA",
+          "address": 6647972
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetModuleHandleA",
+          "address": 6647976
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "LockResource",
+          "address": 6647980
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "LoadResource",
+          "address": 6647984
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SizeofResource",
+          "address": 6647988
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FindResourceA",
+          "address": 6647992
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FindResourceW",
+          "address": 6647996
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "IsProcessorFeaturePresent",
+          "address": 6648000
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CompareStringW",
+          "address": 6648004
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CompareStringA",
+          "address": 6648008
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FlushFileBuffers",
+          "address": 6648012
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetLocaleInfoW",
+          "address": 6648016
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetConsoleCtrlHandler",
+          "address": 6648020
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "LCMapStringW",
+          "address": 6648024
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "LCMapStringA",
+          "address": 6648028
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetStdHandle",
+          "address": 6648032
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetSystemInfo",
+          "address": 6648036
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "VirtualProtect",
+          "address": 6648040
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "InitializeCriticalSection",
+          "address": 6648044
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetOEMCP",
+          "address": 6648048
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetACP",
+          "address": 6648052
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "IsBadCodePtr",
+          "address": 6648056
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "IsBadReadPtr",
+          "address": 6648060
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "VirtualQuery",
+          "address": 6648064
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "InterlockedExchange",
+          "address": 6648068
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetStringTypeW",
+          "address": 6648072
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetStringTypeA",
+          "address": 6648076
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "IsValidCodePage",
+          "address": 6648080
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "IsValidLocale",
+          "address": 6648084
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "EnumSystemLocalesA",
+          "address": 6648088
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetLocaleInfoA",
+          "address": 6648092
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "WaitForSingleObject",
+          "address": 6648096
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "WriteFile",
+          "address": 6648100
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetFilePointer",
+          "address": 6648104
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "ReadFile",
+          "address": 6648108
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CreateFileA",
+          "address": 6648112
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "TerminateThread",
+          "address": 6648116
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CloseHandle",
+          "address": 6648120
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "CreateThread",
+          "address": 6648124
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetThreadPriority",
+          "address": 6648128
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetUserDefaultLCID",
+          "address": 6648132
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetCPInfo",
+          "address": 6648136
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetDateFormatA",
+          "address": 6648140
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetTimeFormatA",
+          "address": 6648144
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "IsBadWritePtr",
+          "address": 6648148
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "VirtualAlloc",
+          "address": 6648152
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "VirtualFree",
+          "address": 6648156
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "HeapCreate",
+          "address": 6648160
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "HeapDestroy",
+          "address": 6648164
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetFileType",
+          "address": 6648168
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetHandleCount",
+          "address": 6648172
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetEnvironmentVariableA",
+          "address": 6648176
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetEnvironmentStringsW",
+          "address": 6648180
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FreeEnvironmentStringsW",
+          "address": 6648184
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "ExitProcess",
+          "address": 6648188
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "RtlUnwind",
+          "address": 6648192
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "RaiseException",
+          "address": 6648196
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetSystemTimeAsFileTime",
+          "address": 6648200
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetFileAttributesA",
+          "address": 6648204
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetStartupInfoA",
+          "address": 6648208
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetCommandLineA",
+          "address": 6648212
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "TerminateProcess",
+          "address": 6648216
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetCurrentProcess",
+          "address": 6648220
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "HeapAlloc",
+          "address": 6648224
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "QueryPerformanceCounter",
+          "address": 6648228
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetTickCount",
+          "address": 6648232
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetCurrentThreadId",
+          "address": 6648236
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetCurrentProcessId",
+          "address": 6648240
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "TlsAlloc",
+          "address": 6648244
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetLastError",
+          "address": 6648248
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetCurrentThread",
+          "address": 6648252
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "TlsFree",
+          "address": 6648256
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "TlsSetValue",
+          "address": 6648260
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "TlsGetValue",
+          "address": 6648264
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "SetUnhandledExceptionFilter",
+          "address": 6648268
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "DeleteCriticalSection",
+          "address": 6648272
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "LeaveCriticalSection",
+          "address": 6648276
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FatalAppExitA",
+          "address": 6648280
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "EnterCriticalSection",
+          "address": 6648284
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "HeapReAlloc",
+          "address": 6648288
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "HeapSize",
+          "address": 6648292
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetTimeZoneInformation",
+          "address": 6648296
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetStdHandle",
+          "address": 6648300
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "UnhandledExceptionFilter",
+          "address": 6648304
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "FreeEnvironmentStringsA",
+          "address": 6648308
+        },
+        {
+          "dll": "kernel32.dll",
+          "name": "GetEnvironmentStrings",
+          "address": 6648312
+        },
+        {
+          "dll": "user32.dll",
+          "name": "LoadIconA",
+          "address": 6648320
+        },
+        {
+          "dll": "user32.dll",
+          "name": "SetWindowPos",
+          "address": 6648324
+        },
+        {
+          "dll": "user32.dll",
+          "name": "ShowCursor",
+          "address": 6648328
+        },
+        {
+          "dll": "user32.dll",
+          "name": "MessageBoxA",
+          "address": 6648332
+        },
+        {
+          "dll": "user32.dll",
+          "name": "SetRect",
+          "address": 6648336
+        },
+        {
+          "dll": "user32.dll",
+          "name": "ReleaseDC",
+          "address": 6648340
+        },
+        {
+          "dll": "user32.dll",
+          "name": "GetDC",
+          "address": 6648344
+        },
+        {
+          "dll": "user32.dll",
+          "name": "DestroyWindow",
+          "address": 6648348
+        },
+        {
+          "dll": "user32.dll",
+          "name": "DispatchMessageA",
+          "address": 6648352
+        },
+        {
+          "dll": "user32.dll",
+          "name": "TranslateMessage",
+          "address": 6648356
+        },
+        {
+          "dll": "user32.dll",
+          "name": "GetMessageA",
+          "address": 6648360
+        },
+        {
+          "dll": "user32.dll",
+          "name": "PeekMessageA",
+          "address": 6648364
+        },
+        {
+          "dll": "user32.dll",
+          "name": "UpdateWindow",
+          "address": 6648368
+        },
+        {
+          "dll": "user32.dll",
+          "name": "DrawTextW",
+          "address": 6648372
+        },
+        {
+          "dll": "user32.dll",
+          "name": "DrawTextA",
+          "address": 6648376
+        },
+        {
+          "dll": "user32.dll",
+          "name": "PostQuitMessage",
+          "address": 6648380
+        },
+        {
+          "dll": "user32.dll",
+          "name": "DefWindowProcA",
+          "address": 6648384
+        },
+        {
+          "dll": "user32.dll",
+          "name": "GetSystemMetrics",
+          "address": 6648388
+        },
+        {
+          "dll": "user32.dll",
+          "name": "LoadCursorA",
+          "address": 6648392
+        },
+        {
+          "dll": "user32.dll",
+          "name": "RegisterClassExA",
+          "address": 6648396
+        },
+        {
+          "dll": "user32.dll",
+          "name": "CreateWindowExA",
+          "address": 6648400
+        },
+        {
+          "dll": "user32.dll",
+          "name": "ShowWindow",
+          "address": 6648404
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "CreateCompatibleDC",
+          "address": 6647832
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "CreateDIBSection",
+          "address": 6647836
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "SetBkMode",
+          "address": 6647840
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "SetBkColor",
+          "address": 6647844
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "SetTextColor",
+          "address": 6647848
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "DeleteDC",
+          "address": 6647852
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "CreateFontIndirectA",
+          "address": 6647856
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "GetObjectA",
+          "address": 6647860
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "GetStockObject",
+          "address": 6647864
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "GetGlyphOutlineA",
+          "address": 6647868
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "GetTextMetricsA",
+          "address": 6647872
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "CreateFontA",
+          "address": 6647876
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "SelectObject",
+          "address": 6647880
+        },
+        {
+          "dll": "gdi32.dll",
+          "name": "DeleteObject",
+          "address": 6647884
+        },
+        {
+          "dll": "advapi32.dll",
+          "name": "RegQueryValueExA",
+          "address": 6647808
+        },
+        {
+          "dll": "advapi32.dll",
+          "name": "RegOpenKeyA",
+          "address": 6647812
+        },
+        {
+          "dll": "advapi32.dll",
+          "name": "RegCloseKey",
+          "address": 6647816
+        },
+        {
+          "dll": "ole32.dll",
+          "name": "CoInitialize",
+          "address": 6648452
+        },
+        {
+          "dll": "ole32.dll",
+          "name": "CoCreateInstance",
+          "address": 6648456
+        },
+        {
+          "dll": "ole32.dll",
+          "name": "CoUninitialize",
+          "address": 6648460
+        }
+      ],
+      "versionStrings": [
+        "ver1.11",
+        "ver1.11",
+        "ver1.11"
+      ]
+    }
+  ],
+  "archives": [
+    {
+      "name": "th075.dat",
+      "bytes": 749862735,
+      "sha256": "258d7176fa2596a9f8f0acae1d5704c476fd33f653528dbebff946bf46494e15",
+      "header": "d70000a90d169e29460284d9b8678c8f4fa1d0955f5b3bb6777e0f63da8416de"
+    },
+    {
+      "name": "th075b.dat",
+      "bytes": 149693705,
+      "sha256": "577889faf8f9b2d9b8d69a517e11ddc36759a73e7e410a81fad3f65982ff6177",
+      "header": "250000a90d169e39571082ddb64f8b9c67a7d9991c4a06b01210a51163f367a2"
+    },
+    {
+      "name": "th075bgm.dat",
+      "bytes": 428003126,
+      "sha256": "028653f0d485e55cebc59dedabc6a56b0f9d6f106b4892c51d1f6bf76edd912a",
+      "header": "220013a90f129e38581cac8ce55ac0995aa3bc6b548e2789ec14c973ea9a23d2"
+    },
+    {
+      "name": "th075c.dat",
+      "bytes": 349795026,
+      "sha256": "c1460767115e8f8900f6ce4707da2edb6112290f0abadf2a16d8d50ac6db94d2",
+      "header": "7a0000a90d169e39571082ddb64f8b9c67e58cde155e2ec27779c8644d8306d6"
+    }
+  ]
+}

@@ -1,0 +1,5384 @@
+[
+  {
+    "address": "0x00401000",
+    "size": "27",
+    "proposed_name": "GraphicsResourceClient::GraphicsResourceClient",
+    "module": "GraphicsResourceClient"
+  },
+  {
+    "address": "0x00401020",
+    "size": "239",
+    "proposed_name": "GraphicsResourceClient::~GraphicsResourceClient",
+    "module": "GraphicsResourceClient"
+  },
+  {
+    "address": "0x00401110",
+    "size": "1059",
+    "proposed_name": "Graphics::Initialize",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00401540",
+    "size": "604",
+    "proposed_name": "Graphics::SetDefaultStates",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x004017A0",
+    "size": "245",
+    "proposed_name": "Graphics::ResetDevice",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x004018A0",
+    "size": "340",
+    "proposed_name": "Graphics::ToggleWindowMode",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00401A00",
+    "size": "29",
+    "proposed_name": "Graphics::ShowError",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00401A20",
+    "size": "43",
+    "proposed_name": "Graphics::SetPresentationDestinationRect",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00401A50",
+    "size": "39",
+    "proposed_name": "Graphics::SetTargetViewport",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00401A80",
+    "size": "43",
+    "proposed_name": "Graphics::SetPresentationSourceRect",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00401AB0",
+    "size": "54",
+    "proposed_name": "Graphics::SetClearColor",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00401AF0",
+    "size": "13",
+    "proposed_name": "Graphics::SetColorMultiplier",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00401B00",
+    "size": "31",
+    "proposed_name": "Graphics::SetDrawTransform",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00401B20",
+    "size": "248",
+    "proposed_name": "Graphics::Create16BitTexture",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00401C20",
+    "size": "340",
+    "proposed_name": "Graphics::CreateTexture",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00401D80",
+    "size": "376",
+    "proposed_name": "Graphics::CopyTextureOpaque",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00401F00",
+    "size": "72",
+    "proposed_name": "Graphics::LoadTexture",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00401F50",
+    "size": "495",
+    "proposed_name": "Graphics::SetBlendMode",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00402140",
+    "size": "270",
+    "proposed_name": "Graphics::SetAlphaMode",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00402250",
+    "size": "344",
+    "proposed_name": "Graphics::SetDepthMode",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x004023B0",
+    "size": "386",
+    "proposed_name": "Graphics::SetTextureFilter",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00402540",
+    "size": "161",
+    "proposed_name": "Graphics::SetTextureStage",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x004025F0",
+    "size": "102",
+    "proposed_name": "Graphics::SetPixelShaderMode",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00402660",
+    "size": "36",
+    "proposed_name": "Graphics::BeginFrame",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00402690",
+    "size": "306",
+    "proposed_name": "Graphics::BeginTarget",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x004027D0",
+    "size": "196",
+    "proposed_name": "Graphics::EndFrame",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x004028A0",
+    "size": "13",
+    "proposed_name": "Graphics::SetPresentCallback",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x004028B0",
+    "size": "10",
+    "proposed_name": "Graphics::GetPrimaryTargetTexture",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x004028C0",
+    "size": "37",
+    "proposed_name": "Graphics::GetTargetTexture",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x004028F0",
+    "size": "123",
+    "proposed_name": "Graphics::Present",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00402970",
+    "size": "128",
+    "proposed_name": "Graphics::PresentToWindow",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x004029F0",
+    "size": "857",
+    "proposed_name": "Graphics::DrawTexturedQuad",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00402D50",
+    "size": "1185",
+    "proposed_name": "Graphics::DrawProjectedTexturedQuad",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00403200",
+    "size": "507",
+    "proposed_name": "Graphics::DrawProjectedTriangleStrip",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00403400",
+    "size": "540",
+    "proposed_name": "Graphics::DrawLine",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00403620",
+    "size": "742",
+    "proposed_name": "Graphics::DrawRectangleOutline",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00403910",
+    "size": "632",
+    "proposed_name": "Graphics::DrawFilledRectangle",
+    "module": "Graphics"
+  },
+  {
+    "address": "0x00403B90",
+    "size": "76",
+    "proposed_name": "InputResourceClient::InputResourceClient",
+    "module": "InputResourceClient"
+  },
+  {
+    "address": "0x00403BE0",
+    "size": "278",
+    "proposed_name": "InputResourceClient::~InputResourceClient",
+    "module": "InputResourceClient"
+  },
+  {
+    "address": "0x00403D00",
+    "size": "29",
+    "proposed_name": "Input::ShowError",
+    "module": "Input"
+  },
+  {
+    "address": "0x00403D20",
+    "size": "95",
+    "proposed_name": "Input::Initialize",
+    "module": "Input"
+  },
+  {
+    "address": "0x00403D80",
+    "size": "197",
+    "proposed_name": "Input::CreateKeyboard",
+    "module": "Input"
+  },
+  {
+    "address": "0x00403E50",
+    "size": "90",
+    "proposed_name": "Input::PollKeyboard",
+    "module": "Input"
+  },
+  {
+    "address": "0x00403EB0",
+    "size": "139",
+    "proposed_name": "Input::InitializeJoysticks",
+    "module": "Input"
+  },
+  {
+    "address": "0x00403F40",
+    "size": "200",
+    "proposed_name": "Input::PollJoysticks",
+    "module": "Input"
+  },
+  {
+    "address": "0x00404010",
+    "size": "260",
+    "proposed_name": "Input::EnumerateJoystickDevice",
+    "module": "Input"
+  },
+  {
+    "address": "0x00404120",
+    "size": "107",
+    "proposed_name": "Input::ConfigureJoystickAxis",
+    "module": "Input"
+  },
+  {
+    "address": "0x0040DB10",
+    "size": "51",
+    "proposed_name": "SpriteGeometry::SetFourDwords",
+    "module": "SpriteGeometry"
+  },
+  {
+    "address": "0x0040FA30",
+    "size": "142",
+    "proposed_name": "AnimationState::AdvanceNestedFrameAt0040FA30",
+    "module": "AnimationState"
+  },
+  {
+    "address": "0x0040FAC0",
+    "size": "52",
+    "proposed_name": "AnimationState::ResetPrimaryCounters",
+    "module": "AnimationState"
+  },
+  {
+    "address": "0x0040FB00",
+    "size": "56",
+    "proposed_name": "AnimationState::SetThreeCounters",
+    "module": "AnimationState"
+  },
+  {
+    "address": "0x0040FB40",
+    "size": "43",
+    "proposed_name": "AnimationState::ResetSecondaryCounter",
+    "module": "AnimationState"
+  },
+  {
+    "address": "0x0040FB70",
+    "size": "57",
+    "proposed_name": "GameObject::SetPolarVelocity [provisional role]",
+    "module": "GameObjectMotion"
+  },
+  {
+    "address": "0x0040FBB0",
+    "size": "158",
+    "proposed_name": "SpriteScene::ResetNodeTransform",
+    "module": "SpriteScene"
+  },
+  {
+    "address": "0x0040FC50",
+    "size": "18",
+    "proposed_name": "AnimationState::ClearByte40",
+    "module": "AnimationState"
+  },
+  {
+    "address": "0x0040FC70",
+    "size": "1758",
+    "proposed_name": "SpriteScene::RenderCameraNode",
+    "module": "SpriteScene"
+  },
+  {
+    "address": "0x00410350",
+    "size": "1706",
+    "proposed_name": "SpriteScene::RenderNode",
+    "module": "SpriteScene"
+  },
+  {
+    "address": "0x00410A00",
+    "size": "1268",
+    "proposed_name": "SpriteScene::RenderMirroredNode",
+    "module": "SpriteScene"
+  },
+  {
+    "address": "0x00410F00",
+    "size": "44",
+    "proposed_name": "CharacterAuxObject::ChooseIntegerRangeAt00410F00",
+    "module": "CharacterAuxObject"
+  },
+  {
+    "address": "0x00410F30",
+    "size": "104",
+    "proposed_name": "CommandList::InitializeDefaultsAt00410F30",
+    "module": "GameContextPolicy"
+  },
+  {
+    "address": "0x00410FA0",
+    "size": "22",
+    "proposed_name": "SpriteSequence::SetSamplingModeAt00410FA0",
+    "module": "SpriteSequence"
+  },
+  {
+    "address": "0x00410FE0",
+    "size": "22",
+    "proposed_name": "SpriteSequence::SetColorMaskAt00410FE0",
+    "module": "SpriteSequence"
+  },
+  {
+    "address": "0x00411000",
+    "size": "183",
+    "proposed_name": "SpriteSequence::AppendElement",
+    "module": "SpriteSequence"
+  },
+  {
+    "address": "0x004110C0",
+    "size": "37",
+    "proposed_name": "SpriteSequence::RemoveFrontIfPresentAt004110C0",
+    "module": "SpriteSequence"
+  },
+  {
+    "address": "0x004110F0",
+    "size": "22",
+    "proposed_name": "CommandList::ClearEntriesAt004110F0",
+    "module": "GameContextPolicy"
+  },
+  {
+    "address": "0x00411110",
+    "size": "746",
+    "proposed_name": "SpriteSequence::RenderElements",
+    "module": "SpriteSequence"
+  },
+  {
+    "address": "0x00411400",
+    "size": "250",
+    "proposed_name": "SpriteTransform::BuildQuadFromRect",
+    "module": "SpriteTransform"
+  },
+  {
+    "address": "0x00411500",
+    "size": "191",
+    "proposed_name": "SpriteTransform::TranslateQuad",
+    "module": "SpriteTransform"
+  },
+  {
+    "address": "0x004115C0",
+    "size": "290",
+    "proposed_name": "SpriteTransform::ScaleQuad",
+    "module": "SpriteTransform"
+  },
+  {
+    "address": "0x004116F0",
+    "size": "1212",
+    "proposed_name": "SpriteTransform::RotateQuad",
+    "module": "SpriteTransform"
+  },
+  {
+    "address": "0x00411BB0",
+    "size": "38",
+    "proposed_name": "SpriteScene::CopyVector",
+    "module": "SpriteScene"
+  },
+  {
+    "address": "0x00411BE0",
+    "size": "33",
+    "proposed_name": "SpriteScene::DispatchGlobalDraw",
+    "module": "SpriteScene"
+  },
+  {
+    "address": "0x00412620",
+    "size": "64",
+    "proposed_name": "CameraMotion::ResetParametersAt00412620",
+    "module": "CameraMotion"
+  },
+  {
+    "address": "0x00412660",
+    "size": "96",
+    "proposed_name": "CameraMotion::InitializeAt00412660",
+    "module": "CameraMotion"
+  },
+  {
+    "address": "0x004126C0",
+    "size": "1520",
+    "proposed_name": "CameraMotion::Update",
+    "module": "CameraMotion"
+  },
+  {
+    "address": "0x00412CB0",
+    "size": "13",
+    "proposed_name": "CameraMotion::SetShakeAmplitude",
+    "module": "CameraMotion"
+  },
+  {
+    "address": "0x00412CC0",
+    "size": "39",
+    "proposed_name": "CameraMotion::SetOverride",
+    "module": "CameraMotion"
+  },
+  {
+    "address": "0x00412CF0",
+    "size": "146",
+    "proposed_name": "CameraMotion::Snap",
+    "module": "CameraMotion"
+  },
+  {
+    "address": "0x00412DD0",
+    "size": "128",
+    "proposed_name": "WindowResource::Initialize",
+    "module": "WindowResource"
+  },
+  {
+    "address": "0x00412E50",
+    "size": "83",
+    "proposed_name": "SharedResource::ReleaseInterfaceAndTexturesAt00412E50",
+    "module": "ResourceReleasePolicy"
+  },
+  {
+    "address": "0x00412EB0",
+    "size": "1385",
+    "proposed_name": "OverlayText::DrawBox",
+    "module": "OverlayText"
+  },
+  {
+    "address": "0x00413420",
+    "size": "64",
+    "proposed_name": "FontSurface::ConfigureTextAt00413420",
+    "module": "FontSurface"
+  },
+  {
+    "address": "0x00413460",
+    "size": "398",
+    "proposed_name": "FontSurface::RenderTextToTexture",
+    "module": "FontSurface"
+  },
+  {
+    "address": "0x00413650",
+    "size": "132",
+    "proposed_name": "StaticResourceQueues::InitializeHandleAt00413650",
+    "module": "StaticResourcePolicy"
+  },
+  {
+    "address": "0x004136E0",
+    "size": "161",
+    "proposed_name": "StaticResourceQueues::ReleaseQueuesAndCloseHandleAt004136E0",
+    "module": "StaticResourcePolicy"
+  },
+  {
+    "address": "0x00413790",
+    "size": "225",
+    "proposed_name": "ReplayRecords::BeginCapture",
+    "module": "ReplayRecords"
+  },
+  {
+    "address": "0x00413880",
+    "size": "67",
+    "proposed_name": "StaticResourceQueues::ClearFourQueuesAt00413880",
+    "module": "StaticResourcePolicy"
+  },
+  {
+    "address": "0x004138E0",
+    "size": "375",
+    "proposed_name": "ReplayRecords::FinalizeFile",
+    "module": "ReplayRecords"
+  },
+  {
+    "address": "0x00413A60",
+    "size": "85",
+    "proposed_name": "GameState::ReadSnapshotHeaderAt00413A60",
+    "module": "GameState"
+  },
+  {
+    "address": "0x00413AC0",
+    "size": "792",
+    "proposed_name": "ReplayRecords::LoadRecord",
+    "module": "ReplayRecords"
+  },
+  {
+    "address": "0x00413DE0",
+    "size": "1252",
+    "proposed_name": "ReplayRecords::AppendRecord",
+    "module": "ReplayRecords"
+  },
+  {
+    "address": "0x004142D0",
+    "size": "35",
+    "proposed_name": "ReplayRecords::IsPrimaryInputQueueEmptyAt004142D0",
+    "module": "ReplayRecords"
+  },
+  {
+    "address": "0x00414300",
+    "size": "89",
+    "proposed_name": "ReplayRecords::FindAvailablePath",
+    "module": "ReplayRecords"
+  },
+  {
+    "address": "0x00416640",
+    "size": "910",
+    "proposed_name": "ProgressRecords::InitializeDefaults",
+    "module": "ProgressRecords"
+  },
+  {
+    "address": "0x004169E0",
+    "size": "297",
+    "proposed_name": "ProgressRecords::SaveScoreFile",
+    "module": "ProgressRecords"
+  },
+  {
+    "address": "0x00416B10",
+    "size": "456",
+    "proposed_name": "ProgressRecords::LoadScoreFile",
+    "module": "ProgressRecords"
+  },
+  {
+    "address": "0x00416CE0",
+    "size": "108",
+    "proposed_name": "GameProgress::SetUnlockBitAt00416CE0",
+    "module": "GameProgress"
+  },
+  {
+    "address": "0x00416DC0",
+    "size": "93",
+    "proposed_name": "GameProgress::TestUnlockBitAt00416DC0",
+    "module": "GameProgress"
+  },
+  {
+    "address": "0x00416E20",
+    "size": "84",
+    "proposed_name": "ProfileSelection::StoreWorkingEightBytesAt00416E20",
+    "module": "ProfileSelection"
+  },
+  {
+    "address": "0x00416E80",
+    "size": "85",
+    "proposed_name": "ProfileSelection::LoadWorkingEightBytesAt00416E80",
+    "module": "ProfileSelection"
+  },
+  {
+    "address": "0x00416EE0",
+    "size": "281",
+    "proposed_name": "ProgressRecords::InsertRankedScore",
+    "module": "ProgressRecords"
+  },
+  {
+    "address": "0x00417000",
+    "size": "168",
+    "proposed_name": "GameGlobals::InitializeBlackSurface",
+    "module": "GameGlobals"
+  },
+  {
+    "address": "0x004170D0",
+    "size": "65",
+    "proposed_name": "FrameCapture::CapturePrimaryAt004170D0",
+    "module": "FrameCapture"
+  },
+  {
+    "address": "0x00417120",
+    "size": "31",
+    "proposed_name": "FrameCapture::InstallPresentCallbackAt00417120",
+    "module": "FrameCapture"
+  },
+  {
+    "address": "0x00417140",
+    "size": "28",
+    "proposed_name": "FrameCapture::EnableDirectDrawAt00417140",
+    "module": "FrameCapture"
+  },
+  {
+    "address": "0x00417160",
+    "size": "98",
+    "proposed_name": "FrameCapture::PresentPrimaryAt00417160",
+    "module": "FrameCapture"
+  },
+  {
+    "address": "0x004171D0",
+    "size": "50",
+    "proposed_name": "FrameCapture::DrawIfEnabledAt004171D0",
+    "module": "FrameCapture"
+  },
+  {
+    "address": "0x00417210",
+    "size": "531",
+    "proposed_name": "GameGlobals::Initialize",
+    "module": "GameGlobals"
+  },
+  {
+    "address": "0x00417430",
+    "size": "358",
+    "proposed_name": "GameGlobals::Release",
+    "module": "GameGlobals"
+  },
+  {
+    "address": "0x004175A0",
+    "size": "334",
+    "proposed_name": "GameGlobals::InitializeSound",
+    "module": "GameGlobals"
+  },
+  {
+    "address": "0x004176F0",
+    "size": "3232",
+    "proposed_name": "BattleLoader::LoadCharactersAt004176F0",
+    "module": "BattleLoader"
+  },
+  {
+    "address": "0x004183D0",
+    "size": "3765",
+    "proposed_name": "BattleLoader::LoadStageAt004183D0",
+    "module": "BattleLoader"
+  },
+  {
+    "address": "0x004192F0",
+    "size": "339",
+    "proposed_name": "GameConfig::LoadIni",
+    "module": "GameConfig"
+  },
+  {
+    "address": "0x00419450",
+    "size": "339",
+    "proposed_name": "GameConfig::SaveIni",
+    "module": "GameConfig"
+  },
+  {
+    "address": "0x004195B0",
+    "size": "880",
+    "proposed_name": "GameState::RestoreFromSnapshot",
+    "module": "GameState"
+  },
+  {
+    "address": "0x00419920",
+    "size": "904",
+    "proposed_name": "GameState::SaveSnapshot",
+    "module": "GameState"
+  },
+  {
+    "address": "0x00419CB0",
+    "size": "318",
+    "proposed_name": "Music::PlayTrackByIndex",
+    "module": "Music"
+  },
+  {
+    "address": "0x00419DF0",
+    "size": "27",
+    "proposed_name": "AudioStream::ScheduleTransitionFadeAt00419DF0",
+    "module": "AudioStream"
+  },
+  {
+    "address": "0x00419E10",
+    "size": "671",
+    "proposed_name": "GameProgress::CheckSelectionAt00419E10",
+    "module": "GameProgress"
+  },
+  {
+    "address": "0x0041BF90",
+    "size": "64",
+    "proposed_name": "RasterResources::InitializeSelectedWindowAndEmptyStateAt0041BF90",
+    "module": "RasterResources"
+  },
+  {
+    "address": "0x0041BFD0",
+    "size": "129",
+    "proposed_name": "RasterResources::ReleaseAndResetAt0041BFD0",
+    "module": "RasterResources"
+  },
+  {
+    "address": "0x0041C060",
+    "size": "99",
+    "proposed_name": "TextRasterizer::CreateFontAt0041C060",
+    "module": "TextRasterizer"
+  },
+  {
+    "address": "0x0041C0D0",
+    "size": "83",
+    "proposed_name": "TextRasterizer::SelectFontAt0041C0D0",
+    "module": "TextRasterizer"
+  },
+  {
+    "address": "0x0041C130",
+    "size": "119",
+    "proposed_name": "FontSurface::ReleaseRasterResourcesAt0041C130",
+    "module": "FontSurface"
+  },
+  {
+    "address": "0x0041C1B0",
+    "size": "301",
+    "proposed_name": "FontSurface::LoadGlyphOutline",
+    "module": "FontSurface"
+  },
+  {
+    "address": "0x0041C2E0",
+    "size": "1766",
+    "proposed_name": "FontSurface::RasterizeText",
+    "module": "FontSurface"
+  },
+  {
+    "address": "0x0041C9D0",
+    "size": "85",
+    "proposed_name": "FontSurface::DecodePackedTextUnitAt0041C9D0",
+    "module": "FontSurface"
+  },
+  {
+    "address": "0x0041CA80",
+    "size": "96",
+    "proposed_name": "TextRasterizer::DecodeHexDigit",
+    "module": "TextRasterizer"
+  },
+  {
+    "address": "0x0041CAE0",
+    "size": "82",
+    "proposed_name": "MathLookup::BuildCosTableAt0041CAE0",
+    "module": "MathLookup"
+  },
+  {
+    "address": "0x0041CB40",
+    "size": "43",
+    "proposed_name": "MathLookup::ReadCosTableAt0041CB40",
+    "module": "MathLookup"
+  },
+  {
+    "address": "0x0041CB70",
+    "size": "49",
+    "proposed_name": "MathLookup::ReadPhaseTableAt0041CB70",
+    "module": "MathLookup"
+  },
+  {
+    "address": "0x0041CBB0",
+    "size": "73",
+    "proposed_name": "MathLookup::ReadRatioAt0041CBB0",
+    "module": "MathLookup"
+  },
+  {
+    "address": "0x0041CE10",
+    "size": "56",
+    "proposed_name": "ArchiveCatalog::BeginUseAt0041CE10",
+    "module": "ArchiveCatalog"
+  },
+  {
+    "address": "0x0041CE50",
+    "size": "171",
+    "proposed_name": "ArchiveCatalog::Release",
+    "module": "ArchiveCatalog"
+  },
+  {
+    "address": "0x0041CF00",
+    "size": "113",
+    "proposed_name": "ResourceLookup::FindByNameAt0041CF00",
+    "module": "ResourceLookup"
+  },
+  {
+    "address": "0x0041CF80",
+    "size": "245",
+    "proposed_name": "ArchiveCatalog::OpenAndRegister",
+    "module": "ArchiveCatalog"
+  },
+  {
+    "address": "0x0041D080",
+    "size": "264",
+    "proposed_name": "ArchiveCatalog::CloseNamed",
+    "module": "ArchiveCatalog"
+  },
+  {
+    "address": "0x0041D190",
+    "size": "90",
+    "proposed_name": "DataArchive::InitializeStateAndClearListAt0041D190",
+    "module": "DataArchive"
+  },
+  {
+    "address": "0x0041D1F0",
+    "size": "98",
+    "proposed_name": "ArchiveResource::CloseHandleAndClearEntriesAt0041D1F0",
+    "module": "ResourceReleasePolicy"
+  },
+  {
+    "address": "0x0041D260",
+    "size": "686",
+    "proposed_name": "DataArchive::Write",
+    "module": "DataArchive"
+  },
+  {
+    "address": "0x0041D510",
+    "size": "429",
+    "proposed_name": "DataArchive::OpenAndReadIndex",
+    "module": "DataArchive"
+  },
+  {
+    "address": "0x0041D6C0",
+    "size": "133",
+    "proposed_name": "DataArchive::AppendReadableFileAt0041D6C0",
+    "module": "DataArchive"
+  },
+  {
+    "address": "0x0041D750",
+    "size": "164",
+    "proposed_name": "DataArchive::SeekNamedEntry",
+    "module": "DataArchive"
+  },
+  {
+    "address": "0x0041D800",
+    "size": "180",
+    "proposed_name": "DataArchive::SeekNamedEntryWithSize",
+    "module": "DataArchive"
+  },
+  {
+    "address": "0x00420440",
+    "size": "130",
+    "proposed_name": "FighterScript::InitializeAt00420440",
+    "module": "FighterScript"
+  },
+  {
+    "address": "0x004204D0",
+    "size": "84",
+    "proposed_name": "FighterResources::ClearMemberBeforeDestructionAt004204D0",
+    "module": "FighterResources"
+  },
+  {
+    "address": "0x00420530",
+    "size": "53",
+    "proposed_name": "FighterScript::GetByteFieldAt00420530",
+    "module": "FighterScript"
+  },
+  {
+    "address": "0x00420570",
+    "size": "55",
+    "proposed_name": "FighterScript::GetWordFieldAt00420570",
+    "module": "FighterScript"
+  },
+  {
+    "address": "0x004205B0",
+    "size": "54",
+    "proposed_name": "FighterScript::GetDwordFieldAt004205B0",
+    "module": "FighterScript"
+  },
+  {
+    "address": "0x004205F0",
+    "size": "217",
+    "proposed_name": "FighterScript::LoadArchiveEntryAt004205F0",
+    "module": "FighterScript"
+  },
+  {
+    "address": "0x004206D0",
+    "size": "418",
+    "proposed_name": "AssetFile::LoadAndTransform",
+    "module": "AssetFile"
+  },
+  {
+    "address": "0x00420880",
+    "size": "2301",
+    "proposed_name": "FighterScript::ParseAt00420880",
+    "module": "FighterScript"
+  },
+  {
+    "address": "0x00421200",
+    "size": "24",
+    "proposed_name": "FighterScript::InitializeRecordBuffer",
+    "module": "FighterScript"
+  },
+  {
+    "address": "0x00421220",
+    "size": "43",
+    "proposed_name": "FighterScript::ReleaseRecordBuffer",
+    "module": "FighterScript"
+  },
+  {
+    "address": "0x004239C0",
+    "size": "34",
+    "proposed_name": "EventQueue::LocalAcquireReleaseAt004239C0",
+    "module": "EventQueue"
+  },
+  {
+    "address": "0x004239F0",
+    "size": "155",
+    "proposed_name": "EventQueue::AcquireSharedServiceAt004239F0",
+    "module": "EventQueue"
+  },
+  {
+    "address": "0x00423A90",
+    "size": "143",
+    "proposed_name": "EventQueue::ReleaseSharedServiceAt00423A90",
+    "module": "EventQueue"
+  },
+  {
+    "address": "0x00423B40",
+    "size": "273",
+    "proposed_name": "EventQueue::RunWorkerAt00423B40",
+    "module": "EventQueue"
+  },
+  {
+    "address": "0x00423C60",
+    "size": "32",
+    "proposed_name": "SetClampedGameValue",
+    "module": "GameState"
+  },
+  {
+    "address": "0x00423C80",
+    "size": "96",
+    "proposed_name": "EventQueue::EnqueueUniqueAt00423C80",
+    "module": "EventQueue"
+  },
+  {
+    "address": "0x00424E00",
+    "size": "308",
+    "proposed_name": "BattleEndScene::Initialize",
+    "module": "BattleEndScene"
+  },
+  {
+    "address": "0x00424F40",
+    "size": "28",
+    "proposed_name": "BattleEndScene::DestroyAt00424F40",
+    "module": "BattleEndScene"
+  },
+  {
+    "address": "0x00424F60",
+    "size": "152",
+    "proposed_name": "BattleEndScene::Update",
+    "module": "BattleEndScene"
+  },
+  {
+    "address": "0x00425000",
+    "size": "180",
+    "proposed_name": "BattleEndScene::Draw",
+    "module": "BattleEndScene"
+  },
+  {
+    "address": "0x004250C0",
+    "size": "107",
+    "proposed_name": "BattleEndScene::PollInputAt004250C0",
+    "module": "BattleEndScene"
+  },
+  {
+    "address": "0x00425130",
+    "size": "92",
+    "proposed_name": "GameProgress::IncrementSelectedRecordAt00425130",
+    "module": "GameProgress"
+  },
+  {
+    "address": "0x004251F0",
+    "size": "181",
+    "proposed_name": "LoadingScene::Initialize",
+    "module": "LoadingScene"
+  },
+  {
+    "address": "0x004252B0",
+    "size": "127",
+    "proposed_name": "LoadingScene::ReleaseSceneResourceAt004252B0",
+    "module": "LoadingScene"
+  },
+  {
+    "address": "0x00425330",
+    "size": "84",
+    "proposed_name": "LoadingScene::AdvanceAt00425330",
+    "module": "SceneRuntime"
+  },
+  {
+    "address": "0x00425390",
+    "size": "156",
+    "proposed_name": "LoadingScene::Draw",
+    "module": "LoadingScene"
+  },
+  {
+    "address": "0x00425490",
+    "size": "183",
+    "proposed_name": "LogoScene::Initialize",
+    "module": "LogoScene"
+  },
+  {
+    "address": "0x00425550",
+    "size": "127",
+    "proposed_name": "LogoScene::ReleaseSceneResourceAt00425550",
+    "module": "LogoScene"
+  },
+  {
+    "address": "0x004255D0",
+    "size": "78",
+    "proposed_name": "TimedScene::AdvanceAt004255D0",
+    "module": "SceneRuntime"
+  },
+  {
+    "address": "0x00425620",
+    "size": "156",
+    "proposed_name": "LogoScene::Draw",
+    "module": "LogoScene"
+  },
+  {
+    "address": "0x004256C0",
+    "size": "96",
+    "proposed_name": "SceneInput::PollAt004256C0",
+    "module": "SceneRuntime"
+  },
+  {
+    "address": "0x00425750",
+    "size": "372",
+    "proposed_name": "MusicRoomScene::Initialize",
+    "module": "MusicRoomScene"
+  },
+  {
+    "address": "0x004258D0",
+    "size": "244",
+    "proposed_name": "MusicRoomScene::ReleaseTexturesRecordsAndAudioAt004258D0",
+    "module": "MusicRoomScene"
+  },
+  {
+    "address": "0x004259D0",
+    "size": "675",
+    "proposed_name": "MusicRoomScene::UpdateSelection",
+    "module": "MusicRoomScene"
+  },
+  {
+    "address": "0x00425C80",
+    "size": "2429",
+    "proposed_name": "MusicRoomScene::RenderList",
+    "module": "MusicRoomScene"
+  },
+  {
+    "address": "0x00426600",
+    "size": "106",
+    "proposed_name": "SceneInput::PollTwoMappingsAt00426600",
+    "module": "SceneInput"
+  },
+  {
+    "address": "0x00426670",
+    "size": "555",
+    "proposed_name": "MusicRoomScene::RenderTrackCatalogText",
+    "module": "MusicRoomScene"
+  },
+  {
+    "address": "0x004268A0",
+    "size": "452",
+    "proposed_name": "MusicRoomScene::RenderSelectedTitle",
+    "module": "MusicRoomScene"
+  },
+  {
+    "address": "0x00426A70",
+    "size": "860",
+    "proposed_name": "MusicRoomScene::RenderSelectedDetails",
+    "module": "MusicRoomScene"
+  },
+  {
+    "address": "0x00426DD0",
+    "size": "916",
+    "proposed_name": "MusicRoom::LoadCatalogAt00426DD0",
+    "module": "MusicRoom"
+  },
+  {
+    "address": "0x00427180",
+    "size": "377",
+    "proposed_name": "MusicRoomScene::DrawNumber",
+    "module": "MusicRoomScene"
+  },
+  {
+    "address": "0x00427300",
+    "size": "298",
+    "proposed_name": "MusicRoom::EncodeCatalogFileAt00427300",
+    "module": "MusicRoom"
+  },
+  {
+    "address": "0x00427430",
+    "size": "50",
+    "proposed_name": "MusicRoomRecord::InitializeAt00427430",
+    "module": "MusicRoomRecord"
+  },
+  {
+    "address": "0x00427470",
+    "size": "82",
+    "proposed_name": "MusicRoomRecord::ReleaseBuffersAt00427470",
+    "module": "MusicRoomRecord"
+  },
+  {
+    "address": "0x00427500",
+    "size": "204",
+    "proposed_name": "SceneText::BuildRectangleCornersAt00427500",
+    "module": "SceneText"
+  },
+  {
+    "address": "0x004275D0",
+    "size": "219",
+    "proposed_name": "OpeningScene::Initialize",
+    "module": "OpeningScene"
+  },
+  {
+    "address": "0x004276B0",
+    "size": "127",
+    "proposed_name": "OpeningScene::ReleaseResources",
+    "module": "OpeningScene"
+  },
+  {
+    "address": "0x00427730",
+    "size": "99",
+    "proposed_name": "OpeningScene::Advance",
+    "module": "OpeningScene"
+  },
+  {
+    "address": "0x004277A0",
+    "size": "5339",
+    "proposed_name": "OpeningScene::RenderTimeline",
+    "module": "OpeningScene"
+  },
+  {
+    "address": "0x00428C80",
+    "size": "106",
+    "proposed_name": "OpeningScene::ProcessInput",
+    "module": "OpeningScene"
+  },
+  {
+    "address": "0x00428D60",
+    "size": "251",
+    "proposed_name": "OptionsScene::InitializeAt00428D60",
+    "module": "OptionsScene"
+  },
+  {
+    "address": "0x00428E60",
+    "size": "154",
+    "proposed_name": "OptionsScene::ReleaseSceneTextureAndResourceAt00428E60",
+    "module": "OptionsScene"
+  },
+  {
+    "address": "0x00428F00",
+    "size": "951",
+    "proposed_name": "OptionsScene::AdvanceAt00428F00",
+    "module": "OptionsScene"
+  },
+  {
+    "address": "0x004292E0",
+    "size": "2759",
+    "proposed_name": "SceneRenderer::DrawAt004292E0",
+    "module": "SceneRenderer"
+  },
+  {
+    "address": "0x00429DC0",
+    "size": "310",
+    "proposed_name": "ReplayScene::PollInput",
+    "module": "ReplayScene"
+  },
+  {
+    "address": "0x00429F00",
+    "size": "563",
+    "proposed_name": "OptionsScene::ApplySelectionAt00429F00",
+    "module": "OptionsScene"
+  },
+  {
+    "address": "0x0042A180",
+    "size": "315",
+    "proposed_name": "ReplayScene::Initialize",
+    "module": "ReplayScene"
+  },
+  {
+    "address": "0x0042A2C0",
+    "size": "127",
+    "proposed_name": "ReplayScene::ReleaseSceneResourceAt0042A2C0",
+    "module": "ReplayScene"
+  },
+  {
+    "address": "0x0042A340",
+    "size": "541",
+    "proposed_name": "NameEntryScene::UpdatePlayer",
+    "module": "NameEntryScene"
+  },
+  {
+    "address": "0x0042A560",
+    "size": "1581",
+    "proposed_name": "NameEntryScene::RenderPlayer",
+    "module": "NameEntryScene"
+  },
+  {
+    "address": "0x0042AB90",
+    "size": "722",
+    "proposed_name": "NameEntryScene::PollPlayerInput",
+    "module": "NameEntryScene"
+  },
+  {
+    "address": "0x0042AE70",
+    "size": "377",
+    "proposed_name": "ReplayScene::DrawNumber",
+    "module": "ReplayScene"
+  },
+  {
+    "address": "0x0042AFF0",
+    "size": "280",
+    "proposed_name": "SceneText::DrawNameGlyphsAt0042AFF0",
+    "module": "SceneText"
+  },
+  {
+    "address": "0x0042B110",
+    "size": "169",
+    "proposed_name": "NameEntryScene::DrawDecimalGlyphLabelAt0042B110",
+    "module": "NameEntryScene"
+  },
+  {
+    "address": "0x0042B1F0",
+    "size": "260",
+    "proposed_name": "NameEntryScene::InitializeAt0042B1F0",
+    "module": "NameEntryScene"
+  },
+  {
+    "address": "0x0042B300",
+    "size": "127",
+    "proposed_name": "NameEntryScene::ReleaseSceneResourceAt0042B300",
+    "module": "NameEntryScene"
+  },
+  {
+    "address": "0x0042B380",
+    "size": "494",
+    "proposed_name": "NameEntryScene::UpdateShared",
+    "module": "NameEntryScene"
+  },
+  {
+    "address": "0x0042B570",
+    "size": "1875",
+    "proposed_name": "NameEntryScene::RenderShared",
+    "module": "NameEntryScene"
+  },
+  {
+    "address": "0x0042BCD0",
+    "size": "764",
+    "proposed_name": "NameEntryScene::PollSharedInput",
+    "module": "NameEntryScene"
+  },
+  {
+    "address": "0x0042BFD0",
+    "size": "377",
+    "proposed_name": "ReplayScene::DrawSlotNumber",
+    "module": "ReplayScene"
+  },
+  {
+    "address": "0x0042C150",
+    "size": "280",
+    "proposed_name": "SceneText::DrawNameGlyphsAt0042C150",
+    "module": "SceneText"
+  },
+  {
+    "address": "0x0042C270",
+    "size": "303",
+    "proposed_name": "ReplayScene::DrawSaveFilename",
+    "module": "ReplayScene"
+  },
+  {
+    "address": "0x0042C3D0",
+    "size": "395",
+    "proposed_name": "ReplayPlaybackScene::Initialize",
+    "module": "ReplayPlaybackScene"
+  },
+  {
+    "address": "0x0042C560",
+    "size": "265",
+    "proposed_name": "ReplayBrowserScene::DestroyOwnedReplayFilesAt0042C560",
+    "module": "ReplayBrowserScene"
+  },
+  {
+    "address": "0x0042C670",
+    "size": "1005",
+    "proposed_name": "ReplayBrowserScene::UpdateSelection",
+    "module": "ReplayBrowserScene"
+  },
+  {
+    "address": "0x0042CA60",
+    "size": "2246",
+    "proposed_name": "ReplayBrowserScene::RenderList",
+    "module": "ReplayBrowserScene"
+  },
+  {
+    "address": "0x0042D330",
+    "size": "310",
+    "proposed_name": "ReplayScene::PollPlaybackInput",
+    "module": "ReplayScene"
+  },
+  {
+    "address": "0x0042D470",
+    "size": "613",
+    "proposed_name": "ReplayBrowserScene::ScanFiles",
+    "module": "ReplayBrowserScene"
+  },
+  {
+    "address": "0x0042D6E0",
+    "size": "377",
+    "proposed_name": "ReplayScene::DrawMetadataNumber",
+    "module": "ReplayScene"
+  },
+  {
+    "address": "0x0042D860",
+    "size": "280",
+    "proposed_name": "SceneText::DrawNameGlyphsAt0042D860",
+    "module": "SceneText"
+  },
+  {
+    "address": "0x0042D980",
+    "size": "315",
+    "proposed_name": "ReplayScene::DrawReplayFilename",
+    "module": "ReplayScene"
+  },
+  {
+    "address": "0x0042E640",
+    "size": "547",
+    "proposed_name": "ResultScene::Initialize",
+    "module": "ResultScene"
+  },
+  {
+    "address": "0x0042E870",
+    "size": "127",
+    "proposed_name": "ResultScene::ReleaseSceneResourceAt0042E870",
+    "module": "ResultScene"
+  },
+  {
+    "address": "0x0042E8F0",
+    "size": "1529",
+    "proposed_name": "SceneController::AdvanceAt0042E8F0",
+    "module": "SceneController"
+  },
+  {
+    "address": "0x0042EF10",
+    "size": "1344",
+    "proposed_name": "ResultScene::RenderCounters",
+    "module": "ResultScene"
+  },
+  {
+    "address": "0x0042F450",
+    "size": "220",
+    "proposed_name": "ResultListScene::PollInput",
+    "module": "ResultListScene"
+  },
+  {
+    "address": "0x0042F530",
+    "size": "423",
+    "proposed_name": "ResultScene::DrawDecimalDigits",
+    "module": "ResultScene"
+  },
+  {
+    "address": "0x0042F710",
+    "size": "366",
+    "proposed_name": "ResultListScene::Initialize",
+    "module": "ResultListScene"
+  },
+  {
+    "address": "0x0042F880",
+    "size": "229",
+    "proposed_name": "ResultListScene::Release",
+    "module": "ResultListScene"
+  },
+  {
+    "address": "0x0042F970",
+    "size": "1803",
+    "proposed_name": "ResultScene::UpdateSelection",
+    "module": "ResultScene"
+  },
+  {
+    "address": "0x00430080",
+    "size": "3314",
+    "proposed_name": "ResultScene::RenderRecordPage",
+    "module": "ResultScene"
+  },
+  {
+    "address": "0x00430D80",
+    "size": "343",
+    "proposed_name": "ResultScene::PollInput",
+    "module": "ResultScene"
+  },
+  {
+    "address": "0x00430EE0",
+    "size": "398",
+    "proposed_name": "ResultScene::LoadSelectedCharacterResources",
+    "module": "ResultScene"
+  },
+  {
+    "address": "0x00431070",
+    "size": "721",
+    "proposed_name": "ResultScene::BuildRecordPage",
+    "module": "ResultScene"
+  },
+  {
+    "address": "0x00431350",
+    "size": "664",
+    "proposed_name": "ResultScene::BuildCounterPage",
+    "module": "ResultScene"
+  },
+  {
+    "address": "0x004315F0",
+    "size": "377",
+    "proposed_name": "ResultScene::DrawCounter",
+    "module": "ResultScene"
+  },
+  {
+    "address": "0x00431770",
+    "size": "280",
+    "proposed_name": "ResultScene::DrawNameGlyphs",
+    "module": "ResultScene"
+  },
+  {
+    "address": "0x00431890",
+    "size": "169",
+    "proposed_name": "ResultScene::DrawRankLabel",
+    "module": "ResultScene"
+  },
+  {
+    "address": "0x00431940",
+    "size": "112",
+    "proposed_name": "CardList::ClearEntries",
+    "module": "CardList"
+  },
+  {
+    "address": "0x004319B0",
+    "size": "429",
+    "proposed_name": "CardList::LoadCharacterFile",
+    "module": "CardList"
+  },
+  {
+    "address": "0x00431B60",
+    "size": "503",
+    "proposed_name": "CardList::LoadEncodedCharacterFile",
+    "module": "CardList"
+  },
+  {
+    "address": "0x00431D60",
+    "size": "432",
+    "proposed_name": "CardList::EncodeCharacterFile",
+    "module": "CardList"
+  },
+  {
+    "address": "0x00431F40",
+    "size": "31",
+    "proposed_name": "SceneBase::ReleaseGameGlobalsAt00431F40",
+    "module": "SceneBase"
+  },
+  {
+    "address": "0x00431F60",
+    "size": "663",
+    "proposed_name": "SceneTransition::DispatchMode",
+    "module": "SceneTransition"
+  },
+  {
+    "address": "0x00432200",
+    "size": "175",
+    "proposed_name": "SceneTransition::RenderPattern01",
+    "module": "SceneTransition"
+  },
+  {
+    "address": "0x004322B0",
+    "size": "172",
+    "proposed_name": "SceneTransition::RenderPattern02",
+    "module": "SceneTransition"
+  },
+  {
+    "address": "0x00432360",
+    "size": "168",
+    "proposed_name": "SceneTransition::RenderPattern03",
+    "module": "SceneTransition"
+  },
+  {
+    "address": "0x00432410",
+    "size": "189",
+    "proposed_name": "SceneTransition::RenderPattern04",
+    "module": "SceneTransition"
+  },
+  {
+    "address": "0x004324D0",
+    "size": "389",
+    "proposed_name": "SceneTransition::RenderPattern05",
+    "module": "SceneTransition"
+  },
+  {
+    "address": "0x00432660",
+    "size": "396",
+    "proposed_name": "SceneTransition::RenderPattern06",
+    "module": "SceneTransition"
+  },
+  {
+    "address": "0x004327F0",
+    "size": "355",
+    "proposed_name": "SceneTransition::RenderPattern07",
+    "module": "SceneTransition"
+  },
+  {
+    "address": "0x00432960",
+    "size": "386",
+    "proposed_name": "SceneTransition::RenderPattern08",
+    "module": "SceneTransition"
+  },
+  {
+    "address": "0x00432AF0",
+    "size": "325",
+    "proposed_name": "SceneTransition::RenderPattern09",
+    "module": "SceneTransition"
+  },
+  {
+    "address": "0x00432C40",
+    "size": "300",
+    "proposed_name": "SceneTransition::RenderPattern10",
+    "module": "SceneTransition"
+  },
+  {
+    "address": "0x00432D70",
+    "size": "297",
+    "proposed_name": "SceneTransition::RenderPattern11",
+    "module": "SceneTransition"
+  },
+  {
+    "address": "0x00432EA0",
+    "size": "668",
+    "proposed_name": "CharacterSelectScene::Initialize",
+    "module": "CharacterSelectScene"
+  },
+  {
+    "address": "0x00433140",
+    "size": "231",
+    "proposed_name": "SceneObject::ReleaseAt00433140",
+    "module": "SceneObject"
+  },
+  {
+    "address": "0x00433230",
+    "size": "569",
+    "proposed_name": "CharacterSelectScene::ResetSelection",
+    "module": "CharacterSelectScene"
+  },
+  {
+    "address": "0x00433470",
+    "size": "1442",
+    "proposed_name": "CharacterSelectScene::Advance",
+    "module": "CharacterSelectScene"
+  },
+  {
+    "address": "0x00433A40",
+    "size": "404",
+    "proposed_name": "CharacterSelectScene::ProcessPlayerOptions",
+    "module": "CharacterSelectScene"
+  },
+  {
+    "address": "0x00433BE0",
+    "size": "264",
+    "proposed_name": "CharacterSelectScene::ProcessSubselection",
+    "module": "CharacterSelectScene"
+  },
+  {
+    "address": "0x00433CF0",
+    "size": "3045",
+    "proposed_name": "CharacterSelectScene::UpdatePlayerSelection",
+    "module": "CharacterSelectScene"
+  },
+  {
+    "address": "0x004348E0",
+    "size": "1029",
+    "proposed_name": "CharacterSelectScene::UpdatePlayerChoice",
+    "module": "CharacterSelectScene"
+  },
+  {
+    "address": "0x00434CF0",
+    "size": "995",
+    "proposed_name": "CharacterSelectScene::UpdatePlayerConfirmation",
+    "module": "CharacterSelectScene"
+  },
+  {
+    "address": "0x004350E0",
+    "size": "1923",
+    "proposed_name": "CharacterSelectScene::UpdateChoiceAnimation",
+    "module": "CharacterSelectScene"
+  },
+  {
+    "address": "0x00435870",
+    "size": "497",
+    "proposed_name": "CharacterSelectScene::UpdateCancelAnimation",
+    "module": "CharacterSelectScene"
+  },
+  {
+    "address": "0x00435A70",
+    "size": "6404",
+    "proposed_name": "BattleScene::RenderBackground",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x00437380",
+    "size": "3769",
+    "proposed_name": "CharacterSelectScene::RenderCharacterCards",
+    "module": "CharacterSelectScene"
+  },
+  {
+    "address": "0x00438240",
+    "size": "1072",
+    "proposed_name": "CharacterSelectScene::RenderPlayerOptions",
+    "module": "CharacterSelectScene"
+  },
+  {
+    "address": "0x00438670",
+    "size": "596",
+    "proposed_name": "CharacterSelectScene::RenderSinglePlayerOptions",
+    "module": "CharacterSelectScene"
+  },
+  {
+    "address": "0x004388D0",
+    "size": "346",
+    "proposed_name": "CharacterSelectScene::PollInput",
+    "module": "CharacterSelectScene"
+  },
+  {
+    "address": "0x00438A80",
+    "size": "53",
+    "proposed_name": "ProgressRecords::GetSelectedCardValue",
+    "module": "ProgressRecords"
+  },
+  {
+    "address": "0x00438AC0",
+    "size": "224",
+    "proposed_name": "StaffRollScene::Initialize",
+    "module": "StaffRollScene"
+  },
+  {
+    "address": "0x00438BA0",
+    "size": "127",
+    "proposed_name": "StaffRollScene::DestroyAt00438BA0",
+    "module": "StaffRollScene"
+  },
+  {
+    "address": "0x00438C20",
+    "size": "208",
+    "proposed_name": "StaffRollScene::Advance",
+    "module": "StaffRollScene"
+  },
+  {
+    "address": "0x00438D00",
+    "size": "4749",
+    "proposed_name": "StaffRollScene::RenderTimeline",
+    "module": "StaffRollScene"
+  },
+  {
+    "address": "0x00439F90",
+    "size": "96",
+    "proposed_name": "StaffRollScene::PollSkipInput",
+    "module": "StaffRollScene"
+  },
+  {
+    "address": "0x0043A020",
+    "size": "435",
+    "proposed_name": "TitleScene::Initialize",
+    "module": "TitleScene"
+  },
+  {
+    "address": "0x0043A1E0",
+    "size": "142",
+    "proposed_name": "TitleScene::DestroyAt0043A1E0",
+    "module": "TitleScene"
+  },
+  {
+    "address": "0x0043A270",
+    "size": "1273",
+    "proposed_name": "TitleScene::Advance",
+    "module": "TitleScene"
+  },
+  {
+    "address": "0x0043A7A0",
+    "size": "1089",
+    "proposed_name": "TitleScene::RenderMenu",
+    "module": "TitleScene"
+  },
+  {
+    "address": "0x0043ABF0",
+    "size": "228",
+    "proposed_name": "TitleScene::PollMenuInput",
+    "module": "TitleScene"
+  },
+  {
+    "address": "0x0043AD10",
+    "size": "922",
+    "proposed_name": "BattleScene::Initialize",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x0043B0B0",
+    "size": "248",
+    "proposed_name": "SceneObject::ReleaseAt0043B0B0",
+    "module": "SceneObject"
+  },
+  {
+    "address": "0x0043B1B0",
+    "size": "859",
+    "proposed_name": "BattleScene::UpdateFrame",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x0043B510",
+    "size": "179",
+    "proposed_name": "BattleScene::UpdatePlayerCounters",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x0043B5D0",
+    "size": "16",
+    "proposed_name": "BattleScene::PresentAt0043B5D0",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x0043B610",
+    "size": "4764",
+    "proposed_name": "BattleScene::AdvanceState",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x0043C8F0",
+    "size": "55",
+    "proposed_name": "BattleScene::ResolveRoundEndMode",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x0043C930",
+    "size": "1150",
+    "proposed_name": "BattleScene::ResolveKnockout",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x0043CDB0",
+    "size": "599",
+    "proposed_name": "BattleScene::EnterRoundEnd",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x0043D010",
+    "size": "847",
+    "proposed_name": "BattleScene::UpdateRoundTransition",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x0043D360",
+    "size": "66",
+    "proposed_name": "ProgressRecords::IncrementModeCounter",
+    "module": "ProgressRecords"
+  },
+  {
+    "address": "0x0043D3B0",
+    "size": "43",
+    "proposed_name": "ProgressRecords::SetCardValue",
+    "module": "ProgressRecords"
+  },
+  {
+    "address": "0x0043D3E0",
+    "size": "79",
+    "proposed_name": "ProgressRecords::IncrementCardCounter",
+    "module": "ProgressRecords"
+  },
+  {
+    "address": "0x0043D430",
+    "size": "44",
+    "proposed_name": "ProgressRecords::MarkCardFlag",
+    "module": "ProgressRecords"
+  },
+  {
+    "address": "0x0043D460",
+    "size": "40",
+    "proposed_name": "ProgressRecords::GetCardValue",
+    "module": "ProgressRecords"
+  },
+  {
+    "address": "0x0043D490",
+    "size": "59",
+    "proposed_name": "BattleHud::InitializeComboCounter",
+    "module": "BattleHud"
+  },
+  {
+    "address": "0x0043D4D0",
+    "size": "154",
+    "proposed_name": "BattleHud::UpdateComboCounter",
+    "module": "BattleHud"
+  },
+  {
+    "address": "0x0043D570",
+    "size": "1115",
+    "proposed_name": "BattleHud::RenderComboCounter",
+    "module": "BattleHud"
+  },
+  {
+    "address": "0x0043D9D0",
+    "size": "1637",
+    "proposed_name": "BattleScene::RenderFrame",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x0043E040",
+    "size": "9841",
+    "proposed_name": "BattleHud::Render",
+    "module": "BattleHud"
+  },
+  {
+    "address": "0x004406C0",
+    "size": "1081",
+    "proposed_name": "BattleScene::DrawDamageFlash",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x00440B00",
+    "size": "78",
+    "proposed_name": "BattleHud::DrawSelectedNotice",
+    "module": "BattleHud"
+  },
+  {
+    "address": "0x00440B50",
+    "size": "3510",
+    "proposed_name": "BattleHud::RenderStatusEffects",
+    "module": "BattleHud"
+  },
+  {
+    "address": "0x00441910",
+    "size": "1414",
+    "proposed_name": "BattleScene::RenderEndOverlay",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x00441EA0",
+    "size": "303",
+    "proposed_name": "BattleScene::RenderRoundBanner",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x00441FE0",
+    "size": "44",
+    "proposed_name": "GameProgress::ReadSelectedWord268At00441FE0",
+    "module": "GameProgress"
+  },
+  {
+    "address": "0x00442010",
+    "size": "44",
+    "proposed_name": "GameProgress::ReadSelectedWord394At00442010",
+    "module": "GameProgress"
+  },
+  {
+    "address": "0x00442400",
+    "size": "217",
+    "proposed_name": "CollisionBounds::IncludePair",
+    "module": "BattleCollision"
+  },
+  {
+    "address": "0x004424E0",
+    "size": "96",
+    "proposed_name": "BattleState::SpawnMidpointEffectAt004424E0",
+    "module": "EffectForwarders"
+  },
+  {
+    "address": "0x00442540",
+    "size": "51",
+    "proposed_name": "BattleCollision::ResetBoundsAt00442540",
+    "module": "BattleCollision"
+  },
+  {
+    "address": "0x00442580",
+    "size": "1249",
+    "proposed_name": "BattleCombat::ResolveActiveCollisions",
+    "module": "BattleCombat"
+  },
+  {
+    "address": "0x00442A70",
+    "size": "975",
+    "proposed_name": "BattleCombat::ResolveAttackHitboxes",
+    "module": "BattleCombat"
+  },
+  {
+    "address": "0x00442E40",
+    "size": "897",
+    "proposed_name": "BattleCombat::ResolveBodyContact",
+    "module": "BattleCombat"
+  },
+  {
+    "address": "0x004431D0",
+    "size": "1982",
+    "proposed_name": "BattleState::ProcessAt004431D0",
+    "module": "BattleState"
+  },
+  {
+    "address": "0x004439A0",
+    "size": "1185",
+    "proposed_name": "BattleCombat::ApplyHitResponseAt004439A0",
+    "module": "BattleCombat"
+  },
+  {
+    "address": "0x00443E90",
+    "size": "304",
+    "proposed_name": "BattleCollision::ApplyImpact",
+    "module": "BattleCollision"
+  },
+  {
+    "address": "0x00443FC0",
+    "size": "88",
+    "proposed_name": "BattleState::StartHitSequence",
+    "module": "BattleState"
+  },
+  {
+    "address": "0x00444020",
+    "size": "898",
+    "proposed_name": "BattleCombat::ApplyAttackHit",
+    "module": "BattleCombat"
+  },
+  {
+    "address": "0x004443B0",
+    "size": "664",
+    "proposed_name": "BattleCombat::ApplyGuardHit",
+    "module": "BattleCombat"
+  },
+  {
+    "address": "0x00444650",
+    "size": "230",
+    "proposed_name": "BattleState::ApplyReactionModeAt00444650 [provisional]",
+    "module": "BattleState"
+  },
+  {
+    "address": "0x00444770",
+    "size": "219",
+    "proposed_name": "BattleCollision::ResolveGuard",
+    "module": "BattleCollision"
+  },
+  {
+    "address": "0x00444850",
+    "size": "1877",
+    "proposed_name": "BattleState::ProcessAt00444850",
+    "module": "BattleState"
+  },
+  {
+    "address": "0x00444FC0",
+    "size": "280",
+    "proposed_name": "BattleCollision::ResolveSpecialHit",
+    "module": "BattleCollision"
+  },
+  {
+    "address": "0x004450E0",
+    "size": "239",
+    "proposed_name": "BattleCollision::ResolveContact",
+    "module": "BattleCollision"
+  },
+  {
+    "address": "0x004451D0",
+    "size": "55",
+    "proposed_name": "GameProgress::SetSelectedValue8At004451D0",
+    "module": "GameProgress"
+  },
+  {
+    "address": "0x00445210",
+    "size": "55",
+    "proposed_name": "GameProgress::SetSelectedValue12At00445210",
+    "module": "GameProgress"
+  },
+  {
+    "address": "0x00445250",
+    "size": "50",
+    "proposed_name": "GameProgress::GetSelectedValue8At00445250",
+    "module": "GameProgress"
+  },
+  {
+    "address": "0x00445290",
+    "size": "50",
+    "proposed_name": "GameProgress::GetSelectedValue12At00445290",
+    "module": "GameProgress"
+  },
+  {
+    "address": "0x004456F0",
+    "size": "314",
+    "proposed_name": "BattleScene::PollPauseShortcut",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x00445830",
+    "size": "457",
+    "proposed_name": "BattleScene::UpdatePlayerEffects",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x00445A00",
+    "size": "1958",
+    "proposed_name": "BattleState::ApplySequenceAt00445A00",
+    "module": "BattleState"
+  },
+  {
+    "address": "0x004461D0",
+    "size": "751",
+    "proposed_name": "BattleScene::HandlePauseMenu",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x00446590",
+    "size": "1483",
+    "proposed_name": "BattleHud::InitializeDigitAtlases",
+    "module": "BattleHud"
+  },
+  {
+    "address": "0x00446B60",
+    "size": "35",
+    "proposed_name": "BattleHud::DrawAtlasNumberDefaultAt00446B60",
+    "module": "BattleHud"
+  },
+  {
+    "address": "0x00446B90",
+    "size": "463",
+    "proposed_name": "BattleHud::DrawAtlasNumber",
+    "module": "BattleHud"
+  },
+  {
+    "address": "0x00446D60",
+    "size": "32",
+    "proposed_name": "HudNotice::SetNoticeStateAt00446D60",
+    "module": "HudNotice"
+  },
+  {
+    "address": "0x00446D80",
+    "size": "1461",
+    "proposed_name": "BattleScene::AdvanceOverlayTimeline",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x00447340",
+    "size": "3459",
+    "proposed_name": "BattleScene::RenderOverlayTimeline",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x004480D0",
+    "size": "788",
+    "proposed_name": "BattleScene::ProcessDebugKeys",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x004483F0",
+    "size": "768",
+    "proposed_name": "BattleScene::HandleMode5OptionsAt004483F0 [provisional]",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x00448710",
+    "size": "2766",
+    "proposed_name": "BattleScene::RenderPauseMenu",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x004491E0",
+    "size": "215",
+    "proposed_name": "BattleGeometry::TransformBoundsByFacingAt004491E0",
+    "module": "BattleGeometry"
+  },
+  {
+    "address": "0x004492C0",
+    "size": "68",
+    "proposed_name": "BattleCollision::TestRectangleOverlapAt004492C0",
+    "module": "BattleCollision"
+  },
+  {
+    "address": "0x00449310",
+    "size": "1861",
+    "proposed_name": "BattleCombat::ResolveBodySeparation",
+    "module": "BattleCombat"
+  },
+  {
+    "address": "0x00449AA0",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG00a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00449B40",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt00449B40",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00449B50",
+    "size": "358",
+    "proposed_name": "BattleEffect::DrawLayerAt00449B50",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x00449CC0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt00449CC0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00449CD0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt00449CD0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00449CE0",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt00449CE0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00449D40",
+    "size": "31",
+    "proposed_name": "BackgroundBase::DestroyAt00449D40",
+    "module": "BackgroundBase"
+  },
+  {
+    "address": "0x00449DC0",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG00a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00449E10",
+    "size": "161",
+    "proposed_name": "BackgroundStage::LoadBG00b",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00449EC0",
+    "size": "26",
+    "proposed_name": "BackgroundStage::AdvanceAnimationCounterAt00449EC0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00449EE0",
+    "size": "640",
+    "proposed_name": "BattleEffect::RenderPattern01",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0044A160",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044A160",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A170",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044A170",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A180",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044A180",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A210",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG00b",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A230",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG00c",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A2D0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044A2D0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A2E0",
+    "size": "358",
+    "proposed_name": "BattleEffect::DrawLayerAt0044A2E0",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0044A450",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044A450",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A460",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044A460",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A470",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044A470",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A500",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG00c",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A520",
+    "size": "140",
+    "proposed_name": "BackgroundStage::LoadBG00x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A5B0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044A5B0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A5C0",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt0044A5C0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A680",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044A680",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A690",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044A690",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A6A0",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044A6A0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A730",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG00x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A750",
+    "size": "140",
+    "proposed_name": "BackgroundStage::LoadBG00y",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A7E0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044A7E0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A7F0",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt0044A7F0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A8B0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044A8B0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A8C0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044A8C0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A8D0",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044A8D0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A960",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG00y",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044A980",
+    "size": "140",
+    "proposed_name": "BackgroundStage::LoadBG00z",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044AA10",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044AA10",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044AA20",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt0044AA20",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044AAE0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044AAE0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044AAF0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044AAF0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044AB00",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044AB00",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044AB90",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG00z",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044ABB0",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG01a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044AC50",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044AC50",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044AC60",
+    "size": "284",
+    "proposed_name": "BattleEffect::DrawLayerAt0044AC60",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0044AD80",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044AD80",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044AD90",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044AD90",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044ADA0",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044ADA0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044AE30",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG01a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044AE50",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG01b",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044AEF0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044AEF0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044AF00",
+    "size": "284",
+    "proposed_name": "BattleEffect::DrawLayerAt0044AF00",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0044B020",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044B020",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B030",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044B030",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B040",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044B040",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B0D0",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG01b",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B0F0",
+    "size": "140",
+    "proposed_name": "BackgroundStage::LoadBG01x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B180",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044B180",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B190",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt0044B190",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B250",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044B250",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B260",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044B260",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B270",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044B270",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B300",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG01x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B320",
+    "size": "140",
+    "proposed_name": "BackgroundStage::LoadBG01y",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B3B0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044B3B0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B3C0",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt0044B3C0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B480",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044B480",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B490",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044B490",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B4A0",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044B4A0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B530",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG01y",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B550",
+    "size": "161",
+    "proposed_name": "BackgroundStage::LoadBG02a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B600",
+    "size": "48",
+    "proposed_name": "BackgroundStage::AdvanceBG02aCycleAt0044B600",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B630",
+    "size": "830",
+    "proposed_name": "BattleEffect::RenderPattern02",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0044B970",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044B970",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B980",
+    "size": "60",
+    "proposed_name": "BackgroundStage::ApplyBG02aBlendAt0044B980",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044B9C0",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044B9C0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044BA50",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG02a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044BA70",
+    "size": "161",
+    "proposed_name": "BackgroundStage::LoadBG02b",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044BB20",
+    "size": "48",
+    "proposed_name": "BackgroundStage::AdvanceBG02bCycleAt0044BB20",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044BB50",
+    "size": "830",
+    "proposed_name": "BattleEffect::RenderPattern03",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0044BE90",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044BE90",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044BEA0",
+    "size": "60",
+    "proposed_name": "BackgroundStage::ApplyBG02bBlendAt0044BEA0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044BEE0",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044BEE0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044BF70",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG02b",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044BF90",
+    "size": "161",
+    "proposed_name": "BackgroundStage::LoadBG02c",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C040",
+    "size": "48",
+    "proposed_name": "BackgroundStage::AdvanceBG02cCycleAt0044C040",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C070",
+    "size": "830",
+    "proposed_name": "BattleEffect::RenderPattern04",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0044C3B0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044C3B0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C3C0",
+    "size": "60",
+    "proposed_name": "BackgroundStage::ApplyBG02cBlendAt0044C3C0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C400",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044C400",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C490",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG02c",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C4B0",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG02x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C550",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044C550",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C560",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt0044C560",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C620",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044C620",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C630",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044C630",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C640",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044C640",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C6D0",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG02x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C6F0",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG02y",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C790",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044C790",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C7A0",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt0044C7A0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C860",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044C860",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C870",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044C870",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C880",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044C880",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C910",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG02y",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C930",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG02z",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C9D0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044C9D0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044C9E0",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt0044C9E0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044CAA0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044CAA0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044CAB0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044CAB0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044CAC0",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044CAC0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044CB50",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG02z",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044CB70",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG03a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044CC10",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044CC10",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044CC20",
+    "size": "284",
+    "proposed_name": "BattleEffect::DrawLayerAt0044CC20",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0044CD40",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044CD40",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044CD50",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044CD50",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044CD60",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044CD60",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044CDF0",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG03a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044CE10",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG03b",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044CEB0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044CEB0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044CEC0",
+    "size": "284",
+    "proposed_name": "BattleEffect::DrawLayerAt0044CEC0",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0044CFE0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044CFE0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044CFF0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044CFF0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D000",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044D000",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D090",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG03b",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D0B0",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG03x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D150",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044D150",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D160",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt0044D160",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D220",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044D220",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D230",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044D230",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D240",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044D240",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D2D0",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG03x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D2F0",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG03y",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D390",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044D390",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D3A0",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt0044D3A0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D460",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044D460",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D470",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044D470",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D480",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044D480",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D510",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG03y",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D530",
+    "size": "161",
+    "proposed_name": "BackgroundStage::LoadBG04a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D5E0",
+    "size": "55",
+    "proposed_name": "BackgroundStage::AdvanceBG04aCycleAt0044D5E0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D620",
+    "size": "716",
+    "proposed_name": "BattleEffect::RenderPattern05",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0044D8F0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044D8F0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D900",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044D900",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D910",
+    "size": "88",
+    "proposed_name": "BackgroundTransform::CopyDarkAt0044D910",
+    "module": "BackgroundTransform"
+  },
+  {
+    "address": "0x0044D9A0",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG04a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044D9C0",
+    "size": "161",
+    "proposed_name": "BackgroundStage::LoadBG04b",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044DA70",
+    "size": "26",
+    "proposed_name": "BackgroundStage::AdvanceAnimationCounterAt0044DA70",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044DA90",
+    "size": "781",
+    "proposed_name": "BattleEffect::RenderPattern06",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0044DDA0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044DDA0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044DDB0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044DDB0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044DDC0",
+    "size": "88",
+    "proposed_name": "BackgroundTransform::CopyDarkAt0044DDC0",
+    "module": "BackgroundTransform"
+  },
+  {
+    "address": "0x0044DE50",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG04b",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044DE70",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG04x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044DF10",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044DF10",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044DF20",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt0044DF20",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044DFE0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044DFE0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044DFF0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044DFF0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E000",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044E000",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E090",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG04x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E0B0",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG04y",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E150",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044E150",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E160",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt0044E160",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E220",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044E220",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E230",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044E230",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E240",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044E240",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E2D0",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG04y",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E2F0",
+    "size": "161",
+    "proposed_name": "BackgroundStage::LoadBG05a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E3A0",
+    "size": "45",
+    "proposed_name": "BackgroundStage::AdvanceBG05aReverseCycleAt0044E3A0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E3D0",
+    "size": "872",
+    "proposed_name": "BattleEffect::RenderPattern07",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0044E740",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044E740",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E750",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044E750",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E760",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044E760",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E7F0",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG05a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E810",
+    "size": "181",
+    "proposed_name": "BackgroundStage::LoadBG05b",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044E930",
+    "size": "2297",
+    "proposed_name": "BattleEffect::RenderPattern08",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0044F230",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044F230",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F240",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044F240",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F250",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044F250",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F2E0",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG05b",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F300",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG05x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F3A0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044F3A0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F3B0",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt0044F3B0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F470",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044F470",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F480",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044F480",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F490",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044F490",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F520",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG05x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F540",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG05y",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F5E0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044F5E0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F5F0",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt0044F5F0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F6B0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044F6B0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F6C0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt0044F6C0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F6D0",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt0044F6D0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F760",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG05y",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F780",
+    "size": "161",
+    "proposed_name": "BackgroundStage::LoadBG06a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F830",
+    "size": "26",
+    "proposed_name": "BackgroundStage::AdvanceAnimationCounterAt0044F830",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x0044F850",
+    "size": "662",
+    "proposed_name": "BattleEffect::RenderPattern09",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0044FAF0",
+    "size": "579",
+    "proposed_name": "BattleEffect::RenderPattern10",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0044FD40",
+    "size": "756",
+    "proposed_name": "BattleEffect::RenderPattern11",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x00450040",
+    "size": "88",
+    "proposed_name": "BackgroundTransform::CopyLightAt00450040",
+    "module": "BackgroundTransform"
+  },
+  {
+    "address": "0x004500D0",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG06a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x004500F0",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG06x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450190",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt00450190",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x004501A0",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt004501A0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450260",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt00450260",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450270",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt00450270",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450280",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt00450280",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450310",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG06x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450330",
+    "size": "161",
+    "proposed_name": "BackgroundStage::LoadBG07a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x004503E0",
+    "size": "55",
+    "proposed_name": "BackgroundStage::AdvanceBG07aCycleAt004503E0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450420",
+    "size": "1005",
+    "proposed_name": "BattleEffect::RenderPattern12",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x00450810",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt00450810",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450820",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt00450820",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450830",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt00450830",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x004508C0",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG07a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x004508E0",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG07x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450980",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt00450980",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450990",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt00450990",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450A50",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt00450A50",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450A60",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt00450A60",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450A70",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt00450A70",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450B00",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG07x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450B20",
+    "size": "171",
+    "proposed_name": "BackgroundStage::LoadBG08a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450BD0",
+    "size": "60",
+    "proposed_name": "BackgroundStage::AdvanceBG08aCycleAt00450BD0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450C10",
+    "size": "699",
+    "proposed_name": "BattleEffect::RenderPattern13",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x00450ED0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt00450ED0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00450EE0",
+    "size": "408",
+    "proposed_name": "BattleEffect::RenderPattern14",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x00451080",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt00451080",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00451110",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG08a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00451130",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG08x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x004511D0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt004511D0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x004511E0",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt004511E0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x004512A0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt004512A0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x004512B0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt004512B0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x004512C0",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt004512C0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00451350",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG08x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00451370",
+    "size": "161",
+    "proposed_name": "BackgroundStage::LoadBG09a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00451420",
+    "size": "26",
+    "proposed_name": "BackgroundStage::AdvanceAnimationCounterAt00451420",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00451440",
+    "size": "1449",
+    "proposed_name": "BattleEffect::RenderPattern15",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x004519F0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt004519F0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00451A00",
+    "size": "446",
+    "proposed_name": "FighterState::RenderTimedSprite",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00451BC0",
+    "size": "88",
+    "proposed_name": "BackgroundTransform::CopyLightAt00451BC0",
+    "module": "BackgroundTransform"
+  },
+  {
+    "address": "0x00451C50",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG09a",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00451C70",
+    "size": "151",
+    "proposed_name": "BackgroundStage::LoadBG09x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00451D10",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt00451D10",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00451D20",
+    "size": "186",
+    "proposed_name": "BackgroundStage::DrawSidePairAt00451D20",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00451DE0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt00451DE0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00451DF0",
+    "size": "11",
+    "proposed_name": "BackgroundStage::NoOpVirtualAt00451DF0",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00451E00",
+    "size": "91",
+    "proposed_name": "BackgroundStage::ApplyTransformAt00451E00",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00451E90",
+    "size": "28",
+    "proposed_name": "BackgroundStage::DestroyBG09x",
+    "module": "BackgroundStage"
+  },
+  {
+    "address": "0x00451EB0",
+    "size": "742",
+    "proposed_name": "FighterState::SelectMovementAnimation",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x004521A0",
+    "size": "132",
+    "proposed_name": "FighterState::AdvanceGuardedStateAt004521A0",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00452230",
+    "size": "289",
+    "proposed_name": "FighterState::AdvancePosition",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00452360",
+    "size": "304",
+    "proposed_name": "FighterState::ChooseAction",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00452490",
+    "size": "1696",
+    "proposed_name": "FighterState::AdvanceCombatTimers",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00452B30",
+    "size": "215",
+    "proposed_name": "FighterState::SelectResourceParametersAt00452B30",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00452C10",
+    "size": "753",
+    "proposed_name": "FighterState::ApplyOpponentGaugeChange",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00452F10",
+    "size": "2815",
+    "proposed_name": "FighterState::UpdateControls",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00453A10",
+    "size": "89",
+    "proposed_name": "FighterState::ClearAuxiliaryWordsAt00453A10",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00453A70",
+    "size": "65",
+    "proposed_name": "FighterState::SpawnBattleEffectAt00453A70",
+    "module": "EffectForwarders"
+  },
+  {
+    "address": "0x00453AC0",
+    "size": "136",
+    "proposed_name": "FighterState::SpawnTrackedEffectAt00453AC0",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00453B50",
+    "size": "140",
+    "proposed_name": "FighterState::SpawnTrackedEffectAt00453B50",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00453BE0",
+    "size": "145",
+    "proposed_name": "FighterState::SpawnTrackedEffectAt00453BE0",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00453C80",
+    "size": "57",
+    "proposed_name": "FighterState::SpawnAuxEffectAt00453C80",
+    "module": "EffectForwarders"
+  },
+  {
+    "address": "0x00453CC0",
+    "size": "57",
+    "proposed_name": "FighterState::SpawnAuxEffectAt00453CC0",
+    "module": "EffectForwarders"
+  },
+  {
+    "address": "0x00453D00",
+    "size": "61",
+    "proposed_name": "FighterState::SpawnConfiguredAuxEffectAt00453D00",
+    "module": "EffectForwarders"
+  },
+  {
+    "address": "0x00453D40",
+    "size": "32",
+    "proposed_name": "FighterState::PlaySoundAt00453D40",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00453D60",
+    "size": "29",
+    "proposed_name": "FighterState::PlaySharedSoundAt00453D60",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00453D80",
+    "size": "149",
+    "proposed_name": "FighterBase::BindAnimationAt00453D80",
+    "module": "FighterBase"
+  },
+  {
+    "address": "0x00453E20",
+    "size": "51",
+    "proposed_name": "FighterState::ClearMotionFieldsAt00453E20",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00453E60",
+    "size": "25",
+    "proposed_name": "FighterState::SetCameraShakeAt00453E60",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00453E80",
+    "size": "37",
+    "proposed_name": "FighterState::SetNonnegativeWordAt00453E80",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00453EB0",
+    "size": "181",
+    "proposed_name": "FighterState::AdjustCameraOffsetAt00453EB0",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00453F70",
+    "size": "2246",
+    "proposed_name": "FighterState::Render",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00454840",
+    "size": "378",
+    "proposed_name": "FighterState::RenderSideEffect",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x004549C0",
+    "size": "165",
+    "proposed_name": "FighterState::DrawFacingSpriteAt004549C0",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00454A70",
+    "size": "35",
+    "proposed_name": "FighterState::BeginFadeParametersAt00454A70",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00454AA0",
+    "size": "280",
+    "proposed_name": "FighterState::RenderFadeOverlay",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00454C20",
+    "size": "193",
+    "proposed_name": "FighterState::ApplyMode5DirectionAt00454C20 [provisional]",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00454D00",
+    "size": "79",
+    "proposed_name": "ProfileSelection::IncrementSelectedWordCounterAt00454D00",
+    "module": "ProfileSelection"
+  },
+  {
+    "address": "0x00454EE0",
+    "size": "133",
+    "proposed_name": "FighterState::CheckHorizontalLimitsAt00454EE0",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00454F90",
+    "size": "58",
+    "proposed_name": "FighterState::IsState50To149At00454F90",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00454FD0",
+    "size": "61",
+    "proposed_name": "FighterState::IsState150To199At00454FD0",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00455010",
+    "size": "96",
+    "proposed_name": "FighterState::IsGroundedStateWindow",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00455070",
+    "size": "56",
+    "proposed_name": "FighterState::IsState95To99At00455070",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x004550B0",
+    "size": "130",
+    "proposed_name": "FighterState::UpdateFacingFromOpponentAt004550B0",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00455140",
+    "size": "944",
+    "proposed_name": "BattleCombat::SelectHitResponseAt00455140",
+    "module": "BattleCombat"
+  },
+  {
+    "address": "0x00455500",
+    "size": "118",
+    "proposed_name": "FighterState::SaveCollisionFieldsAt00455500",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00455580",
+    "size": "139",
+    "proposed_name": "FighterState::SelectRecordedRandomRangeAt00455580",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00455610",
+    "size": "44",
+    "proposed_name": "CharacterAI::ChooseIntegerRangeAt00455610",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x00455640",
+    "size": "294",
+    "proposed_name": "FighterState::ResolveOpponentValue",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x004557E0",
+    "size": "21",
+    "proposed_name": "BattleScene::SetSharedValueAt004557E0",
+    "module": "BattleScene"
+  },
+  {
+    "address": "0x00455800",
+    "size": "695",
+    "proposed_name": "BattleInput::MatchSequenceAt00455800",
+    "module": "BattleInput"
+  },
+  {
+    "address": "0x00455B30",
+    "size": "260",
+    "proposed_name": "BattleInput::PackDirectionBits",
+    "module": "BattleInput"
+  },
+  {
+    "address": "0x004567B0",
+    "size": "345",
+    "proposed_name": "FighterState::Initialize",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00456910",
+    "size": "588",
+    "proposed_name": "FighterState::ReleaseResources",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00456B60",
+    "size": "1186",
+    "proposed_name": "FighterState::LoadResources",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00457010",
+    "size": "1151",
+    "proposed_name": "FighterState::ResetRound",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x00457490",
+    "size": "31",
+    "proposed_name": "FighterState::SetBindingsAt00457490",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x004574B0",
+    "size": "25",
+    "proposed_name": "FighterState::BindOpponentAt004574B0",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x004574D0",
+    "size": "389",
+    "proposed_name": "BattleState::RecordRoundFields",
+    "module": "BattleState"
+  },
+  {
+    "address": "0x00457660",
+    "size": "3696",
+    "proposed_name": "FighterState::LoadPattern",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x004584D0",
+    "size": "374",
+    "proposed_name": "FighterState::LoadStageResource",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x0045B760",
+    "size": "203",
+    "proposed_name": "BattleObject::InitializeDefaultsAt0045B760",
+    "module": "GameContextPolicy"
+  },
+  {
+    "address": "0x0045B830",
+    "size": "21",
+    "proposed_name": "BattleEffect::ClearField74",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0045B860",
+    "size": "29",
+    "proposed_name": "BattleEffect::PlaySharedSoundAt0045B860",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0045B880",
+    "size": "149",
+    "proposed_name": "BattleObject::BindAnimationAt0045B880",
+    "module": "BattleObject"
+  },
+  {
+    "address": "0x0045B920",
+    "size": "131",
+    "proposed_name": "FighterCommandQueues::InitializeAt0045B920",
+    "module": "GameContextPolicy"
+  },
+  {
+    "address": "0x0045B9B0",
+    "size": "85",
+    "proposed_name": "BattleEffectManager::DestroyOwnedEffectsAt0045B9B0",
+    "module": "BattleEffectManager"
+  },
+  {
+    "address": "0x0045BA10",
+    "size": "21",
+    "proposed_name": "BattleEffectManager::BindFighterAt0045BA10",
+    "module": "BattleEffectManager"
+  },
+  {
+    "address": "0x0045BA30",
+    "size": "221",
+    "proposed_name": "BattleEffectManager::DeleteFourListsAt0045BA30",
+    "module": "BattleEffectManager"
+  },
+  {
+    "address": "0x0045BB10",
+    "size": "282",
+    "proposed_name": "BattleEffect::Spawn",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0045BC30",
+    "size": "166",
+    "proposed_name": "BattleEffectManager::DispatchSelectedListAt0045BC30",
+    "module": "BattleEffectManager"
+  },
+  {
+    "address": "0x0045BCE0",
+    "size": "207",
+    "proposed_name": "BattleEffectManager::DispatchFourListsAt0045BCE0",
+    "module": "BattleEffectManager"
+  },
+  {
+    "address": "0x0045BDB0",
+    "size": "296",
+    "proposed_name": "BattleEffect::AdvanceAll",
+    "module": "BattleEffect"
+  },
+  {
+    "address": "0x0045CD50",
+    "size": "25",
+    "proposed_name": "FighterState::SetNoticeModeByteAt0045CD50",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x0045CD70",
+    "size": "75",
+    "proposed_name": "FighterState::SetNoticeFieldsAt0045CD70",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x0045CDC0",
+    "size": "73",
+    "proposed_name": "FighterState::InitializeNotice",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x0045CE10",
+    "size": "1926",
+    "proposed_name": "FighterState::ProcessActionAt0045CE10",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x0045D5D0",
+    "size": "113",
+    "proposed_name": "FighterState::RenderNoticeAt0045D5D0",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x0045D650",
+    "size": "78",
+    "proposed_name": "FighterState::ConfigureNoticeText",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x0045D6A0",
+    "size": "72",
+    "proposed_name": "FighterState::BeginNoticeTransition",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x0045D6F0",
+    "size": "21",
+    "proposed_name": "FighterState::ClearNoticeTransition",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x0045D710",
+    "size": "247",
+    "proposed_name": "FighterState::AdvanceNoticeLevelsAt0045D710",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x0045D810",
+    "size": "1264",
+    "proposed_name": "FighterState::ChoosePatternSequence",
+    "module": "FighterState"
+  },
+  {
+    "address": "0x0045DD00",
+    "size": "66",
+    "proposed_name": "FighterScript::CountPatternEntries",
+    "module": "FighterScript"
+  },
+  {
+    "address": "0x0045DD70",
+    "size": "60999",
+    "proposed_name": "ReimuFighter::AdvanceActionStatesAt0045DD70",
+    "module": "ReimuFighter"
+  },
+  {
+    "address": "0x0046D000",
+    "size": "126",
+    "proposed_name": "ReimuFighter::UpdateGaugeTimer",
+    "module": "ReimuFighter"
+  },
+  {
+    "address": "0x0046D080",
+    "size": "218",
+    "proposed_name": "ReimuFighter::Initialize",
+    "module": "ReimuFighter"
+  },
+  {
+    "address": "0x0046D160",
+    "size": "120",
+    "proposed_name": "ReimuFighter::CreateOwnedObject",
+    "module": "ReimuFighter"
+  },
+  {
+    "address": "0x0046D1E0",
+    "size": "235",
+    "proposed_name": "ReimuFighter::ResetRound",
+    "module": "ReimuFighter"
+  },
+  {
+    "address": "0x0046D2D0",
+    "size": "19",
+    "proposed_name": "ReimuFighter::ForwardBaseActionAt0046D2D0",
+    "module": "ReimuFighter"
+  },
+  {
+    "address": "0x0046D2F0",
+    "size": "11",
+    "proposed_name": "ReimuFighter::NoOpVirtualAt0046D2F0",
+    "module": "ReimuFighter"
+  },
+  {
+    "address": "0x0046D300",
+    "size": "14141",
+    "proposed_name": "ReimuFighter::DispatchActions",
+    "module": "ReimuFighter"
+  },
+  {
+    "address": "0x00470A40",
+    "size": "1027",
+    "proposed_name": "CharacterAux::RunAt00470A40",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x00470E50",
+    "size": "130",
+    "proposed_name": "ReimuFighter::SelectSpecialVariant",
+    "module": "ReimuFighter"
+  },
+  {
+    "address": "0x00470F00",
+    "size": "3797",
+    "proposed_name": "CharacterSpecial::AdvanceAt00470F00",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x00471E00",
+    "size": "1584",
+    "proposed_name": "CharacterSpecial::RenderAt00471E00",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x00472450",
+    "size": "11",
+    "proposed_name": "ReimuFighter::NoOpVirtualAt00472450",
+    "module": "ReimuFighter"
+  },
+  {
+    "address": "0x004724B0",
+    "size": "982",
+    "proposed_name": "CharacterAux::RunAt004724B0",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x00472890",
+    "size": "8871",
+    "proposed_name": "CharacterAI::ChooseAt00472890",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x00474B40",
+    "size": "7780",
+    "proposed_name": "CharacterAI::ChooseAt00474B40",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x004769B0",
+    "size": "134",
+    "proposed_name": "ReimuObject::Initialize",
+    "module": "ReimuObject"
+  },
+  {
+    "address": "0x00476A40",
+    "size": "50915",
+    "proposed_name": "CharacterObject::AdvanceAt00476A40",
+    "module": "CharacterObject"
+  },
+  {
+    "address": "0x00483350",
+    "size": "12400",
+    "proposed_name": "CharacterSequence::AdvanceAt00483350",
+    "module": "CharacterSequence"
+  },
+  {
+    "address": "0x00486550",
+    "size": "50735",
+    "proposed_name": "CharacterMove::AdvanceAt00486550",
+    "module": "CharacterMove"
+  },
+  {
+    "address": "0x00492FB0",
+    "size": "243",
+    "proposed_name": "MarisaFighter::Initialize",
+    "module": "MarisaFighter"
+  },
+  {
+    "address": "0x004930B0",
+    "size": "120",
+    "proposed_name": "MarisaFighter::CreateOwnedObject",
+    "module": "MarisaFighter"
+  },
+  {
+    "address": "0x00493130",
+    "size": "780",
+    "proposed_name": "MarisaFighter::ResetRound",
+    "module": "MarisaFighter"
+  },
+  {
+    "address": "0x00493440",
+    "size": "19",
+    "proposed_name": "MarisaFighter::ForwardBaseActionAt00493440",
+    "module": "MarisaFighter"
+  },
+  {
+    "address": "0x00493460",
+    "size": "11",
+    "proposed_name": "MarisaFighter::NoOpVirtualAt00493460",
+    "module": "MarisaFighter"
+  },
+  {
+    "address": "0x00493470",
+    "size": "14312",
+    "proposed_name": "CharacterAction::DispatchAt00493470",
+    "module": "CharacterAction"
+  },
+  {
+    "address": "0x00496C60",
+    "size": "1027",
+    "proposed_name": "CharacterAux::RunAt00496C60",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x00497070",
+    "size": "1291",
+    "proposed_name": "CharacterAux::RunAt00497070",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x00497580",
+    "size": "130",
+    "proposed_name": "MarisaFighter::SelectSpecialVariant",
+    "module": "MarisaFighter"
+  },
+  {
+    "address": "0x00497630",
+    "size": "3814",
+    "proposed_name": "CharacterSpecial::AdvanceAt00497630",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x00498540",
+    "size": "1584",
+    "proposed_name": "CharacterSpecial::RenderAt00498540",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x00498BE0",
+    "size": "1099",
+    "proposed_name": "CharacterAux::RunAt00498BE0",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x00499030",
+    "size": "8256",
+    "proposed_name": "CharacterAI::ChooseAt00499030",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x0049B070",
+    "size": "6097",
+    "proposed_name": "CharacterAI::ChooseAt0049B070",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x0049C850",
+    "size": "146",
+    "proposed_name": "MarisaObject::Initialize",
+    "module": "MarisaObject"
+  },
+  {
+    "address": "0x0049C8F0",
+    "size": "46596",
+    "proposed_name": "CharacterObject::AdvanceAt0049C8F0",
+    "module": "CharacterObject"
+  },
+  {
+    "address": "0x004A80F0",
+    "size": "3935",
+    "proposed_name": "CharacterAux::RunAt004A80F0",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x004A9050",
+    "size": "11894",
+    "proposed_name": "CharacterSequence::AdvanceAt004A9050",
+    "module": "CharacterSequence"
+  },
+  {
+    "address": "0x004AC040",
+    "size": "82796",
+    "proposed_name": "CharacterMove::AdvanceAt004AC040",
+    "module": "CharacterMove"
+  },
+  {
+    "address": "0x004C0820",
+    "size": "243",
+    "proposed_name": "SakuyaFighter::Initialize",
+    "module": "SakuyaFighter"
+  },
+  {
+    "address": "0x004C0920",
+    "size": "120",
+    "proposed_name": "SakuyaFighter::CreateOwnedObject",
+    "module": "SakuyaFighter"
+  },
+  {
+    "address": "0x004C09A0",
+    "size": "247",
+    "proposed_name": "SakuyaFighter::ResetRound",
+    "module": "SakuyaFighter"
+  },
+  {
+    "address": "0x004C0AA0",
+    "size": "19",
+    "proposed_name": "SakuyaFighter::ForwardBaseActionAt004C0AA0",
+    "module": "SakuyaFighter"
+  },
+  {
+    "address": "0x004C0AC0",
+    "size": "11",
+    "proposed_name": "SakuyaFighter::NoOpVirtualAt004C0AC0",
+    "module": "SakuyaFighter"
+  },
+  {
+    "address": "0x004C0AD0",
+    "size": "16098",
+    "proposed_name": "CharacterAction::DispatchAt004C0AD0",
+    "module": "CharacterAction"
+  },
+  {
+    "address": "0x004C49C0",
+    "size": "1757",
+    "proposed_name": "CharacterAux::RunAt004C49C0",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x004C50A0",
+    "size": "130",
+    "proposed_name": "SakuyaFighter::SelectSpecialVariant",
+    "module": "SakuyaFighter"
+  },
+  {
+    "address": "0x004C5150",
+    "size": "3800",
+    "proposed_name": "CharacterSpecial::AdvanceAt004C5150",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x004C6050",
+    "size": "1584",
+    "proposed_name": "CharacterSpecial::RenderAt004C6050",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x004C66A0",
+    "size": "11",
+    "proposed_name": "SakuyaFighter::NoOpVirtualAt004C66A0",
+    "module": "SakuyaFighter"
+  },
+  {
+    "address": "0x004C6700",
+    "size": "1099",
+    "proposed_name": "CharacterAux::RunAt004C6700",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x004C6B50",
+    "size": "8572",
+    "proposed_name": "CharacterAI::ChooseAt004C6B50",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x004C8CD0",
+    "size": "6504",
+    "proposed_name": "CharacterAI::ChooseAt004C8CD0",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x004CA640",
+    "size": "146",
+    "proposed_name": "SakuyaObject::Initialize",
+    "module": "SakuyaObject"
+  },
+  {
+    "address": "0x004CA6E0",
+    "size": "42511",
+    "proposed_name": "CharacterObject::AdvanceAt004CA6E0",
+    "module": "CharacterObject"
+  },
+  {
+    "address": "0x004D4EA0",
+    "size": "11859",
+    "proposed_name": "CharacterSequence::AdvanceAt004D4EA0",
+    "module": "CharacterSequence"
+  },
+  {
+    "address": "0x004D7E70",
+    "size": "43601",
+    "proposed_name": "CharacterMove::AdvanceAt004D7E70",
+    "module": "CharacterMove"
+  },
+  {
+    "address": "0x004E2C90",
+    "size": "243",
+    "proposed_name": "AliceFighter::Initialize",
+    "module": "AliceFighter"
+  },
+  {
+    "address": "0x004E2D90",
+    "size": "120",
+    "proposed_name": "AliceFighter::CreateOwnedObject",
+    "module": "AliceFighter"
+  },
+  {
+    "address": "0x004E2E10",
+    "size": "223",
+    "proposed_name": "AliceFighter::ResetRound",
+    "module": "AliceFighter"
+  },
+  {
+    "address": "0x004E2EF0",
+    "size": "19",
+    "proposed_name": "AliceFighter::ForwardBaseActionAt004E2EF0",
+    "module": "AliceFighter"
+  },
+  {
+    "address": "0x004E2F10",
+    "size": "11",
+    "proposed_name": "AliceFighter::NoOpVirtualAt004E2F10",
+    "module": "AliceFighter"
+  },
+  {
+    "address": "0x004E2F20",
+    "size": "13170",
+    "proposed_name": "CharacterAction::DispatchAt004E2F20",
+    "module": "CharacterAction"
+  },
+  {
+    "address": "0x004E62A0",
+    "size": "256",
+    "proposed_name": "AliceFighter::UpdateSpecialStateAt004E62A0",
+    "module": "AliceFighter"
+  },
+  {
+    "address": "0x004E63A0",
+    "size": "130",
+    "proposed_name": "AliceFighter::SelectSpecialVariant",
+    "module": "AliceFighter"
+  },
+  {
+    "address": "0x004E6450",
+    "size": "3800",
+    "proposed_name": "CharacterSpecial::AdvanceAt004E6450",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x004E7350",
+    "size": "1584",
+    "proposed_name": "CharacterSpecial::RenderAt004E7350",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x004E79A0",
+    "size": "11",
+    "proposed_name": "AliceFighter::NoOpVirtualAt004E79A0",
+    "module": "AliceFighter"
+  },
+  {
+    "address": "0x004E7A00",
+    "size": "982",
+    "proposed_name": "CharacterAux::RunAt004E7A00",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x004E7DE0",
+    "size": "8871",
+    "proposed_name": "CharacterAI::ChooseAt004E7DE0",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x004EA090",
+    "size": "7279",
+    "proposed_name": "CharacterAI::ChooseAt004EA090",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x004EBD00",
+    "size": "146",
+    "proposed_name": "AliceObject::Initialize",
+    "module": "AliceObject"
+  },
+  {
+    "address": "0x004EBDA0",
+    "size": "33293",
+    "proposed_name": "CharacterObject::AdvanceAt004EBDA0",
+    "module": "CharacterObject"
+  },
+  {
+    "address": "0x004F4170",
+    "size": "855",
+    "proposed_name": "CharacterProjectile::AdvanceAt004F4170",
+    "module": "CharacterProjectile"
+  },
+  {
+    "address": "0x004F44D0",
+    "size": "11012",
+    "proposed_name": "CharacterSequence::AdvanceAt004F44D0",
+    "module": "CharacterSequence"
+  },
+  {
+    "address": "0x004F7130",
+    "size": "44211",
+    "proposed_name": "CharacterMove::AdvanceAt004F7130",
+    "module": "CharacterMove"
+  },
+  {
+    "address": "0x005021C0",
+    "size": "243",
+    "proposed_name": "PatchouliFighter::Initialize",
+    "module": "PatchouliFighter"
+  },
+  {
+    "address": "0x005022C0",
+    "size": "120",
+    "proposed_name": "PatchouliFighter::CreateOwnedObject",
+    "module": "PatchouliFighter"
+  },
+  {
+    "address": "0x00502340",
+    "size": "211",
+    "proposed_name": "PatchouliFighter::ResetRound",
+    "module": "PatchouliFighter"
+  },
+  {
+    "address": "0x00502420",
+    "size": "19",
+    "proposed_name": "PatchouliFighter::ForwardBaseActionAt00502420",
+    "module": "PatchouliFighter"
+  },
+  {
+    "address": "0x00502440",
+    "size": "11",
+    "proposed_name": "PatchouliFighter::NoOpVirtualAt00502440",
+    "module": "PatchouliFighter"
+  },
+  {
+    "address": "0x00502450",
+    "size": "13839",
+    "proposed_name": "CharacterAction::DispatchAt00502450",
+    "module": "CharacterAction"
+  },
+  {
+    "address": "0x00505A60",
+    "size": "1576",
+    "proposed_name": "CharacterAux::RunAt00505A60",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x00506090",
+    "size": "130",
+    "proposed_name": "PatchouliFighter::SelectSpecialVariant",
+    "module": "PatchouliFighter"
+  },
+  {
+    "address": "0x00506140",
+    "size": "3800",
+    "proposed_name": "CharacterSpecial::AdvanceAt00506140",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x00507040",
+    "size": "1584",
+    "proposed_name": "CharacterSpecial::RenderAt00507040",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x00507690",
+    "size": "11",
+    "proposed_name": "PatchouliFighter::NoOpVirtualAt00507690",
+    "module": "PatchouliFighter"
+  },
+  {
+    "address": "0x005076F0",
+    "size": "1060",
+    "proposed_name": "CharacterAux::RunAt005076F0",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x00507B20",
+    "size": "3000",
+    "proposed_name": "CharacterAux::RunAt00507B20",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x005086E0",
+    "size": "7676",
+    "proposed_name": "CharacterAI::ChooseAt005086E0",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x0050A4E0",
+    "size": "146",
+    "proposed_name": "PatchouliObject::Initialize",
+    "module": "PatchouliObject"
+  },
+  {
+    "address": "0x0050A580",
+    "size": "81539",
+    "proposed_name": "CharacterObject::AdvanceAt0050A580",
+    "module": "CharacterObject"
+  },
+  {
+    "address": "0x0051E640",
+    "size": "11521",
+    "proposed_name": "CharacterSequence::AdvanceAt0051E640",
+    "module": "CharacterSequence"
+  },
+  {
+    "address": "0x005214B0",
+    "size": "46755",
+    "proposed_name": "CharacterMove::AdvanceAt005214B0",
+    "module": "CharacterMove"
+  },
+  {
+    "address": "0x0052CEE0",
+    "size": "314",
+    "proposed_name": "YoumuFighter::Initialize",
+    "module": "YoumuFighter"
+  },
+  {
+    "address": "0x0052D020",
+    "size": "105",
+    "proposed_name": "CharacterResource::ClearEntriesAndReleaseBaseAt0052D020",
+    "module": "ResourceReleasePolicy"
+  },
+  {
+    "address": "0x0052D090",
+    "size": "120",
+    "proposed_name": "YoumuFighter::CreateOwnedObject",
+    "module": "YoumuFighter"
+  },
+  {
+    "address": "0x0052D110",
+    "size": "225",
+    "proposed_name": "YoumuFighter::ResetRound",
+    "module": "YoumuFighter"
+  },
+  {
+    "address": "0x0052D200",
+    "size": "19",
+    "proposed_name": "YoumuFighter::ForwardBaseActionAt0052D200",
+    "module": "YoumuFighter"
+  },
+  {
+    "address": "0x0052D220",
+    "size": "11",
+    "proposed_name": "YoumuFighter::NoOpVirtualAt0052D220",
+    "module": "YoumuFighter"
+  },
+  {
+    "address": "0x0052D230",
+    "size": "12146",
+    "proposed_name": "CharacterAction::DispatchAt0052D230",
+    "module": "CharacterAction"
+  },
+  {
+    "address": "0x005301B0",
+    "size": "1008",
+    "proposed_name": "CharacterAux::RunAt005301B0",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x005305A0",
+    "size": "130",
+    "proposed_name": "YoumuFighter::SelectSpecialVariant",
+    "module": "YoumuFighter"
+  },
+  {
+    "address": "0x00530650",
+    "size": "3822",
+    "proposed_name": "CharacterSpecial::AdvanceAt00530650",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x00531570",
+    "size": "1584",
+    "proposed_name": "CharacterSpecial::RenderAt00531570",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x00531BC0",
+    "size": "11",
+    "proposed_name": "YoumuFighter::NoOpVirtualAt00531BC0",
+    "module": "YoumuFighter"
+  },
+  {
+    "address": "0x00532520",
+    "size": "1060",
+    "proposed_name": "CharacterAux::RunAt00532520",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x00532950",
+    "size": "8273",
+    "proposed_name": "CharacterAI::ChooseAt00532950",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x005349B0",
+    "size": "6567",
+    "proposed_name": "CharacterAI::ChooseAt005349B0",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x00536360",
+    "size": "146",
+    "proposed_name": "YoumuObject::Initialize",
+    "module": "YoumuObject"
+  },
+  {
+    "address": "0x00536400",
+    "size": "39999",
+    "proposed_name": "CharacterObject::AdvanceAt00536400",
+    "module": "CharacterObject"
+  },
+  {
+    "address": "0x00540290",
+    "size": "11787",
+    "proposed_name": "CharacterSequence::AdvanceAt00540290",
+    "module": "CharacterSequence"
+  },
+  {
+    "address": "0x00543210",
+    "size": "58294",
+    "proposed_name": "CharacterMove::AdvanceAt00543210",
+    "module": "CharacterMove"
+  },
+  {
+    "address": "0x00551980",
+    "size": "277",
+    "proposed_name": "RemiliaFighter::Initialize",
+    "module": "RemiliaFighter"
+  },
+  {
+    "address": "0x00551AA0",
+    "size": "120",
+    "proposed_name": "RemiliaFighter::CreateOwnedObject",
+    "module": "RemiliaFighter"
+  },
+  {
+    "address": "0x00551B20",
+    "size": "175",
+    "proposed_name": "RemiliaFighter::ResetRound",
+    "module": "RemiliaFighter"
+  },
+  {
+    "address": "0x00551BD0",
+    "size": "19",
+    "proposed_name": "RemiliaFighter::ForwardBaseActionAt00551BD0",
+    "module": "RemiliaFighter"
+  },
+  {
+    "address": "0x00551BF0",
+    "size": "11",
+    "proposed_name": "RemiliaFighter::NoOpVirtualAt00551BF0",
+    "module": "RemiliaFighter"
+  },
+  {
+    "address": "0x00551C00",
+    "size": "14631",
+    "proposed_name": "CharacterAction::DispatchAt00551C00",
+    "module": "CharacterAction"
+  },
+  {
+    "address": "0x00555530",
+    "size": "1028",
+    "proposed_name": "CharacterAux::RunAt00555530",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x00555940",
+    "size": "130",
+    "proposed_name": "RemiliaFighter::SelectSpecialVariant",
+    "module": "RemiliaFighter"
+  },
+  {
+    "address": "0x005559F0",
+    "size": "3800",
+    "proposed_name": "CharacterSpecial::AdvanceAt005559F0",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x005568F0",
+    "size": "1584",
+    "proposed_name": "CharacterSpecial::RenderAt005568F0",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x00556F40",
+    "size": "11",
+    "proposed_name": "RemiliaFighter::NoOpVirtualAt00556F40",
+    "module": "RemiliaFighter"
+  },
+  {
+    "address": "0x00556FA0",
+    "size": "982",
+    "proposed_name": "CharacterAux::RunAt00556FA0",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x00557380",
+    "size": "7113",
+    "proposed_name": "CharacterAI::ChooseAt00557380",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x00558F50",
+    "size": "7303",
+    "proposed_name": "CharacterAI::ChooseAt00558F50",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x0055ABE0",
+    "size": "146",
+    "proposed_name": "RemiliaObject::Initialize",
+    "module": "RemiliaObject"
+  },
+  {
+    "address": "0x0055AC80",
+    "size": "28432",
+    "proposed_name": "CharacterObject::AdvanceAt0055AC80",
+    "module": "CharacterObject"
+  },
+  {
+    "address": "0x00561D40",
+    "size": "11569",
+    "proposed_name": "CharacterSequence::AdvanceAt00561D40",
+    "module": "CharacterSequence"
+  },
+  {
+    "address": "0x00564BE0",
+    "size": "61872",
+    "proposed_name": "CharacterMove::AdvanceAt00564BE0",
+    "module": "CharacterMove"
+  },
+  {
+    "address": "0x00574100",
+    "size": "266",
+    "proposed_name": "YuyukoFighter::Initialize",
+    "module": "YuyukoFighter"
+  },
+  {
+    "address": "0x00574210",
+    "size": "120",
+    "proposed_name": "YuyukoFighter::CreateOwnedObject",
+    "module": "YuyukoFighter"
+  },
+  {
+    "address": "0x00574290",
+    "size": "175",
+    "proposed_name": "YuyukoFighter::ResetRound",
+    "module": "YuyukoFighter"
+  },
+  {
+    "address": "0x00574340",
+    "size": "19",
+    "proposed_name": "YuyukoFighter::ForwardBaseActionAt00574340",
+    "module": "YuyukoFighter"
+  },
+  {
+    "address": "0x00574360",
+    "size": "11",
+    "proposed_name": "YuyukoFighter::NoOpVirtualAt00574360",
+    "module": "YuyukoFighter"
+  },
+  {
+    "address": "0x00574370",
+    "size": "13278",
+    "proposed_name": "CharacterAction::DispatchAt00574370",
+    "module": "CharacterAction"
+  },
+  {
+    "address": "0x00577750",
+    "size": "1121",
+    "proposed_name": "CharacterAux::RunAt00577750",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x00577BC0",
+    "size": "130",
+    "proposed_name": "YuyukoFighter::SelectSpecialVariant",
+    "module": "YuyukoFighter"
+  },
+  {
+    "address": "0x00577C70",
+    "size": "3800",
+    "proposed_name": "CharacterSpecial::AdvanceAt00577C70",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x00578B70",
+    "size": "1584",
+    "proposed_name": "CharacterSpecial::RenderAt00578B70",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x005791C0",
+    "size": "11",
+    "proposed_name": "YuyukoFighter::NoOpVirtualAt005791C0",
+    "module": "YuyukoFighter"
+  },
+  {
+    "address": "0x00579220",
+    "size": "1060",
+    "proposed_name": "CharacterAux::RunAt00579220",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x00579650",
+    "size": "8871",
+    "proposed_name": "CharacterAI::ChooseAt00579650",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x0057B900",
+    "size": "7125",
+    "proposed_name": "CharacterAI::ChooseAt0057B900",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x0057D4E0",
+    "size": "146",
+    "proposed_name": "YuyukoObject::Initialize",
+    "module": "YuyukoObject"
+  },
+  {
+    "address": "0x0057D580",
+    "size": "43845",
+    "proposed_name": "CharacterObject::AdvanceAt0057D580",
+    "module": "CharacterObject"
+  },
+  {
+    "address": "0x005882B0",
+    "size": "11102",
+    "proposed_name": "CharacterSequence::AdvanceAt005882B0",
+    "module": "CharacterSequence"
+  },
+  {
+    "address": "0x0058AF60",
+    "size": "49230",
+    "proposed_name": "CharacterMove::AdvanceAt0058AF60",
+    "module": "CharacterMove"
+  },
+  {
+    "address": "0x00597380",
+    "size": "243",
+    "proposed_name": "YukariFighter::Initialize",
+    "module": "YukariFighter"
+  },
+  {
+    "address": "0x00597480",
+    "size": "120",
+    "proposed_name": "YukariFighter::CreateOwnedObject",
+    "module": "YukariFighter"
+  },
+  {
+    "address": "0x00597500",
+    "size": "295",
+    "proposed_name": "YukariFighter::ResetRound",
+    "module": "YukariFighter"
+  },
+  {
+    "address": "0x00597630",
+    "size": "19",
+    "proposed_name": "YukariFighter::ForwardBaseActionAt00597630",
+    "module": "YukariFighter"
+  },
+  {
+    "address": "0x00597650",
+    "size": "11",
+    "proposed_name": "YukariFighter::NoOpVirtualAt00597650",
+    "module": "YukariFighter"
+  },
+  {
+    "address": "0x00597660",
+    "size": "15918",
+    "proposed_name": "CharacterAction::DispatchAt00597660",
+    "module": "CharacterAction"
+  },
+  {
+    "address": "0x0059B490",
+    "size": "679",
+    "proposed_name": "YukariFighter::UpdateSpecialStateAt0059B490",
+    "module": "YukariFighter"
+  },
+  {
+    "address": "0x0059B740",
+    "size": "130",
+    "proposed_name": "YukariFighter::SelectSpecialVariant",
+    "module": "YukariFighter"
+  },
+  {
+    "address": "0x0059B7F0",
+    "size": "3797",
+    "proposed_name": "CharacterSpecial::AdvanceAt0059B7F0",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x0059C6F0",
+    "size": "1584",
+    "proposed_name": "CharacterSpecial::RenderAt0059C6F0",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x0059CD40",
+    "size": "11",
+    "proposed_name": "YukariFighter::NoOpVirtualAt0059CD40",
+    "module": "YukariFighter"
+  },
+  {
+    "address": "0x0059CDA0",
+    "size": "1177",
+    "proposed_name": "CharacterAux::RunAt0059CDA0",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x0059D240",
+    "size": "8871",
+    "proposed_name": "CharacterAI::ChooseAt0059D240",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x0059F4F0",
+    "size": "8294",
+    "proposed_name": "CharacterAI::ChooseAt0059F4F0",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x005A1560",
+    "size": "146",
+    "proposed_name": "YukariObject::Initialize",
+    "module": "YukariObject"
+  },
+  {
+    "address": "0x005A1600",
+    "size": "43599",
+    "proposed_name": "CharacterObject::AdvanceAt005A1600",
+    "module": "CharacterObject"
+  },
+  {
+    "address": "0x005AC250",
+    "size": "10998",
+    "proposed_name": "CharacterSequence::AdvanceAt005AC250",
+    "module": "CharacterSequence"
+  },
+  {
+    "address": "0x005AEEC0",
+    "size": "71616",
+    "proposed_name": "CharacterMove::AdvanceAt005AEEC0",
+    "module": "CharacterMove"
+  },
+  {
+    "address": "0x005C0AB0",
+    "size": "243",
+    "proposed_name": "SuikaFighter::Initialize",
+    "module": "SuikaFighter"
+  },
+  {
+    "address": "0x005C0BB0",
+    "size": "120",
+    "proposed_name": "SuikaFighter::CreateOwnedObject",
+    "module": "SuikaFighter"
+  },
+  {
+    "address": "0x005C0C30",
+    "size": "261",
+    "proposed_name": "SuikaFighter::ResetRound",
+    "module": "SuikaFighter"
+  },
+  {
+    "address": "0x005C0D40",
+    "size": "19",
+    "proposed_name": "SuikaFighter::ForwardBaseActionAt005C0D40",
+    "module": "SuikaFighter"
+  },
+  {
+    "address": "0x005C0D60",
+    "size": "11",
+    "proposed_name": "SuikaFighter::NoOpVirtualAt005C0D60",
+    "module": "SuikaFighter"
+  },
+  {
+    "address": "0x005C0D70",
+    "size": "12857",
+    "proposed_name": "CharacterAction::DispatchAt005C0D70",
+    "module": "CharacterAction"
+  },
+  {
+    "address": "0x005C3FB0",
+    "size": "874",
+    "proposed_name": "SuikaFighter::UpdateSpecialStateAt005C3FB0",
+    "module": "SuikaFighter"
+  },
+  {
+    "address": "0x005C4320",
+    "size": "130",
+    "proposed_name": "SuikaFighter::SelectSpecialVariant",
+    "module": "SuikaFighter"
+  },
+  {
+    "address": "0x005C43D0",
+    "size": "3797",
+    "proposed_name": "CharacterSpecial::AdvanceAt005C43D0",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x005C52D0",
+    "size": "1584",
+    "proposed_name": "CharacterSpecial::RenderAt005C52D0",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x005C5920",
+    "size": "11",
+    "proposed_name": "SuikaFighter::NoOpVirtualAt005C5920",
+    "module": "SuikaFighter"
+  },
+  {
+    "address": "0x005C5980",
+    "size": "904",
+    "proposed_name": "CharacterAux::RunAt005C5980",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x005C5D10",
+    "size": "8871",
+    "proposed_name": "CharacterAI::ChooseAt005C5D10",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x005C7FC0",
+    "size": "7264",
+    "proposed_name": "CharacterAI::ChooseAt005C7FC0",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x005C9C20",
+    "size": "146",
+    "proposed_name": "SuikaObject::Initialize",
+    "module": "SuikaObject"
+  },
+  {
+    "address": "0x005C9CC0",
+    "size": "43501",
+    "proposed_name": "CharacterObject::AdvanceAt005C9CC0",
+    "module": "CharacterObject"
+  },
+  {
+    "address": "0x005D4890",
+    "size": "10712",
+    "proposed_name": "CharacterSequence::AdvanceAt005D4890",
+    "module": "CharacterSequence"
+  },
+  {
+    "address": "0x005D73C0",
+    "size": "43282",
+    "proposed_name": "CharacterMove::AdvanceAt005D73C0",
+    "module": "CharacterMove"
+  },
+  {
+    "address": "0x005E2090",
+    "size": "218",
+    "proposed_name": "MeilingFighter::Initialize",
+    "module": "MeilingFighter"
+  },
+  {
+    "address": "0x005E2170",
+    "size": "120",
+    "proposed_name": "MeilingFighter::CreateOwnedObject",
+    "module": "MeilingFighter"
+  },
+  {
+    "address": "0x005E21F0",
+    "size": "235",
+    "proposed_name": "MeilingFighter::ResetRound",
+    "module": "MeilingFighter"
+  },
+  {
+    "address": "0x005E22E0",
+    "size": "19",
+    "proposed_name": "MeilingFighter::ForwardBaseActionAt005E22E0",
+    "module": "MeilingFighter"
+  },
+  {
+    "address": "0x005E2300",
+    "size": "11",
+    "proposed_name": "MeilingFighter::NoOpVirtualAt005E2300",
+    "module": "MeilingFighter"
+  },
+  {
+    "address": "0x005E2310",
+    "size": "12777",
+    "proposed_name": "CharacterAction::DispatchAt005E2310",
+    "module": "CharacterAction"
+  },
+  {
+    "address": "0x005E5500",
+    "size": "1027",
+    "proposed_name": "CharacterAux::RunAt005E5500",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x005E5910",
+    "size": "130",
+    "proposed_name": "MeilingFighter::SelectSpecialVariant",
+    "module": "MeilingFighter"
+  },
+  {
+    "address": "0x005E59C0",
+    "size": "3797",
+    "proposed_name": "CharacterSpecial::AdvanceAt005E59C0",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x005E68C0",
+    "size": "1584",
+    "proposed_name": "CharacterSpecial::RenderAt005E68C0",
+    "module": "CharacterSpecial"
+  },
+  {
+    "address": "0x005E6F10",
+    "size": "11",
+    "proposed_name": "MeilingFighter::NoOpVirtualAt005E6F10",
+    "module": "MeilingFighter"
+  },
+  {
+    "address": "0x005E6F70",
+    "size": "1021",
+    "proposed_name": "CharacterAux::RunAt005E6F70",
+    "module": "CharacterAux"
+  },
+  {
+    "address": "0x005E7370",
+    "size": "8871",
+    "proposed_name": "CharacterAI::ChooseAt005E7370",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x005E9620",
+    "size": "7780",
+    "proposed_name": "CharacterAI::ChooseAt005E9620",
+    "module": "CharacterAI"
+  },
+  {
+    "address": "0x005EB490",
+    "size": "134",
+    "proposed_name": "MeilingObject::Initialize",
+    "module": "MeilingObject"
+  },
+  {
+    "address": "0x005EB520",
+    "size": "34434",
+    "proposed_name": "CharacterObject::AdvanceAt005EB520",
+    "module": "CharacterObject"
+  },
+  {
+    "address": "0x005F3D60",
+    "size": "12400",
+    "proposed_name": "MeilingFighter::DispatchSpecialStatesAt005F3D60",
+    "module": "MeilingFighter"
+  },
+  {
+    "address": "0x005F6F60",
+    "size": "142",
+    "proposed_name": "StaticBattleResources::ConstructAndClearContainersAt005F6F60",
+    "module": "StaticResourcePolicy"
+  },
+  {
+    "address": "0x005F6FF0",
+    "size": "235",
+    "proposed_name": "StaticBattleResources::ReleaseOwnedEntriesAt005F6FF0",
+    "module": "StaticResourcePolicy"
+  },
+  {
+    "address": "0x005F70E0",
+    "size": "84",
+    "proposed_name": "Effects::LoadResourcesAt005F70E0",
+    "module": "Effects"
+  },
+  {
+    "address": "0x005F7140",
+    "size": "162",
+    "proposed_name": "BattlePointerQueues::ReleaseEntriesAt005F7140",
+    "module": "GameContextPolicy"
+  },
+  {
+    "address": "0x005F71F0",
+    "size": "1722",
+    "proposed_name": "Effects::LoadPatternCatalogAt005F71F0",
+    "module": "Effects"
+  },
+  {
+    "address": "0x005F78B0",
+    "size": "487",
+    "proposed_name": "Effects::SpawnAuxObjectAt005F78B0",
+    "module": "Effects"
+  },
+  {
+    "address": "0x005F7AA0",
+    "size": "602",
+    "proposed_name": "Effects::SpawnConfiguredAuxObjectAt005F7AA0",
+    "module": "Effects"
+  },
+  {
+    "address": "0x005F7D00",
+    "size": "114",
+    "proposed_name": "AuxEffectManager::DispatchSelectedListAt005F7D00",
+    "module": "AuxEffectManager"
+  },
+  {
+    "address": "0x005F7D80",
+    "size": "276",
+    "proposed_name": "AuxEffectManager::AdvanceAndPruneTwoListsAt005F7D80",
+    "module": "AuxEffectManager"
+  },
+  {
+    "address": "0x005FAB10",
+    "size": "116",
+    "proposed_name": "CharacterAuxObject::InitializeAt005FAB10",
+    "module": "CharacterAuxObject"
+  },
+  {
+    "address": "0x005FAB90",
+    "size": "61",
+    "proposed_name": "AuxEffect::SpawnPeerAt005FAB90",
+    "module": "EffectForwarders"
+  },
+  {
+    "address": "0x005FABD0",
+    "size": "65",
+    "proposed_name": "AuxEffect::SpawnConfiguredPeerAt005FABD0",
+    "module": "EffectForwarders"
+  },
+  {
+    "address": "0x005FAC20",
+    "size": "21",
+    "proposed_name": "AuxEffect::ClearField8",
+    "module": "AuxEffect"
+  },
+  {
+    "address": "0x005FAC40",
+    "size": "29",
+    "proposed_name": "AuxEffect::PlaySharedSoundAt005FAC40",
+    "module": "AuxEffect"
+  },
+  {
+    "address": "0x005FAE30",
+    "size": "31352",
+    "proposed_name": "CharacterAuxObject::AdvanceActionAt005FAE30",
+    "module": "CharacterAuxObject"
+  },
+  {
+    "address": "0x00602A60",
+    "size": "2987",
+    "proposed_name": "GameApplication::RunAt00602A60",
+    "module": "GameApplication"
+  },
+  {
+    "address": "0x00603650",
+    "size": "83",
+    "proposed_name": "GameApplication::WindowCallbackAt00603650",
+    "module": "GameApplication"
+  }
+]

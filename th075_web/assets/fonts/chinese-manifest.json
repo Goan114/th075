@@ -1,0 +1,17 @@
+{
+  "format": "GG75-v1",
+  "method": "CreateFontW Song / GBK, GetGlyphOutlineW GGO_GRAY4_BITMAP, five matching layout sizes",
+  "face": "宋体",
+  "encoding": "GBK",
+  "heights": [
+    12,
+    16,
+    20,
+    24,
+    32
+  ],
+  "count": 8635,
+  "bytes": 3668500,
+  "sha256": "6699211d9307731a42b853a2828ae888ccec4f24a795e1cfd875d1e258ff62ac",
+  "fontSha256": "120a51d2b14eb588700a21e15fc301f0ea55d7c1a4e1f3ae61db83b7c8d42cd6"
+}

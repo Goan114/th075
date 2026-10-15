@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {core,oracle,memory,report} from './helpers.mjs';
+test('camera targets, smoothing, fixed view and shake match original float storage',async()=>{
+ const c=await core(),m=await oracle(),actors=[m.allocate(0x800),m.allocate(0x800)],states=c.core_alloc(72),values=c.core_alloc(32),addresses=[0x6713bc,0x6713c0,0x6713c4,0x6713d8,0x6713dc,0x6713e0,0x6713e4,0x6713e8,0x6713ec,0x6713f0,0x6713f4,0x6713f8,0x6713fc,0x671400,0x671404,0x671408,0x67140c,0x671410];let seed=0x8cf92b70,checks=0;const next=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed;};
+ m.u32(0x6713c8,actors[0]+0x44);m.u32(0x6713cc,actors[1]+0x44);m.u32(0x6713d0,actors[0]+0x48);m.u32(0x6713d4,actors[1]+0x48);
+ try{for(let sample=0;sample<16000;sample++){
+  const state=new Float32Array(Array.from({length:18},()=>((next()%80000)-40000)/100));state[11]=[0,0.5,0.9999,1,1.05,50][sample%6];state[12]=(next()%36000)/100;state[17]=(next()%36000)/100;state[8]=((next()%10000)-5000)/100;state[16]=((next()%10000)-5000)/100;const fixed=sample%3===0?1:0;memory(c,states,72).set(new Uint8Array(state.buffer));c.camera_load(states,fixed);addresses.forEach((a,i)=>m.f32(a,state[i]));m.view(0x671414,1)[0]=fixed;
+  for(let side=0;side<2;side++){const v=new Float32Array([((next()%160000)-10000)/100,((next()%90000)-10000)/100,0,0,0,0,0,0]);memory(c,values,32).set(new Uint8Array(v.buffer));c.motion_load(side,values,side===0?1:-1,0,0);m.f32(actors[side]+0x44,v[0]);m.f32(actors[side]+0x48,v[1]);}
+  const operations=[sample%4,1,1,2];for(const op of operations){if(op===3)m.call(0x412660,{args:[actors[0]+0x44,actors[0]+0x48,actors[1]+0x44,actors[1]+0x48]});else m.call([0x412620,0x4126c0,0x412cf0][op]);c.camera_apply(op);const out=Buffer.from(memory(c,c.camera_values(),72));for(let i=0;i<18;i++)assert.deepEqual(out.subarray(i*4,i*4+4),Buffer.from(m.bytes(addresses[i],4)),`camera ${sample}/${op}/${addresses[i].toString(16)}`);checks++;}
+ }report('camera-original',{passed:true,samples:16000,checks,originalFunctions:['0x412620','0x412660','0x4126c0','0x412cf0'],scope:'native complete camera calculations including original VC7 cosine and sine, no replacements'});
+ }finally{m.close();}
+});

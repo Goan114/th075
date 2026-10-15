@@ -1,0 +1,43 @@
+address,name,module,confidence,evidence
+0x00401000,GraphicsResourceClient::GraphicsResourceClient,GraphicsResourceClient,inferred,F001; constructor role supported by paired cleanup and constructor caller; original name unknown
+0x004017A0,Graphics::ResetDevice,Graphics,inferred,F003; complete target behavior and SDK ABI; original name unknown
+0x00401A00,Graphics::ShowError,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x00401A20,Graphics::SetPresentationDestinationRect,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x00401A50,Graphics::SetTargetViewport,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x00401A80,Graphics::SetPresentationSourceRect,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x00401AB0,Graphics::SetClearColor,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x00401AF0,Graphics::SetColorMultiplier,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x00401B00,Graphics::SetDrawTransform,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x00401B20,Graphics::Create16BitTexture,Graphics,inferred,F003; complete target behavior and SDK ABI; original name unknown
+0x00401C20,Graphics::CreateTexture,Graphics,inferred,F003; complete target behavior and SDK ABI; original name unknown
+0x00401D80,Graphics::CopyTextureOpaque,Graphics,inferred,F006; full SDK behavior and cold byte comparison; original name unknown
+0x00401F00,Graphics::LoadTexture,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x00401F50,Graphics::SetBlendMode,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x00402140,Graphics::SetAlphaMode,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x00402250,Graphics::SetDepthMode,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x004023B0,Graphics::SetTextureFilter,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x00402540,Graphics::SetTextureStage,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x004025F0,Graphics::SetPixelShaderMode,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x00402660,Graphics::BeginFrame,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x00402690,Graphics::BeginTarget,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x004027D0,Graphics::EndFrame,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x004028A0,Graphics::SetPresentCallback,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x004028B0,Graphics::GetPrimaryTargetTexture,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x004028C0,Graphics::GetTargetTexture,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x004028F0,Graphics::Present,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x00402970,Graphics::PresentToWindow,Graphics,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x004029F0,Graphics::DrawTexturedQuad,Graphics,inferred,F007; complete target control flow and D3D8 ABI; original names and complete coordinate owner unknown
+0x00403200,Graphics::DrawProjectedTriangleStrip,Graphics,inferred,F007; complete target control flow and D3D8 ABI; original names and complete coordinate owner unknown
+0x00403400,Graphics::DrawLine,Graphics,inferred,F006; full SDK behavior and cold byte comparison; original name unknown
+0x00403620,Graphics::DrawRectangleOutline,Graphics,inferred,R001/F007; complete SDK primitive/vertex protocol; original name unknown
+0x00403910,Graphics::DrawFilledRectangle,Graphics,inferred,F006; full SDK behavior and cold byte comparison; original name unknown
+0x00403B90,InputResourceClient::InputResourceClient,InputResourceClient,inferred,F005; complete target behavior and SDK ABI; original name and full owner layout unknown
+0x00403BE0,InputResourceClient::~InputResourceClient,InputResourceClient,inferred,F005; complete target behavior and SDK ABI; original name and full owner layout unknown
+0x00403D00,Input::ShowError,Input,inferred,F002; target-observed operations and typed SDK call slots; original name unknown
+0x00403D20,Input::Initialize,Input,inferred,F004; SDK ABI and complete target behavior; original name unknown
+0x00403D80,Input::CreateKeyboard,Input,inferred,F004; SDK ABI and complete target behavior; original name unknown
+0x00403E50,Input::PollKeyboard,Input,inferred,F004; SDK ABI and complete target behavior; original name unknown
+0x00403EB0,Input::InitializeJoysticks,Input,inferred,F005; complete target behavior and SDK ABI; original name and full owner layout unknown
+0x00403F40,Input::PollJoysticks,Input,inferred,F005; complete target behavior and SDK ABI; original name and full owner layout unknown
+0x00404010,Input::EnumerateJoystickDevice,Input,inferred,F005; complete target behavior and SDK ABI; original name and full owner layout unknown
+0x00404120,Input::ConfigureJoystickAxis,Input,inferred,F005; complete target behavior and SDK ABI; original name and full owner layout unknown

@@ -1,0 +1,1171 @@
+schema_version = 1
+target_sha256 = "bd441e99075436e8dcad26f86ffcf5e6aac4f58b0ed3ee7442e4cb39d8e22c98"
+
+[units]
+
+[units.graphics-resource-client-constructor]
+source = "src/GraphicsResourceClient.cpp"
+object = "build/matching/GraphicsResourceClient.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["GraphicsResourceClient::GraphicsResourceClient"]
+symbol = "??0GraphicsResourceClient@@QAE@XZ"
+target_address = 0x00401000
+size = 27
+relocations = [
+  { offset = 0x8, type = "DIR32", symbol = "?g_GraphicsResourceClientCount@@3HA", target = 0x00671210 },
+  { offset = 0x10, type = "DIR32", symbol = "?g_GraphicsResourceClientCount@@3HA", target = 0x00671210 },
+]
+
+[units.graphics-show-error]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::ShowError"]
+symbol = "?ShowError@Graphics@@YAXPBD@Z"
+target_address = 0x00401A00
+size = 29
+relocations = [
+  { offset = 0x6, type = "DIR32", symbol = "$SG61888", target = 0x006573EC },
+  { offset = 0x10, type = "DIR32", symbol = "?g_Window@Graphics@@3PAUHWND__@@A", target = 0x00671214 },
+  { offset = 0x17, type = "DIR32", symbol = "__imp__MessageBoxA@16", target = 0x0065720C },
+]
+
+[units.graphics-set-presentation-destination-rect]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::SetPresentationDestinationRect"]
+symbol = "?SetPresentationDestinationRect@Graphics@@YAXPBUtagRECT@@@Z"
+target_address = 0x00401A20
+size = 43
+relocations = [
+  { offset = 0xA, type = "DIR32", symbol = "?g_PresentationDestinationRect@Graphics@@3UtagRECT@@A", target = 0x006711D8 },
+  { offset = 0x13, type = "DIR32", symbol = "?g_PresentationDestinationRect@Graphics@@3UtagRECT@@A", target = 0x006711D8 },
+  { offset = 0x1C, type = "DIR32", symbol = "?g_PresentationDestinationRect@Graphics@@3UtagRECT@@A", target = 0x006711D8 },
+  { offset = 0x25, type = "DIR32", symbol = "?g_PresentationDestinationRect@Graphics@@3UtagRECT@@A", target = 0x006711D8 },
+]
+
+[units.graphics-set-target-viewport]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::SetTargetViewport"]
+symbol = "?SetTargetViewport@Graphics@@YAXKKKK@Z"
+target_address = 0x00401A50
+size = 39
+relocations = [
+  { offset = 0x7, type = "DIR32", symbol = "?g_TargetViewport@Graphics@@3U_D3DVIEWPORT8@@A", target = 0x00671180 },
+  { offset = 0x10, type = "DIR32", symbol = "?g_TargetViewport@Graphics@@3U_D3DVIEWPORT8@@A", target = 0x00671180 },
+  { offset = 0x19, type = "DIR32", symbol = "?g_TargetViewport@Graphics@@3U_D3DVIEWPORT8@@A", target = 0x00671180 },
+  { offset = 0x21, type = "DIR32", symbol = "?g_TargetViewport@Graphics@@3U_D3DVIEWPORT8@@A", target = 0x00671180 },
+]
+
+[units.graphics-set-presentation-source-rect]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::SetPresentationSourceRect"]
+symbol = "?SetPresentationSourceRect@Graphics@@YAXPBUtagRECT@@@Z"
+target_address = 0x00401A80
+size = 43
+relocations = [
+  { offset = 0xA, type = "DIR32", symbol = "?g_PresentationSourceRect@Graphics@@3UtagRECT@@A", target = 0x00671200 },
+  { offset = 0x13, type = "DIR32", symbol = "?g_PresentationSourceRect@Graphics@@3UtagRECT@@A", target = 0x00671200 },
+  { offset = 0x1C, type = "DIR32", symbol = "?g_PresentationSourceRect@Graphics@@3UtagRECT@@A", target = 0x00671200 },
+  { offset = 0x25, type = "DIR32", symbol = "?g_PresentationSourceRect@Graphics@@3UtagRECT@@A", target = 0x00671200 },
+]
+
+[units.graphics-set-clear-color]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::SetClearColor"]
+symbol = "?SetClearColor@Graphics@@YAXEEE@Z"
+target_address = 0x00401AB0
+size = 54
+relocations = [
+  { offset = 0x30, type = "DIR32", symbol = "?g_ClearColor@Graphics@@3KA", target = 0x006711D0 },
+]
+
+[units.graphics-set-color-multiplier]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::SetColorMultiplier"]
+symbol = "?SetColorMultiplier@Graphics@@YAXM@Z"
+target_address = 0x00401AF0
+size = 13
+relocations = [
+  { offset = 0x7, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+]
+
+[units.graphics-set-draw-transform]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::SetDrawTransform"]
+symbol = "?SetDrawTransform@Graphics@@YAXMMM@Z"
+target_address = 0x00401B00
+size = 31
+relocations = [
+  { offset = 0x7, type = "DIR32", symbol = "?g_DrawScale@Graphics@@3MA", target = 0x0066C084 },
+  { offset = 0x10, type = "DIR32", symbol = "?g_DrawOriginX@Graphics@@3MA", target = 0x00671220 },
+  { offset = 0x19, type = "DIR32", symbol = "?g_DrawOriginY@Graphics@@3MA", target = 0x00671224 },
+]
+
+[units.graphics-load-texture]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::LoadTexture"]
+symbol = "?LoadTexture@Graphics@@YAXPBDPAPAUIDirect3DTexture8@@@Z"
+target_address = 0x00401F00
+size = 72
+relocations = [
+  { offset = 0x24, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x2A, type = "REL32", symbol = "_D3DXCreateTextureFromFileExA@56", target = 0x00608666 },
+  { offset = 0x38, type = "DIR32", symbol = "?g_TextureLoadError@Graphics@@3QBDB", target = 0x00657444 },
+  { offset = 0x3D, type = "REL32", symbol = "?ShowError@Graphics@@YAXPBD@Z", target = 0x00401A00 },
+]
+
+[units.graphics-set-blend-mode]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::SetBlendMode"]
+symbol = "?SetBlendMode@Graphics@@YAXH@Z"
+target_address = 0x00401F50
+size = 495
+relocations = [
+  { offset = 0x1A, type = "DIR32", symbol = "$L62213", target = 0x0040211F },
+  { offset = 0x24, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x2C, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x3D, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x45, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x5B, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x63, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x74, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x7C, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x92, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x9A, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xAB, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xB3, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xC9, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xD1, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xE2, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xEA, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x100, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x108, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x119, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x121, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x137, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x13F, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x150, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x158, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x16B, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x173, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x184, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x18C, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x19F, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x1A7, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x1B8, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x1C0, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x1CF, type = "DIR32", symbol = "$L61999", target = 0x00401FA5 },
+  { offset = 0x1D3, type = "DIR32", symbol = "$L61998", target = 0x00401F6E },
+  { offset = 0x1D7, type = "DIR32", symbol = "$L62000", target = 0x00401FDC },
+  { offset = 0x1DB, type = "DIR32", symbol = "$L62001", target = 0x00402013 },
+  { offset = 0x1DF, type = "DIR32", symbol = "$L62002", target = 0x0040204A },
+  { offset = 0x1E3, type = "DIR32", symbol = "$L62003", target = 0x00402081 },
+  { offset = 0x1E7, type = "DIR32", symbol = "$L62004", target = 0x004020B5 },
+  { offset = 0x1EB, type = "DIR32", symbol = "$L62005", target = 0x004020E9 },
+]
+
+[units.graphics-set-alpha-mode]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::SetAlphaMode"]
+symbol = "?SetAlphaMode@Graphics@@YAXH@Z"
+target_address = 0x00402140
+size = 270
+relocations = [
+  { offset = 0x2B, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x32, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x43, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x4A, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x5D, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x64, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x7A, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x81, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x92, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x99, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xAC, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xB3, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xC6, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xCD, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xDE, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xE5, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xF8, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xFF, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+]
+
+[units.graphics-set-depth-mode]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::SetDepthMode"]
+symbol = "?SetDepthMode@Graphics@@YAXH@Z"
+target_address = 0x00402250
+size = 344
+relocations = [
+  { offset = 0x1A, type = "DIR32", symbol = "$L62218", target = 0x00402384 },
+  { offset = 0x24, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x2C, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x3A, type = "REL32", symbol = "?SetDepthMode@Graphics@@YAXH@Z", target = 0x00402250 },
+  { offset = 0x4C, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x54, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x6A, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x72, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x88, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x90, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xA6, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xAE, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xC1, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xC9, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xDC, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xE4, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xF7, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xFF, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x11D, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x125, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x134, type = "DIR32", symbol = "$L62024", target = 0x00402296 },
+  { offset = 0x138, type = "DIR32", symbol = "$L62023", target = 0x0040226E },
+  { offset = 0x13C, type = "DIR32", symbol = "$L62025", target = 0x004022B4 },
+  { offset = 0x140, type = "DIR32", symbol = "$L62026", target = 0x004022D2 },
+  { offset = 0x144, type = "DIR32", symbol = "$L62027", target = 0x004022F0 },
+  { offset = 0x148, type = "DIR32", symbol = "$L62028", target = 0x0040230B },
+  { offset = 0x14C, type = "DIR32", symbol = "$L62029", target = 0x00402326 },
+  { offset = 0x150, type = "DIR32", symbol = "$L62030", target = 0x00402341 },
+  { offset = 0x154, type = "DIR32", symbol = "$L62031", target = 0x0040235C },
+]
+
+[units.graphics-set-texture-filter]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::SetTextureFilter"]
+symbol = "?SetTextureFilter@Graphics@@YAXH@Z"
+target_address = 0x004023B0
+size = 386
+relocations = [
+  { offset = 0x1A, type = "DIR32", symbol = "$L62221", target = 0x00402522 },
+  { offset = 0x26, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x2E, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x41, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x49, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x5C, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x64, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x7C, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x84, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x97, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x9F, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xB2, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xBA, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xD2, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xDA, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xED, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xF5, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x108, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x110, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x125, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x12D, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x140, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x148, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x15B, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x163, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x172, type = "DIR32", symbol = "$L62039", target = 0x004023CE },
+  { offset = 0x176, type = "DIR32", symbol = "$L62040", target = 0x00402424 },
+  { offset = 0x17A, type = "DIR32", symbol = "$L62041", target = 0x0040247A },
+  { offset = 0x17E, type = "DIR32", symbol = "$L62042", target = 0x004024CD },
+]
+
+[units.graphics-set-texture-stage]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::SetTextureStage"]
+symbol = "?SetTextureStage@Graphics@@YAXCPAUIDirect3DTexture8@@_N@Z"
+target_address = 0x00402540
+size = 161
+relocations = [
+  { offset = 0x16, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x1E, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x33, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x3B, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x51, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x58, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x6D, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x75, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x8D, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x94, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+]
+
+[units.graphics-set-pixel-shader-mode]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::SetPixelShaderMode"]
+symbol = "?SetPixelShaderMode@Graphics@@YAXC@Z"
+target_address = 0x004025F0
+size = 102
+relocations = [
+  { offset = 0x6, type = "DIR32", symbol = "?g_PixelShaderSupport@Graphics@@3CA", target = 0x006711F8 },
+  { offset = 0x1C, type = "DIR32", symbol = "?g_PixelShaderEnabled@Graphics@@3_NA", target = 0x0067123B },
+  { offset = 0x27, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x2F, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x3C, type = "DIR32", symbol = "?g_PixelShaderEnabled@Graphics@@3_NA", target = 0x0067123B },
+  { offset = 0x44, type = "DIR32", symbol = "?g_PixelShader@Graphics@@3KA", target = 0x0066C1B8 },
+  { offset = 0x4B, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x52, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x5F, type = "DIR32", symbol = "?g_PixelShaderEnabled@Graphics@@3_NA", target = 0x0067123B },
+]
+
+[units.graphics-begin-frame]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::BeginFrame"]
+symbol = "?BeginFrame@Graphics@@YAXXZ"
+target_address = 0x00402660
+size = 36
+relocations = [
+  { offset = 0x5, type = "DIR32", symbol = "?g_PresentCallback@Graphics@@3P6AXPAPAUIDirect3DTexture8@@@ZA", target = 0x00671198 },
+  { offset = 0xF, type = "REL32", symbol = "?BeginTarget@Graphics@@YA_NC@Z", target = 0x00402690 },
+  { offset = 0x1B, type = "REL32", symbol = "?BeginTarget@Graphics@@YA_NC@Z", target = 0x00402690 },
+]
+
+[units.graphics-begin-target]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::BeginTarget"]
+symbol = "?BeginTarget@Graphics@@YA_NC@Z"
+target_address = 0x00402690
+size = 306
+relocations = [
+  { offset = 0x25, type = "DIR32", symbol = "?g_ActiveTarget@Graphics@@3CA", target = 0x0066C088 },
+  { offset = 0x32, type = "DIR32", symbol = "?g_ActiveTarget@Graphics@@3CA", target = 0x0066C088 },
+  { offset = 0x39, type = "DIR32", symbol = "?g_TargetTextures@Graphics@@3PAPAUIDirect3DTexture8@@A", target = 0x006711D4 },
+  { offset = 0x40, type = "DIR32", symbol = "?g_ActiveTarget@Graphics@@3CA", target = 0x0066C088 },
+  { offset = 0x47, type = "DIR32", symbol = "?g_TargetTextures@Graphics@@3PAPAUIDirect3DTexture8@@A", target = 0x006711D4 },
+  { offset = 0x52, type = "DIR32", symbol = "?g_TargetViewport@Graphics@@3U_D3DVIEWPORT8@@A", target = 0x00671180 },
+  { offset = 0x5D, type = "DIR32", symbol = "?g_ActiveTarget@Graphics@@3CA", target = 0x0066C088 },
+  { offset = 0x64, type = "DIR32", symbol = "?g_TargetRenderers@Graphics@@3PAPAUID3DXRenderToSurface@@A", target = 0x006711FC },
+  { offset = 0x6B, type = "DIR32", symbol = "?g_ActiveTarget@Graphics@@3CA", target = 0x0066C088 },
+  { offset = 0x72, type = "DIR32", symbol = "?g_TargetRenderers@Graphics@@3PAPAUID3DXRenderToSurface@@A", target = 0x006711FC },
+  { offset = 0x81, type = "DIR32", symbol = "?g_TargetBeginError@Graphics@@3QBDB", target = 0x00657460 },
+  { offset = 0x86, type = "REL32", symbol = "?ShowError@Graphics@@YAXPBD@Z", target = 0x00401A00 },
+  { offset = 0xB4, type = "DIR32", symbol = "?g_ClearColor@Graphics@@3KA", target = 0x006711D0 },
+  { offset = 0xC6, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xCD, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xDC, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xE3, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xF8, type = "DIR32", symbol = "?g_ActiveTarget@Graphics@@3CA", target = 0x0066C088 },
+  { offset = 0x106, type = "DIR32", symbol = "?g_ClearColor@Graphics@@3KA", target = 0x006711D0 },
+  { offset = 0x119, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x121, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+]
+
+[units.graphics-end-frame]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::EndFrame"]
+symbol = "?EndFrame@Graphics@@YAXXZ"
+target_address = 0x004027D0
+size = 196
+relocations = [
+  { offset = 0x6, type = "DIR32", symbol = "?g_ActiveTarget@Graphics@@3CA", target = 0x0066C088 },
+  { offset = 0x15, type = "DIR32", symbol = "?g_ActiveTarget@Graphics@@3CA", target = 0x0066C088 },
+  { offset = 0x1C, type = "DIR32", symbol = "?g_TargetRenderers@Graphics@@3PAPAUID3DXRenderToSurface@@A", target = 0x006711FC },
+  { offset = 0x23, type = "DIR32", symbol = "?g_ActiveTarget@Graphics@@3CA", target = 0x0066C088 },
+  { offset = 0x2A, type = "DIR32", symbol = "?g_TargetRenderers@Graphics@@3PAPAUID3DXRenderToSurface@@A", target = 0x006711FC },
+  { offset = 0x36, type = "DIR32", symbol = "?g_ActiveTarget@Graphics@@3CA", target = 0x0066C088 },
+  { offset = 0x3D, type = "DIR32", symbol = "?g_PresentCallback@Graphics@@3P6AXPAPAUIDirect3DTexture8@@@ZA", target = 0x00671198 },
+  { offset = 0x45, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x4D, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x66, type = "DIR32", symbol = "?g_ClearColor@Graphics@@3KA", target = 0x006711D0 },
+  { offset = 0x78, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x7F, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x8B, type = "DIR32", symbol = "?g_TargetTextures@Graphics@@3PAPAUIDirect3DTexture8@@A", target = 0x006711D4 },
+  { offset = 0x91, type = "DIR32", symbol = "?g_PresentCallback@Graphics@@3P6AXPAPAUIDirect3DTexture8@@@ZA", target = 0x00671198 },
+  { offset = 0x9A, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xA1, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xB0, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xB7, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+]
+
+[units.graphics-set-present-callback]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::SetPresentCallback"]
+symbol = "?SetPresentCallback@Graphics@@YAXP6AXPAPAUIDirect3DTexture8@@@Z@Z"
+target_address = 0x004028A0
+size = 13
+relocations = [
+  { offset = 0x7, type = "DIR32", symbol = "?g_PresentCallback@Graphics@@3P6AXPAPAUIDirect3DTexture8@@@ZA", target = 0x00671198 },
+]
+
+[units.graphics-get-primary-target-texture]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::GetPrimaryTargetTexture"]
+symbol = "?GetPrimaryTargetTexture@Graphics@@YAPAUIDirect3DTexture8@@XZ"
+target_address = 0x004028B0
+size = 10
+relocations = [
+  { offset = 0x4, type = "DIR32", symbol = "?g_TargetTextures@Graphics@@3PAPAUIDirect3DTexture8@@A", target = 0x006711D4 },
+]
+
+[units.graphics-get-target-texture]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::GetTargetTexture"]
+symbol = "?GetTargetTexture@Graphics@@YAPAUIDirect3DTexture8@@C@Z"
+target_address = 0x004028C0
+size = 37
+relocations = [
+  { offset = 0x1F, type = "DIR32", symbol = "?g_TargetTextures@Graphics@@3PAPAUIDirect3DTexture8@@A", target = 0x006711D4 },
+]
+
+[units.graphics-present]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::Present"]
+symbol = "?Present@Graphics@@YAXXZ"
+target_address = 0x004028F0
+size = 123
+relocations = [
+  { offset = 0x7, type = "DIR32", symbol = "?g_Windowed@Graphics@@3_NA", target = 0x00671238 },
+  { offset = 0x14, type = "DIR32", symbol = "?g_PresentationDestinationRect@Graphics@@3UtagRECT@@A", target = 0x006711D8 },
+  { offset = 0x19, type = "DIR32", symbol = "?g_PresentationSourceRect@Graphics@@3UtagRECT@@A", target = 0x00671200 },
+  { offset = 0x1F, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x26, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x3D, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x44, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x57, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x5E, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x73, type = "REL32", symbol = "?ResetDevice@Graphics@@YAXXZ", target = 0x004017A0 },
+]
+
+[units.graphics-present-to-window]
+source = "src/GraphicsState.cpp"
+object = "build/matching/GraphicsState.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::PresentToWindow"]
+symbol = "?PresentToWindow@Graphics@@YAXPAUHWND__@@@Z"
+target_address = 0x00402970
+size = 128
+relocations = [
+  { offset = 0x7, type = "DIR32", symbol = "?g_Windowed@Graphics@@3_NA", target = 0x00671238 },
+  { offset = 0x16, type = "DIR32", symbol = "?g_PresentationDestinationRect@Graphics@@3UtagRECT@@A", target = 0x006711D8 },
+  { offset = 0x1B, type = "DIR32", symbol = "?g_PresentationSourceRect@Graphics@@3UtagRECT@@A", target = 0x00671200 },
+  { offset = 0x21, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x29, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x41, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x49, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x5B, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x63, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x78, type = "REL32", symbol = "?ResetDevice@Graphics@@YAXXZ", target = 0x004017A0 },
+]
+
+[units.input-show-error]
+source = "src/Input.cpp"
+object = "build/matching/Input.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Input::ShowError"]
+symbol = "?ShowError@Input@@YAXPBD@Z"
+target_address = 0x00403D00
+size = 29
+relocations = [
+  { offset = 0x6, type = "DIR32", symbol = "$SG55206", target = 0x00657488 },
+  { offset = 0x10, type = "DIR32", symbol = "?g_Window@Input@@3PAUHWND__@@A", target = 0x00671344 },
+  { offset = 0x17, type = "DIR32", symbol = "__imp__MessageBoxA@16", target = 0x0065720C },
+]
+
+[units.graphics-create-16-bit-texture]
+source = "src/GraphicsTexture.cpp"
+object = "build/matching/GraphicsTexture.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::Create16BitTexture"]
+symbol = "?Create16BitTexture@Graphics@@YA_NGGPAPAUIDirect3DTexture8@@@Z"
+target_address = 0x00401B20
+size = 248
+relocations = [
+  { offset = 0x94, type = "DIR32", symbol = "?g_RequireSquareTextures@Graphics@@3_NA", target = 0x0067123A },
+  { offset = 0xCE, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xD4, type = "REL32", symbol = "_D3DXCreateTexture@32", target = 0x00605B61 },
+  { offset = 0xE2, type = "DIR32", symbol = "?g_Create16BitTextureError@Graphics@@3QBDB", target = 0x006573FC },
+  { offset = 0xE7, type = "REL32", symbol = "?ShowError@Graphics@@YAXPBD@Z", target = 0x00401A00 },
+]
+
+[units.graphics-create-texture]
+source = "src/GraphicsTexture.cpp"
+object = "build/matching/GraphicsTexture.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::CreateTexture"]
+symbol = "?CreateTexture@Graphics@@YA_NGGPAPAUIDirect3DTexture8@@E@Z"
+target_address = 0x00401C20
+size = 340
+relocations = [
+  { offset = 0x94, type = "DIR32", symbol = "?g_RequireSquareTextures@Graphics@@3_NA", target = 0x0067123A },
+  { offset = 0xE0, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xE6, type = "REL32", symbol = "_D3DXCreateTexture@32", target = 0x00605B61 },
+  { offset = 0x117, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x11D, type = "REL32", symbol = "_D3DXCreateTexture@32", target = 0x00605B61 },
+  { offset = 0x127, type = "DIR32", symbol = "?g_UnsupportedTextureDepthError@Graphics@@3QBDB", target = 0x00657414 },
+  { offset = 0x12C, type = "REL32", symbol = "?ShowError@Graphics@@YAXPBD@Z", target = 0x00401A00 },
+  { offset = 0x13E, type = "DIR32", symbol = "?g_CreateTextureError@Graphics@@3QBDB", target = 0x0065742C },
+  { offset = 0x143, type = "REL32", symbol = "?ShowError@Graphics@@YAXPBD@Z", target = 0x00401A00 },
+]
+
+[units.graphics-reset-device]
+source = "src/GraphicsTexture.cpp"
+object = "build/matching/GraphicsTexture.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::ResetDevice"]
+symbol = "?ResetDevice@Graphics@@YAXXZ"
+target_address = 0x004017A0
+size = 245
+relocations = [
+  { offset = 0x22, type = "DIR32", symbol = "?g_TargetTextures@Graphics@@3PAPAUIDirect3DTexture8@@A", target = 0x006711D4 },
+  { offset = 0x2C, type = "DIR32", symbol = "?g_TargetTextures@Graphics@@3PAPAUIDirect3DTexture8@@A", target = 0x006711D4 },
+  { offset = 0x3C, type = "DIR32", symbol = "?g_TargetRenderers@Graphics@@3PAPAUID3DXRenderToSurface@@A", target = 0x006711FC },
+  { offset = 0x46, type = "DIR32", symbol = "?g_TargetRenderers@Graphics@@3PAPAUID3DXRenderToSurface@@A", target = 0x006711FC },
+  { offset = 0x53, type = "DIR32", symbol = "?g_PresentationParameters@Graphics@@3U_D3DPRESENT_PARAMETERS_@@A", target = 0x0067119C },
+  { offset = 0x59, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x61, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x6E, type = "DIR32", symbol = "?g_ResetDeviceError@Graphics@@3QBDB", target = 0x006573D4 },
+  { offset = 0x73, type = "REL32", symbol = "?ShowError@Graphics@@YAXPBD@Z", target = 0x00401A00 },
+  { offset = 0x7D, type = "REL32", symbol = "?SetDefaultStates@Graphics@@YAXXZ", target = 0x00401540 },
+  { offset = 0x9F, type = "DIR32", symbol = "?g_TargetTextures@Graphics@@3PAPAUIDirect3DTexture8@@A", target = 0x006711D4 },
+  { offset = 0xB8, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xC0, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xCE, type = "DIR32", symbol = "?g_TargetRenderers@Graphics@@3PAPAUID3DXRenderToSurface@@A", target = 0x006711FC },
+  { offset = 0xE5, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0xEB, type = "REL32", symbol = "_D3DXCreateRenderToSurface@28", target = 0x0060508B },
+]
+
+[units.input-initialize]
+source = "src/InputDevice.cpp"
+object = "build/matching/InputDevice.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Input::Initialize"]
+symbol = "?Initialize@Input@@YA_NPAUHWND__@@PAUHINSTANCE__@@@Z"
+target_address = 0x00403D20
+size = 95
+relocations = [
+  { offset = 0x8, type = "DIR32", symbol = "?g_Window@Input@@3PAUHWND__@@A", target = 0x00671344 },
+  { offset = 0x11, type = "DIR32", symbol = "?g_Instance@Input@@3PAUHINSTANCE__@@A", target = 0x00671348 },
+  { offset = 0x17, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+  { offset = 0x25, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+  { offset = 0x2A, type = "DIR32", symbol = "_IID_IDirectInput8A", target = 0x0065BA8C },
+  { offset = 0x35, type = "DIR32", symbol = "?g_Instance@Input@@3PAUHINSTANCE__@@A", target = 0x00671348 },
+  { offset = 0x3B, type = "REL32", symbol = "_DirectInput8Create@20", target = 0x006036A4 },
+  { offset = 0x49, type = "DIR32", symbol = "?g_CreateDirectInputError@Input@@3QBDB", target = 0x00657498 },
+  { offset = 0x4E, type = "REL32", symbol = "?ShowError@Input@@YAXPBD@Z", target = 0x00403D00 },
+]
+
+[units.input-create-keyboard]
+source = "src/InputDevice.cpp"
+object = "build/matching/InputDevice.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Input::CreateKeyboard"]
+symbol = "?CreateKeyboard@Input@@YA_NXZ"
+target_address = 0x00403D80
+size = 197
+relocations = [
+  { offset = 0x6, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x17, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x1C, type = "DIR32", symbol = "_GUID_SysKeyboard", target = 0x0065B91C },
+  { offset = 0x21, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+  { offset = 0x29, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+  { offset = 0x3B, type = "DIR32", symbol = "?g_CreateKeyboardError@Input@@3QBDB", target = 0x006574BC },
+  { offset = 0x40, type = "REL32", symbol = "?ShowError@Input@@YAXPBD@Z", target = 0x00403D00 },
+  { offset = 0x4C, type = "DIR32", symbol = "_c_dfDIKeyboard", target = 0x0065A4DC },
+  { offset = 0x51, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x59, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x6B, type = "DIR32", symbol = "?g_KeyboardFormatError@Input@@3QBDB", target = 0x006574D8 },
+  { offset = 0x70, type = "REL32", symbol = "?ShowError@Input@@YAXPBD@Z", target = 0x00403D00 },
+  { offset = 0x7E, type = "DIR32", symbol = "?g_Window@Input@@3PAUHWND__@@A", target = 0x00671344 },
+  { offset = 0x85, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x8C, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x9E, type = "DIR32", symbol = "?g_KeyboardCooperativeLevelError@Input@@3QBDB", target = 0x006574F8 },
+  { offset = 0xA3, type = "REL32", symbol = "?ShowError@Input@@YAXPBD@Z", target = 0x00403D00 },
+  { offset = 0xB0, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0xB7, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+]
+
+[units.input-poll-keyboard]
+source = "src/InputDevice.cpp"
+object = "build/matching/InputDevice.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Input::PollKeyboard"]
+symbol = "?PollKeyboard@Input@@YAXXZ"
+target_address = 0x00403E50
+size = 90
+relocations = [
+  { offset = 0x6, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0xE, type = "DIR32", symbol = "?g_KeyboardState@Input@@3PAEA", target = 0x00671240 },
+  { offset = 0x18, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x20, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x32, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x3A, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x4A, type = "DIR32", symbol = "?g_KeyboardState@Input@@3PAEA", target = 0x00671240 },
+  { offset = 0x4F, type = "REL32", symbol = "_memset", target = 0x00640490 },
+]
+
+[units.input-resource-client-constructor]
+source = "src/InputJoystick.cpp"
+object = "build/matching/InputJoystick.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/GS", "/I", "src"]
+functions = ["InputResourceClient::InputResourceClient"]
+symbol = "??0InputResourceClient@@QAE@XZ"
+target_address = 0x00403B90
+size = 76
+relocations = [
+  { offset = 0x9, type = "DIR32", symbol = "?g_InputResourceClientCount@@3HA", target = 0x00671340 },
+  { offset = 0x12, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+  { offset = 0x1C, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x25, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0x2A, type = "REL32", symbol = "?clear@?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEXXZ", target = 0x00404300 },
+  { offset = 0x2F, type = "DIR32", symbol = "?g_JoystickStates@Input@@3V?$vector@UDIJOYSTATE@@V?$allocator@UDIJOYSTATE@@@std@@@std@@A", target = 0x00671358 },
+  { offset = 0x34, type = "REL32", symbol = "?clear@?$vector@UDIJOYSTATE@@V?$allocator@UDIJOYSTATE@@@std@@@std@@QAEXXZ", target = 0x00404380 },
+  { offset = 0x39, type = "DIR32", symbol = "?g_InputResourceClientCount@@3HA", target = 0x00671340 },
+  { offset = 0x41, type = "DIR32", symbol = "?g_InputResourceClientCount@@3HA", target = 0x00671340 },
+]
+
+[units.input-resource-client-destructor]
+source = "src/InputJoystick.cpp"
+object = "build/matching/InputJoystick.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/GS", "/I", "src"]
+functions = ["InputResourceClient::~InputResourceClient"]
+symbol = "??1InputResourceClient@@QAE@XZ"
+target_address = 0x00403BE0
+size = 278
+relocations = [
+  { offset = 0xA, type = "DIR32", symbol = "?g_InputResourceClientCount@@3HA", target = 0x00671340 },
+  { offset = 0x12, type = "DIR32", symbol = "?g_InputResourceClientCount@@3HA", target = 0x00671340 },
+  { offset = 0x1E, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x27, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x2E, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x38, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x3F, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x49, type = "DIR32", symbol = "?g_Keyboard@Input@@3PAUIDirectInputDevice8A@@A", target = 0x00671350 },
+  { offset = 0x64, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0x69, type = "REL32", symbol = "?size@?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QBEIXZ", target = 0x00404190 },
+  { offset = 0x77, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0x7C, type = "REL32", symbol = "??A?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEAAPAUIDirectInputDevice8A@@I@Z", target = 0x004041D0 },
+  { offset = 0x8A, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0x8F, type = "REL32", symbol = "??A?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEAAPAUIDirectInputDevice8A@@I@Z", target = 0x004041D0 },
+  { offset = 0xA9, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0xAE, type = "REL32", symbol = "??A?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEAAPAUIDirectInputDevice8A@@I@Z", target = 0x004041D0 },
+  { offset = 0xC8, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0xCD, type = "REL32", symbol = "??A?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEAAPAUIDirectInputDevice8A@@I@Z", target = 0x004041D0 },
+  { offset = 0xDA, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0xDF, type = "REL32", symbol = "?clear@?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEXXZ", target = 0x00404300 },
+  { offset = 0xE4, type = "DIR32", symbol = "?g_JoystickStates@Input@@3V?$vector@UDIJOYSTATE@@V?$allocator@UDIJOYSTATE@@@std@@@std@@A", target = 0x00671358 },
+  { offset = 0xE9, type = "REL32", symbol = "?clear@?$vector@UDIJOYSTATE@@V?$allocator@UDIJOYSTATE@@@std@@@std@@QAEXXZ", target = 0x00404380 },
+  { offset = 0xEF, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+  { offset = 0xF8, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+  { offset = 0x100, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+  { offset = 0x10A, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+]
+
+[units.input-initialize-joysticks]
+source = "src/InputJoystick.cpp"
+object = "build/matching/InputJoystick.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/GS", "/I", "src"]
+functions = ["Input::InitializeJoysticks"]
+symbol = "?InitializeJoysticks@Input@@YA_NXZ"
+target_address = 0x00403EB0
+size = 139
+relocations = [
+  { offset = 0x7, type = "DIR32", symbol = "___security_cookie", target = 0x0066FE30 },
+  { offset = 0x10, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+  { offset = 0x1C, type = "DIR32", symbol = "?EnumerateJoystickDevice@Input@@YGHPBUDIDEVICEINSTANCEA@@PAX@Z", target = 0x00404010 },
+  { offset = 0x23, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+  { offset = 0x2B, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+  { offset = 0x38, type = "DIR32", symbol = "?g_EnumerateJoysticksError@Input@@3QBDB", target = 0x00657510 },
+  { offset = 0x3D, type = "REL32", symbol = "?ShowError@Input@@YAXPBD@Z", target = 0x00403D00 },
+  { offset = 0x49, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0x4E, type = "REL32", symbol = "?size@?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QBEIXZ", target = 0x00404190 },
+  { offset = 0x53, type = "DIR32", symbol = "?g_JoystickCount@Input@@3EA", target = 0x00671354 },
+  { offset = 0x60, type = "REL32", symbol = "_memset", target = 0x00640490 },
+  { offset = 0x6E, type = "DIR32", symbol = "?g_JoystickCount@Input@@3EA", target = 0x00671354 },
+  { offset = 0x74, type = "DIR32", symbol = "?g_JoystickStates@Input@@3V?$vector@UDIJOYSTATE@@V?$allocator@UDIJOYSTATE@@@std@@@std@@A", target = 0x00671358 },
+  { offset = 0x79, type = "REL32", symbol = "?assign@?$vector@UDIJOYSTATE@@V?$allocator@UDIJOYSTATE@@@std@@@std@@QAEXIABUDIJOYSTATE@@@Z", target = 0x00404360 },
+  { offset = 0x83, type = "REL32", symbol = "@__security_check_cookie@4", target = 0x00640611 },
+]
+
+[units.input-poll-joysticks]
+source = "src/InputJoystick.cpp"
+object = "build/matching/InputJoystick.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/GS", "/I", "src"]
+functions = ["Input::PollJoysticks"]
+symbol = "?PollJoysticks@Input@@YAXXZ"
+target_address = 0x00403F40
+size = 200
+relocations = [
+  { offset = 0x8, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+  { offset = 0x28, type = "DIR32", symbol = "?g_JoystickCount@Input@@3EA", target = 0x00671354 },
+  { offset = 0x3A, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0x3F, type = "REL32", symbol = "??A?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEAAPAUIDirectInputDevice8A@@I@Z", target = 0x004041D0 },
+  { offset = 0x4D, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0x52, type = "REL32", symbol = "??A?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEAAPAUIDirectInputDevice8A@@I@Z", target = 0x004041D0 },
+  { offset = 0x75, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0x7A, type = "REL32", symbol = "??A?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEAAPAUIDirectInputDevice8A@@I@Z", target = 0x004041D0 },
+  { offset = 0x94, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0x99, type = "REL32", symbol = "??A?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEAAPAUIDirectInputDevice8A@@I@Z", target = 0x004041D0 },
+  { offset = 0xA7, type = "DIR32", symbol = "?g_JoystickStates@Input@@3V?$vector@UDIJOYSTATE@@V?$allocator@UDIJOYSTATE@@@std@@@std@@A", target = 0x00671358 },
+  { offset = 0xAC, type = "REL32", symbol = "??A?$vector@UDIJOYSTATE@@V?$allocator@UDIJOYSTATE@@@std@@@std@@QAEAAUDIJOYSTATE@@I@Z", target = 0x00404320 },
+]
+
+[units.input-enumerate-joystick-device]
+source = "src/InputJoystick.cpp"
+object = "build/matching/InputJoystick.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/GS", "/I", "src"]
+functions = ["Input::EnumerateJoystickDevice"]
+symbol = "?EnumerateJoystickDevice@Input@@YGHPBUDIDEVICEINSTANCEA@@PAX@Z"
+target_address = 0x00404010
+size = 260
+relocations = [
+  { offset = 0x8, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+  { offset = 0x22, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0x27, type = "REL32", symbol = "?push_back@?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEXABQAUIDirectInputDevice8A@@@Z", target = 0x00404240 },
+  { offset = 0x2E, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0x33, type = "REL32", symbol = "?back@?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEAAPAUIDirectInputDevice8A@@XZ", target = 0x00404210 },
+  { offset = 0x41, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+  { offset = 0x49, type = "DIR32", symbol = "?g_DirectInput@Input@@3PAUIDirectInput8A@@A", target = 0x0067134C },
+  { offset = 0x5B, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0x60, type = "REL32", symbol = "?pop_back@?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEXXZ", target = 0x004042B0 },
+  { offset = 0x6C, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0x71, type = "REL32", symbol = "?back@?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEAAPAUIDirectInputDevice8A@@XZ", target = 0x00404210 },
+  { offset = 0x7B, type = "DIR32", symbol = "_c_dfDIJoystick", target = 0x0065A6E4 },
+  { offset = 0x8C, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0x91, type = "REL32", symbol = "?back@?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEAAPAUIDirectInputDevice8A@@XZ", target = 0x00404210 },
+  { offset = 0x9E, type = "DIR32", symbol = "?g_Window@Input@@3PAUHWND__@@A", target = 0x00671344 },
+  { offset = 0xB7, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0xBC, type = "REL32", symbol = "?back@?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEAAPAUIDirectInputDevice8A@@XZ", target = 0x00404210 },
+  { offset = 0xD6, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0xDB, type = "REL32", symbol = "?back@?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEAAPAUIDirectInputDevice8A@@XZ", target = 0x00404210 },
+  { offset = 0xE9, type = "DIR32", symbol = "?ConfigureJoystickAxis@Input@@YGHPBUDIDEVICEOBJECTINSTANCEA@@PAX@Z", target = 0x00404120 },
+]
+
+[units.input-configure-joystick-axis]
+source = "src/InputJoystick.cpp"
+object = "build/matching/InputJoystick.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/GS", "/I", "src"]
+functions = ["Input::ConfigureJoystickAxis"]
+symbol = "?ConfigureJoystickAxis@Input@@YGHPBUDIDEVICEOBJECTINSTANCEA@@PAX@Z"
+target_address = 0x00404120
+size = 107
+relocations = [
+  { offset = 0x33, type = "DIR32", symbol = "?g_Joysticks@Input@@3V?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@A", target = 0x00671368 },
+  { offset = 0x38, type = "REL32", symbol = "?back@?$vector@PAUIDirectInputDevice8A@@V?$allocator@PAUIDirectInputDevice8A@@@std@@@std@@QAEAAPAUIDirectInputDevice8A@@XZ", target = 0x00404210 },
+]
+
+[units.graphics-draw-line]
+source = "src/GraphicsDraw.cpp"
+object = "build/matching/GraphicsDraw.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::DrawLine"]
+symbol = "?DrawLine@Graphics@@YAXPBUtagRECT@@K@Z"
+target_address = 0x00403400
+size = 540
+relocations = [
+  { offset = 0x64, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0xA2, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0xA7, type = "REL32", symbol = "__ftol2", target = 0x006406AC },
+  { offset = 0xD3, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0xD8, type = "REL32", symbol = "__ftol2", target = 0x006406AC },
+  { offset = 0x102, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x107, type = "REL32", symbol = "__ftol2", target = 0x006406AC },
+  { offset = 0x144, type = "DIR32", symbol = "?g_DrawScale@Graphics@@3MA", target = 0x0066C084 },
+  { offset = 0x14E, type = "DIR32", symbol = "?g_DrawOriginX@Graphics@@3MA", target = 0x00671220 },
+  { offset = 0x164, type = "DIR32", symbol = "?g_DrawScale@Graphics@@3MA", target = 0x0066C084 },
+  { offset = 0x16E, type = "DIR32", symbol = "?g_DrawOriginY@Graphics@@3MA", target = 0x00671224 },
+  { offset = 0x186, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x18E, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x19B, type = "DIR32", symbol = "?g_CachedTexture@Graphics@@3PAUIDirect3DTexture8@@A", target = 0x00671228 },
+  { offset = 0x1A8, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x1B0, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x1BD, type = "DIR32", symbol = "?g_CachedTexture@Graphics@@3PAUIDirect3DTexture8@@A", target = 0x00671228 },
+  { offset = 0x1CC, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x1D4, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x1EA, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x1F2, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x204, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x20C, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+]
+
+[units.graphics-draw-filled-rectangle]
+source = "src/GraphicsDraw.cpp"
+object = "build/matching/GraphicsDraw.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::DrawFilledRectangle"]
+symbol = "?DrawFilledRectangle@Graphics@@YAXPBUtagRECT@@K@Z"
+target_address = 0x00403910
+size = 632
+relocations = [
+  { offset = 0x31, type = "DIR32", symbol = "__real@3f800000", target = 0x0065747C },
+  { offset = 0x57, type = "DIR32", symbol = "__real@3f800000", target = 0x0065747C },
+  { offset = 0x66, type = "DIR32", symbol = "__real@3f800000", target = 0x0065747C },
+  { offset = 0x8B, type = "DIR32", symbol = "__real@3f800000", target = 0x0065747C },
+  { offset = 0xDA, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x118, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x11D, type = "REL32", symbol = "__ftol2", target = 0x006406AC },
+  { offset = 0x14F, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x154, type = "REL32", symbol = "__ftol2", target = 0x006406AC },
+  { offset = 0x186, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x18B, type = "REL32", symbol = "__ftol2", target = 0x006406AC },
+  { offset = 0x1D5, type = "DIR32", symbol = "?g_DrawScale@Graphics@@3MA", target = 0x0066C084 },
+  { offset = 0x1DF, type = "DIR32", symbol = "?g_DrawOriginX@Graphics@@3MA", target = 0x00671220 },
+  { offset = 0x1F5, type = "DIR32", symbol = "?g_DrawScale@Graphics@@3MA", target = 0x0066C084 },
+  { offset = 0x1FF, type = "DIR32", symbol = "?g_DrawOriginY@Graphics@@3MA", target = 0x00671224 },
+  { offset = 0x211, type = "DIR32", symbol = "?g_CachedTexture@Graphics@@3PAUIDirect3DTexture8@@A", target = 0x00671228 },
+  { offset = 0x21E, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x226, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x233, type = "DIR32", symbol = "?g_CachedTexture@Graphics@@3PAUIDirect3DTexture8@@A", target = 0x00671228 },
+  { offset = 0x242, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x24A, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x260, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x268, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+]
+
+[units.graphics-copy-texture-opaque]
+source = "src/GraphicsCopy.cpp"
+object = "build/matching/GraphicsCopy.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::CopyTextureOpaque"]
+symbol = "?CopyTextureOpaque@Graphics@@YAXPAPAUIDirect3DTexture8@@0PBUtagRECT@@@Z"
+target_address = 0x00401D80
+size = 376
+relocations = [
+  { offset = 0x43, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x4B, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+]
+
+[units.graphics-draw-rectangle-outline]
+source = "src/GraphicsDraw.cpp"
+object = "build/matching/GraphicsDraw.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::DrawRectangleOutline"]
+symbol = "?DrawRectangleOutline@Graphics@@YAXPBUtagRECT@@K@Z"
+target_address = 0x00403620
+size = 742
+relocations = [
+  { offset = 0xCF, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x116, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x11B, type = "REL32", symbol = "__ftol2", target = 0x006406AC },
+  { offset = 0x150, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x155, type = "REL32", symbol = "__ftol2", target = 0x006406AC },
+  { offset = 0x187, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x18C, type = "REL32", symbol = "__ftol2", target = 0x006406AC },
+  { offset = 0x1F5, type = "DIR32", symbol = "?g_DrawScale@Graphics@@3MA", target = 0x0066C084 },
+  { offset = 0x202, type = "DIR32", symbol = "?g_DrawOriginX@Graphics@@3MA", target = 0x00671220 },
+  { offset = 0x221, type = "DIR32", symbol = "?g_DrawScale@Graphics@@3MA", target = 0x0066C084 },
+  { offset = 0x22E, type = "DIR32", symbol = "?g_DrawOriginY@Graphics@@3MA", target = 0x00671224 },
+  { offset = 0x24C, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x254, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x261, type = "DIR32", symbol = "?g_CachedTexture@Graphics@@3PAUIDirect3DTexture8@@A", target = 0x00671228 },
+  { offset = 0x26E, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x276, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x283, type = "DIR32", symbol = "?g_CachedTexture@Graphics@@3PAUIDirect3DTexture8@@A", target = 0x00671228 },
+  { offset = 0x292, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x29A, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x2B3, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x2BB, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x2CD, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x2D5, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+]
+
+[units.graphics-draw-textured-quad]
+source = "src/GraphicsTexturedDraw.cpp"
+object = "build/matching/GraphicsTexturedDraw.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::DrawTexturedQuad"]
+symbol = "?DrawTexturedQuad@Graphics@@YAXPAY03$$CBMPBUtagRECT@@KPAUIDirect3DTexture8@@@Z"
+target_address = 0x004029F0
+size = 857
+relocations = [
+  { offset = 0x8F, type = "DIR32", symbol = "__real@3f000000", target = 0x00657478 },
+  { offset = 0x9E, type = "DIR32", symbol = "__real@3f000000", target = 0x00657478 },
+  { offset = 0xBB, type = "DIR32", symbol = "__real@3f000000", target = 0x00657478 },
+  { offset = 0xCA, type = "DIR32", symbol = "__real@3f000000", target = 0x00657478 },
+  { offset = 0xE7, type = "DIR32", symbol = "__real@3f000000", target = 0x00657478 },
+  { offset = 0xF6, type = "DIR32", symbol = "__real@3f000000", target = 0x00657478 },
+  { offset = 0x113, type = "DIR32", symbol = "__real@3f000000", target = 0x00657478 },
+  { offset = 0x122, type = "DIR32", symbol = "__real@3f000000", target = 0x00657478 },
+  { offset = 0x1DC, type = "DIR32", symbol = "?g_DrawScale@Graphics@@3MA", target = 0x0066C084 },
+  { offset = 0x1E6, type = "DIR32", symbol = "?g_DrawOriginX@Graphics@@3MA", target = 0x00671220 },
+  { offset = 0x202, type = "DIR32", symbol = "?g_DrawScale@Graphics@@3MA", target = 0x0066C084 },
+  { offset = 0x20C, type = "DIR32", symbol = "?g_DrawOriginY@Graphics@@3MA", target = 0x00671224 },
+  { offset = 0x221, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x268, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x26D, type = "REL32", symbol = "__ftol2", target = 0x006406AC },
+  { offset = 0x2A2, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x2A7, type = "REL32", symbol = "__ftol2", target = 0x006406AC },
+  { offset = 0x2DA, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x2DF, type = "REL32", symbol = "__ftol2", target = 0x006406AC },
+  { offset = 0x30A, type = "DIR32", symbol = "?g_CachedTexture@Graphics@@3PAUIDirect3DTexture8@@A", target = 0x00671228 },
+  { offset = 0x31B, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x322, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x332, type = "DIR32", symbol = "?g_CachedTexture@Graphics@@3PAUIDirect3DTexture8@@A", target = 0x00671228 },
+  { offset = 0x341, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x349, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+]
+
+[units.graphics-draw-projected-triangle-strip]
+source = "src/GraphicsTexturedDraw.cpp"
+object = "build/matching/GraphicsTexturedDraw.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["Graphics::DrawProjectedTriangleStrip"]
+symbol = "?DrawProjectedTriangleStrip@Graphics@@YAXPAUScreenVertex@1@HPAUIDirect3DTexture8@@@Z"
+target_address = 0x00403200
+size = 507
+relocations = [
+  { offset = 0x30, type = "DIR32", symbol = "?g_DrawScale@Graphics@@3MA", target = 0x0066C084 },
+  { offset = 0x39, type = "DIR32", symbol = "?g_DrawOriginX@Graphics@@3MA", target = 0x00671220 },
+  { offset = 0x54, type = "DIR32", symbol = "?g_DrawScale@Graphics@@3MA", target = 0x0066C084 },
+  { offset = 0x5E, type = "DIR32", symbol = "?g_DrawOriginY@Graphics@@3MA", target = 0x00671224 },
+  { offset = 0x7A, type = "DIR32", symbol = "__real@453b8000", target = 0x00657484 },
+  { offset = 0x84, type = "DIR32", symbol = "__real@453b8000", target = 0x00657484 },
+  { offset = 0xA0, type = "DIR32", symbol = "__real@40000000", target = 0x00657480 },
+  { offset = 0xA6, type = "DIR32", symbol = "__real@3f800000", target = 0x0065747C },
+  { offset = 0xB9, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x10A, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x10F, type = "REL32", symbol = "__ftol2", target = 0x006406AC },
+  { offset = 0x146, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x14B, type = "REL32", symbol = "__ftol2", target = 0x006406AC },
+  { offset = 0x17F, type = "DIR32", symbol = "?g_ColorMultiplier@Graphics@@3MA", target = 0x0066C080 },
+  { offset = 0x184, type = "REL32", symbol = "__ftol2", target = 0x006406AC },
+  { offset = 0x1A5, type = "DIR32", symbol = "?g_CachedTexture@Graphics@@3PAUIDirect3DTexture8@@A", target = 0x00671228 },
+  { offset = 0x1B6, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x1BE, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x1CE, type = "DIR32", symbol = "?g_CachedTexture@Graphics@@3PAUIDirect3DTexture8@@A", target = 0x00671228 },
+  { offset = 0x1E3, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+  { offset = 0x1EB, type = "DIR32", symbol = "?g_Device@Graphics@@3PAUIDirect3DDevice8@@A", target = 0x00671230 },
+]
+
+[units.sprite-geometry-set-four-dwords]
+source = "src/GameLeafHelpers.cpp"
+object = "build/matching/GameLeafHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["SpriteGeometry::SetFourDwords"]
+symbol = "?SetFourDwords@SpriteGeometry@@QAEPAV1@KKKK@Z"
+target_address = 0x0040DB10
+size = 51
+relocations = []
+
+[units.animation-reset-primary-counters]
+source = "src/GameLeafHelpers.cpp"
+object = "build/matching/GameLeafHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["AnimationState::ResetPrimaryCounters"]
+symbol = "?ResetPrimaryCounters@AnimationState@@QAEXF@Z"
+target_address = 0x0040FAC0
+size = 52
+relocations = []
+
+[units.animation-set-three-counters]
+source = "src/GameLeafHelpers.cpp"
+object = "build/matching/GameLeafHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["AnimationState::SetThreeCounters"]
+symbol = "?SetThreeCounters@AnimationState@@QAEXFFF@Z"
+target_address = 0x0040FB00
+size = 56
+relocations = []
+
+[units.animation-reset-secondary-counter]
+source = "src/GameLeafHelpers.cpp"
+object = "build/matching/GameLeafHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["AnimationState::ResetSecondaryCounter"]
+symbol = "?ResetSecondaryCounter@AnimationState@@QAEXF@Z"
+target_address = 0x0040FB40
+size = 43
+relocations = []
+
+[units.animation-clear-byte40]
+source = "src/GameLeafHelpers.cpp"
+object = "build/matching/GameLeafHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["AnimationState::ClearByte40"]
+symbol = "?ClearByte40@AnimationState@@QAEXXZ"
+target_address = 0x0040FC50
+size = 18
+relocations = []
+
+[units.game-set-clamped-value]
+source = "src/GameLeafHelpers.cpp"
+object = "build/matching/GameLeafHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["SetClampedGameValue"]
+symbol = "?SetClampedGameValue@@YAXH@Z"
+target_address = 0x00423C60
+size = 32
+relocations = [
+  { offset = 0x7, type = "DIR32", symbol = "?g_ClampedGameValue@@3HA", target = 0x0066C23C },
+  { offset = 0xD, type = "DIR32", symbol = "?g_ClampedGameValue@@3HA", target = 0x0066C23C },
+  { offset = 0x16, type = "DIR32", symbol = "?g_ClampedGameValue@@3HA", target = 0x0066C23C },
+]
+
+[units.battle-effect-clear-field74]
+source = "src/GameLeafHelpers.cpp"
+object = "build/matching/GameLeafHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["BattleEffect::ClearField74"]
+symbol = "?ClearField74@BattleEffect@@QAEXXZ"
+target_address = 0x0045B830
+size = 21
+relocations = []
+
+[units.fighter-clear-notice-transition]
+source = "src/GameLeafHelpers.cpp"
+object = "build/matching/GameLeafHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["FighterState::ClearNoticeTransition"]
+symbol = "?ClearNoticeTransition@FighterState@@QAEXXZ"
+target_address = 0x0045D6F0
+size = 21
+relocations = []
+
+[units.aux-effect-clear-field8]
+source = "src/GameLeafHelpers.cpp"
+object = "build/matching/GameLeafHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["AuxEffect::ClearField8"]
+symbol = "?ClearField8@AuxEffect@@QAEXXZ"
+target_address = 0x005FAC20
+size = 21
+relocations = []
+
+[units.sprite-scene-copy-vector]
+source = "src/GamePolicyHelpers.cpp"
+object = "build/matching/GamePolicyHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["SpriteScene::CopyVector"]
+symbol = "?CopyVector@SpriteScene@@QAEXPAUVector3@@@Z"
+target_address = 0x00411BB0
+size = 38
+relocations = []
+
+[units.sprite-scene-dispatch-global-draw]
+source = "src/GamePolicyHelpers.cpp"
+object = "build/matching/GamePolicyHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["SpriteScene::DispatchGlobalDraw"]
+symbol = "?DispatchGlobalDraw@SpriteScene@@SAXHHH@Z"
+target_address = 0x00411BE0
+size = 33
+relocations = [
+  { offset = 0x10, type = "DIR32", symbol = "?g_DrawDispatcher@@3PAVDrawDispatcher@@A", target = 0x00671424 },
+  { offset = 0x18, type = "DIR32", symbol = "?g_DrawDispatcher@@3PAVDrawDispatcher@@A", target = 0x00671424 },
+]
+
+[units.text-rasterizer-decode-hex-digit]
+source = "src/GamePolicyHelpers.cpp"
+object = "build/matching/GamePolicyHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["TextRasterizer::DecodeHexDigit"]
+symbol = "?DecodeHexDigit@TextRasterizer@@QAEEE@Z"
+target_address = 0x0041CA80
+size = 96
+relocations = []
+
+[units.battle-hud-draw-selected-notice]
+source = "src/GamePolicyHelpers.cpp"
+object = "build/matching/GamePolicyHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["BattleHud::DrawSelectedNotice"]
+symbol = "?DrawSelectedNotice@BattleHud@@QAEXXZ"
+target_address = 0x00440B00
+size = 78
+relocations = [
+  { offset = 0x3B, type = "REL32", symbol = "?DrawFacingSprite@FighterState@@QAEXFMHH@Z", target = 0x004549C0 },
+  { offset = 0x41, type = "DIR32", symbol = "?g_TextRenderer@@3PAVTextRenderer@@A", target = 0x0067143C },
+  { offset = 0x46, type = "REL32", symbol = "?DrawBox@TextRenderer@@QAEXXZ", target = 0x00412EB0 },
+]
+
+[units.fighter-is-grounded-state-window]
+source = "src/GamePolicyHelpers.cpp"
+object = "build/matching/GamePolicyHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["FighterState::IsGroundedStateWindow"]
+symbol = "?IsGroundedStateWindow@FighterState@@QAE_NXZ"
+target_address = 0x00455010
+size = 96
+relocations = [
+  { offset = 0x11, type = "DIR32", symbol = "?g_ZeroFloat@@3MA", target = 0x0065782C },
+  { offset = 0x2E, type = "REL32", symbol = "?IsState50To149@FighterState@@QAE_NXZ", target = 0x00454F90 },
+]
+
+[units.fighter-configure-notice-text]
+source = "src/GamePolicyHelpers.cpp"
+object = "build/matching/GamePolicyHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["FighterState::ConfigureNoticeText"]
+symbol = "?ConfigureNoticeText@FighterState@@QAEXE@Z"
+target_address = 0x0045D650
+size = 78
+relocations = [
+  { offset = 0x12, type = "DIR32", symbol = "?g_NoticeSelection@@3CA", target = 0x0067161E },
+  { offset = 0x29, type = "DIR32", symbol = "?g_TextRenderer@@3PAVTextRenderer@@A", target = 0x0067143C },
+  { offset = 0x2E, type = "REL32", symbol = "?ConfigureText@TextRenderer@@QAEXMM_N@Z", target = 0x00413420 },
+]
+
+[units.fighter-begin-notice-transition]
+source = "src/GamePolicyHelpers.cpp"
+object = "build/matching/GamePolicyHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["FighterState::BeginNoticeTransition"]
+symbol = "?BeginNoticeTransition@FighterState@@QAEXEE@Z"
+target_address = 0x0045D6A0
+size = 72
+relocations = [
+  { offset = 0x32, type = "REL32", symbol = "?SetNoticeFields@FighterState@@QAEXCEE@Z", target = 0x0045CD70 },
+]
+
+[units.battle-state-start-hit-sequence]
+source = "src/GamePolicyHelpers.cpp"
+object = "build/matching/GamePolicyHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["BattleState::StartHitSequence"]
+symbol = "?StartHitSequence@BattleState@@QAEXPAVAnimationState@@F@Z"
+target_address = 0x00443FC0
+size = 88
+relocations = [
+  { offset = 0x28, type = "REL32", symbol = "?ResetPrimaryCounters@AnimationState@@QAEXF@Z", target = 0x0040FAC0 },
+  { offset = 0x30, type = "REL32", symbol = "?ClearByte40@AnimationState@@QAEXXZ", target = 0x0040FC50 },
+  { offset = 0x41, type = "REL32", symbol = "?SpawnMidpointEffect@BattleState@@QAEXHE@Z", target = 0x004424E0 },
+  { offset = 0x49, type = "DIR32", symbol = "?g_SoundBank@@3PAVSoundBank@@A", target = 0x00671618 },
+  { offset = 0x4E, type = "REL32", symbol = "?Play@SoundBank@@QAEXH@Z", target = 0x004079C0 },
+]
+
+[units.fighter-initialize-notice]
+source = "src/GamePolicyHelpers.cpp"
+object = "build/matching/GamePolicyHelpers.obj"
+profile = ["/Od", "/Ob0", "/Gy", "/GR-", "/GX-", "/Zi", "/I", "src"]
+functions = ["FighterState::InitializeNotice"]
+symbol = "?InitializeNotice@FighterState@@QAEXF@Z"
+target_address = 0x0045CDC0
+size = 73
+relocations = [
+  { offset = 0x3F, type = "REL32", symbol = "?ConfigureNoticeText@FighterState@@QAEXE@Z", target = 0x0045D650 },
+]

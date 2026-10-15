@@ -1,0 +1,61 @@
+address,name,size,status,match_percent,unit,evidence
+0x00401000,GraphicsResourceClient::GraphicsResourceClient,27,matching,100.00,graphics-resource-client-constructor,scripts/repo-python scripts/replay-exact-units.py --unit graphics-resource-client-constructor; F001
+0x004017A0,Graphics::ResetDevice,245,matching,100.00,graphics-reset-device,scripts/repo-python scripts/replay-exact-units.py --unit graphics-reset-device; F003
+0x00401A00,Graphics::ShowError,29,matching,100.00,graphics-show-error,scripts/repo-python scripts/replay-exact-units.py --unit graphics-show-error; F002; public MCP aggregate replay
+0x00401A20,Graphics::SetPresentationDestinationRect,43,matching,100.00,graphics-set-presentation-destination-rect,scripts/repo-python scripts/replay-exact-units.py --unit graphics-set-presentation-destination-rect; F002; public MCP aggregate replay
+0x00401A50,Graphics::SetTargetViewport,39,matching,100.00,graphics-set-target-viewport,scripts/repo-python scripts/replay-exact-units.py --unit graphics-set-target-viewport; F002; public MCP aggregate replay
+0x00401A80,Graphics::SetPresentationSourceRect,43,matching,100.00,graphics-set-presentation-source-rect,scripts/repo-python scripts/replay-exact-units.py --unit graphics-set-presentation-source-rect; F002; public MCP aggregate replay
+0x00401AB0,Graphics::SetClearColor,54,matching,100.00,graphics-set-clear-color,scripts/repo-python scripts/replay-exact-units.py --unit graphics-set-clear-color; F002; public MCP aggregate replay
+0x00401AF0,Graphics::SetColorMultiplier,13,matching,100.00,graphics-set-color-multiplier,scripts/repo-python scripts/replay-exact-units.py --unit graphics-set-color-multiplier; F002; public MCP aggregate replay
+0x00401B00,Graphics::SetDrawTransform,31,matching,100.00,graphics-set-draw-transform,scripts/repo-python scripts/replay-exact-units.py --unit graphics-set-draw-transform; F002; public MCP aggregate replay
+0x00401B20,Graphics::Create16BitTexture,248,matching,100.00,graphics-create-16-bit-texture,scripts/repo-python scripts/replay-exact-units.py --unit graphics-create-16-bit-texture; F003
+0x00401C20,Graphics::CreateTexture,340,matching,100.00,graphics-create-texture,scripts/repo-python scripts/replay-exact-units.py --unit graphics-create-texture; F003
+0x00401D80,Graphics::CopyTextureOpaque,376,matching,100.00,graphics-copy-texture-opaque,F006; scripts/repo-python scripts/replay-exact-units.py --unit graphics-copy-texture-opaque
+0x00401F00,Graphics::LoadTexture,72,matching,100.00,graphics-load-texture,scripts/repo-python scripts/replay-exact-units.py --unit graphics-load-texture; F002; public MCP aggregate replay
+0x00401F50,Graphics::SetBlendMode,495,matching,100.00,graphics-set-blend-mode,scripts/repo-python scripts/replay-exact-units.py --unit graphics-set-blend-mode; F002; public MCP aggregate replay
+0x00402140,Graphics::SetAlphaMode,270,matching,100.00,graphics-set-alpha-mode,scripts/repo-python scripts/replay-exact-units.py --unit graphics-set-alpha-mode; F002; public MCP aggregate replay
+0x00402250,Graphics::SetDepthMode,344,matching,100.00,graphics-set-depth-mode,scripts/repo-python scripts/replay-exact-units.py --unit graphics-set-depth-mode; F002; public MCP aggregate replay
+0x004023B0,Graphics::SetTextureFilter,386,matching,100.00,graphics-set-texture-filter,scripts/repo-python scripts/replay-exact-units.py --unit graphics-set-texture-filter; F002; public MCP aggregate replay
+0x00402540,Graphics::SetTextureStage,161,matching,100.00,graphics-set-texture-stage,scripts/repo-python scripts/replay-exact-units.py --unit graphics-set-texture-stage; F002; public MCP aggregate replay
+0x004025F0,Graphics::SetPixelShaderMode,102,matching,100.00,graphics-set-pixel-shader-mode,scripts/repo-python scripts/replay-exact-units.py --unit graphics-set-pixel-shader-mode; F002; public MCP aggregate replay
+0x00402660,Graphics::BeginFrame,36,matching,100.00,graphics-begin-frame,scripts/repo-python scripts/replay-exact-units.py --unit graphics-begin-frame; F002; public MCP aggregate replay
+0x00402690,Graphics::BeginTarget,306,matching,100.00,graphics-begin-target,scripts/repo-python scripts/replay-exact-units.py --unit graphics-begin-target; F002; public MCP aggregate replay
+0x004027D0,Graphics::EndFrame,196,matching,100.00,graphics-end-frame,scripts/repo-python scripts/replay-exact-units.py --unit graphics-end-frame; F002; public MCP aggregate replay
+0x004028A0,Graphics::SetPresentCallback,13,matching,100.00,graphics-set-present-callback,scripts/repo-python scripts/replay-exact-units.py --unit graphics-set-present-callback; F002; public MCP aggregate replay
+0x004028B0,Graphics::GetPrimaryTargetTexture,10,matching,100.00,graphics-get-primary-target-texture,scripts/repo-python scripts/replay-exact-units.py --unit graphics-get-primary-target-texture; F002; public MCP aggregate replay
+0x004028C0,Graphics::GetTargetTexture,37,matching,100.00,graphics-get-target-texture,scripts/repo-python scripts/replay-exact-units.py --unit graphics-get-target-texture; F002; public MCP aggregate replay
+0x004028F0,Graphics::Present,123,matching,100.00,graphics-present,scripts/repo-python scripts/replay-exact-units.py --unit graphics-present; F002; public MCP aggregate replay
+0x00402970,Graphics::PresentToWindow,128,matching,100.00,graphics-present-to-window,scripts/repo-python scripts/replay-exact-units.py --unit graphics-present-to-window; F002; public MCP aggregate replay
+0x004029F0,Graphics::DrawTexturedQuad,857,matching,100.00,graphics-draw-textured-quad,scripts/repo-python scripts/replay-exact-units.py --unit graphics-draw-textured-quad; F007
+0x00403200,Graphics::DrawProjectedTriangleStrip,507,matching,100.00,graphics-draw-projected-triangle-strip,scripts/repo-python scripts/replay-exact-units.py --unit graphics-draw-projected-triangle-strip; F007
+0x00403400,Graphics::DrawLine,540,matching,100.00,graphics-draw-line,F006; scripts/repo-python scripts/replay-exact-units.py --unit graphics-draw-line
+0x00403620,Graphics::DrawRectangleOutline,742,matching,100.00,graphics-draw-rectangle-outline,F007; scripts/repo-python scripts/replay-exact-units.py --unit graphics-draw-rectangle-outline
+0x00403910,Graphics::DrawFilledRectangle,632,matching,100.00,graphics-draw-filled-rectangle,F006; scripts/repo-python scripts/replay-exact-units.py --unit graphics-draw-filled-rectangle
+0x00403B90,InputResourceClient::InputResourceClient,76,matching,100.00,input-resource-client-constructor,scripts/repo-python scripts/replay-exact-units.py --unit input-resource-client-constructor; F005
+0x00403BE0,InputResourceClient::~InputResourceClient,278,matching,100.00,input-resource-client-destructor,scripts/repo-python scripts/replay-exact-units.py --unit input-resource-client-destructor; F005
+0x00403D00,Input::ShowError,29,matching,100.00,input-show-error,scripts/repo-python scripts/replay-exact-units.py --unit input-show-error; F002; public MCP aggregate replay
+0x00403D20,Input::Initialize,95,matching,100.00,input-initialize,scripts/repo-python scripts/replay-exact-units.py --unit input-initialize; F004
+0x00403D80,Input::CreateKeyboard,197,matching,100.00,input-create-keyboard,scripts/repo-python scripts/replay-exact-units.py --unit input-create-keyboard; F004
+0x00403E50,Input::PollKeyboard,90,matching,100.00,input-poll-keyboard,scripts/repo-python scripts/replay-exact-units.py --unit input-poll-keyboard; F004
+0x00403EB0,Input::InitializeJoysticks,139,matching,100.00,input-initialize-joysticks,scripts/repo-python scripts/replay-exact-units.py --unit input-initialize-joysticks; F005
+0x00403F40,Input::PollJoysticks,200,matching,100.00,input-poll-joysticks,scripts/repo-python scripts/replay-exact-units.py --unit input-poll-joysticks; F005
+0x00404010,Input::EnumerateJoystickDevice,260,matching,100.00,input-enumerate-joystick-device,scripts/repo-python scripts/replay-exact-units.py --unit input-enumerate-joystick-device; F005
+0x00404120,Input::ConfigureJoystickAxis,107,matching,100.00,input-configure-joystick-axis,scripts/repo-python scripts/replay-exact-units.py --unit input-configure-joystick-axis; F005
+0x0040DB10,SpriteGeometry::SetFourDwords,51,matching,100.00,sprite-geometry-set-four-dwords,F008; scripts/repo-python scripts/replay-exact-units.py --unit sprite-geometry-set-four-dwords
+0x0040FAC0,AnimationState::ResetPrimaryCounters,52,matching,100.00,animation-reset-primary-counters,F008; scripts/repo-python scripts/replay-exact-units.py --unit animation-reset-primary-counters
+0x0040FB00,AnimationState::SetThreeCounters,56,matching,100.00,animation-set-three-counters,F008; scripts/repo-python scripts/replay-exact-units.py --unit animation-set-three-counters
+0x0040FB40,AnimationState::ResetSecondaryCounter,43,matching,100.00,animation-reset-secondary-counter,F008; scripts/repo-python scripts/replay-exact-units.py --unit animation-reset-secondary-counter
+0x0040FC50,AnimationState::ClearByte40,18,matching,100.00,animation-clear-byte40,F008; scripts/repo-python scripts/replay-exact-units.py --unit animation-clear-byte40
+0x00411BB0,SpriteScene::CopyVector,38,matching,100.00,sprite-scene-copy-vector,F009; scripts/repo-python scripts/replay-exact-units.py --unit sprite-scene-copy-vector
+0x00411BE0,SpriteScene::DispatchGlobalDraw,33,matching,100.00,sprite-scene-dispatch-global-draw,F009; scripts/repo-python scripts/replay-exact-units.py --unit sprite-scene-dispatch-global-draw
+0x0041CA80,TextRasterizer::DecodeHexDigit,96,matching,100.00,text-rasterizer-decode-hex-digit,F009; scripts/repo-python scripts/replay-exact-units.py --unit text-rasterizer-decode-hex-digit
+0x00423C60,SetClampedGameValue,32,matching,100.00,game-set-clamped-value,F008; scripts/repo-python scripts/replay-exact-units.py --unit game-set-clamped-value
+0x00440B00,BattleHud::DrawSelectedNotice,78,matching,100.00,battle-hud-draw-selected-notice,F009; scripts/repo-python scripts/replay-exact-units.py --unit battle-hud-draw-selected-notice
+0x00443FC0,BattleState::StartHitSequence,88,matching,100.00,battle-state-start-hit-sequence,F009; scripts/repo-python scripts/replay-exact-units.py --unit battle-state-start-hit-sequence
+0x00455010,FighterState::IsGroundedStateWindow,96,matching,100.00,fighter-is-grounded-state-window,F009; scripts/repo-python scripts/replay-exact-units.py --unit fighter-is-grounded-state-window
+0x0045B830,BattleEffect::ClearField74,21,matching,100.00,battle-effect-clear-field74,F008; scripts/repo-python scripts/replay-exact-units.py --unit battle-effect-clear-field74
+0x0045CDC0,FighterState::InitializeNotice,73,matching,100.00,fighter-initialize-notice,F009; scripts/repo-python scripts/replay-exact-units.py --unit fighter-initialize-notice
+0x0045D650,FighterState::ConfigureNoticeText,78,matching,100.00,fighter-configure-notice-text,F009; scripts/repo-python scripts/replay-exact-units.py --unit fighter-configure-notice-text
+0x0045D6A0,FighterState::BeginNoticeTransition,72,matching,100.00,fighter-begin-notice-transition,F009; scripts/repo-python scripts/replay-exact-units.py --unit fighter-begin-notice-transition
+0x0045D6F0,FighterState::ClearNoticeTransition,21,matching,100.00,fighter-clear-notice-transition,F008; scripts/repo-python scripts/replay-exact-units.py --unit fighter-clear-notice-transition
+0x005FAC20,AuxEffect::ClearField8,21,matching,100.00,aux-effect-clear-field8,F008; scripts/repo-python scripts/replay-exact-units.py --unit aux-effect-clear-field8

@@ -1,0 +1,13 @@
+import {readFileSync,writeFileSync,mkdirSync,readdirSync,statSync,openSync,readSync,closeSync,createReadStream} from 'node:fs';
+import {resolve,relative} from 'node:path';import {fileURLToPath} from 'node:url';import {createHash} from 'node:crypto';import {PEImage} from './native/pe.mjs';
+const root=fileURLToPath(new URL('../',import.meta.url)),workspace=resolve(root,'..'),original=resolve(workspace,'[th075] 东方萃梦想 (汉化版+日文版)');
+const sha=b=>createHash('sha256').update(b).digest('hex');
+async function fileSha(p){const hash=createHash('sha256');for await(const b of createReadStream(p))hash.update(b);return hash.digest('hex');}
+const executables=[];for(const name of ['th075.exe','th075c.exe']){const b=readFileSync(resolve(original,name)),pe=new PEImage(b),text=b.toString('latin1');executables.push({name,bytes:b.length,sha256:sha(b),base:pe.base,entry:pe.entry,size:pe.size,sections:pe.sections,imports:pe.imports,versionStrings:[...text.matchAll(/ver1\.[0-9]+/g)].map(m=>m[0])});}
+const archives=[];for(const name of ['th075.dat','th075b.dat','th075bgm.dat','th075c.dat']){const p=resolve(original,name),fd=openSync(p,'r'),head=Buffer.alloc(32);try{readSync(fd,head,0,32,0);}finally{closeSync(fd);}archives.push({name,bytes:statSync(p).size,sha256:await fileSha(p),header:head.toString('hex')});}
+const sharedFiles=[];function scan(dir){for(const e of readdirSync(dir,{withFileTypes:true})){const p=resolve(dir,e.name);if(e.isDirectory())scan(p);else if(/\.(cpp|hpp|h|inc)$/.test(e.name)){const b=readFileSync(p);sharedFiles.push({path:relative(workspace,p).replaceAll('\\','/'),bytes:b.length,sha256:sha(b)});}}}scan(resolve(workspace,'portable/sdl'));scan(resolve(workspace,'portable/input'));
+const releases=[];for(const game of ['th08','th09','th10','th11']){const p=resolve(workspace,game+'_web/artifacts/sdl-release/site/manifest.json'),b=readFileSync(p),m=JSON.parse(b);releases.push({game,manifestSha256:sha(b),version:m.version,execution:m.execution});}
+const write=(name,value)=>writeFileSync(resolve(root,name),JSON.stringify(value,null,2)+'\n');
+write('target.json',{game:'th075',version:'1.11',language:'Japanese',executable:'../[th075] 东方萃梦想 (汉化版+日文版)/th075.exe',sha256:executables[0].sha256,imageBase:executables[0].base,completeGame:false});
+write('reference/original-inspection.json',{game:'th075',version:'1.11',executables,archives});write('reference/architecture-baseline.json',{date:'2026-10-11',releases,sharedFiles,launcher:'th11_web/launcher',publicPort:3007});
+console.log(JSON.stringify({executables:executables.map(({name,bytes,sha256,entry})=>({name,bytes,sha256,entry})),archives,sharedFiles:sharedFiles.length}));

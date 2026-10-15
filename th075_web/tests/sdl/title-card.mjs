@@ -1,0 +1,1 @@
+import{harness,images}from './harness.mjs';import{resolve}from 'node:path';await harness(async({page,tick})=>{await page.evaluate(()=>game.ccall('th075_probe_scene','number',['number'],[2],{async:true}));await tick(80);await page.locator('canvas').screenshot({path:resolve('th075_web/launcher/public/assets/th075-card.png')});});

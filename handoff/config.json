@@ -1,0 +1,8 @@
+{
+  "game": "th075",
+  "webVersion": "1.0.4",
+  "releaseDate": "2026-10-12",
+  "manifestVersion": "d989c5e41b410aabf3748429",
+  "productionWasmSha256": "155a8e66c893f8cacbca3ec6c4a309ef03a7e41a6d2e4188260420cf88a0ba9b",
+  "archiveRoot": "TH075-1.0.4-development-20261012"
+}

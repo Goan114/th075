@@ -1,0 +1,622 @@
+{
+  "language": "lang_zh-hant",
+  "source": "local th075c.dat",
+  "sha256": "c1460767115e8f8900f6ce4707da2edb6112290f0abadf2a16d8d50ac6db94d2",
+  "encoding": "GBK; original expression/control tokens remain CP932",
+  "textMarker": 1,
+  "files": [
+    {
+      "path": "data/character/00.dat",
+      "kind": "images-only",
+      "images": 647
+    },
+    {
+      "path": "data/character/002.dat",
+      "kind": "images-only",
+      "images": 10
+    },
+    {
+      "path": "data/character/01.dat",
+      "kind": "images-only",
+      "images": 665
+    },
+    {
+      "path": "data/character/012.dat",
+      "kind": "images-only",
+      "images": 10
+    },
+    {
+      "path": "data/character/02.dat",
+      "kind": "images-only",
+      "images": 637
+    },
+    {
+      "path": "data/character/022.dat",
+      "kind": "images-only",
+      "images": 10
+    },
+    {
+      "path": "data/character/03.dat",
+      "kind": "images-only",
+      "images": 685
+    },
+    {
+      "path": "data/character/032.dat",
+      "kind": "images-only",
+      "images": 10
+    },
+    {
+      "path": "data/character/04.dat",
+      "kind": "images-only",
+      "images": 812
+    },
+    {
+      "path": "data/character/042.dat",
+      "kind": "images-only",
+      "images": 10
+    },
+    {
+      "path": "data/character/05.dat",
+      "kind": "images-only",
+      "images": 751
+    },
+    {
+      "path": "data/character/052.dat",
+      "kind": "images-only",
+      "images": 10
+    },
+    {
+      "path": "data/character/06.dat",
+      "kind": "images-only",
+      "images": 672
+    },
+    {
+      "path": "data/character/062.dat",
+      "kind": "images-only",
+      "images": 11
+    },
+    {
+      "path": "data/character/07.dat",
+      "kind": "images-only",
+      "images": 540
+    },
+    {
+      "path": "data/character/072.dat",
+      "kind": "images-only",
+      "images": 10
+    },
+    {
+      "path": "data/character/08.dat",
+      "kind": "images-only",
+      "images": 606
+    },
+    {
+      "path": "data/character/082.dat",
+      "kind": "images-only",
+      "images": 12
+    },
+    {
+      "path": "data/character/09.dat",
+      "kind": "images-only",
+      "images": 678
+    },
+    {
+      "path": "data/character/092.dat",
+      "kind": "images-only",
+      "images": 10
+    },
+    {
+      "path": "data/character/10.dat",
+      "kind": "images-only",
+      "images": 612
+    },
+    {
+      "path": "data/character/102.dat",
+      "kind": "images-only",
+      "images": 10
+    },
+    {
+      "path": "data/character/alice/alice.sce",
+      "kind": "dialogue-only; exact Japanese control structure",
+      "blocks": 43
+    },
+    {
+      "path": "data/character/alice/cardlist.dat",
+      "kind": "card-names-only",
+      "names": 100
+    },
+    {
+      "path": "data/character/alice/stage1.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/alice/stage2.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/alice/stage3.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/alice/stage4.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/alice/stage5.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/alice/stage6.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/alice/stage7.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/marisa/cardlist.dat",
+      "kind": "card-names-only",
+      "names": 100
+    },
+    {
+      "path": "data/character/marisa/marisa.sce",
+      "kind": "dialogue-only; exact Japanese control structure",
+      "blocks": 45
+    },
+    {
+      "path": "data/character/marisa/stage1.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/marisa/stage2.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/marisa/stage3.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/marisa/stage4.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/marisa/stage5.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/marisa/stage6.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/marisa/stage7.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/meiling/meiling.sce",
+      "kind": "dialogue-only; exact Japanese control structure",
+      "blocks": 12
+    },
+    {
+      "path": "data/character/patchouli/cardlist.dat",
+      "kind": "card-names-only",
+      "names": 100
+    },
+    {
+      "path": "data/character/patchouli/patchouli.sce",
+      "kind": "dialogue-only; exact Japanese control structure",
+      "blocks": 44
+    },
+    {
+      "path": "data/character/patchouli/stage1.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/patchouli/stage2.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/patchouli/stage3.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/patchouli/stage4.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/patchouli/stage5.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/patchouli/stage6.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/patchouli/stage7.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/reimu/cardlist.dat",
+      "kind": "card-names-only",
+      "names": 100
+    },
+    {
+      "path": "data/character/reimu/reimu.sce",
+      "kind": "dialogue-only; exact Japanese control structure",
+      "blocks": 47
+    },
+    {
+      "path": "data/character/reimu/stage1.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/reimu/stage2.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/reimu/stage3.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/reimu/stage4.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/reimu/stage5.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/reimu/stage6.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/reimu/stage7.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/remilia/cardlist.dat",
+      "kind": "card-names-only",
+      "names": 100
+    },
+    {
+      "path": "data/character/remilia/remilia.sce",
+      "kind": "dialogue-only; exact Japanese control structure",
+      "blocks": 43
+    },
+    {
+      "path": "data/character/remilia/stage1.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/remilia/stage2.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/remilia/stage3.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/remilia/stage4.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/remilia/stage5.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/remilia/stage6.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/remilia/stage7.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/sakuya/cardlist.dat",
+      "kind": "card-names-only",
+      "names": 100
+    },
+    {
+      "path": "data/character/sakuya/sakuya.sce",
+      "kind": "dialogue-only; exact Japanese control structure",
+      "blocks": 45
+    },
+    {
+      "path": "data/character/sakuya/stage1.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/sakuya/stage2.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/sakuya/stage3.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/sakuya/stage4.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/sakuya/stage5.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/sakuya/stage6.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/sakuya/stage7.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/suika/cardlist.dat",
+      "kind": "card-names-only",
+      "names": 100
+    },
+    {
+      "path": "data/character/suika/stage1.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/suika/stage2.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/suika/stage3.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/suika/stage4.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/suika/stage5.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/suika/stage6.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/suika/stage7.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/suika/suika.sce",
+      "kind": "dialogue-only; exact Japanese control structure",
+      "blocks": 38
+    },
+    {
+      "path": "data/character/youmu/cardlist.dat",
+      "kind": "card-names-only",
+      "names": 100
+    },
+    {
+      "path": "data/character/youmu/stage1.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/youmu/stage2.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/youmu/stage3.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/youmu/stage4.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/youmu/stage5.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/youmu/stage6.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/youmu/stage7.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/youmu/youmu.sce",
+      "kind": "dialogue-only; exact Japanese control structure",
+      "blocks": 44
+    },
+    {
+      "path": "data/character/yukari/cardlist.dat",
+      "kind": "card-names-only",
+      "names": 100
+    },
+    {
+      "path": "data/character/yukari/stage1.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/yukari/stage2.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/yukari/stage3.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/yukari/stage4.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/yukari/stage5.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/yukari/stage6.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/yukari/stage7.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/yukari/yukari.sce",
+      "kind": "dialogue-only; exact Japanese control structure",
+      "blocks": 42
+    },
+    {
+      "path": "data/character/yuyuko/cardlist.dat",
+      "kind": "card-names-only",
+      "names": 100
+    },
+    {
+      "path": "data/character/yuyuko/stage1.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/yuyuko/stage2.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/yuyuko/stage3.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/yuyuko/stage4.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/yuyuko/stage5.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/yuyuko/stage6.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/yuyuko/stage7.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/character/yuyuko/yuyuko.sce",
+      "kind": "dialogue-only; exact Japanese control structure",
+      "blocks": 41
+    },
+    {
+      "path": "data/system/battle.dat",
+      "kind": "images-only",
+      "images": 11
+    },
+    {
+      "path": "data/system/opening.dat",
+      "kind": "images-only",
+      "images": 24
+    },
+    {
+      "path": "data/system/option.dat",
+      "kind": "images-only",
+      "images": 3
+    },
+    {
+      "path": "data/system/replay.dat",
+      "kind": "images-only",
+      "images": 3
+    },
+    {
+      "path": "data/system/resultlist.dat",
+      "kind": "images-only",
+      "images": 4
+    },
+    {
+      "path": "data/system/select.dat",
+      "kind": "images-only",
+      "images": 8
+    },
+    {
+      "path": "data/system/selectchar.dat",
+      "kind": "images-only",
+      "images": 22
+    },
+    {
+      "path": "data/system/staffroll.dat",
+      "kind": "images-only",
+      "images": 27
+    },
+    {
+      "path": "musicroom.dat",
+      "kind": "music-text-only"
+    }
+  ],
+  "glyphs": 1727,
+  "packedBytes": 92191945,
+  "gameLogicChanged": false,
+  "untranslated": []
+}

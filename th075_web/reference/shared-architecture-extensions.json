@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-12",
+  "purpose": "Existing shared renderer additions for tested TH075 monochrome modulation and semantic graphics state; shared architecture retained.",
+  "changes": [
+    {
+      "path": "portable/sdl/GraphicsState.hpp",
+      "baselineSha256": "f9dee47bc9938ccaadcea8183c4023b597fd46fee3e2b07bfc3ceae6e2157f5b",
+      "currentSha256": "e11ee01c47ef4cea3cd64eff069cd8bd1f4cfb8f761982f9769626dc62ba5a6b"
+    },
+    {
+      "path": "portable/sdl/Shaders.hpp",
+      "baselineSha256": "c2168b9412c46c6589f2c726d8ea7b9ea5def8c61c4eb8f8feff6b51cc11181e",
+      "currentSha256": "744c82640fdeb00ba8bc253f768d59b039652edb50be534cc7aab27c22a00754"
+    }
+  ]
+}
