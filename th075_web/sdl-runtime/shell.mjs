@@ -25,7 +25,26 @@ function inputKey(event,down,source){
   if(event.code==='KeyR'&&down&&!event.repeat&&core._th075_phase()===2){core._th075_restart();return true;}
   return keyboard.event(event,down,source);
 }
-const fatal=e=>{$('#error').textContent=e?.message||String(e);++loopId;core?._th075_loop_pause(1);emit('error',{error:e?.message||String(e)});};
+const fatal=e=>{
+  ++loopId;
+  const message=e?.message||String(e),inspect=name=>{try{return core?.[name]?.()??null;}catch{return null;}};
+  const report={game,version:build.version,time:new Date().toISOString(),browser:navigator.userAgent,
+    error:message,stack:String(e?.stack||'').slice(0,32768),scene:inspect('_th075_scene'),frame:inspect('_th075_frame'),
+    phase:inspect('_th075_phase'),language:core?.th075Language||'ja',music};
+  // Preserve the original failure even if pausing a failed Wasm instance throws.
+  globalThis.__th075LastError=report;console.error('TH075 runtime failure',report);
+  const panel=$('#error');panel.textContent=message;
+  const details=document.createElement('details'),summary=document.createElement('summary'),trace=document.createElement('pre');
+  summary.textContent='错误详情 / Error details';trace.textContent=report.stack||message;
+  trace.style.cssText='max-height:35vh;overflow:auto;white-space:pre-wrap;text-align:left;font-size:12px;user-select:text';
+  details.append(summary,trace);panel.append(details);
+  const download=document.createElement('a');download.textContent='下载错误报告 / Download error report';
+  download.download='th075-error-'+report.time.replace(/[:.]/g,'-')+'.json';
+  download.href=URL.createObjectURL(new Blob([JSON.stringify(report,null,2)],{type:'application/json'}));
+  download.style.color='inherit';panel.append(download);
+  try{core?._th075_loop_pause(1);}catch{}
+  emit('error',{error:message,stack:report.stack});
+};
 async function idle(){while(busy)await new Promise(resolve=>setTimeout(resolve,5));}
 async function save(){await idle();if(launched&&!core._th075_save_scores())throw Error(error());await sync();}
 function closeAudio(){const context=core.SDL3?.audioContext,borrowed=parent!==window&&context===parent.__touhouAudioContext;if(borrowed)core.SDL3.audioContext=undefined;try{core._th075_audio_close();}finally{if(borrowed)core.SDL3.audioContext=context;}}
