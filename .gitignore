@@ -53,3 +53,6 @@
 .env.*
 !.env.example
 .npmrc
+/build-eagler/
+/assets-ogg/
+/third_party/eagler-common/

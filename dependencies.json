@@ -1,0 +1,12 @@
+{
+  "eagler-touhou": {
+    "repository": "https://github.com/YomotsuHisami/eagler-touhou",
+    "revision": "b667ab07cb7cf11f9220d11e3a64602cc6331792",
+    "integrationRepository": "https://github.com/Goan114/eagler-touhou",
+    "integrationRevision": "13a21ce758e40eaab25d459724dd9da315c33b4c"
+  },
+  "eagler-common": {
+    "repository": "https://github.com/YomotsuHisami/eagler-common",
+    "revision": "5f745a3f90e90d0f765e4eb7301ea5013f2f590b"
+  }
+}
