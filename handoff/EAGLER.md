@@ -96,9 +96,9 @@ full-help DOM snapshots retain preexisting THPrac markup expectations.
 
 Not claimed: full Replay golden `quick`/`daily` acceptance, high-refresh
 presentation, physical mobile/gamepad testing, or a new public deployment.
-MIDI, Multiplayer, THPrac and language packs are not advertised in this ordinary
-adapter build. The original Chinese implementation remains in the source
-snapshot; integrating a new localization profile is a separate experiment lane.
+MIDI, Multiplayer and THPrac are not advertised in this ordinary adapter build.
+Static thcrap language packs are described in [THCRAP.md](THCRAP.md); the
+development package's older Chinese overlay remains a separate source profile.
 Formal all-title Runtime Release and Hosted/External/Import release assembly
 still require the other registered titles' matching build inputs. The local
 TH075 launcher/Package Store path is executable independently of those inputs.

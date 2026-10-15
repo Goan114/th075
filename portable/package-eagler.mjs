@@ -16,7 +16,7 @@ put('shell.mjs',readFileSync(resolve(runtime,'shell.mjs'),'utf8').replace("/*TH0
 for(const name of ['managed.css','keyboard.mjs','directory-keyboard.mjs','display.mjs','save-sync.mjs'])put(name,readFileSync(resolve(runtime,name)));
 put('content-bundle.mjs',readFileSync(resolve(root,'portable/content-bundle.mjs')));
 put('th075.mjs',readFileSync(resolve(built,'th075.mjs')));put('th075.wasm',wasm);
-put('manifest.json',JSON.stringify({game:'th075',protocol:'eagler-touhou/1',adapter:'sdl3-eagler',profile:'production',version,builtAt:build.builtAt,features:{thprac:false,languages:false,focusHitbox:false},music:['ogg','none'],execution:{kind:build.kind,sha256:build.sha256}},null,2)+'\n');
+put('manifest.json',JSON.stringify({game:'th075',protocol:'eagler-touhou/1',adapter:'sdl3-eagler',profile:'production',version,builtAt:build.builtAt,features:{thprac:false,languages:true,focusHitbox:false},music:['ogg','none'],execution:{kind:build.kind,sha256:build.sha256}},null,2)+'\n');
 const files=Object.fromEntries(names.map(name=>{const bytes=readFileSync(resolve(out,name));return [name,{bytes:bytes.length,sha256:hash(bytes)}];}));
 put('runtime-files.json',JSON.stringify({schema:'eagler-touhou/runtime-directory/1',game:'th075',files},null,2)+'\n');
 console.log(JSON.stringify({out,version,files:names.length,wasm:build.sha256}));

@@ -39,6 +39,21 @@ EMSCRIPTEN_KEEPALIVE void th075_touch_cancel(){using namespace th075::sdl;touchB
 EMSCRIPTEN_KEEPALIVE const unsigned* th075_audio_statistics(){using namespace th075::sdl;return app?app->audio.statistics():nullptr;}
 EMSCRIPTEN_KEEPALIVE void th075_audio_close(){using namespace th075::sdl;if(app)app->audio.close();}
 #if TH075_DEVELOPMENT_HARNESS
+// Test-only source/control and decode checks for every compiled replacement.
+EMSCRIPTEN_KEEPALIVE int th075_probe_language_resource(const char* path,unsigned edition,unsigned kind){
+ using namespace th075;using namespace th075::sdl;if(!app||!path||edition>1||kind>2)return -1;
+ std::vector<u8> translated,original;FileResources fresh;
+ if(!app->resources.read(ResourceEdition(edition),path,translated))return -2;
+ EM_ASM({Module.probePreviousLanguage=Module.th075Language;Module.th075Language=null;});
+ const bool ok=fresh.read(ResourceEdition(edition),path,original);
+ EM_ASM({Module.th075Language=Module.probePreviousLanguage;delete Module.probePreviousLanguage;});
+ if(!ok)return -3;
+ if(kind==0){TexturePack a,b;if(!a.load(original.data(),original.size())||!b.load(translated.data(),translated.size())||a.images.size()!=b.images.size())return -4;std::vector<u8> pixels;for(u32 i=0;i<a.images.size();i++)if(a.images[i].width!=b.images[i].width||a.images[i].height!=b.images[i].height||!b.images[i].decode(pixels))return -5;return int(b.images.size());}
+ if(kind==2){MusicCatalog a,b;if(!a.load(original.data(),original.size())||!b.load(translated.data(),translated.size())||a.tracks.size()!=b.tracks.size())return -6;for(u32 i=0;i<a.tracks.size();i++)if(a.tracks[i].id!=b.tracks[i].id||a.tracks[i].author!=b.tracks[i].author)return -7;return int(b.tracks.size());}
+ FighterScript a,b;if(!a.load(original.data(),original.size())||!b.load(translated.data(),translated.size())||a.labels!=b.labels||a.blocks.size()!=b.blocks.size())return -8;unsigned changed=0;
+ for(u32 i=0;i<a.blocks.size();i++){if(a.blocks[i].size()!=b.blocks[i].size())return -9;for(u32 j=0;j<a.blocks[i].size();j++){const auto& x=a.blocks[i][j];const auto& y=b.blocks[i][j];if(x.kind!=y.kind||x.argument!=y.argument)return -10;if(x.text!=y.text){changed++;TextRasterOptions o;o.width=1024;o.height=1024;o.lineLimit=40;const auto texture=app->fonts.create(y.text,o);if(!texture)return -11;app->graphics.destroy(texture);}}}
+ return int(changed);
+}
 EMSCRIPTEN_KEEPALIVE const float* th075_probe_camera(){using namespace th075::sdl;static float v[8]{};if(app){const auto& loaded=app->loading.story.camera;v[0]=loaded.fixed;v[1]=loaded.fixedY;if(app->battle){const auto& c=app->battle->simulation.story.camera;v[2]=c.fixed;v[3]=c.x;v[4]=c.y;v[5]=c.span;v[6]=c.fixedY;v[7]=c.smoothY;}}return v;}
 // Verify the real shared renderer, including texture alpha times vertex alpha.
 EMSCRIPTEN_KEEPALIVE unsigned th075_probe_alpha(unsigned color){using namespace th075;using namespace th075::sdl;if(!app)return 0;auto& d=app->graphics;auto& g=app->zun;const auto image=d.create_surface(1,1);const u32 white=0xffffffff;d.update_pixels(image,&white,4);d.clear(0xffff0000);g.blend(SpriteBlend::Alpha);g.depth(DepthMode::Disabled);g.textured_quad(rectangle_quad(0,0,64,64),{0,0,1,1},color,image);const auto* pixels=d.capture_pixels();u32 result=0;std::memcpy(&result,pixels+(32*640+32)*4,4);d.destroy(image);return result;}
