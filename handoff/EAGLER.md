@@ -126,3 +126,16 @@ native down/up edges remain immediate. Emulated-mobile browser regression
 covers actual menus and battles, all 240 edges from 120 rapid taps, zero queued
 input messages, and stale bridge epoch rejection. This is not a physical-phone
 frame-rate guarantee.
+
+## 2026-10-15 standalone rapid-tap scheduling
+
+SDL 3.4.2 Emscripten_GLES_SwapWindow calls emscripten_sleep(0) by default
+when Asyncify is linked. The adapter already owns a requestAnimationFrame loop,
+but awaited every swap timer before requesting the next frame. Mobile tap
+scheduling can postpone that timer while joystick movement establishes a gesture.
+Set SDL_HINT_EMSCRIPTEN_ASYNCIFY to 0 before graphics initialization to disable
+the redundant swap yield. Asyncify remains linked for asynchronous asset reads.
+The launcher test test-th075-touch-scheduling-browser.mjs drives browser-managed
+touches and gates zero-delay timers during isolated taps. Before the change this
+reduces simulation to about 3.5 FPS while rAF continues; fixed builds must retain
+over 45 FPS for each A/B/C/D button and the joystick comparison.
