@@ -139,3 +139,19 @@ The launcher test test-th075-touch-scheduling-browser.mjs drives browser-managed
 touches and gates zero-delay timers during isolated taps. Before the change this
 reduces simulation to about 3.5 FPS while rAF continues; fixed builds must retain
 over 45 FPS for each A/B/C/D button and the joystick comparison.
+
+## 2026-10-15 menu transition warmup
+
+Fixed menu textures are decoded and uploaded once during Runtime initialization,
+then shared by scene banks through a retained owner. The cache contains only
+title, select/selectchar/selectbg, replay, music, resultlist, option and load
+artwork. Music-room metadata and the ten ranking characters' card lists are
+retained as small decoded resources. Fighter/stage banks still release normally.
+The initial loading phase performs this work before accepting menu input.
+
+The launcher browser regression test-th075-menu-transitions-browser.mjs visits
+Story selection, Replay, Music Room, rankings and Options twice using real
+keyboard commands, checks zero asset reads on entry, records tick duration and
+WASM heap size, and captures first-entry screens. The original adapter rereads
+all three selection packs on every entry (204 ms cold, 183 ms repeated on the
+local test machine). Set TH075_MENU_BASELINE=1 only to collect unfixed evidence.

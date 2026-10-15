@@ -23,6 +23,8 @@ private:
  struct ResetEvents final:FighterCoreEvents {Application& app;u8 side;ResetEvents(Application& a,u8 s):app(a),side(s){}void clear_owned_objects(FighterActor&)override;void spell_attempt(u8)override;void reset_hud_alpha()override;};
  std::array<ResetEvents,2> resetEvents{ResetEvents(*this,0),ResetEvents(*this,1)};
  TextureBank sceneImages,selectionCharacters,selectionBackgrounds,stageImages,hudImages,effectImages,windowImages;
+ std::map<std::pair<ResourceEdition,std::string>,std::shared_ptr<TextureBank>> menuImages;
+ bool warm_menu_images();
  std::array<std::unique_ptr<TextureBank>,2> characterImages,portraitImages,captionImages;
  std::array<CharacterAssets,2> characterAssets;EffectPattern effects;
  TextSurface textSurface;u32 dialogueTexture=0,captureTexture=0,menuText=0;
