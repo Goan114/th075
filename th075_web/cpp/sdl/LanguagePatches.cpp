@@ -50,6 +50,19 @@ bool text(const std::vector<u8>& source,ByteReader& patch,u32 count,bool music,s
  if(used!=count)return false;crypt(out,music);return true;
 }
 }
+bool localized_option_description(u8 index,std::string& text){
+ const auto size=EM_ASM_INT({
+  if(!Module.th075Language)return 0;
+  if(!Module.th075OptionDescriptions){
+   let rows;try{rows=JSON.parse(FS.readFile('/thcrap/th075/localization/options.json',{encoding:'utf8'})).optionDescriptions;}catch{return 0;}
+   if(!Array.isArray(rows)||rows.length!==7||rows.some(row=>!Array.isArray(row)||!row.length||row.length>65536||row.some(n=>!Number.isInteger(n)||n<0||n>255)))return 0;
+   Module.th075OptionDescriptions=rows.map(row=>new Uint8Array(row));
+  }
+  const value=Module.th075OptionDescriptions[$0];return value?value.length:0;
+ },index);
+ if(size<=0)return false;text.resize(std::size_t(size));
+ EM_ASM({HEAPU8.set(Module.th075OptionDescriptions[$0],$1);},index,text.data());return true;
+}
 bool apply_language_patch(const std::string& path,std::vector<u8>& bytes,std::string& error){
  if(!EM_ASM_INT({return !!Module.th075Language;}))return true;
  for(const bool picture:{true,false}){

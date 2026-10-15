@@ -47,3 +47,9 @@ experiment `experiment/thcrap` in `worktrees/th075-thcrap`. Promotion records
 the reviewed experiment head and final canonical verification in the delivery
 receipt. Full ending playthrough, alternate-palette visual parity and physical
 phone performance are not claimed by these tests.
+
+Option descriptions are executable literals, separate from option.dat artwork.
+Language packs may supply exactly seven encoded optionDescriptions byte arrays
+in localization/options.json. The Runtime validates count, byte range and size,
+then uses the same pack glyph bank. Missing or invalid tables retain the
+existing original-language fallback; no shared game-language flag is changed.

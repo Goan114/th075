@@ -1,12 +1,13 @@
 #include "Application.hpp"
 #include "MenuText.hpp"
+#include "LanguagePatches.hpp"
 #include "MenuTextChinese.hpp"
 #include <algorithm>
 #include <cstdio>
 #include <dirent.h>
 namespace th075::sdl {
 namespace {TextRasterOptions menu_options(u32 width,u32 height,u32 wrap,i32 spacing,bool white=false){TextRasterOptions o;o.width=width;o.height=height;o.wrapWidth=wrap;o.fontHeight=16;o.lineSpacing=spacing;o.lineLimit=40;if(white)o.red=o.green=o.blue=255;return o;}}
-void Application::description(u8 index){if(index<menu_text::options.size())prepare_text(menuText,FileResources::chinese()?menu_text::chinese_options[index]:menu_text::options[index],menu_options(1024,512,560,10,true));}
+void Application::description(u8 index){if(index>=menu_text::options.size())return;std::string value;if(!localized_option_description(index,value))value=FileResources::chinese()?menu_text::chinese_options[index]:menu_text::options[index];prepare_text(menuText,value,menu_options(1024,512,560,10,true));}
 void Application::update_music_catalog(){std::string text;const auto flags=profile.selection_unlocks();for(const auto& track:music.catalog.tracks){text+=flags.storyFlags[u8(track.id+100)]?track.title:menu_text::music[0];text+=menu_text::music[1];}prepare_text(musicArtwork.catalog,text,menu_options(1024,1024,560,2));}
 void Application::update_title(u8 index){prepare_text(musicArtwork.title,index<music.catalog.tracks.size()?music.catalog.tracks[index].title:menu_text::music[2],menu_options(512,32,560,2));}
 void Application::update_details(u8 index){const bool valid=index<music.catalog.tracks.size();prepare_text(musicArtwork.details,valid?music.catalog.tracks[index].description:menu_text::music[3],menu_options(512,512,528,2));std::string credit=menu_text::music[4];if(valid){char no[24];std::snprintf(no,sizeof(no),"No.%02d ",index+1);const auto& t=music.catalog.tracks[index];credit=std::string(no)+t.title+" / "+t.author;}prepare_text(musicArtwork.credit,credit,menu_options(512,32,528,2));}
