@@ -31,3 +31,5 @@
 资源重做：node th075_web/scripts/inspect-resources.mjs --extract，然后 prepare-assets.mjs、python th075_web/scripts/prepare-music.py；中文执行 prepare-chinese.mjs 和 bake-glyphs.mjs --chinese。inspect-original.mjs 是最初建档脚本，会重写历史基线，不是例行构建步骤。tools/emsdk/.emscripten 使用相对 SDK 定位；开发环境.cmd 会清理旧路径标记而保留离线端口缓存。
 
 历史证据保留原构建哈希；当前交付身份见 handoff/config.json。异地构建可能因路径或工具链信息产生字节差异，须核对源码与实际重建运行结果。完整原版一致性和手机真机性能请按测试组范围复测。
+
+正式构建同时在 artifacts/sdl3/th075.mjs.symbols 保存函数序号映射，不进入公开 Runtime。处理 Safari 错误报告时，先核对报告版本中的 Wasm SHA-256，再使用同一构建的映射解析 wasm-function 序号；不要混用其他构建的映射。共享特效拆分需要在最终映射中保留 advance_group_0 至 advance_group_8，避免优化器重新合并。

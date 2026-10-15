@@ -146,7 +146,7 @@
     "th075_web/cpp/game/SceneFade.cpp": "c79e29d999084f9d0b66c0a93aa775d650a20f5cd1ca55326b86324bec443e8a",
     "th075_web/cpp/game/SceneFadeDrawing.cpp": "7b8ad42de148d37f90dfc6265ddab63a4154a3166dd461bd0d9426f8722d91d5",
     "th075_web/cpp/game/SelectionUnlocks.cpp": "1336d9ecc9d9d953247b80488c816ee1905268edc993f9a7bbad8f37282a170e",
-    "th075_web/cpp/game/SharedEffectActions.cpp": "776a64b03ac082b52809261e0345ddf366254ec7598149d364eb2291d1b6dbcf",
+    "th075_web/cpp/game/SharedEffectActions.cpp": "f670694f6adbbd42f2f00d1b2e0dca1ded9060bfd4c188d935ca8ad83fa9c12e",
     "th075_web/cpp/game/SharedEffects.cpp": "7daa0a044c6a8b55bbbc7f3f8b4c36ce3b0de9e024d813432c6668661d316280",
     "th075_web/cpp/game/SoundPack.cpp": "e514c16b77f8f6577225feb12f5ca25816b5281589aa2a69356d9be5462e7aea",
     "th075_web/cpp/game/SpriteRenderer.cpp": "c9afd0ea9eea8db62a4c520f08f719b7326490a05675909267c980bc6cfc280c",
@@ -746,5 +746,29 @@
     "passed": true,
     "language": "lang_zh-hant",
     "scope": "real public HTTPS origin/frontend/Wasm, CSP/isolation, new display module, Chinese selection and training Escape pause/resume; unchanged game assets supplied from local verified copies, not a fresh CDN download test; desktop Chromium software GPU, phone hardware not measured"
+  },
+  "eaglerSharedEffectStack": {
+    "date": "2026-10-16",
+    "previousSourceSha256": "776a64b03ac082b52809261e0345ddf366254ec7598149d364eb2291d1b6dbcf",
+    "sourceSha256": "f670694f6adbbd42f2f00d1b2e0dca1ded9060bfd4c188d935ca8ad83fa9c12e",
+    "reason": "Bound the Wasm activation size in the nested shared-effect path identified by Safari 17.5 failure report; preserve synchronous child updates and RNG.",
+    "originalComparison": {
+      "effectUpdates": 15180,
+      "managerFrames": 3600,
+      "managerObjectChecks": 81330,
+      "passed": true
+    },
+    "browser": {
+      "engines": [
+        "Chromium",
+        "Windows WebKit 26.6 (mock WebAudio)"
+      ],
+      "battlesPerEngine": 6,
+      "framesPerBattle": 3600,
+      "hitDamageObserved": true,
+      "passed": true
+    },
+    "limitations": "Original iPadOS 17.5.1 failure not reproduced on desktop engines; physical-device verification remains required.",
+    "reports": "artifacts/eagler/shared-effect-stack/"
   }
 }

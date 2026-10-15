@@ -1,35 +1,12 @@
 #include "SharedEffects.hpp"
 #include <cmath>
 namespace th075 {
-void advance_shared_effect(SharedEffect& e,ReplayRandom& random,SharedEffectEvents& events){
+namespace {
+// Keep each policy group out of line: Safari needs a bounded native Wasm
+// call frame when a hit effect immediately creates and updates child particles.
+// Child update order and RNG consumption remain synchronous and unchanged.
+[[gnu::noinline]] void advance_group_0(SharedEffect& e,ReplayRandom& random,SharedEffectEvents& events){
     i16 shortBits=0,shortValue=0;i32 randomValue=0;double angleRadians=0;float launchSpeed=0;
-    u32 growthEnabled0=0;
-    u32 growthEnabled1=0;
-    u32 growthEnabled2=0;
-    u32 growthEnabled3=0;
-    u32 growthEnabled4=0;
-    u32 growthEnabled5=0;
-    u32 growthEnabled6=0;
-    u32 growthEnabled7=0;
-    u32 growthEnabled8=0;
-    u32 growthEnabled9=0;
-    u32 growthEnabled10=0;
-    u32 growthEnabled11=0;
-    u32 growthEnabled12=0;
-    u32 growthEnabled13=0;
-    u32 growthEnabled14=0;
-    u32 growthEnabled15=0;
-    u32 growthEnabled16=0;
-    u32 growthEnabled17=0;
-    u32 growthEnabled18=0;
-    u32 growthEnabled19=0;
-    u32 growthEnabled20=0;
-    u32 growthEnabled21=0;
-    u32 growthEnabled22=0;
-    u32 growthEnabled23=0;
-    u32 growthEnabled24=0;
-    u32 growthEnabled25=0;
-    u32 growthEnabled26=0;
     const auto emit=[&](i16 id,float x,float y,i8 facing,u8 layer){events.spawn(id,x,y,facing,layer,e.parameters);};
   switch(e.cursor.action) {
   case 1:
@@ -425,6 +402,20 @@ void advance_shared_effect(SharedEffect& e,ReplayRandom& random,SharedEffectEven
       e.destroy();
     }
     break;
+  }
+}
+[[gnu::noinline]] void advance_group_1(SharedEffect& e,ReplayRandom& random,SharedEffectEvents& events){
+    i16 shortBits=0,shortValue=0;i32 randomValue=0;double angleRadians=0;float launchSpeed=0;
+    u32 growthEnabled0=0;
+    u32 growthEnabled1=0;
+    u32 growthEnabled2=0;
+    u32 growthEnabled3=0;
+    u32 growthEnabled4=0;
+    u32 growthEnabled5=0;
+    u32 growthEnabled6=0;
+    u32 growthEnabled7=0;
+    const auto emit=[&](i16 id,float x,float y,i8 facing,u8 layer){events.spawn(id,x,y,facing,layer,e.parameters);};
+  switch(e.cursor.action) {
   case 0xe:
     if ((e.cursor.index == 0) && (e.cursor.elapsed == 0)) {
       e.begin_pose(0,0,0);
@@ -753,6 +744,14 @@ void advance_shared_effect(SharedEffect& e,ReplayRandom& random,SharedEffectEven
       e.destroy();
     }
     break;
+  }
+}
+[[gnu::noinline]] void advance_group_2(SharedEffect& e,ReplayRandom& random,SharedEffectEvents& events){
+    i16 shortBits=0,shortValue=0;i32 randomValue=0;double angleRadians=0;float launchSpeed=0;
+    u32 growthEnabled8=0;
+    u32 growthEnabled9=0;
+    const auto emit=[&](i16 id,float x,float y,i8 facing,u8 layer){events.spawn(id,x,y,facing,layer,e.parameters);};
+  switch(e.cursor.action) {
   case 0x38:
     if ((e.cursor.index == 0) && (e.cursor.elapsed == 0)) {
       e.begin_pose(0,0,0);
@@ -1059,6 +1058,11 @@ void advance_shared_effect(SharedEffect& e,ReplayRandom& random,SharedEffectEven
       e.destroy();
     }
     break;
+  }
+}
+[[gnu::noinline]] void advance_group_3(SharedEffect& e,ReplayRandom& random,SharedEffectEvents& events){
+    i16 shortBits=0,shortValue=0;i32 randomValue=0;double angleRadians=0;float launchSpeed=0;
+  switch(e.cursor.action) {
   case 0x65:
     if ((e.cursor.index == 0) && (e.cursor.elapsed == 0)) {
       e.begin_pose(0,0,0);
@@ -1369,6 +1373,15 @@ void advance_shared_effect(SharedEffect& e,ReplayRandom& random,SharedEffectEven
       e.destroy();
     }
     break;
+  }
+}
+[[gnu::noinline]] void advance_group_4(SharedEffect& e,ReplayRandom& random,SharedEffectEvents& events){
+    i16 shortBits=0,shortValue=0;i32 randomValue=0;double angleRadians=0;float launchSpeed=0;
+    u32 growthEnabled10=0;
+    u32 growthEnabled11=0;
+    u32 growthEnabled12=0;
+    const auto emit=[&](i16 id,float x,float y,i8 facing,u8 layer){events.spawn(id,x,y,facing,layer,e.parameters);};
+  switch(e.cursor.action) {
   case 0x6d:
     if ((e.cursor.index == 0) && (e.cursor.elapsed == 0)) {
       e.begin_pose(0,0,0);
@@ -1671,6 +1684,17 @@ void advance_shared_effect(SharedEffect& e,ReplayRandom& random,SharedEffectEven
       e.destroy();
     }
     break;
+  }
+}
+[[gnu::noinline]] void advance_group_5(SharedEffect& e,ReplayRandom& random,SharedEffectEvents& events){
+    i16 shortBits=0,shortValue=0;i32 randomValue=0;double angleRadians=0;float launchSpeed=0;
+    u32 growthEnabled13=0;
+    u32 growthEnabled14=0;
+    u32 growthEnabled15=0;
+    u32 growthEnabled16=0;
+    u32 growthEnabled17=0;
+    u32 growthEnabled18=0;
+  switch(e.cursor.action) {
   case 0x75:
     if ((e.cursor.index == 0) && (e.cursor.elapsed == 0)) {
       e.begin_pose(0,0,0);
@@ -1946,6 +1970,15 @@ void advance_shared_effect(SharedEffect& e,ReplayRandom& random,SharedEffectEven
       e.age = e.age + 1;
     }
     break;
+  }
+}
+[[gnu::noinline]] void advance_group_6(SharedEffect& e,ReplayRandom& random,SharedEffectEvents& events){
+    i16 shortBits=0,shortValue=0;i32 randomValue=0;double angleRadians=0;float launchSpeed=0;
+    u32 growthEnabled19=0;
+    u32 growthEnabled20=0;
+    u32 growthEnabled21=0;
+    u32 growthEnabled22=0;
+  switch(e.cursor.action) {
   case 0x7d:
     if ((e.cursor.index == 0) && (e.cursor.elapsed == 0)) {
       e.begin_pose(0,0,0);
@@ -2136,6 +2169,15 @@ void advance_shared_effect(SharedEffect& e,ReplayRandom& random,SharedEffectEven
       e.destroy();
     }
     break;
+  }
+}
+[[gnu::noinline]] void advance_group_7(SharedEffect& e,ReplayRandom& random,SharedEffectEvents& events){
+    i16 shortBits=0,shortValue=0;i32 randomValue=0;double angleRadians=0;float launchSpeed=0;
+    u32 growthEnabled23=0;
+    u32 growthEnabled24=0;
+    u32 growthEnabled25=0;
+    u32 growthEnabled26=0;
+  switch(e.cursor.action) {
   case 0x85:
     if ((e.cursor.index == 0) && (e.cursor.elapsed == 0)) {
       e.begin_pose(0,0,0);
@@ -2423,6 +2465,11 @@ void advance_shared_effect(SharedEffect& e,ReplayRandom& random,SharedEffectEven
       e.destroy();
     }
     break;
+  }
+}
+[[gnu::noinline]] void advance_group_8(SharedEffect& e,ReplayRandom& random,SharedEffectEvents& events){
+    i16 shortBits=0,shortValue=0;i32 randomValue=0;double angleRadians=0;float launchSpeed=0;
+  switch(e.cursor.action) {
   case 0x8d:
     if ((e.cursor.index == 0) && (e.cursor.elapsed == 0)) {
       e.begin_pose(0,0,0);
@@ -2602,8 +2649,23 @@ void advance_shared_effect(SharedEffect& e,ReplayRandom& random,SharedEffectEven
       }
     }
   }
-  return;
 }
-
-
+}
+void advance_shared_effect(SharedEffect& e,ReplayRandom& random,SharedEffectEvents& events){
+    using Policy=void(*)(SharedEffect&,ReplayRandom&,SharedEffectEvents&);
+    // Binaryen otherwise inlines all single-caller groups despite noinline.
+    // Keep the dispatch indirect so child updates use the smaller activations.
+    static Policy volatile policies[]{advance_group_0,advance_group_1,advance_group_2,
+        advance_group_3,advance_group_4,advance_group_5,advance_group_6,advance_group_7,advance_group_8};
+    const auto action=e.cursor.action;
+    if(action<=0xd){policies[0](e,random,events);return;}
+    if(action<=0x37){policies[1](e,random,events);return;}
+    if(action<=100){policies[2](e,random,events);return;}
+    if(action<=0x6c){policies[3](e,random,events);return;}
+    if(action<=0x74){policies[4](e,random,events);return;}
+    if(action<=0x7c){policies[5](e,random,events);return;}
+    if(action<=0x84){policies[6](e,random,events);return;}
+    if(action<=0x8c){policies[7](e,random,events);return;}
+    if(action<=0x91)policies[8](e,random,events);
+}
 }
