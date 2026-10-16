@@ -87,3 +87,6 @@ fighter position, health and action at identical simulation frames. Native
 not a playback equality requirement. `--spectator-failure` on browser-match
 closes only the viewer stream, requires an explicit viewer error, and proves
 that both player worlds keep advancing.
+
+Recorded results, immutable source bases and remaining limits are in
+[MULTIPLAYER-ACCEPTANCE.md](MULTIPLAYER-ACCEPTANCE.md).
