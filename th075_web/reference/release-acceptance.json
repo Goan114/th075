@@ -287,7 +287,7 @@
     "th075_web/cpp/game/NameEntryScene.hpp": "04acfab1ad02157114a1496d9461e7226f8aedf38ad69fd8a22911775847f8f7",
     "th075_web/cpp/game/ObjectTools.hpp": "a8195b09063712a069e5a042986e845613eb7bc7a9dcf55950335f06d2a62388",
     "th075_web/cpp/game/OptionsScene.hpp": "89a7d23591e70bd014f098509c5da28e5daa966aa349e43838e95e4f02d7a5ef",
-    "th075_web/cpp/game/OwnedObjects.hpp": "135bb03e14fd454c290d37a0bc899679305f2c207e1dc8947dd3f9193d0c176f",
+    "th075_web/cpp/game/OwnedObjects.hpp": "12f4e8d2aef9d3898ed1ae270c954a55caca169bba5ec91ea4b0372d669fd415",
     "th075_web/cpp/game/PatchouliCharacter.hpp": "0fdfe9eed099411194e99aa12377eb1a535e933cbac01b8c8b4111881a367c5e",
     "th075_web/cpp/game/PatchouliObjects.hpp": "a6efdc932f70702ba52afa71bac21fc7bbc40ba4380c291f1985f42e08b8f8bb",
     "th075_web/cpp/game/PatchouliState.hpp": "0ce45d9734eea4b91c26b3ed324a5d3cd9996bfe690add14c11d6e14529acf24",
@@ -320,7 +320,7 @@
     "th075_web/cpp/game/SakuyaState.hpp": "1c10ccf3530700ef79f101e673832a8d5f77a793fd6c68d62c92e47731849d02",
     "th075_web/cpp/game/SakuyaStory.hpp": "fac6480bfe83c5286db5e7c0e61afa87eef737494ad58273eb87e9dfd38b1957",
     "th075_web/cpp/game/SceneFade.hpp": "4cd3e635de625890328dbe8c5b92d1b574e7bf526cc25af7e08c17aec9dc3b69",
-    "th075_web/cpp/game/SharedEffects.hpp": "854f776f33906653ffed08baf15776e9470a8b53c5483d954cf7141dfbcececf",
+    "th075_web/cpp/game/SharedEffects.hpp": "6acf9f65faa846ae1f562c6072f0eb817ce05540f5f9f60ff08220c08cd2d6ed",
     "th075_web/cpp/game/SoundPack.hpp": "2c390d28f07efbc82c91789ef1861b4853c386cbb73d6e1b3a2ce081747cd28a",
     "th075_web/cpp/game/SpriteRenderer.hpp": "7d43e3f55e535e38641f7d9940a9b873f5b626184dc609220df11e5838ecc00d",
     "th075_web/cpp/game/StoryDialogue.hpp": "a35339102714af0d234eb00150f9e75739e8818b18a560a09a29e33dc0dd08a3",
@@ -770,5 +770,40 @@
     },
     "limitations": "Original iPadOS 17.5.1 failure not reproduced on desktop engines; physical-device verification remains required.",
     "reports": "artifacts/eagler/shared-effect-stack/"
+  },
+  "eaglerRollback": {
+    "date": "2026-10-16",
+    "stateAccessOnlyHeaders": [
+      "th075_web/cpp/game/OwnedObjects.hpp",
+      "th075_web/cpp/game/SharedEffects.hpp"
+    ],
+    "gameplayRulesChanged": false,
+    "policy": "opt-in D0/P1..8, default pure delay; repeat directions only for two missing frames; confirmed lifecycle boundaries",
+    "communityReferences": {
+      "giuroll": "7eaf02ea6e38d40fd58bce95383880908101384b",
+      "copyliu/RollCaster": "05de055abc0865e353d04e7ae536ac441294ff60"
+    },
+    "gates": {
+      "allCharactersSnapshotRestoreAndReplay": 11,
+      "protocolConfirmedFrames": 1000,
+      "rtcRollbackOperations": [
+        69,
+        231
+      ],
+      "rtcResimulatedFrames": [
+        155,
+        1278
+      ],
+      "rtcConfirmedSpectatorCheckpoints": 30,
+      "nativeReplayBytesIdentical": true,
+      "pauseResumeRestartAndExit": true,
+      "offlineReplayConfirmedSamples": 19,
+      "webSocketRollback": true,
+      "webSocketPureDelay": true,
+      "launcherServiceAndSelectorTests": 51
+    },
+    "limitations": "Physical iPadOS 17.5.1 performance not yet measured. No native DLL compatibility; independent source-level implementation.",
+    "reports": "th075_web/artifacts/multiplayer-browser/; handoff/ROLLBACK.md",
+    "releaseWasmSha256": "24408a9d8c6b2d1518dd2ad0f5a1fee1fef653786ac71e8eae6420b70bd58b67"
   }
 }

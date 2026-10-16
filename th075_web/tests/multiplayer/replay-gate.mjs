@@ -9,7 +9,9 @@ const {findChromiumExecutable}=await import(pathToFileURL(resolve(launcher,'lib/
 const outputFile=name=>resolve(root,'th075_web/artifacts/multiplayer-browser',name);
 import {readFile,writeFile} from 'node:fs/promises';
 const recording=JSON.parse(await readFile(outputFile('replays.json'),'utf8'))[0][0];
-const live=JSON.parse(await readFile(outputFile('browser-match.json'),'utf8')).states.map(s=>s[0].s).filter(s=>s[8]===0&&s[10]===0&&s[12]>180);
+// Predicted presentation is not an offline Replay oracle. The adapter exposes
+// the actor sample from each reconciled/confirmed history entry separately.
+const live=JSON.parse(await readFile(outputFile('browser-match.json'),'utf8')).states.map(s=>s[0].s).filter(s=>s[8]===0).map(s=>s[51]?{frame:s[55],actors:s.slice(56,64)}:{frame:s[12],actors:[...s.slice(16,20),...s.slice(32,36)]}).filter(s=>s.frame>180);
 const browser=await puppeteer.launch({executablePath:await findChromiumExecutable(),headless:true,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader','--autoplay-policy=no-user-gesture-required']});
 try{const page=await browser.newPage();await page.goto(process.env.EAGLER_TH075_MP_TEST_URL||'http://127.0.0.1:18375/');await page.waitForFunction(()=>host.events.some(e=>e.event==='ready'),{timeout:120000});
 await page.evaluate(async recording=>{await host.request('configure',{language:'ja',music:'none',options:{replayViewer:true}});await host.request('write',{path:'replay/replay000.rep',bytes:recording.bytes});await host.request('launch');},recording);
@@ -20,5 +22,5 @@ await page.waitForFunction(()=>{const c=document.querySelector('iframe').content
 // Keep the exact-frame comparisons below; wait for samples or actual playback EOF.
 await page.waitForFunction(()=>host.replayHistory.size>230||(host.replayHistory.size>0&&document.querySelector('iframe').contentWindow.Module._th075_scene()===5)||host.error(),{timeout:60000});
 const values=await page.evaluate(()=>({history:[...host.replayHistory],error:host.error(),scene:document.querySelector('iframe').contentWindow.Module._th075_scene()}));assert.equal(values.error,null);
-const replay=new Map(values.history);let compared=0;for(const s of live){const t=replay.get(s[12]);if(!t)continue;assert.deepEqual([...s.slice(16,20),...s.slice(32,36)],[...t.slice(16,20),...t.slice(32,36)],'Replay differs at simulation frame '+s[12]);++compared;}assert.ok(compared>=5,'insufficient matching replay frames '+compared);await writeFile(outputFile('replay-gate.json'),JSON.stringify({compared,frames:values.history.length,scene:values.scene}));console.log('PASS native offline Replay matches',compared,'recorded combat states');
+const replay=new Map(values.history);let compared=0;for(const s of live){const t=replay.get(s.frame);if(!t)continue;assert.deepEqual(s.actors,[...t.slice(16,20),...t.slice(32,36)],'Replay differs at simulation frame '+s.frame);++compared;}assert.ok(compared>=5,'insufficient matching replay frames '+compared);await writeFile(outputFile('replay-gate.json'),JSON.stringify({compared,frames:values.history.length,scene:values.scene}));console.log('PASS native offline Replay matches',compared,'recorded combat states');
 }finally{await browser.close();}

@@ -11,6 +11,8 @@ class GraphicsDevice final:public GfxInterface {
     void flush_vertices();
     static touhou::sdl::Surface resolve(void*,u32);
 public:
+    bool suppressed=false;
+    void suppress(bool value){flush_vertices();suppressed=value;}
     // 8 is the original alpha/raster precision profile. The implementation is
     // exactly the shared SDL3/GLES renderer; no Direct3D device exists here.
     touhou::sdl::Renderer renderer{8,resolve,this};
@@ -28,9 +30,9 @@ public:
     PipelineState& pipeline()override{return renderer.pipeline();}
     TextureSize texture_size(u32)override;
     void draw(u32,Topology,const ScreenVertex*,u32)override;
-    void clear_depth()override{flush_vertices();renderer.clear(2,0,1,0);}
-    void clear(u32 color){flush_vertices();renderer.clear(3,color,1,0);}
-    void present(){flush_vertices();renderer.present(screen);}
+    void clear_depth()override{if(suppressed)return;flush_vertices();renderer.clear(2,0,1,0);}
+    void clear(u32 color){if(suppressed)return;flush_vertices();renderer.clear(3,color,1,0);}
+    void present(){if(suppressed)return;flush_vertices();renderer.present(screen);}
     const u8* capture_pixels(){flush_vertices();renderer.read(screen);return images.at(screen).bytes.data();}
 };
 }

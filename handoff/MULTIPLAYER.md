@@ -9,12 +9,14 @@ Launcher topic base: `8e08ef2`. Common library pin remains the exact revision in
 
 The Launcher catalog declares TH075MP, its dedicated Runtime, two seats,
 11 characters, 9 first/second spell combinations per character, four
- difficulties and measured pure-delay timing (manual D=0..9, automatic choice).
+ difficulties, measured pure-delay timing (manual D=0..9, automatic choice),
+and opt-in direct rollback (D0, at most eight speculative frames).
 The native Runtime owns input capture, the measured-start barrier, exact
 confirmed input and deterministic world advancement. It reuses the pinned
 common codec, channel, browser peer transport and calibration presentation.
-This is Caster-style deterministic delay, not rollback or Caster protocol
-interoperability. See the original author's technical explanation:
+Pure delay remains the default. The optional rollback policy restores the
+native state and resimulates corrected input; it does not interoperate with
+native Caster/Giuroll wire protocols. See [ROLLBACK.md](ROLLBACK.md). See the original author's technical explanation:
 https://web.archive.org/web/20180429085318/http://mizuumi.net/2010/11/08/caster-how-its-done/
 
 Each seat uses its local P1 keyboard/touch/gamepad controls. Inputs are sampled
@@ -23,7 +25,8 @@ repair. Native `VersusCpu` mode means the original two-human duel. The shared
 seed, characters, spell choices, difficulty, fixed shrine stage, build
 identity and DATA resource identities are agreed before frame zero; local profiles do not choose the world.
 Camera and fade mutation occur in the original render callback, so waiting for
-a missing peer input must not rerun it. No prediction or undo is performed.
+a missing peer input must not rerun it. Rollback resimulation runs these state
+updates while suppressing GPU submission; normal waiting does neither.
 Every 60 network frames the peers compare a bounded explicit world observation;
 this detects divergence, but is not a claim that every latent native field is
 included in the diagnostic digest.

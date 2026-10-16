@@ -21,6 +21,7 @@ struct SharedEffectEvents {virtual ~SharedEffectEvents()=default;virtual void sp
 void advance_shared_effect(SharedEffect&,ReplayRandom&,SharedEffectEvents&);
 class SharedEffects final:public SharedEffectEvents {
     const EffectPattern& pattern;ReplayRandom& random;std::array<std::deque<std::unique_ptr<SharedEffect>>,2> layers;
+    friend class BattleSnapshot;
 public:
     SharedEffects(const EffectPattern& pattern,ReplayRandom& random):pattern(pattern),random(random){}
     void spawn(i16,float,float,i8,u8,const std::array<float,4>& = {})override;

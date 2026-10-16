@@ -10,6 +10,8 @@ for(const patch of [{netplayPlayerCount:3},{netplayAdonisMode:0},{netplayAdonisM
   {netplayPredictionLimit:1},{netplayInputDelay:10},{netplaySeed:65536},
   {netplayDifficulty:4},{netplayLoadouts:[{character:11,shot:0},{character:0,shot:0}]},
   {netplayUrl:base.netplayUrl.replace('&player=0','')}])assert.throws(()=>validateMultiplayerOptions({...base,...patch}));
+assert.equal(validateMultiplayerOptions({...base,netplayAdonisMode:0,netplayPredictionLimit:8,netplayInputDelay:0}).spectator,false);
+for(const patch of [{netplayPredictionLimit:0},{netplayPredictionLimit:9},{netplayInputDelay:1},{netplayInputDelayAuto:true}])assert.throws(()=>validateMultiplayerOptions({...base,netplayAdonisMode:0,netplayPredictionLimit:8,netplayInputDelay:0,...patch}));
 const viewer={...base,netplayPlayer:null,netplaySpectator:true,netplaySpectatorId:'viewer_1234',
   netplayUrl:base.netplayUrl.replace('player=0','spectator=viewer_1234')};
 assert.equal(validateMultiplayerOptions(viewer).spectator,true);

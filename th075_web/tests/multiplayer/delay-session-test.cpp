@@ -60,5 +60,33 @@ void match(std::uint32_t requested,bool corrupt=false){
     wires[1].disconnected=true;assert(!b.Ready());
     std::printf("PASS: D=%u, 1000 exact frames, loss/reorder/duplicates, one capture per frame\n",a.Delay());
 }
+void rollback_match(){
+ Wire wires[2];wires[0].peer=&wires[1];wires[1].peer=&wires[0];
+ th075::multiplayer::DelaySession a(wires[0]),b(wires[1]);auto peers=std::array{&a,&b};
+ std::array<std::vector<unsigned>,2> before;std::array<unsigned,2> state{},captures{},rollbacks{};
+ std::array<std::vector<std::array<std::uint16_t,2>>,2> committed;
+ for(unsigned side=0;side<2;++side){SessionConfig c;c.sessionId=9101;c.seed=1947;c.gameplayAbi=0x075222;c.gameId=75;c.localPlayer=side;assert(peers[side]->Begin(c,0,0,0,8));}
+ for(std::uint64_t now=0;now<50'000'000;now+=1000){
+  wires[0].now=wires[1].now=now;
+  for(unsigned side=0;side<2;++side){auto& p=*peers[side];assert(p.Pump(now));
+   if(p.HasRollbackRequest()){auto f=p.RollbackFrame();state[side]=before[side].at(f);before[side].resize(f);assert(p.Rewind(f));++rollbacks[side];}
+   if(now%16000)continue;
+   auto f=p.Frame();if(f<1000){
+    if(p.NeedsCapture()){assert(p.Capture(std::uint16_t((f*37+side*19)&255),now));++captures[side];}
+    auto d=p.Prepare();if(d.canAdvance){before[side].push_back(state[side]);state[side]=state[side]*1664525u+d.inputs[0].buttons*17+d.inputs[1].buttons+1013904223u;assert(p.Complete(d));}
+   }
+   std::array<FrameInput,MAX_PLAYERS> inputs;
+   while(p.ConfirmedInputs(unsigned(committed[side].size()),&inputs)){
+    const auto f=unsigned(committed[side].size());committed[side].push_back({inputs[0].buttons,inputs[1].buttons});
+    assert(p.VerifyAt(f,before[side].at(f)));
+   }
+  }
+  if(committed[0].size()==1000&&committed[1].size()==1000)break;
+ }
+ assert(committed[0].size()==1000&&committed[0]==committed[1]);assert(state[0]==state[1]);
+ assert(captures[0]==1000&&captures[1]==1000);assert(rollbacks[0]&&rollbacks[1]);
+ std::printf("PASS: rollback correction, 1000 confirmed frames, captures once, rollback counts %u/%u\n",rollbacks[0],rollbacks[1]);
 }
-int main(){match(0);match(2);match(9);match(Netplay::AdonisStartup::Automatic);match(2,true);return 0;}
+
+}
+int main(){rollback_match();match(0);match(2);match(9);match(Netplay::AdonisStartup::Automatic);match(2,true);return 0;}

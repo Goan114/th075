@@ -7,7 +7,7 @@
 
 namespace th075::multiplayer {
 // Transport history and physical capture ownership never belong to game state.
-// Caster-style exact input uses the shared codec/channel, with prediction off.
+// The delay and rollback policies share transport history and capture ownership.
 class DelaySession final:private Netplay::PeerTransport {
     Netplay::PeerTransport& wire;
     Netplay::SessionConfig config{};
@@ -17,7 +17,7 @@ class DelaySession final:private Netplay::PeerTransport {
     Netplay::AdonisStartup startup;
     std::deque<std::vector<std::uint8_t>> pending;
     std::uint32_t frame=0;
-    bool configured=false;
+    bool configured=false;unsigned mode=1,predictionLimit=0;
     std::string error;
     struct Hash {std::uint32_t frame=Netplay::INVALID_FRAME,local=0,remote=0;bool haveLocal=false,haveRemote=false;};
     std::array<Hash,64> hashes{};
@@ -32,11 +32,11 @@ class DelaySession final:private Netplay::PeerTransport {
         const auto delay=startup.Selected().delay;
         auto agreed=config;
         // Include the committed timing in the ordinary HELLO/READY contract.
-        agreed.gameplayAbi^=0x07510000u|(delay<<8);
+        agreed.gameplayAbi^=0x07520000u|(delay<<8)|(mode<<4)|predictionLimit;
         Netplay::CoreConfig c;
         c.sessionId=agreed.sessionId;c.playerCount=2;c.localPlayer=agreed.localPlayer;
-        c.inputDelay=std::uint8_t(delay);c.maxRollbackFrames=1;
-        c.allowPrediction=false;c.predictableButtons=0;
+        c.inputDelay=std::uint8_t(delay);c.maxRollbackFrames=std::uint8_t(predictionLimit?predictionLimit:1);
+        c.allowPrediction=mode==0;c.predictableButtons=0x0f;c.directionButtons=0x0f;c.maxDirectionPredictionFrames=2;
         Netplay::SessionChannelConfig policy;policy.adonisPhase=true;
         if(!core.Reset(c)||!gate.Reset(agreed)||!channel.BeginSession(agreed,now,policy))
             return fail("TH075 session configuration failed");
@@ -57,10 +57,11 @@ class DelaySession final:private Netplay::PeerTransport {
     }
 public:
     explicit DelaySession(Netplay::PeerTransport& transport):wire(transport){}
-    bool Begin(const Netplay::SessionConfig& c,std::uint64_t nowUs,std::uint32_t delay){
+    bool Begin(const Netplay::SessionConfig& c,std::uint64_t nowUs,std::uint32_t delay,unsigned timingMode=1,unsigned limit=0){
         if(configured||startup.Active())return fail("TH075 session already configured");
         if(c.gameId!=75||c.playerCount!=2||c.localPlayer>1)return fail("Invalid TH075 seats");
-        config=c;
+        if(timingMode>1||(timingMode==0&&(limit<1||limit>8||delay!=0))||(timingMode==1&&limit))return fail("Invalid TH075 rollback policy");
+        config=c;mode=timingMode;predictionLimit=limit;
         return startup.Begin(c,nowUs,Netplay::AdonisMode::Delay,delay)||fail(startup.Error());
     }
     static bool Valid(const Netplay::FrameInput& in){
@@ -115,11 +116,12 @@ public:
     }
     Netplay::FrameDecision Prepare()const{return Ready()?core.PrepareFrame(frame):Netplay::FrameDecision{};}
     bool Complete(const Netplay::FrameDecision& decision){
-        if(!decision.canAdvance||decision.predictedMask||!core.MarkSimulated(frame,decision))
+        if(!decision.canAdvance||(mode==1&&decision.predictedMask)||!core.MarkSimulated(frame,decision))
             return fail("TH075 attempted an unconfirmed frame");
         ++frame;return true;
     }
-    bool Verify(std::uint32_t digest){
+    bool Verify(std::uint32_t digest){return VerifyAt(frame,digest);}
+    bool VerifyAt(std::uint32_t frame,std::uint32_t digest){
         if(frame%60)return true;auto& h=hashes[(frame/60)%hashes.size()];
         if(h.frame!=frame){h={};h.frame=frame;}h.local=digest;h.haveLocal=true;
         if(!compare(h))return false;
@@ -128,6 +130,14 @@ public:
         put(config.sessionId,8);put(frame,4);put(digest,4);put(config.gameplayAbi,4);
         return wire.SendControl(bytes.data(),bytes.size())||!wire.Failed();
     }
+    bool Rollback()const{return mode==0;}
+    bool HasRollbackRequest()const{return core.HasRollbackRequest();}
+    std::uint32_t RollbackFrame()const{return core.RollbackFrame();}
+    bool Rewind(std::uint32_t first){if(!core.RewindSimulationTo(first))return fail("TH075 rollback history expired");frame=first;return true;}
+    bool ConfirmedInputs(std::uint32_t f,std::array<Netplay::FrameInput,Netplay::MAX_PLAYERS>* out)const{return core.ConfirmedInputs(f,out);}
+    bool InputConfirmed(std::uint32_t f)const{const auto frontier=core.ConfirmedThroughAllRemotes();return frontier!=Netplay::INVALID_FRAME&&frontier>=f;}
+    unsigned Mode()const{return mode;}
+    unsigned PredictionLimit()const{return predictionLimit;}
     bool CanFinish()const{return frame&&channel.CanRetire(core,frame-1);}
     bool FlushFinish(std::uint64_t nowUs){return frame&&channel.FlushRetirementFence(core,frame-1,nowUs/1000);}
     std::uint32_t Frame()const{return frame;}

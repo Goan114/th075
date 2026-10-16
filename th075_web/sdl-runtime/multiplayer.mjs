@@ -24,7 +24,7 @@ export function validateMultiplayerOptions(options){
   if(!['ws:','wss:'].includes(url.protocol)||!/^th075mp-\d{4}$/.test(url.searchParams.get('room')||'')||
      !/^\d+$/.test(url.searchParams.get('run')||'')||o.netplayMode!=='lan'||o.netplayPlayerCount!==2||
      (!spectator&&!integer(o.netplayPlayer,0,1))||!integer(o.netplaySeed,0,65535)||!integer(o.netplayDifficulty,0,3)||
-     o.netplayAdonisMode!==1||(o.netplayPredictionLimit??0)!==0||!integer(o.netplayInputDelay??0,0,9)||
+     ![0,1].includes(o.netplayAdonisMode)||(o.netplayAdonisMode===1?(o.netplayPredictionLimit??0)!==0:!integer(o.netplayPredictionLimit,1,8)||o.netplayInputDelayAuto||(o.netplayInputDelay??0)!==0)||!integer(o.netplayInputDelay??0,0,9)||
      typeof o.netplayInputDelayAuto!=='boolean')throw Error('Invalid TH075 multiplayer configuration');
   if(spectator?!/^[A-Za-z0-9_-]{8,64}$/.test(o.netplaySpectatorId||'')||url.searchParams.get('spectator')!==o.netplaySpectatorId||url.searchParams.has('player'):
      !url.searchParams.has('player')||Number(url.searchParams.get('player'))!==o.netplayPlayer||url.searchParams.has('spectator'))throw Error('Invalid TH075 seat admission');
@@ -46,7 +46,7 @@ export class Multiplayer {
     const prepared=await core.ccall('th075_mp_prepare','number',Array(6).fill('number'),[o.netplaySeed,a.character,b.character,a.shot,b.shot,o.netplayDifficulty],{async:true});
     if(!prepared)throw Error(core.UTF8ToString(core._th075_error())||'TH075 multiplayer preparation failed');
     if(typeof core.th075ContentIdentity!=='string'||!core.th075ContentIdentity)throw Error('Missing TH075 content identity');
-    const identity=JSON.stringify({content:core.th075ContentIdentity,build:this.build.version,seed:o.netplaySeed,difficulty:o.netplayDifficulty,loadouts:o.netplayLoadouts,background:0});
+    const identity=JSON.stringify({content:core.th075ContentIdentity,build:this.build.version,seed:o.netplaySeed,difficulty:o.netplayDifficulty,loadouts:o.netplayLoadouts,background:0,timingMode:o.netplayAdonisMode,predictionLimit:o.netplayPredictionLimit??0});
     const hash=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(identity)),abi=new DataView(hash).getUint32(0,true)||1;
     const run=(BigInt(url.searchParams.get('run'))<<16n|BigInt(o.netplaySeed))+1n;
     if(run>0xffffffffffffffffn)throw Error('TH075 run identity overflow');
@@ -56,7 +56,7 @@ export class Multiplayer {
     globalThis.__eaglerNetplayLanActive=false;globalThis.__eaglerNetplaySpectator=spectator;
     globalThis.__eaglerNetplayLanRollback=globalThis.__eaglerNetplayLanResimulated=0;
     globalThis.__eaglerNetplayLanFrame=globalThis.__eaglerNetplayLanConfirmed=0;
-    globalThis.__eaglerNetplayAdonisMode=1;globalThis.__eaglerNetplayFailed=false;globalThis.__eaglerNetplayError='';
+    globalThis.__eaglerNetplayAdonisMode=o.netplayAdonisMode;globalThis.__eaglerNetplayFailed=false;globalThis.__eaglerNetplayError='';
     const self=this;
     if(!spectator){
       // Use the shared calibration presentation; native peers own all choices.
@@ -78,7 +78,8 @@ export class Multiplayer {
   frame(){
     if(this.closed)return;
     const s=this.state();
-    if(this.spectator&&!this.timingReported){const at=this.core._th075_mp_timing();if(at){const p=new DataView(this.core.HEAPU8.buffer,at,40),timing={phase:'ready',automatic:!!p.getUint32(32,true),adonisMode:1,inputDelay:p.getUint8(6),predictionReserve:0,fullDelay:p.getUint32(8,true),rttP95Us:p.getUint32(24,true),lost:p.getUint32(28,true),samples:p.getUint32(36,true),route:'spectator'};this.timingReported=true;globalThis.__eaglerNetplayTiming=timing;this.emit('runtime-info',{netplayTiming:timing});}}
+    if(this.spectator&&!this.timingReported){const at=this.core._th075_mp_timing();if(at){const p=new DataView(this.core.HEAPU8.buffer,at,40),timing={phase:'ready',automatic:!!p.getUint32(32,true),adonisMode:p.getUint8(5),inputDelay:p.getUint8(6),predictionReserve:0,fullDelay:p.getUint32(8,true),rttP95Us:p.getUint32(24,true),lost:p.getUint32(28,true),samples:p.getUint32(36,true),route:'spectator'};this.timingReported=true;globalThis.__eaglerNetplayTiming=timing;this.emit('runtime-info',{netplayTiming:timing});}}
+    globalThis.__eaglerNetplayLanRollback=s[48];globalThis.__eaglerNetplayLanResimulated=s[49];
     globalThis.__eaglerNetplayLanFrame=s[2];globalThis.__eaglerNetplayLanConfirmed=s[3];
     globalThis.__eaglerNetplayLanActive=s[1]===3;
     globalThis.__eaglerNetplayInputDelayFrames=s[6];

@@ -16,10 +16,12 @@
 #include "../game/ResultScene.hpp"
 #include "../game/SceneFade.hpp"
 namespace th075::sdl {
+struct RollbackState;
 class Application final:public BattleScenePlatform,public BattleLoadSignals,public BattleStoryPlatform,public BattleTextDrawing,public CharacterSelectSignals,public OptionsSignals,public MusicRoomSignals,public CinemaSignals,public NameEntrySignals,public ReplayBrowserSignals,public ResultSignals,public ResultListSignals,public SceneFadeSignals {
 public:
  GraphicsDevice graphics;ZunGraphics zun{graphics};FileResources resources;FontDevice fonts{graphics};AudioDevice audio;
 private:
+ friend struct RollbackState;
  struct ResetEvents final:FighterCoreEvents {Application& app;u8 side;ResetEvents(Application& a,u8 s):app(a),side(s){}void clear_owned_objects(FighterActor&)override;void spell_attempt(u8)override;void reset_hud_alpha()override;};
  std::array<ResetEvents,2> resetEvents{ResetEvents(*this,0),ResetEvents(*this,1)};
  TextureBank sceneImages,selectionCharacters,selectionBackgrounds,stageImages,hudImages,effectImages,windowImages;
@@ -45,6 +47,10 @@ public:
  u8 current_scene()const{return scene;}
  bool restart();bool probe_scene(u8);bool probe_battle(u8,u8,u8,u8);
  bool prepare_multiplayer(u32,u8,u8,u8,u8,u8);bool save_multiplayer_replay();bool show_replays();
+ struct RollbackSound {i16 id;u8 side;bool character;};
+ bool rollbackResimulating=false;bool collectRollbackSound=false;std::vector<RollbackSound> rollbackSounds;
+ std::unique_ptr<RollbackState> capture_rollback()const;bool restore_rollback(const RollbackState&);
+ bool rollback_predictable()const;
  bool multiplayer_complete()const{return (sceneCode&0xff)!=0&&(sceneCode&0xff)!=1;}
  u8 phase()const{return exiting?4:battle&&scene==0?(battle->progress.paused?2:1):0;}
  void sound(i16)override;void sound(u16 v)override{sound(i16(v));}void character_sound(u8,i16)override;void fade_music(i32,i32,u32,u32)override;void select_music(i16)override;void start_music()override;void stop_music()override;void stop_music(i32)override;

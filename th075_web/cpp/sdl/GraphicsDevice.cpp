@@ -38,7 +38,7 @@ void GraphicsDevice::flush_vertices(){
     renderer.state=next;vertices.clear();
 }
 void GraphicsDevice::draw(u32 texture,Topology topology,const ScreenVertex* source,u32 count){
-    if(count<3)return;renderer.state.texture=texture;renderer.state.layout=attributes(VertexLayout::ScreenColorUv);renderer.state.stride=sizeof(ScreenVertex);
+    if(suppressed||count<3)return;renderer.state.texture=texture;renderer.state.layout=attributes(VertexLayout::ScreenColorUv);renderer.state.stride=sizeof(ScreenVertex);
     const auto& state=renderer.state;
     const bool same=batchState.texture==texture&&batchState.target==state.target&&batchState.depth==state.depth&&batchState.layout==state.layout&&batchState.pipeline.compatible(state.pipeline)&&batchState.matrix==state.matrix&&std::memcmp(&batchState.viewport,&state.viewport,sizeof(state.viewport))==0;
     if(!vertices.empty()&&!same)flush_vertices();if(vertices.empty())batchState=renderer.state;

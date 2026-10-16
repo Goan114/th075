@@ -16,6 +16,7 @@ struct FighterObjectCallbacks:FighterObjectUpdates {
 class OwnedObjects {
     FighterActor& owner;FighterObjectFactory& factory;
     std::array<std::deque<std::unique_ptr<FighterObject>>,4> layers;
+    friend class BattleSnapshot;
 public:
     OwnedObjects(FighterActor& owner,FighterObjectFactory& factory):owner(owner),factory(factory){}
     FighterObject* spawn(const ObjectRequest&);
