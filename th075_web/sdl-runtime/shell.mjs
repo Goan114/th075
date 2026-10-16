@@ -9,7 +9,7 @@ const game='th075',protocol='eagler-touhou/1',query=new URLSearchParams(location
 const epoch=Number(query.get('runtimeEpoch')),validEpoch=Number.isSafeInteger(epoch)&&epoch>0;
 const canvas=document.querySelector('canvas'),$=s=>document.querySelector(s);
 const build=/*TH075_EAGLER_BUILD*/{version:'development',completeGame:false};
-let net;
+let net,replayPrompt,showReplaySavePrompt,replayBaseline=new Set();
 let core,bundle,launched=false,stopping=false,busy=false,loopId=0,options={},music='none',commands=Promise.resolve();
 let escapeSerial=0,stick={x:0,y:0},direct=null,actionButtons=0;
 const keyboard=createBrowserKeyboard({accept:code=>!!scanCodes[code],send:(code,down)=>core?._th075_key(scanCodes[code],+down)});
@@ -23,6 +23,7 @@ const sync=createSaveSync(()=>core);
 function clearKeyboard(){keyboard.clear();core?._th075_keys_clear();}
 function cancelTouch(){direct=null;stick={x:0,y:0};actionButtons=0;core?._th075_touch_cancel();}
 function inputKey(event,down,source){
+  if(replayPrompt)return false;
   if(net?.spectator)return true;
   if(event.code==='KeyR'&&down&&!event.repeat&&core._th075_phase()===2){if(net)core._th075_mp_restart();else core._th075_restart();return true;}
   return keyboard.event(event,down,source);
@@ -51,7 +52,17 @@ const fatal=e=>{
 async function idle(){while(busy)await new Promise(resolve=>setTimeout(resolve,5));}
 async function save(){await idle();if(launched&&!core._th075_save_scores())throw Error(error());await sync();}
 function closeAudio(){const context=core.SDL3?.audioContext,borrowed=parent!==window&&context===parent.__touhouAudioContext;if(borrowed)core.SDL3.audioContext=undefined;try{core._th075_audio_close();}finally{if(borrowed)core.SDL3.audioContext=context;}}
-async function stop(){if(stopping)return;stopping=true;++loopId;try{await idle();core._th075_loop_pause(1);clearKeyboard();cancelTouch();if(net&&!net.spectator)core._th075_mp_save_replay();await save();net?.close();net=null;closeAudio();launched=false;emit('exit',{code:0,status:'success'});}finally{stopping=false;}}
+async function stop(){if(stopping)return;stopping=true;++loopId;try{await idle();core._th075_loop_pause(1);clearKeyboard();cancelTouch();if(net&&!net.spectator&&!core._th075_mp_save_replay())throw Error(error()||'Unable to save TH075 Replay');await save();net?.close();net=null;replayPrompt?.dispose();replayPrompt=null;closeAudio();launched=false;emit('exit',{code:0,status:'success'});}finally{stopping=false;}}
+async function completeMultiplayer(){
+  if(stopping||replayPrompt)return;
+  const session=net;if(!session||session.spectator)return stop();
+  ++loopId;await idle();if(stopping||net!==session)return;
+  core._th075_loop_pause(1);clearKeyboard();cancelTouch();
+  if(!core._th075_mp_save_replay())throw Error(error()||'Unable to save TH075 Replay');
+  await save();if(stopping||net!==session)return;
+  session.close();net=null;
+  replayPrompt=showReplaySavePrompt({core,baseline:replayBaseline,onReturn:()=>void stop().catch(fatal)});
+}
 
 export function userPath(value){
   if(typeof value!=='string'||value.includes('\\'))throw Error('Invalid save path');
@@ -152,7 +163,7 @@ async function command(m){if(dispatchInput(m))return {};switch(m.command){
     if(build.multiplayer&&options.netplayMode!=='lan'&&!options.replayViewer)throw Error('Launch TH075 multiplayer from its shared room');
     core._th075_music_enabled(+(music==='ogg'));
     if(!await call('initialize',['number'],[options.renderScale===1?1:2]))throw Error(error());
-    if(build.multiplayer&&options.netplayMode==='lan'){const {Multiplayer}=await import('./multiplayer.mjs');net=new Multiplayer({core,options,build,emit,onError:fatal,onFinished:()=>void stop().catch(fatal),isBusy:()=>busy});await net.connect();}
+    if(build.multiplayer&&options.netplayMode==='lan'){const multiplayer=await import('./multiplayer.mjs');showReplaySavePrompt=multiplayer.showReplaySavePrompt;replayBaseline=new Set(core.FS.readdir('/save/replay'));net=new multiplayer.Multiplayer({core,options,build,emit,onError:fatal,onFinished:()=>void completeMultiplayer().catch(fatal),isBusy:()=>busy});await net.connect();}
     else if(build.multiplayer&&options.replayViewer){if(!await call('mp_replay_viewer'))throw Error(error());}
     launched=true;$('#loading').textContent='';updateDisplay();core._th075_loop_pause(0);
     emit('runtime-info',{renderer:'SDL3 / WebGL2 / C++',...build});loop();return {};

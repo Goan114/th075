@@ -1,6 +1,24 @@
 import {createAdonisCalibration} from './adonis-calibration.mjs';
 
 const integer=(n,min,max)=>Number.isInteger(n)&&n>=min&&n<=max;
+// Keep completed native files available for a user-initiated mobile download.
+export function showReplaySavePrompt({core,baseline,onReturn}){
+  const names=core.FS.readdir('/save/replay').filter(name=>/^[a-zA-Z0-9_(). -]+\.rep$/.test(name)&&!baseline.has(name)).sort();
+  if(!names.length)throw Error('Completed TH075 Replay was not saved');
+  const files=names.map(name=>({name,bytes:core.FS.readFile('/save/replay/'+name).slice()}));
+  if(files.some(file=>!file.bytes.length))throw Error('Empty TH075 Replay');
+  const dialog=document.createElement('dialog');dialog.id='th075ReplaySavePrompt';
+  const title=document.createElement('h2');title.textContent='保存录像 / Save Replay';
+  const description=document.createElement('p');description.textContent='录像已保存在本机，可下载 .rep 文件。 / Replay saved locally. Download the .rep file below.';
+  dialog.append(title,description);const urls=[];
+  for(const {name,bytes} of files){
+    const link=document.createElement('a');link.download=name;link.textContent='下载 / Download '+name;link.className='th075-replay-download';
+    link.href=URL.createObjectURL(new Blob([bytes],{type:'application/octet-stream'}));urls.push(link.href);dialog.append(link);
+  }
+  const leave=document.createElement('button');leave.type='button';leave.id='th075ReplayReturn';leave.textContent='返回房间 / Return to room';leave.addEventListener('click',onReturn);dialog.append(leave);
+  dialog.addEventListener('cancel',event=>event.preventDefault());document.body.append(dialog);dialog.showModal();
+  return {dispose(){dialog.close();dialog.remove();for(const url of urls)URL.revokeObjectURL(url);}};
+}
 export function validateMultiplayerOptions(options){
   const o=options,url=new URL(o.netplayUrl,location.href),spectator=o.netplaySpectator===true;
   if(!['ws:','wss:'].includes(url.protocol)||!/^th075mp-\d{4}$/.test(url.searchParams.get('room')||'')||

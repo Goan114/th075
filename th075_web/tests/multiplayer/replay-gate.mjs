@@ -16,7 +16,9 @@ await page.evaluate(async recording=>{await host.request('configure',{language:'
 await page.evaluate(()=>{host.replayHistory=new Map();function poll(){const w=document.querySelector('iframe').contentWindow,c=w.Module;if(c){const at=c._th075_mp_status(),s=Array.from(c.HEAPU32.subarray(at/4,at/4+64));if(c._th075_scene()===0&&s[12]>0)host.replayHistory.set(s[12],s);}requestAnimationFrame(poll);}poll();});
 await page.evaluate(()=>host.key('KeyZ',true));await new Promise(r=>setTimeout(r,100));await page.evaluate(()=>host.key('KeyZ',false));
 await page.waitForFunction(()=>{const c=document.querySelector('iframe').contentWindow.Module;return c._th075_scene()===0||host.error();},{timeout:60000});
-await page.waitForFunction(()=>host.replayHistory.size>230||host.error(),{timeout:60000});
+// A short completed recording can return to the menu before 230 RAF samples.
+// Keep the exact-frame comparisons below; wait for samples or actual playback EOF.
+await page.waitForFunction(()=>host.replayHistory.size>230||(host.replayHistory.size>0&&document.querySelector('iframe').contentWindow.Module._th075_scene()===5)||host.error(),{timeout:60000});
 const values=await page.evaluate(()=>({history:[...host.replayHistory],error:host.error(),scene:document.querySelector('iframe').contentWindow.Module._th075_scene()}));assert.equal(values.error,null);
 const replay=new Map(values.history);let compared=0;for(const s of live){const t=replay.get(s[12]);if(!t)continue;assert.deepEqual([...s.slice(16,20),...s.slice(32,36)],[...t.slice(16,20),...t.slice(32,36)],'Replay differs at simulation frame '+s[12]);++compared;}assert.ok(compared>=5,'insufficient matching replay frames '+compared);await writeFile(outputFile('replay-gate.json'),JSON.stringify({compared,frames:values.history.length,scene:values.scene}));console.log('PASS native offline Replay matches',compared,'recorded combat states');
 }finally{await browser.close();}

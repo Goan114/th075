@@ -90,3 +90,9 @@ that both player worlds keep advancing.
 
 Recorded results, immutable source bases and remaining limits are in
 [MULTIPLAYER-ACCEPTANCE.md](MULTIPLAYER-ACCEPTANCE.md).
+
+After a player ends the native battle/save flow, the Runtime flushes its new
+`.rep` files to IDBFS and opens a Replay download prompt. Downloading uses an
+explicit link click, including on mobile; Return to room retires the Runtime.
+Spectators retire directly without creating a player Replay. A normal Launcher
+exit still flushes the recording and keeps it available in Replay management.
