@@ -32,12 +32,18 @@ class DelaySession final:private Netplay::PeerTransport {
         const auto delay=startup.Selected().delay;
         auto agreed=config;
         // Include the committed timing in the ordinary HELLO/READY contract.
-        agreed.gameplayAbi^=0x07520000u|(delay<<8)|(mode<<4)|predictionLimit;
+        agreed.gameplayAbi^=0x07530000u|(delay<<8)|(mode<<4)|predictionLimit;
         Netplay::CoreConfig c;
         c.sessionId=agreed.sessionId;c.playerCount=2;c.localPlayer=agreed.localPlayer;
         c.inputDelay=std::uint8_t(delay);c.maxRollbackFrames=std::uint8_t(predictionLimit?predictionLimit:1);
-        c.allowPrediction=mode==0;c.predictableButtons=0x0f;c.directionButtons=0x0f;c.maxDirectionPredictionFrames=2;
-        Netplay::SessionChannelConfig policy;policy.adonisPhase=true;
+        // Like Giuroll's EnemyInputHolder, repeat the last known held gameplay
+        // state. Clearing attacks/directions manufactures releases and forces
+        // corrections even while the remote player holds a constant input.
+        // Escape/cancel/restart remain confirmed lifecycle commands.
+        c.allowPrediction=mode==0;c.predictableButtons=0xff;c.directionButtons=0x0f;c.maxDirectionPredictionFrames=std::uint8_t(predictionLimit);
+        // The positive-wait Adonis adjustment belongs to delay mode. Applying
+        // it to D0 rollback converts the intended prediction lead into delay.
+        Netplay::SessionChannelConfig policy;policy.adonisPhase=mode==1;
         if(!core.Reset(c)||!gate.Reset(agreed)||!channel.BeginSession(agreed,now,policy))
             return fail("TH075 session configuration failed");
         configured=true;return true;

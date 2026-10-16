@@ -1,4 +1,5 @@
 #include "../../cpp/multiplayer/DelaySession.hpp"
+#include "../../cpp/multiplayer/RollbackAudio.hpp"
 #include <cassert>
 #include <cstdio>
 #include <functional>
@@ -7,7 +8,7 @@ namespace {
 using namespace Netplay;
 struct Wire:PeerTransport {
     struct Delivery {std::uint64_t due;std::vector<std::uint8_t> bytes;};
-    Wire* peer=nullptr;std::uint64_t now=0;unsigned sends=0;bool disconnected=false;
+    Wire* peer=nullptr;std::uint64_t now=0,inputLag=0;unsigned sends=0;bool disconnected=false;
     std::deque<Delivery> input;
     bool IsOpen()const override{return !disconnected;}
     bool Failed()const override{return false;}
@@ -16,7 +17,7 @@ struct Wire:PeerTransport {
         ++sends;
         // Drop/reorder/duplicate the actual input lane, including calibration.
         if(!reliable&&sends%23==0)return true;
-        const auto due=now+(reliable?4000:(sends%7)*2000);
+        const auto due=now+(reliable?4000:(sends%7)*2000+inputLag);
         peer->input.push_back({due,{p,p+n}});
         if(!reliable&&sends%17==0)peer->input.push_back({due+1000,{p,p+n}});
         return true;
@@ -89,4 +90,43 @@ void rollback_match(){
 }
 
 }
-int main(){rollback_match();match(0);match(2);match(9);match(Netplay::AdonisStartup::Automatic);match(2,true);return 0;}
+void held_prediction(){
+ Wire wires[2];wires[0].peer=&wires[1];wires[1].peer=&wires[0];
+ th075::multiplayer::DelaySession a(wires[0]),b(wires[1]);auto peers=std::array{&a,&b};
+ unsigned predicted=0,maxPending=0;
+ for(unsigned side=0;side<2;++side){SessionConfig c;c.sessionId=9301;c.seed=1947;c.gameplayAbi=0x075333;c.gameId=75;c.localPlayer=side;assert(peers[side]->Begin(c,0,0,0,8));}
+ for(std::uint64_t now=0;now<20'000'000;now+=1000){
+  wires[0].now=wires[1].now=now;
+  for(unsigned side=0;side<2;++side){auto& p=*peers[side];assert(p.Pump(now));
+   if(!p.Ready())continue;
+   wires[side].inputLag=80000;
+   if(p.HasRollbackRequest())assert(p.Rewind(p.RollbackFrame()));
+   if(now%16000||p.Frame()>=240)continue;
+   if(p.NeedsCapture())assert(p.Capture(0xff,now));
+   const auto d=p.Prepare();if(!d.canAdvance)continue;
+   if(d.predictedMask&&p.Frame()>20){assert(d.inputs[1-side].buttons==0xff);++predicted;}
+   if(p.Confirmed()!=INVALID_FRAME&&p.Frame()>p.Confirmed())maxPending=std::max(maxPending,p.Frame()-p.Confirmed());
+   assert(p.Complete(d));
+   // Direct rollback must not accrue the delay-mode positive-wait correction.
+   assert(p.Pace(16.)==16.);
+  }
+  if(a.Frame()==240&&b.Frame()==240)break;
+ }
+ assert(a.Frame()==240&&b.Frame()==240&&predicted>100&&maxPending>=4);
+ std::printf("PASS: held ABCD/directions predict across 80ms, pending=%u, predicted=%u, no delay pacing\n",maxPending,predicted);
+}
+void sound_correction(){
+ th075::multiplayer::RollbackAudio<int> audio;std::vector<int> played,stopped;
+ const auto play=[&](int id){played.push_back(id);};const auto stop=[&](int id){stopped.push_back(id);};
+ audio.Submit(100,{1,2},play);assert((played==std::vector<int>{1,2}));
+ audio.Begin(100);audio.Submit(100,{},play);audio.Submit(101,{1,3},play);audio.Finish(stop);
+ assert((played==std::vector<int>{1,2,3}));assert((stopped==std::vector<int>{2}));
+ // A second correction must not replay matched sounds or stop a voice that
+ // was also emitted just before the corrected interval.
+ audio.Begin(101);audio.Submit(101,{1,3},play);audio.Finish(stop);
+ assert(played.size()==3&&stopped.size()==1);
+ audio.Submit(102,{3},play);audio.Begin(102);audio.Submit(102,{},play);audio.Finish(stop);
+ assert(stopped.size()==1);audio.Confirm(120);audio.Reset();
+ std::puts("PASS: immediate predicted sounds, correction deduplication, obsolete voice cancellation");
+}
+int main(){sound_correction();held_prediction();rollback_match();match(0);match(2);match(9);match(Netplay::AdonisStartup::Automatic);match(2,true);return 0;}

@@ -3,6 +3,7 @@
 #include "Application.hpp"
 #include "RollbackState.hpp"
 #include "../multiplayer/DelaySession.hpp"
+#include "../multiplayer/RollbackAudio.hpp"
 #include <eagler/netplay/BrowserPeerTransport.hpp>
 #include <emscripten.h>
 #include <deque>
@@ -38,6 +39,9 @@ struct History {
  u32 replayFrame=0;std::array<u32,8> actors{};
 };
 std::deque<History> history;
+th075::multiplayer::RollbackAudio<Application::RollbackSound> rollbackAudio;
+void play_sound(const Application::RollbackSound& sound){if(sound.character)app->audio.character_sound(sound.side,sound.id);else app->audio.sound(sound.id);}
+void stop_sound(const Application::RollbackSound& sound){app->audio.stop_sound(sound.character?u8(sound.side+1):0,sound.id);}
 
 u64 integer(const u8* p,unsigned n){u64 v=0;for(unsigned i=0;i<n;++i)v|=u64(p[i])<<(8*i);return v;}
 void put(std::vector<u8>& b,u64 v,unsigned n){for(unsigned i=0;i<n;++i)b.push_back(u8(v>>(i*8)));}
@@ -180,7 +184,7 @@ bool retire(){
         if(!session->VerifyAt(h.frame,h.digestAfter))return fail(session->Error());
         if(h.frame%60==0){confirmedCheckpoint=h.frame;confirmedDigest=h.digestAfter;}
         confirmedReplayFrame=h.replayFrame;confirmedActors=h.actors;
-        for(const auto& sound:h.sounds){if(sound.character)app->audio.character_sound(sound.side,sound.id);else app->audio.sound(sound.id);}
+        rollbackAudio.Confirm(h.frame);
         if(!contract.localPlayer&&!spectatorStopped){Netplay::SpectatorFramePacket p;p.sessionId=contract.sessionId;p.gameplayAbi=contract.gameplayAbi;p.frame=h.frame;p.playerCount=2;p.inputs=inputs;
             if(Netplay::EncodeSpectatorFramePacket(p,&output))spectatorOutput.push_back(output);}
         history.pop_front();
@@ -222,6 +226,7 @@ bool advance_one(double us,bool resimulation,bool& advanced){
         h.digestAfter=digest;h.replayFrame=app->battle->timing.replayFrame;
         for(unsigned side=0;side<2;++side){const auto& a=app->battle->simulation.characters[side]->actor;std::memcpy(&h.actors[side*4],&a.motion.x,4);std::memcpy(&h.actors[side*4+1],&a.motion.y,4);h.actors[side*4+2]=u32(a.combat.health);h.actors[side*4+3]=u32(a.animation.cursor.action);}
         h.sounds=std::move(app->rollbackSounds);history.push_back(std::move(h));
+        if(session->Rollback())rollbackAudio.Submit(frame,history.back().sounds,play_sound);
         if(!session->Complete(decision))return fail(session->Error());
     }
     ++frame;advanced=true;if(resimulation)++resimulated;
@@ -240,11 +245,12 @@ bool step(const BattleSystemInput&,double us){
         if(at==history.end()||!at->state)return fail("TH075 rollback snapshot expired");
         if(!app->restore_rollback(*at->state)||!session->Rewind(first))return fail("TH075 rollback restore failed");
         resimTarget=std::max(resimTarget,frame);frame=first;counts=at->counts;cancel=at->cancel;digest=at->digestBefore;
-        history.erase(at,history.end());++rollbackCount;
+        rollbackAudio.Begin(first);history.erase(at,history.end());++rollbackCount;
     }
     if(!spectator&&!retire())return false;
     for(unsigned n=0;n<9&&frame<resimTarget;++n){bool advanced;if(!advance_one(us,true,advanced))return false;if(!advanced){remember_state();return true;}}
     if(frame<resimTarget){remember_state();return true;}
+    rollbackAudio.Finish(stop_sound);
     bool advanced;if(!advance_one(us,false,advanced))return false;
     remember_state();return true;
 }
@@ -268,7 +274,7 @@ EMSCRIPTEN_KEEPALIVE int th075_mp_begin(const char* url,const char* spectatorId,
     if(!(spectator?transport.ConnectSpectator(url,spectatorId,2):transport.Connect(url,th075::u8(side),2)))return 0;
     th075::sdl::multiplayer::seed=seed;th075::sdl::multiplayer::first=first;th075::sdl::multiplayer::other=other;
     firstCards=a;otherCards=b;th075::sdl::multiplayer::difficulty=difficulty;
-    frame=restarts=receivedFrame=digest=rollbackCount=resimulated=resimTarget=0;history.clear();confirmedCheckpoint=Netplay::INVALID_FRAME;confirmedDigest=confirmedReplayFrame=0;confirmedActors={};finishAt=0;enabled=true;restartPending=finishing=finished=saved=timingSent=timingReceived=spectatorStopped=connectionEnded=false;
+    frame=restarts=receivedFrame=digest=rollbackCount=resimulated=resimTarget=0;history.clear();rollbackAudio.Reset();confirmedCheckpoint=Netplay::INVALID_FRAME;confirmedDigest=confirmedReplayFrame=0;confirmedActors={};finishAt=0;enabled=true;restartPending=finishing=finished=saved=timingSent=timingReceived=spectatorStopped=connectionEnded=false;
     failure.clear();counts={};cancel={};spectatorFrames.clear();spectatorOutput.clear();timingBytes.clear();
     if(!spectator){session=std::make_unique<th075::multiplayer::DelaySession>(transport);if(!session->Begin(contract,std::uint64_t(emscripten_get_now()*1000),automatic?Netplay::AdonisStartup::Automatic:delay,mode,limit))return 0;}
     remember_state();return 1;
@@ -277,7 +283,8 @@ EMSCRIPTEN_KEEPALIVE int th075_mp_begin(const char* url,const char* spectatorId,
 // Diagnostic-only restore equivalence gate. It never enters published Wasm.
 EMSCRIPTEN_KEEPALIVE int th075_probe_rollback(unsigned span){
  using namespace th075::sdl::multiplayer;using namespace th075;using namespace th075::sdl;
- if(enabled||!app||!app->battle||span<1||span>16)return 0;
+ const unsigned phase=span>>8;span&=255;
+ if(enabled||!app||!app->battle||span<1||span>16||phase>3)return 0;
  counts={};cancel={};frame=0;restarts=0;digest=0;app->collectRollbackSound=true;app->graphics.suppress(true);
  const auto run=[&](unsigned ticks,unsigned variant,std::vector<u32>* trace){for(unsigned n=0;n<ticks;++n){
   std::array<Netplay::FrameInput,Netplay::MAX_PLAYERS> inputs{};
@@ -285,7 +292,9 @@ EMSCRIPTEN_KEEPALIVE int th075_probe_rollback(unsigned span){
   if(!play(inputs))return false;
   if(trace)trace->push_back(world_digest());++frame;
  }return true;};
- if(!run(360,0,nullptr))return 0;
+ if(!run(phase==1?45:360,0,nullptr))return 0;
+ if(phase==2){app->battle->simulation.rules.phase=BattlePhase::RoundKnockout;app->battle->simulation.rules.countdown=15;}
+ if(phase==3){app->battle->simulation.rules.phase=BattlePhase::RoundRecovery;app->battle->simulation.rules.countdown=155;}
  auto checkpoint=app->capture_rollback();const auto initialCounts=counts;const auto initialCancel=cancel;const auto initialFrame=frame;
  std::vector<u32> expected,actual;
  if(!run(span,0,&expected))return 0;

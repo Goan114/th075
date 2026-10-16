@@ -34,8 +34,8 @@ measurement barrier. Runtime/build/resource identities bind mode and P to the
 peer handshake. The Launcher normalizes its legacy hybrid choice to direct
 rollback just as for other rollback titles.
 
-Only directions may repeat (two missing frames maximum). ABCD/menu/restart
-edges remain unpredicted. A missing input older than P stalls the world.
+Repeat the last known held direction and ABCD state throughout the negotiated
+window, as in Giuroll EnemyInputHolder. Menu/restart commands remain unpredicted. A missing input older than P stalls the world.
 Snapshots include both complete typed characters, all four object layers per
 side (including derived timers), both shared-effect layers, contacts, rules,
 AI, RNG, input counters, camera, controls, session/progress, render-owned HUD /
@@ -45,10 +45,12 @@ refer only to retained immutable assets; fighter addresses stay stable.
 Replay queues truncate on restoration rather than copying the entire recording.
 Transport, captured physical input and ACK history never rewind. Correction
 restores before the first wrong frame and resimulates the captured logical
-inputs, with GPU submissions and real-time audio pumping suppressed. Audio is
-released once a frame is confirmed. Hashes and spectator packets publish only
+inputs, with GPU submissions and real-time audio pumping suppressed. Predicted audio is
+played immediately; corrected intervals match already played events, suppress
+duplicates and stop obsolete voices. Audio output history never rewinds. Hashes and spectator packets publish only
 from reconciled contiguous confirmed history. Normal waiting does not rerun
-camera/render state. Pause, restart, round transitions and final save are
+camera/render state. Intro, round knockout and round recovery are checkpointed and speculative.
+Pause, restart, victory dialogue/resource changes and final save are
 confirmation fences; closing an unfinished run truncates its speculative tail.
 
 Status words 48..54 expose rollback/resimulation counts, pending history, P,
@@ -100,3 +102,57 @@ For the all-character snapshot probe, build without `--release`, then run
 resulting `th075_web/artifacts/rollback-harness`, then run `rollback-snapshot.mjs`.
 This fixture contains diagnostics and must never be deployed or packaged.
 The release packager rejects probe exports and stale source hashes.
+
+## Rollback pacing correction (2026-10-16)
+
+Experiment base / canonical MP base: `d32fabc`; same isolated experiment worktree
+and exact common pin as above. No gameplay rules or ordinary branch changes.
+
+The first release's passing correctness gates did not establish smooth play.
+It fenced **every** intro/knockout/recovery frame, cleared predicted ABCD and
+cleared directions after two frames. Its D0 channel also retained delay-mode
+positive-wait pacing. These policies were incompatible with the intended
+Giuroll-style held-input prediction even though native rollback existed.
+
+Fixes: predict all held gameplay buttons throughout P; speculate all rewindable
+battle phases; retain a confirmed fence before victory texture/menu lifecycle;
+disable Adonis positive-wait pacing in direct rollback; reconcile immediate
+predicted audio using an output journal outside snapshots.
+
+Same desktop Chromium/D3D11, two real RTC runtimes, injected 80 ms on each input
+receive lane, sustained direction and rotating held ABCD, 20 measured seconds:
+
+| Metric | Previous release | Corrected release |
+| --- | --- | --- |
+| Frames after 20 s | 176 / 176, still in intro | 1203 / 1202 |
+| Active simulation | Not reached | 60.0 / 60.0 fps |
+| Longest observed frame gap | 184 / 200 ms | 17.2 / 17.8 ms |
+| Peak speculative history | 0 / 0 | 7 / 5 frames |
+| Corrections / resimulated frames | 0 / 0 | 27/184 and 27/131 |
+| Common confirmed checkpoints | 3 | 20, identical |
+
+Release Wasm: `303976836f999138cdc5fdac762bfcff59f4fb4f4971b5a836cd15105c5c854c`.
+CPU time per native tick p95 was 0.5 ms on this desktop. This is not a mobile
+hardware claim. A software-rendered attempt reached about 45.6 fps and failed
+the 55 fps performance gate; it was not relabeled as a pass.
+
+Regression gates: all 11 characters x Active/Intro/RoundKnockout/RoundRecovery
+(44 restore/divergent-branch/Replay checks); 1000 confirmed protocol frames;
+held ABCD/directions across 80 ms (438 predicted decisions, up to 7 pending,
+no delay pacing); predicted sound matching/cancellation; full RTC loss/jitter
+match (31 shared spectator checkpoints, restart/pause/exit, identical native
+Replays, prompt and IDBFS); WebSocket rollback and pure-delay; offline playback
+matching 11 confirmed combat samples. Existing browser menu tests now hold an
+input until the expected state acknowledges it instead of assuming a 120 ms
+pulse spans enough logical frames under injected delay.
+
+Evidence: workspace `_scratch/th075-rollback-20261016/perf-baseline-hardware/`,
+`perf-final/`, `fix-protocol.log`, `fix-snapshot.log`, `fix-rtc-final.log`,
+`fix-relay.log`, `fix-pure.log`, `fix-replay.log`. Physical iPad performance
+remains unmeasured. Promotion uses a reviewed commit and exact tested native
+release files, verified against canonical source/header hashes before packaging.
+
+Run `rollback-performance.mjs --accept` with `EAGLER_TH075_PERF_GPU=hardware`
+on Windows hardware rendering, or without `--accept` to record a software-GPU
+baseline. Use `EAGLER_TH075_PERF_OUTPUT` for separate reports. The fixed default
+fault is 80 ms each input lane; `EAGLER_TH075_PERF_LATENCY` overrides it.

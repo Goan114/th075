@@ -47,7 +47,7 @@ public:
  u8 current_scene()const{return scene;}
  bool restart();bool probe_scene(u8);bool probe_battle(u8,u8,u8,u8);
  bool prepare_multiplayer(u32,u8,u8,u8,u8,u8);bool save_multiplayer_replay();bool show_replays();
- struct RollbackSound {i16 id;u8 side;bool character;};
+ struct RollbackSound {i16 id;u8 side;bool character;bool operator==(const RollbackSound& other)const{return id==other.id&&side==other.side&&character==other.character;}};
  bool rollbackResimulating=false;bool collectRollbackSound=false;std::vector<RollbackSound> rollbackSounds;
  std::unique_ptr<RollbackState> capture_rollback()const;bool restore_rollback(const RollbackState&);
  bool rollback_predictable()const;

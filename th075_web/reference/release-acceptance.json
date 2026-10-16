@@ -453,7 +453,7 @@
       ],
       "smallTouchScreenFit": true
     },
-    "doc": "docs/2026-10-12-画面缩放与清晰度.md",
+    "doc": "docs/2026-10-12-\u753b\u9762\u7f29\u653e\u4e0e\u6e05\u6670\u5ea6.md",
     "evidence": [
       {
         "report": "artifacts/cpp/verification/graphics-vertices-original.json",
@@ -509,7 +509,7 @@
         "report": "artifacts/cpp/verification/original-replays-full-original.json",
         "scope": "full original main battle loop versus named C++ scene, real recorded inputs/random stream; rendering and audio excluded; neutral initial actor fields supplied from C++ and original constructors verified separately"
       },
-      "reportsNote": "Historical 1.0.1 acceptance; changing report files are updated for the current release. Prior detailed results are described in docs/2026-10-12-画面与原版录像修复.md."
+      "reportsNote": "Historical 1.0.1 acceptance; changing report files are updated for the current release. Prior detailed results are described in docs/2026-10-12-\u753b\u9762\u4e0e\u539f\u7248\u5f55\u50cf\u4fee\u590d.md."
     },
     {
       "webVersion": "1.0.2",
@@ -778,7 +778,7 @@
       "th075_web/cpp/game/SharedEffects.hpp"
     ],
     "gameplayRulesChanged": false,
-    "policy": "opt-in D0/P1..8, default pure delay; repeat directions only for two missing frames; confirmed lifecycle boundaries",
+    "policy": "opt-in D0/P1..8, default pure delay; repeat held directions and ABCD for P frames; predict rewindable battle phases; confirm resource/menu lifecycle",
     "communityReferences": {
       "giuroll": "7eaf02ea6e38d40fd58bce95383880908101384b",
       "copyliu/RollCaster": "05de055abc0865e353d04e7ae536ac441294ff60"
@@ -805,5 +805,41 @@
     "limitations": "Physical iPadOS 17.5.1 performance not yet measured. No native DLL compatibility; independent source-level implementation.",
     "reports": "th075_web/artifacts/multiplayer-browser/; handoff/ROLLBACK.md",
     "releaseWasmSha256": "24408a9d8c6b2d1518dd2ad0f5a1fee1fef653786ac71e8eae6420b70bd58b67"
+  },
+  "eaglerRollbackPerformanceFix": {
+    "date": "2026-10-16",
+    "base": "d32fabc",
+    "releaseWasmSha256": "303976836f999138cdc5fdac762bfcff59f4fb4f4971b5a836cd15105c5c854c",
+    "reports": "handoff/ROLLBACK.md; workspace _scratch/th075-rollback-20261016/",
+    "snapshotCharacterPhaseChecks": 44,
+    "injectedInputLatencyMsEachWay": 80,
+    "measurementSeconds": 20,
+    "baselineFrames": [
+      176,
+      176
+    ],
+    "correctedFrames": [
+      1203,
+      1202
+    ],
+    "correctedActiveFps": [
+      59.999,
+      59.999
+    ],
+    "longestFrameGapMs": [
+      17.2,
+      17.8
+    ],
+    "peakSpeculativeFrames": [
+      7,
+      5
+    ],
+    "confirmedCheckpoints": 20,
+    "offlineReplayConfirmedSamples": 11,
+    "rtcSpectatorSharedCheckpoints": 31,
+    "webSocketRollbackAndPureDelay": true,
+    "immediateAudioCorrectionTests": true,
+    "physicalMobilePerformance": "not measured",
+    "failedAttempt": "Software GPU performance gate: approximately 45.6 fps; correctness passed, 55 fps gate failed."
   }
 }
