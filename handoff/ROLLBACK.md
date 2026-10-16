@@ -259,3 +259,31 @@ updated from this diagnostic work. No change to main, beta, test or live relay.
 Test release authorization: user requested deployment after the diagnostic report.
 The bounded fixes are promoted for test-site evaluation; cellular feel remains
 explicitly unaccepted. Production build removes all probe exports.
+
+
+Formal release / test deployment (2026-10-16):
+- Build source3538083 on canonical eagler-mp, Wasm
+  bb7a1a17a0dd108896bc9f37b4cc63e4824cde5e2c52780bf89dca8e356c311c.
+- Probe exports absent; package/source hashes, canonical protocol gate passed.
+- scheduler-release-rtc.log initial page-load timeout preserved; fresh full RTC
+  rerun scheduler-release-rtc-retry.log passed31/31 shared checkpoints, native
+  Replays2150/1626bytes identical, finish/save/download/IDBFS.
+- scheduler-release-relay.log formal relay rollback passed914byte native Replay.
+- https://test.touhou.vip/ current release:
+  th075-rollback-scheduler-20261016-47f3762090d0
+  MP generationeaf395222130764110e0ad7c6c55249ebc8aca7ac725680e36115c7a81e5c9ef.
+- Preserved current collaborator frontend and runtime-font-redirect release.
+  Both registered worker URLs refreshed with the same new catalog while
+  preserving the existing font redirect policy; sync-version.json contents
+  unchanged, corrected its pre-existing stale inventory declaration only.
+- Baseline generic verifier already failed inventory ordering and expected
+  resource-node-only fonts on disk. Bounded publication verifier checked all
+  local file hashes,3170declarations,584unchanged external font declarations,
+  exact immutable frontend, new complete MP generation and Wasm exports,
+  unchanged other Runtime groups, main/beta/content/nginx/relay guards.
+  No missing/changed new file is accepted under the external-font exception.
+- Evidence and rollback records: workspace
+  _scratch/th075-scheduler-deploy-20261016/; server
+  /var/lib/eagler-test-sync/th075-scheduler-20261016/.
+Physical cellular-link responsiveness remains unaccepted; test deployment
+does not establish Giuroll-equivalent feel or immunity to network blackouts.

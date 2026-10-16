@@ -896,6 +896,19 @@
       "No physical-phone or input-to-photon acceptance."
     ],
     "reports": "handoff/ROLLBACK.md; workspace _scratch/th075-rollback-20261016/",
-    "deploymentAuthorization": "User requested test deployment after diagnostic candidate results; no claim of fully resolved cellular feel."
+    "deploymentAuthorization": "User requested test deployment after diagnostic candidate results; no claim of fully resolved cellular feel.",
+    "releaseWasmSha256": "bb7a1a17a0dd108896bc9f37b4cc63e4824cde5e2c52780bf89dca8e356c311c",
+    "formalReleaseGates": {
+      "rtcFullMatch": true,
+      "confirmedSpectatorCheckpoints": [
+        31,
+        31
+      ],
+      "nativeReplayBytesIdentical": true,
+      "relayRollbackMatch": true,
+      "probeExportsAbsent": true,
+      "canonicalProtocolGate": true,
+      "testDeployment": "th075-rollback-scheduler-20261016-47f3762090d0"
+    }
   }
 }
