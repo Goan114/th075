@@ -7,12 +7,13 @@
     "node": ">=22"
   },
   "scripts": {
-    "build": "node th075_web/scripts/build-sdl.mjs --release --eagler",
-    "package:runtime": "node portable/package-eagler.mjs",
+    "build": "node th075_web/scripts/build-sdl.mjs --release --eagler --multiplayer",
+    "package:runtime": "node portable/package-eagler.mjs --multiplayer",
     "prepare:content": "node portable/prepare-content.mjs",
     "check:common": "node tools/sync-common.mjs --check",
     "test:camera": "node th075_web/scripts/build-sdl.mjs --release --eagler --test-harness && node --test tests/eagler/camera-transition.browser.mjs",
     "test:adapter": "node --test tests/eagler/*.test.mjs",
-    "dev": "node tools/dev-launcher.mjs"
+    "dev": "node tools/dev-launcher.mjs",
+    "test:multiplayer": "node th075_web/scripts/test-multiplayer.mjs && node --test tests/eagler/multiplayer-options.test.mjs"
   }
 }

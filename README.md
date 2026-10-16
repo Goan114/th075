@@ -12,7 +12,14 @@ A portable C++ / SDL3 / WebAssembly implementation of 東方萃夢想 ～ Immate
 - `th075_web/reference/external/th075/`: separately licensed reconstruction reference, with its original MIT license and provenance preserved. It is not the complete playable implementation.
 - `deploy/`, `handoff/`, `tools/`: deployment source, original development instructions, and local input restoration helpers.
 
-## Build and run (`eagler`)
+## Multiplayer branch (`eagler-mp`)
+
+This branch adds two-human network duels through the shared eagler-touhou
+room, WebRTC/relay and admitted spectator service. Ordinary single-player
+development stays on `eagler`; do not merge the full MP implementation there.
+See [the multiplayer contract and verification](handoff/MULTIPLAYER.md).
+
+## Build and run
 
 Install Python 3.10+ and Node.js 22+. With the matching private development
 package and the companion `eagler-touhou` integration branch:
@@ -27,7 +34,8 @@ npm run dev
 
 Open `http://127.0.0.1:18175/`. This uses the current shared launcher and Package
 Store, with the original TH075 A/B/C/D layout, button descriptions and joystick.
-The Runtime, DATA and music outputs stay local and ignored by Git.
+On this branch the Runtime output is `build-eagler-multiplayer/`. DATA and
+music use the ordinary TH075 layout. All generated outputs remain ignored.
 
 See [Eagler setup, controls and verification](handoff/EAGLER.md),
 [the public source setup](handoff/PUBLIC-SOURCE.md), and

@@ -22,7 +22,7 @@ export function parseContentBundle(buffer) {
     entries.set(file.path,file); end += file.bytes;
   }
   if (start+end !== bytes.length || !entries.has('/fonts/original-glyphs.bin') || !entries.has('/music/catalog.bin')) throw Error('Incomplete TH075 DATA');
-  return {paths:[...entries.keys()], async read(path) {
+  return {identity:JSON.stringify(table.files.map(f=>[f.path,f.bytes,f.sha256])),paths:[...entries.keys()], async read(path) {
     const file = entries.get(path); if (!file) throw Error('TH075 DATA path is not declared: '+path);
     const value = bytes.slice(start+file.offset,start+file.offset+file.bytes);
     const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',value)),x=>x.toString(16).padStart(2,'0')).join('');

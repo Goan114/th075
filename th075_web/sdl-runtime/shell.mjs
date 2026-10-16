@@ -9,6 +9,7 @@ const game='th075',protocol='eagler-touhou/1',query=new URLSearchParams(location
 const epoch=Number(query.get('runtimeEpoch')),validEpoch=Number.isSafeInteger(epoch)&&epoch>0;
 const canvas=document.querySelector('canvas'),$=s=>document.querySelector(s);
 const build=/*TH075_EAGLER_BUILD*/{version:'development',completeGame:false};
+let net;
 let core,bundle,launched=false,stopping=false,busy=false,loopId=0,options={},music='none',commands=Promise.resolve();
 let escapeSerial=0,stick={x:0,y:0},direct=null,actionButtons=0;
 const keyboard=createBrowserKeyboard({accept:code=>!!scanCodes[code],send:(code,down)=>core?._th075_key(scanCodes[code],+down)});
@@ -22,10 +23,12 @@ const sync=createSaveSync(()=>core);
 function clearKeyboard(){keyboard.clear();core?._th075_keys_clear();}
 function cancelTouch(){direct=null;stick={x:0,y:0};actionButtons=0;core?._th075_touch_cancel();}
 function inputKey(event,down,source){
-  if(event.code==='KeyR'&&down&&!event.repeat&&core._th075_phase()===2){core._th075_restart();return true;}
+  if(net?.spectator)return true;
+  if(event.code==='KeyR'&&down&&!event.repeat&&core._th075_phase()===2){if(net)core._th075_mp_restart();else core._th075_restart();return true;}
   return keyboard.event(event,down,source);
 }
 const fatal=e=>{
+  if(net){globalThis.__eaglerNetplayFailed=true;globalThis.__eaglerNetplayError=e?.message||String(e);globalThis.__eaglerNetplayLanActive=false;}
   ++loopId;
   const message=e?.message||String(e),inspect=name=>{try{return core?.[name]?.()??null;}catch{return null;}};
   const report={game,version:build.version,time:new Date().toISOString(),browser:navigator.userAgent,
@@ -48,11 +51,11 @@ const fatal=e=>{
 async function idle(){while(busy)await new Promise(resolve=>setTimeout(resolve,5));}
 async function save(){await idle();if(launched&&!core._th075_save_scores())throw Error(error());await sync();}
 function closeAudio(){const context=core.SDL3?.audioContext,borrowed=parent!==window&&context===parent.__touhouAudioContext;if(borrowed)core.SDL3.audioContext=undefined;try{core._th075_audio_close();}finally{if(borrowed)core.SDL3.audioContext=context;}}
-async function stop(){if(stopping)return;stopping=true;++loopId;try{await idle();core._th075_loop_pause(1);clearKeyboard();cancelTouch();await save();closeAudio();launched=false;emit('exit',{code:0,status:'success'});}finally{stopping=false;}}
+async function stop(){if(stopping)return;stopping=true;++loopId;try{await idle();core._th075_loop_pause(1);clearKeyboard();cancelTouch();if(net&&!net.spectator)core._th075_mp_save_replay();await save();net?.close();net=null;closeAudio();launched=false;emit('exit',{code:0,status:'success'});}finally{stopping=false;}}
 
 export function userPath(value){
   if(typeof value!=='string'||value.includes('\\'))throw Error('Invalid save path');
-  const path=value.replace(/^\/savesth075\//,'').replace(/^\//,'');
+  const path=value.replace(/^\/savesth075(?:mp)?\//,'').replace(/^\//,'');
   if(!/^(?:score\.dat|config\.dat|replay\/[a-zA-Z0-9_(). -]+\.rep)$/.test(path)||path.includes('..')||path.length>240)throw Error('Invalid save path');
   return path;
 }
@@ -97,7 +100,7 @@ function loop(){
     try{
       if(!await call('tick',['number'],[time])){if(core._th075_phase()===4){busy=false;await stop();return;}throw Error(error());}
       // The C++ tick commits the shared renderer before returning. Do not use ready as presentation proof.
-      if(first){first=false;emit('first-frame');}
+      if(first){first=false;emit('first-frame');}net?.frame();
       presents++;maximum=Math.max(maximum,performance.now()-start);
       const now=performance.now();
       if(now-last>=1000){const current=core._th075_frame(),pointer=core._th075_audio_statistics();
@@ -109,7 +112,7 @@ function loop(){
 }
 
 // Share one input owner across the same-origin fast path and postMessage fallback.
-function dispatchInput(m){switch(m.command){
+function dispatchInput(m){if(net?.spectator&&['keyboard','keyboard-clear','touch-controls','touch-cancel','direct-touch'].includes(m.command))return true;switch(m.command){
   case 'keyboard':if(launched&&!document.hidden&&!stopping)inputKey(m,!!m.down,'hosted');return true;
   case 'keyboard-clear':clearKeyboard();return true;
   case 'touch-controls':if(launched&&!document.hidden&&!stopping)touch(m);return true;
@@ -146,8 +149,11 @@ async function command(m){if(dispatchInput(m))return {};switch(m.command){
   case 'resources':for(const r of m.resources||[])await resource(r);return {};
   case 'launch':
     if(launched)return {};
+    if(build.multiplayer&&options.netplayMode!=='lan'&&!options.replayViewer)throw Error('Launch TH075 multiplayer from its shared room');
     core._th075_music_enabled(+(music==='ogg'));
     if(!await call('initialize',['number'],[options.renderScale===1?1:2]))throw Error(error());
+    if(build.multiplayer&&options.netplayMode==='lan'){const {Multiplayer}=await import('./multiplayer.mjs');net=new Multiplayer({core,options,build,emit,onError:fatal,onFinished:()=>void stop().catch(fatal),isBusy:()=>busy});await net.connect();}
+    else if(build.multiplayer&&options.replayViewer){if(!await call('mp_replay_viewer'))throw Error(error());}
     launched=true;$('#loading').textContent='';updateDisplay();core._th075_loop_pause(0);
     emit('runtime-info',{renderer:'SDL3 / WebGL2 / C++',...build});loop();return {};
   case 'sync':await save();return {};
@@ -185,10 +191,12 @@ const initialized=(async()=>{
   core=await createModule({canvas,resourceFiles:new Set([...bundle.paths.map(path=>path.slice(1))]),
     async readAsset(path){if(path.startsWith('/music/')&&path.endsWith('.ogg')){try{return core.FS.readFile(path).buffer;}catch{throw Error('Music must be installed through Package Store');}}return (await bundle.read(path)).buffer;},
     printErr:console.error,onAssetLoading(path,on){$('#loading').textContent=on?'正在准备场景…':'';}});
+  core.th075ContentIdentity=bundle.identity;
   core.SDL3=core.SDL3||{};if(parent.__touhouAudioContext)core.SDL3.audioContext=parent.__touhouAudioContext;
   window.Module=core;window.FS=core.FS;core.resetBrowserKeyboard=()=>keyboard.clear();
-  core.FS.mkdirTree('/savesth075');core.FS.mount(core.IDBFS,{},'/savesth075');await sync(true);
-  core.FS.mkdirTree('/savesth075/replay');core.FS.symlink('/savesth075','/save');
+  const saveRoot=build.multiplayer?'/savesth075mp':'/savesth075';
+  core.FS.mkdirTree(saveRoot);core.FS.mount(core.IDBFS,{},saveRoot);await sync(true);
+  core.FS.mkdirTree(saveRoot+'/replay');core.FS.symlink(saveRoot,'/save');
   for(const path of ['/fonts/original-glyphs.bin','/music/catalog.bin']){core.FS.mkdirTree(path.slice(0,path.lastIndexOf('/')));core.FS.writeFile(path,await bundle.read(path));}
   emit('ready');
 })().catch(e=>{if(e?.name==='AbortError'&&e?.message==='EAGLER_RUNTIME_SESSION_SUPERSEDED')return false;fatal(e);throw e;});

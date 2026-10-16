@@ -44,6 +44,8 @@ public:
  Application();~Application();bool initialize(u32 scale);bool tick(const BattleSystemInput&,u32 milliseconds);bool save_scores();bool save_replay(u32 slot,const char*);bool return_title();
  u8 current_scene()const{return scene;}
  bool restart();bool probe_scene(u8);bool probe_battle(u8,u8,u8,u8);
+ bool prepare_multiplayer(u32,u8,u8,u8,u8,u8);bool save_multiplayer_replay();bool show_replays();
+ bool multiplayer_complete()const{return (sceneCode&0xff)!=0&&(sceneCode&0xff)!=1;}
  u8 phase()const{return exiting?4:battle&&scene==0?(battle->progress.paused?2:1):0;}
  void sound(i16)override;void sound(u16 v)override{sound(i16(v));}void character_sound(u8,i16)override;void fade_music(i32,i32,u32,u32)override;void select_music(i16)override;void start_music()override;void stop_music()override;void stop_music(i32)override;
  bool load_character(u8,const CharacterDefinition&,u8,CharacterController&)override;void load_story_artwork(CharacterController&,u8)override;FighterCoreEvents& reset_events(u8)override;void save_profile(const std::vector<u8>&)override;void prepare_round_recording(const GameSelection&,const BattleSession&,const RoundRules&,const FighterActor&)override;

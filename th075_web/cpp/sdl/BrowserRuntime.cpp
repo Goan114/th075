@@ -1,4 +1,7 @@
 #include "Application.hpp"
+#if TH075_MULTIPLAYER
+#include "Multiplayer.hpp"
+#endif
 #include "../../../portable/sdl/FrameCadence.hpp"
 #include <SDL3/SDL.h>
 #include <emscripten.h>
@@ -21,7 +24,15 @@ EMSCRIPTEN_KEEPALIVE const char* th075_error(){return th075::sdl::app?th075::sdl
 EMSCRIPTEN_KEEPALIVE unsigned th075_frame(){return th075::sdl::app?th075::sdl::app->frame:0;}
 EMSCRIPTEN_KEEPALIVE unsigned th075_phase(){return th075::sdl::app?th075::sdl::app->phase():0;}
 EMSCRIPTEN_KEEPALIVE unsigned th075_scene(){return th075::sdl::app?th075::sdl::app->current_scene():255;}
-EMSCRIPTEN_KEEPALIVE int th075_tick(double timestamp){using namespace th075::sdl;if(!app||suspended)return 1;const double delta=previous<0?1./60.:(timestamp-previous)/1000.;previous=timestamp;const auto ticks=cadence.advance(delta);app->graphics.renderer.defer=true;bool ok=true;for(unsigned n=0;n<ticks&&ok;n++)ok=app->tick(sample(),unsigned(timestamp));app->graphics.renderer.commit();app->graphics.renderer.defer=false;app->audio.pump();return ok?1:0;}
+EMSCRIPTEN_KEEPALIVE int th075_tick(double timestamp){using namespace th075::sdl;if(!app||suspended)return 1;const double delta=previous<0?1./60.:(timestamp-previous)/1000.;previous=timestamp;double elapsed=delta;
+#if TH075_MULTIPLAYER
+ if(multiplayer::active()){if(!multiplayer::pump(emscripten_get_now()*1000))return 0;elapsed=multiplayer::pace(delta*1000)/1000;}
+#endif
+ const auto ticks=cadence.advance(elapsed);app->graphics.renderer.defer=true;bool ok=true;for(unsigned n=0;n<ticks&&ok;n++){
+#if TH075_MULTIPLAYER
+ if(multiplayer::active())ok=multiplayer::step({},emscripten_get_now()*1000);else
+#endif
+ ok=app->tick(sample(),unsigned(timestamp));}app->graphics.renderer.commit();app->graphics.renderer.defer=false;app->audio.pump();return ok?1:0;}
 EMSCRIPTEN_KEEPALIVE void th075_key(unsigned scan,unsigned down){for(auto& k:th075::sdl::keyboard_map)if(k.scan==scan)k.hosted=down!=0;}
 EMSCRIPTEN_KEEPALIVE void th075_keys_clear(){th075::sdl::clear_inputs();}
 EMSCRIPTEN_KEEPALIVE void th075_loop_pause(unsigned on){using namespace th075::sdl;suspended=on!=0;previous=-1;cadence.reset();clear_inputs();if(app)app->audio.suspend(suspended);}
