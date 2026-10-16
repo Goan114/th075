@@ -254,3 +254,8 @@ Status: diagnostic experiment only. Native/browser correctness passed; repeated
 cellular blackout performance and physical phone control feel remain unaccepted.
 Production acceptance hashes and canonical MP source have deliberately not been
 updated from this diagnostic work. No change to main, beta, test or live relay.
+
+
+Test release authorization: user requested deployment after the diagnostic report.
+The bounded fixes are promoted for test-site evaluation; cellular feel remains
+explicitly unaccepted. Production build removes all probe exports.

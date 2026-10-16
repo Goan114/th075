@@ -61,7 +61,7 @@
     "th075_web/cpp/game/GameResources.cpp": "b0497743e1d815f674c69cbaac4c7032384d4d67acf4c4bd998c483357ef0cf4",
     "th075_web/cpp/game/GameSettings.cpp": "55323b6fbf42106d08dc55707f880b1f0f52890d2cb5334f162f926404aff54f",
     "th075_web/cpp/game/GuardSelector.cpp": "d384572441b5c69934890f8e92807d5aeed4cc141d6f0fae383cf3c6645b536e",
-    "th075_web/cpp/game/ImageRenderer.cpp": "bc6d2503031cc43abed1dfde01a7df4f4e33ae3da7ac1fba07b4beb922da31e5",
+    "th075_web/cpp/game/ImageRenderer.cpp": "8058c0c7e4bf0e9d695243bbf31bf84a6c2917830593d86a558e35c70b1ebc67",
     "th075_web/cpp/game/InputMapping.cpp": "d526fe03a80e3fa53cc5788f2aa4c5b1e82bc3402276133cfe35bd1f07d5337e",
     "th075_web/cpp/game/MarisaActions.cpp": "f4fa8f959f840c0d5c65105edb19bb762745e4c1e878a007b23de5d16a261f8b",
     "th075_web/cpp/game/MarisaAI.cpp": "ab583f98a2b71bd72d624f1a7786ecbf34ee927701e9570aa78132e8e09127bd",
@@ -196,13 +196,13 @@
     "th075_web/cpp/game/YuyukoState.cpp": "6fad7560eb35bb2447df779a1a94d67da035a9b75ec74dded7c034ff1af1a270",
     "th075_web/cpp/game/YuyukoStory.cpp": "20594a7ed735c3f072a1b8e7c6f572a47de3cc96a77b0ceb8c4691b3b3825895",
     "th075_web/cpp/game/YuyukoStorySetup.cpp": "d2f4e86a76f8f120e4f472caaea2bf66da0d156a9d3f0b691c7d0c7cc05602a6",
-    "th075_web/cpp/game/ZunGraphics.cpp": "aa5badd155c960934f5dbe2e78ed95abde24ebb9c9bc92736200116ef5b11b17",
+    "th075_web/cpp/game/ZunGraphics.cpp": "8bf2ec97b614c5cc17262873ef116b27ab68032d19cc9ab0b9b791e4e8027edb",
     "th075_web/cpp/sdl/Application.cpp": "522f0e3dfbbbc4577db1e7dbeba54a2fe8482e1a9b502e62fe3d68564f8b26da",
     "th075_web/cpp/sdl/ApplicationBattle.cpp": "3102ee6fb11f31e031b48cd97540816507e2bf13e14ff65134c0d769eebd432c",
     "th075_web/cpp/sdl/ApplicationMenus.cpp": "2ed8e987052c63e9aea5333a2d36289c3ad978ba0cc6cb19f182d6aa481c651e",
-    "th075_web/cpp/sdl/ApplicationScenes.cpp": "974f2fbd500956070678a6b066514335c5b835d573e08d031b21c944cfaf1f84",
-    "th075_web/cpp/sdl/AudioDevice.cpp": "0c6b8a5d6d6538730d8a53c19e1d6c5ee12e5ad739b8622ed84e5e503e130176",
-    "th075_web/cpp/sdl/BrowserRuntime.cpp": "dec165cfb5d85f6268c5914ee6e0fa714a308602b00610e64f95812ae6edd1d2",
+    "th075_web/cpp/sdl/ApplicationScenes.cpp": "afbf97605f5e599106def69a764e8057876e3787ed072be863355f799401eae3",
+    "th075_web/cpp/sdl/AudioDevice.cpp": "93d7df6c252d0b3251c75d71aa39aeb8d0972bc432dcf62997ec812233b4ebf1",
+    "th075_web/cpp/sdl/BrowserRuntime.cpp": "42dbb82805ed477efb864a7478bd2fab7b7bf75918e73166dbf76e84d590d561",
     "th075_web/cpp/sdl/FileResources.cpp": "730d32a1562711f5de425ed12e0c4dd7e9011eab07865803ba85d715746420a9",
     "th075_web/cpp/sdl/FontDevice.cpp": "e8ca07accfb8850741c92c04607fcfdf763266dc3c8d8d86164e84fc44008399",
     "th075_web/cpp/sdl/GraphicsDevice.cpp": "17953cac628be095aadefc88c85dc0f009de12861c636045e1fbdf8222b4ae69",
@@ -210,7 +210,7 @@
   },
   "headerHashes": {
     "portable/sdl/AssetPixelFormat.hpp": "5653937bc3857013326a95420effa3d1200469a48a65303cb2915772086cb894",
-    "portable/sdl/FrameCadence.hpp": "1b2a610ac172de2089b4cd6551e88b04d36fb4030da93526a4442cefa8cdbed8",
+    "portable/sdl/FrameCadence.hpp": "416f21cd774a42782a964670511bcad76588077e0458a3d10c340d6456d9605d",
     "portable/sdl/GraphicsState.hpp": "e11ee01c47ef4cea3cd64eff069cd8bd1f4cfb8f761982f9769626dc62ba5a6b",
     "portable/sdl/LegacyGraphics.hpp": "e604d1e07504fc2b1633c54359be8a3243488cc94c44ab0a4d1e95e6a502f897",
     "portable/sdl/RenderCommands.hpp": "0e0e53d13c2b56b90b09e1ed83088dd43a7b658d72359b3c7c5ea2058c85f5c4",
@@ -346,12 +346,12 @@
     "th075_web/cpp/game/YuyukoObjects.hpp": "32e21d0cc787f0c69c65b718c4d1e665ea9827d72f0877bbacb2674c1c34e0bd",
     "th075_web/cpp/game/YuyukoState.hpp": "a6f5133d8616a83e065382c9e2c6d39927c744060d3bdb2a7e9ac1066c75b4cd",
     "th075_web/cpp/game/YuyukoStory.hpp": "27507a650ebe3cc6b83bf6acd8cd1adfbd7306884b4268e01c0696abf14bc436",
-    "th075_web/cpp/game/ZunGraphics.hpp": "7af2938f2bbef2c86c74651b8a90854b06d766c04513ebd05737f59331d62f48",
+    "th075_web/cpp/game/ZunGraphics.hpp": "d4f0c80c05622bc9fa5901b960a2b06f3c10a46c89a2eacf872ab750c555ac89",
     "th075_web/cpp/sdl/Application.hpp": "45f9ef7ef576558f0a6b4d2395c766f3e001495bd8069aedecd5778c755d6de3",
     "th075_web/cpp/sdl/AudioDevice.hpp": "d52a9fe39388d93a985c49f30f794f802edbee3440f44abc068010459538372b",
     "th075_web/cpp/sdl/FileResources.hpp": "451761851da0afd381c08f223bdcb43fc500fade538bd3f480672e09b758137d",
     "th075_web/cpp/sdl/FontDevice.hpp": "6c837545b2e44b9fdbe266c85e1d73ead9fa02ae53d05da0d8a9e5264ad8cbcb",
-    "th075_web/cpp/sdl/GraphicsDevice.hpp": "6e7a54180b419f93a055916fa93edfec0d0499a8575a59d18cf58fc9c70b1d07",
+    "th075_web/cpp/sdl/GraphicsDevice.hpp": "873f29b16e708db43ebe40271c8c69fd6eb19f4718ae50bc9278b61faa31268b",
     "th075_web/cpp/sdl/MenuText.hpp": "f2626db69012a69223780bcaa5856a5c32bf05d9541bd60fc845277f73f34272",
     "th075_web/cpp/sdl/MenuTextChinese.hpp": "939b68867b919a1d0f54c796bc8aed90cbfa65ccebe3c40d5cc1bbbb52e61a9e",
     "th075_web/cpp/sdl/TextureBank.hpp": "ea313bfded96837dfc7a7bd7cadb69ff1c2114840f72df7a4955d924b4a8a41c"
@@ -453,7 +453,7 @@
       ],
       "smallTouchScreenFit": true
     },
-    "doc": "docs/2026-10-12-\u753b\u9762\u7f29\u653e\u4e0e\u6e05\u6670\u5ea6.md",
+    "doc": "docs/2026-10-12-画面缩放与清晰度.md",
     "evidence": [
       {
         "report": "artifacts/cpp/verification/graphics-vertices-original.json",
@@ -509,7 +509,7 @@
         "report": "artifacts/cpp/verification/original-replays-full-original.json",
         "scope": "full original main battle loop versus named C++ scene, real recorded inputs/random stream; rendering and audio excluded; neutral initial actor fields supplied from C++ and original constructors verified separately"
       },
-      "reportsNote": "Historical 1.0.1 acceptance; changing report files are updated for the current release. Prior detailed results are described in docs/2026-10-12-\u753b\u9762\u4e0e\u539f\u7248\u5f55\u50cf\u4fee\u590d.md."
+      "reportsNote": "Historical 1.0.1 acceptance; changing report files are updated for the current release. Prior detailed results are described in docs/2026-10-12-画面与原版录像修复.md."
     },
     {
       "webVersion": "1.0.2",
@@ -841,5 +841,61 @@
     "immediateAudioCorrectionTests": true,
     "physicalMobilePerformance": "not measured",
     "failedAttempt": "Software GPU performance gate: approximately 45.6 fps; correctness passed, 55 fps gate failed."
+  },
+  "eaglerRollbackSchedulingFix": {
+    "date": "2026-10-16",
+    "base": "c781ea6",
+    "experimentCommit": "c035890",
+    "acceptedChangedInputs": [
+      "th075_web/cpp/game/ImageRenderer.cpp",
+      "th075_web/cpp/game/ZunGraphics.cpp",
+      "th075_web/cpp/sdl/ApplicationScenes.cpp",
+      "th075_web/cpp/sdl/AudioDevice.cpp",
+      "th075_web/cpp/sdl/BrowserRuntime.cpp",
+      "portable/sdl/FrameCadence.hpp",
+      "th075_web/cpp/game/ZunGraphics.hpp",
+      "th075_web/cpp/sdl/GraphicsDevice.hpp"
+    ],
+    "sourceContract": "Fixed 60Hz, capture-once and confirmed Replay unchanged; skip only GPU vertex output during replay; MP-only callback scheduling, attack-edge retention and bounded PCM batches.",
+    "gates": {
+      "snapshotCharacterPhases": 44,
+      "protocolConfirmedFrames": 1000,
+      "rtcSpectatorCheckpoints": [
+        31,
+        31
+      ],
+      "nativeReplayBytesIdentical": true,
+      "offlineReplayConfirmedStates": 7,
+      "relayPureDelayFrames": 404,
+      "keyboardTouchPhysicalSamples": [
+        16,
+        0
+      ]
+    },
+    "performance": {
+      "meanInjectedReceiveDelayMsEachWay": 50,
+      "jitterReceiveRangeMs": [
+        20,
+        80
+      ],
+      "oneEndpointCpuThrottle": 12,
+      "measurementSeconds": 20,
+      "activeMaxForwardGapMs": [
+        33.9,
+        47.8
+      ],
+      "slowEndpointSyntheticInputP95Ms": 10.6,
+      "sampledEmptyAudioQueues": 0,
+      "bothNear60Hz": true
+    },
+    "limitations": [
+      "CPU throttle is not a phone test.",
+      "Cellular bursts beyond 8-frame prediction horizon still stall.",
+      "Earlier burst candidate worsened maximum gaps; preserved in handoff.",
+      "Whole-run startup gaps remain and are not called active-play gaps.",
+      "No physical-phone or input-to-photon acceptance."
+    ],
+    "reports": "handoff/ROLLBACK.md; workspace _scratch/th075-rollback-20261016/",
+    "deploymentAuthorization": "User requested test deployment after diagnostic candidate results; no claim of fully resolved cellular feel."
   }
 }
