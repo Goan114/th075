@@ -287,3 +287,11 @@ Formal release / test deployment (2026-10-16):
   /var/lib/eagler-test-sync/th075-scheduler-20261016/.
 Physical cellular-link responsiveness remains unaccepted; test deployment
 does not establish Giuroll-equivalent feel or immunity to network blackouts.
+
+Post-deployment checks: HTTPS exact-byte identities passed for all23 updated
+paths. Actual public Launcher two independent clients imported the retail
+package, joined a new room, selected named character/spells, opted into D0/P8,
+advanced to306/306frames and both moved/attacked without Runtime errors.
+Initial load-event navigation timed out; DOM-ready navigation with the same
+explicit Launcher boot gates passed. Evidence: deployment directory
+https-identities.json, online-browser.log, launcher-gate.json.
