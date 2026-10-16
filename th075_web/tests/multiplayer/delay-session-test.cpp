@@ -1,8 +1,10 @@
 #include "../../cpp/multiplayer/DelaySession.hpp"
 #include "../../cpp/multiplayer/RollbackAudio.hpp"
+#include "../../cpp/multiplayer/InputLatch.hpp"
 #include <cassert>
 #include <cstdio>
 #include <functional>
+#include "../../../portable/sdl/FrameCadence.hpp"
 
 namespace {
 using namespace Netplay;
@@ -108,12 +110,12 @@ void held_prediction(){
    if(p.Confirmed()!=INVALID_FRAME&&p.Frame()>p.Confirmed())maxPending=std::max(maxPending,p.Frame()-p.Confirmed());
    assert(p.Complete(d));
    // Direct rollback must not accrue the delay-mode positive-wait correction.
-   assert(p.Pace(16.)==16.);
+   const auto elapsed=p.Pace(16.);assert(elapsed>=16./1.02&&elapsed<=16./.98);
   }
   if(a.Frame()==240&&b.Frame()==240)break;
  }
  assert(a.Frame()==240&&b.Frame()==240&&predicted>100&&maxPending>=4);
- std::printf("PASS: held ABCD/directions predict across 80ms, pending=%u, predicted=%u, no delay pacing\n",maxPending,predicted);
+ std::printf("PASS: held ABCD/directions predict across 80ms, pending=%u, predicted=%u, bounded smooth clock pacing\n",maxPending,predicted);
 }
 void sound_correction(){
  th075::multiplayer::RollbackAudio<int> audio;std::vector<int> played,stopped;
@@ -129,4 +131,28 @@ void sound_correction(){
  assert(stopped.size()==1);audio.Confirm(120);audio.Reset();
  std::puts("PASS: immediate predicted sounds, correction deduplication, obsolete voice cancellation");
 }
-int main(){sound_correction();held_prediction();rollback_match();match(0);match(2);match(9);match(Netplay::AdonisStartup::Automatic);match(2,true);return 0;}
+void stalled_cadence(){
+ touhou::sdl::FrameCadence clock;
+ clock.accumulate(1./60.);assert(clock.due()==1);
+ // Five callbacks cannot advance while the peer's prediction window is full.
+ for(unsigned n=0;n<5;++n)clock.accumulate(1./60.);
+ assert(clock.due()==4);
+ for(unsigned n=0;n<4;++n)clock.consume();
+ assert(clock.due()==2);clock.consume();clock.consume();assert(clock.due()==0);
+ // Budget yields retain debt too; long outages retain no more than 100 ms.
+ clock.accumulate(10.);assert(clock.debt<=.1&&clock.due()==4);
+ clock.reset();assert(clock.due()==0);
+ // Ordinary play still consumes all scheduled ticks using its original API.
+ assert(clock.advance(2./60.)==2&&clock.due()==0);
+ std::puts("PASS: peer waits and budget yields retain bounded cadence debt");
+}
+void input_latch(){
+ th075::multiplayer::InputLatch input;
+ input.Key(44,true);input.Key(44,false);assert(input.TakeKey(44));assert(!input.TakeKey(44));
+ input.Key(44,true);assert(input.TakeKey(44));input.Key(44,true);assert(!input.TakeKey(44));input.Key(44,false);
+ input.Touch(16);input.Touch(0);assert(input.TakeTouch()==16);assert(input.TakeTouch()==0);
+ input.Key(45,true);input.Touch(32);input.Clear();assert(!input.TakeKey(45)&&input.TakeTouch()==0);
+ input.Key(999,true);assert(!input.TakeKey(999));
+ std::puts("PASS: short key/touch taps survive peer wait and transfer once");
+}
+int main(){input_latch();stalled_cadence();sound_correction();held_prediction();rollback_match();match(0);match(2);match(9);match(Netplay::AdonisStartup::Automatic);match(2,true);return 0;}

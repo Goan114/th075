@@ -40,6 +40,7 @@ void ZunGraphics::transform(ScreenVertex& v)const{
     v.x=float(double(drawScale)*double(v.x)+double(originX));v.y=float(double(drawScale)*double(v.y)+double(originY));
 }
 void ZunGraphics::filled_rectangle(const CollisionRectangle& rect,u32 color){
+    if(!backend.drawing_enabled())return;
     std::array<ScreenVertex,4> vertices;
     const float x[]={float(rect.left),float(double(rect.right)+1.0)},y[]={float(rect.top),float(double(rect.bottom)+1.0)};
     color=modulate(color);constexpr u32 order[]={0,1,3,2};
@@ -47,6 +48,7 @@ void ZunGraphics::filled_rectangle(const CollisionRectangle& rect,u32 color){
     backend.draw(0,Topology::Fan,vertices.data(),4);
 }
 void ZunGraphics::textured_quad(const std::array<std::array<float,4>,4>& points,const CollisionRectangle& rect,u32 color,u32 texture){
+    if(!backend.drawing_enabled())return;
     const auto size=backend.texture_size(texture);if(!size.width||!size.height)return;
     std::array<ScreenVertex,4> vertices;constexpr u32 order[]={0,1,3,2};
     const float u[]={float(rect.left)/float(size.width),float(rect.right)/float(size.width)};
@@ -56,6 +58,7 @@ void ZunGraphics::textured_quad(const std::array<std::array<float,4>,4>& points,
     backend.draw(texture,Topology::Strip,vertices.data(),4);
 }
 bool ZunGraphics::projected_quad(const std::array<std::array<float,4>,4>& points,const CollisionRectangle& rect,float centerX,float centerY,float distance,u32 color,u32 texture){
+    if(!backend.drawing_enabled())return false;
     const auto size=backend.texture_size(texture);if(!size.width||!size.height)return false;
     std::array<ScreenVertex,4> vertices;color=modulate(color);
     for(u32 i=0;i<4;i++){

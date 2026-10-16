@@ -39,7 +39,14 @@ void AudioDevice::music_level(i32 level){impl->level=level;if(impl->current)ma_s
 void AudioDevice::fade_music(i32 target,i32 step,u8 stopWhenDone,u8 startWhenDone){auto& a=*impl;if(!a.playing()){a.fading=false;if(startWhenDone)start_music();return;}a.target=target;a.step=step;a.stopWhenDone=stopWhenDone;a.startWhenDone=startWhenDone;a.fading=true;a.lastFade=u32(SDL_GetTicks());}
 void AudioDevice::update(u32 now){auto& a=*impl;if(a.fading&&a.playing()&&u32(now-a.lastFade)>=80){a.lastFade+=80;if(a.current)ma_sound_set_volume(&a.current->sound,gain(a.level,musicEnabled?musicVolume:0));a.level=increment_wrapped(a.level,a.step*4);if(a.step<0){if(a.level<a.target||a.level< -9999)a.fading=false;}else if(a.level<a.target||a.level>=0){if(a.level>=0)a.level=0;a.fading=false;}if(!a.fading&&a.stopWhenDone){stop_music();if(a.startWhenDone)start_music();}}if(a.current&&!a.fading)ma_sound_set_volume(&a.current->sound,gain(a.level,musicEnabled?musicVolume:0));}
 bool AudioDevice::mix(float* pcm,u32 frames){ma_uint64 read=0;if(!impl->ready||!pcm||ma_engine_read_pcm_frames(&impl->engine,pcm,frames,&read)!=MA_SUCCESS||read!=frames)return false;for(u32 i=0;i<frames*2;i++)pcm[i]=std::clamp(pcm[i],-1.f,1.f);return true;}
-void AudioDevice::pump(){auto& a=*impl;if(!a.ready||!a.stream||a.suspended)return;i32 queued=std::max(0,SDL_GetAudioStreamQueued(a.stream))/8;if(!a.refill&&queued<4096)a.refill=true;if(!a.refill)return;if(queued>=6144){a.refill=false;return;}for(i32 i=0;i<6&&queued<6144;i++){float pcm[2048]{};if(!mix(pcm,1024))return;if(!SDL_PutAudioStreamData(a.stream,pcm,sizeof(pcm)))return;queued+=1024;}if(queued>=6144)a.refill=false;}
+// Bound PCM work per browser callback. A six-block refill becomes a long
+// main-thread blackout on constrained devices and delays input/network events.
+#if TH075_MULTIPLAYER
+static constexpr i32 refillBlocks=2;
+#else
+static constexpr i32 refillBlocks=6;
+#endif
+void AudioDevice::pump(){auto& a=*impl;if(!a.ready||!a.stream||a.suspended)return;i32 queued=std::max(0,SDL_GetAudioStreamQueued(a.stream))/8;if(!a.refill&&queued<4096)a.refill=true;if(!a.refill)return;if(queued>=6144){a.refill=false;return;}for(i32 i=0;i<refillBlocks&&queued<6144;i++){float pcm[2048]{};if(!mix(pcm,1024))return;if(!SDL_PutAudioStreamData(a.stream,pcm,sizeof(pcm)))return;queued+=1024;}if(queued>=6144)a.refill=false;}
 const u32* AudioDevice::statistics(){static u32 state[5];auto& a=*impl;state[0]=a.ready;state[1]=a.stream?u32(std::max(0,SDL_GetAudioStreamQueued(a.stream))/8):0;state[2]=u32(a.currentCue);state[3]=a.suspended;state[4]=musicEnabled;return state;}
 void AudioDevice::suspend(bool suspend){auto& a=*impl;a.suspended=suspend;if(a.stream){if(suspend)SDL_PauseAudioStreamDevice(a.stream);else SDL_ResumeAudioStreamDevice(a.stream);}}
 }

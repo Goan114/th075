@@ -154,6 +154,6 @@ public:
     const char* Error()const{return error.c_str();}
     bool ConnectionEnded()const{return wire.Disconnected()||channel.Error()==Netplay::SessionChannel::Failure::Transport||
         channel.Error()==Netplay::SessionChannel::Failure::ConfirmedTimeout||channel.Error()==Netplay::SessionChannel::Failure::HandshakeTimeout;}
-    double Pace(double elapsed){phaseDebt+=channel.TakeAdonisDelayMs();const auto used=std::min(phaseDebt,elapsed);phaseDebt-=used;return elapsed-used;}
+    double Pace(double elapsed){phaseDebt+=channel.TakeAdonisDelayMs();const auto used=std::min(phaseDebt,elapsed);phaseDebt-=used;return (elapsed-used)/channel.IntervalScale();}
 };
 }

@@ -8,8 +8,13 @@ struct FrameCadence {
     static constexpr double interval=1./60.;
     double debt=0;
     void reset(){debt=0;}
+    // Multiplayer consumes a tick only after forward simulation succeeds.
+    // A peer wait or an event-loop budget yield must retain bounded time debt.
+    void accumulate(double seconds){debt=std::min(.1,debt+std::clamp(seconds,0.,.1));}
+    unsigned due()const{return std::min(4u,unsigned(std::floor((debt+1.e-9)/interval)));}
+    void consume(){debt=std::max(0.,debt-interval);}
     unsigned advance(double seconds){
-        debt=std::min(.1,debt+std::clamp(seconds,0.,.1));
+        accumulate(seconds);
         const auto ticks=std::min(4u,unsigned(std::floor((debt+1.e-9)/interval)));
         debt=std::max(0.,debt-ticks*interval);return ticks;
     }

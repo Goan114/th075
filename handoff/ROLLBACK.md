@@ -156,3 +156,101 @@ Run `rollback-performance.mjs --accept` with `EAGLER_TH075_PERF_GPU=hardware`
 on Windows hardware rendering, or without `--accept` to record a software-GPU
 baseline. Use `EAGLER_TH075_PERF_OUTPUT` for separate reports. The fixed default
 fault is 80 ms each input lane; `EAGLER_TH075_PERF_LATENCY` overrides it.
+
+
+## Mobile-link responsiveness investigation (2026-10-16, in progress)
+
+Base: c781ea6, experiment/th075-rollback; canonical eagler-mp remains unchanged.
+Reported topology: one phone on cellular data, one computer on wired Internet,
+approximately 100 ms displayed latency. No physical-device result is claimed.
+
+Reviewed RollCaster 05de055abc0865e353d04e7ae536ac441294ff60:
+- src/mainDat_mainStep.cpp::calcRewind splits local delay and rewind allowance;
+  capture/send of fresh input is guarded against resampling stored frames;
+- src/state_dll/dll.cpp::update_passthrough disables rendering during rewind,
+  retains combo/shadow progression, and accounts for reconciliation time;
+- giuroll's input head and simulation head have separate ownership; its clock
+  adjustment is not equivalent to merely forcing delay=0.
+
+Candidate fixes:
+- retain bounded scheduler debt on peer waits and browser budget yields;
+- connect the pinned shared SessionPacing recommendation (at most +/-2%);
+- send fresh captured input before historical reconciliation;
+- yield historical replay between ticks after 4 ms, retaining its target;
+- suppress vertex/projection construction while retaining render-owned state;
+- retain an ABCD press/release occurring entirely during a peer wait until the
+  next physical capture; edge retention is outside snapshots, never resampled.
+
+Evidence in workspace _scratch/th075-rollback-20261016/:
+- scheduler-snapshot.log: 44 character/phase checks, including normal drawing
+  versus suppressed drawing; exact gameplay traces and Replay streams;
+- scheduler-rtc.log: pre-input-latch/pre-replay-budget candidate full RTC match,
+  30/31 spectator checkpoints, identical native Replay, finish/prompt/IDBFS;
+- mobile100-{baseline,candidate}: one endpoint 4x browser CPU throttle,
+  20..80 ms injected receive delay with loss/reordering and recurring 260 ms
+  receive delays. Candidate ~57.3..57.5 fps versus baseline ~55.1 fps, BUT
+  candidate max gap ~250 ms versus ~184 ms. This is NOT smoothness acceptance.
+- mobile100-noburst-{baseline,candidate}: both about 60 fps; neither reproduced
+  the reported sustained cellular stutter. Synthetic hosted-input-to-native
+  controls timing does not measure display or input-to-photon latency.
+
+CPU throttle is not a phone measurement. The 8-frame horizon still cannot
+cover arbitrary mobile-network blackouts. Earlier long-held-input 60fps gates
+are insufficient to establish good competitive control feel. Do not deploy
+this candidate or mark the user's issue resolved using these results alone.
+
+
+Additional candidate work and evidence:
+- MP PCM refill is capped at two 1024-frame blocks per browser callback; the
+  app's per-forward-tick pump is bypassed during MP and the outer browser pump
+  owns output. Ordinary builds retain six blocks. Queue thresholds, PCM values,
+  music ownership and sample rate are unchanged.
+- scheduler-final-rtc.log: input-latch + 4ms replay-yield candidate (before audio
+  batching) completed RTC, spectators, native Replay, save prompt and IDBFS.
+- scheduler-final-snapshot.log: 44 draw/suppressed-draw restore/Replay checks.
+- mobile100-audio-cpu12-queue: 12x CPU throttle on one endpoint, 20..80ms
+  injected receive jitter and loss, 20 seconds: both ~60fps; constrained endpoint
+  synthetic input-to-controls p95 16ms / max44ms, versus baseline 23.8/63.4ms.
+  Constrained endpoint max forward gap 56.8ms versus baseline331.4ms (whole-run
+  values include startup; do not call them presented-frame metrics). Audio queue
+  sampled minimum1056frames, no sampled empty queue. Active CPU p95 increased
+  10.9->13.1ms in these separate runs; do not report a universal CPU speedup.
+- The first combined audio/short-tap run failed a post-callback state observer:
+  catch-up can consume a tap and its release in one callback. This observer
+  cannot prove per-logical-frame capture, and that failed attempt remains
+  unaccepted. The diagnostic wiring gate samples the actual keyboard/touch
+  bridge directly; protocol tests separately verify capture-once ownership.
+
+No physical cellular-link acceptance, production release or canonical promotion
+has been performed for this candidate. Fixed 8-frame reach, startup stalls and
+actual input-to-presentation responsiveness remain separate acceptance items.
+
+
+Final diagnostic candidate verification:
+- mobile100-final-wiring: 20 seconds at 50ms mean injected receive delay each
+  way, 20..80ms jitter/loss, one endpoint throttled12x. Both ~60Hz; active
+  maximum forward-progress gaps33.9/47.8ms; constrained endpoint synthetic
+  input-to-native-controls p95 10.6ms / max34.6ms. No missed driver transitions.
+  All21 shared confirmed checkpoints matched. Audio queue minimum2387frames
+  on both endpoints, zero sampled empty queues. These are browser diagnostics,
+  not sound-output quality or phone/input-to-photon acceptance.
+- Recomputed baseline active gaps from mobile100-cpu12-baseline samples:
+  17.2/64.0ms. Whole-run baseline331.4ms includes opening and must NOT be
+  compared with candidate active47.8ms as if they measured the same interval.
+- Real keyboard and touch exports, down+up inside one synchronous task during
+  a receive blackout: diagnostic physical samples [16,0] on both endpoints.
+  Corrected test uses the physical bridge; a multi-tick callback may legitimately
+  show only the final release in the public post-callback status.
+- scheduler-audio-rtc.log: final full RTC/confirmed spectator match;31 shared
+  checkpoints per viewer, pause/restart/end, identical native Replays2084/1664
+  bytes, save prompt/download and fresh-runtime IDBFS all passed.
+- scheduler-audio-replay.log: offline native playback matches7 recorded states.
+- scheduler-audio-pure.log: relay pure-delay404frames,908byte identical Replay,
+  spectator finish, save prompt/download and IDBFS passed.
+- scheduler-protocol.log: input edge retention, cadence debt, sound journal,
+  1000confirmed rollbackframes, capture-once, D0/D2/D9/auto and explicit desync.
+
+Status: diagnostic experiment only. Native/browser correctness passed; repeated
+cellular blackout performance and physical phone control feel remain unaccepted.
+Production acceptance hashes and canonical MP source have deliberately not been
+updated from this diagnostic work. No change to main, beta, test or live relay.

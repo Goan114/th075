@@ -6,6 +6,8 @@ using namespace touhou::graphics;
 struct ScreenVertex {float x=0,y=0,z=0.5f,reciprocalW=1;u32 color=0xffffffff;float u=0,v=0;};
 struct TextureSize {u32 width=0,height=0;};
 struct GfxInterface:StateCommands {
+    // Rollback still runs render-owned state, but need not build GPU vertices.
+    virtual bool drawing_enabled()const{return true;}
     virtual TextureSize texture_size(u32)=0;
     virtual void draw(u32 texture,Topology,const ScreenVertex*,u32 vertices)=0;
     virtual void clear_depth()=0;

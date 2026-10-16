@@ -198,11 +198,7 @@ bool advance_one(double us,bool resimulation,bool& advanced){
     if(spectator){if(spectatorFrames.empty())return true;inputs=spectatorFrames.front().inputs;}
     else{
         if(!session->Ready())return true;
-        if(session->NeedsCapture()){
-            if(resimulation)return fail("TH075 resimulation attempted physical input capture");
-            const auto raw=th075::sdl::sample();u16 bits=raw.players[0].held();if(raw.keys[1])bits|=256;if(raw.cancel[0])bits|=512;if(restartPending){bits|=1024;restartPending=false;}
-            if(!session->Capture(bits,u64(us)))return fail(session->Error());
-        }
+        if(session->NeedsCapture())return fail("TH075 simulation attempted uncaptured physical input");
         decision=session->Prepare();if(!decision.canAdvance)return true;inputs=decision.inputs;
         speculative=!session->InputConfirmed(frame);
         // Lifecycle and menu actions never run against an unconfirmed past.
@@ -238,8 +234,15 @@ bool advance_one(double us,bool resimulation,bool& advanced){
     }
     return true;
 }
-bool step(const BattleSystemInput&,double us){
+bool step(const BattleSystemInput&,double us,bool* forwardAdvanced){
+    if(forwardAdvanced)*forwardAdvanced=false;
     if(!enabled||finished||finishing||connectionEnded||transport.Disconnected())return true;
+    // Send the current physical sample before historical work. Reconciliation
+    // must never postpone the peer's fresh input behind our snapshot/replay cost.
+    if(!spectator&&session->NeedsCapture()){
+        const auto raw=th075::sdl::sample();u16 bits=raw.players[0].held();if(raw.keys[1])bits|=256;if(raw.cancel[0])bits|=512;if(restartPending){bits|=1024;restartPending=false;}
+        if(!session->Capture(bits,u64(us)))return fail(session->Error());
+    }
     if(!spectator&&session->HasRollbackRequest()){
         const auto first=session->RollbackFrame();auto at=std::find_if(history.begin(),history.end(),[&](const auto& h){return h.frame==first;});
         if(at==history.end()||!at->state)return fail("TH075 rollback snapshot expired");
@@ -248,10 +251,18 @@ bool step(const BattleSystemInput&,double us){
         rollbackAudio.Begin(first);history.erase(at,history.end());++rollbackCount;
     }
     if(!spectator&&!retire())return false;
-    for(unsigned n=0;n<9&&frame<resimTarget;++n){bool advanced;if(!advance_one(us,true,advanced))return false;if(!advanced){remember_state();return true;}}
+    const double reconcileStarted=emscripten_get_now();
+    for(unsigned n=0;n<9&&frame<resimTarget;++n){
+        // A slow endpoint must yield to browser input/network/audio between
+        // historical ticks. Keep the target and snapshots for the next callback.
+        if(n&&emscripten_get_now()-reconcileStarted>=4.)break;
+        bool advanced;if(!advance_one(us,true,advanced))return false;
+        if(!advanced){remember_state();return true;}
+    }
     if(frame<resimTarget){remember_state();return true;}
     rollbackAudio.Finish(stop_sound);
     bool advanced;if(!advance_one(us,false,advanced))return false;
+    if(forwardAdvanced)*forwardAdvanced=advanced;
     remember_state();return true;
 }
 void render(){} // A missing peer frame must not re-run BattleScene::render's camera update.
@@ -286,7 +297,7 @@ EMSCRIPTEN_KEEPALIVE int th075_probe_rollback(unsigned span){
  const unsigned phase=span>>8;span&=255;
  if(enabled||!app||!app->battle||span<1||span>16||phase>3)return 0;
  counts={};cancel={};frame=0;restarts=0;digest=0;app->collectRollbackSound=true;app->graphics.suppress(true);
- const auto run=[&](unsigned ticks,unsigned variant,std::vector<u32>* trace){for(unsigned n=0;n<ticks;++n){
+ const auto run=[&](unsigned ticks,unsigned variant,std::vector<u32>* trace,bool draw=false){app->graphics.suppress(!draw);for(unsigned n=0;n<ticks;++n){
   std::array<Netplay::FrameInput,Netplay::MAX_PLAYERS> inputs{};
   for(unsigned side=0;side<2;++side){const auto t=frame+variant*7+side*13;inputs[side].buttons=u16(((t/19)%2?1:2)|((t%11<3)?(16u<<((t/11)%4)):0));}
   if(!play(inputs))return false;
@@ -297,7 +308,7 @@ EMSCRIPTEN_KEEPALIVE int th075_probe_rollback(unsigned span){
  if(phase==3){app->battle->simulation.rules.phase=BattlePhase::RoundRecovery;app->battle->simulation.rules.countdown=155;}
  auto checkpoint=app->capture_rollback();const auto initialCounts=counts;const auto initialCancel=cancel;const auto initialFrame=frame;
  std::vector<u32> expected,actual;
- if(!run(span,0,&expected))return 0;
+ if(!run(span,0,&expected,true))return 0;
  const ReplayRound expectedRecord=*app->battle->simulation.replay.round;
  const auto reset=[&]{if(!app->restore_rollback(*checkpoint))return false;counts=initialCounts;cancel=initialCancel;frame=initialFrame;return true;};
  if(!reset()||!run(span,1,nullptr)||!reset()||!run(span,0,&actual))return 0;

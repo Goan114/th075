@@ -12,6 +12,7 @@ class GraphicsDevice final:public GfxInterface {
     static touhou::sdl::Surface resolve(void*,u32);
 public:
     bool suppressed=false;
+    bool drawing_enabled()const override{return !suppressed;}
     void suppress(bool value){flush_vertices();suppressed=value;}
     // 8 is the original alpha/raster precision profile. The implementation is
     // exactly the shared SDL3/GLES renderer; no Direct3D device exists here.

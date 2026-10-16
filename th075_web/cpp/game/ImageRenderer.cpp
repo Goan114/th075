@@ -2,6 +2,7 @@
 #include <cmath>
 namespace th075 {
 void ImageRenderer::image(i16 index,float xValue,float yValue,u32 color,float anchorXValue,float anchorYValue,float scaleValue,float rotation,u8 flags,bool centeredScale){
+    if(!graphics.backend.drawing_enabled())return;
     const auto resource=resources.image(index);if(!resource.texture||!resource.width||!resource.height)return;
     const double x=xValue,y=yValue,anchorX=anchorXValue,anchorY=anchorYValue,scale=scaleValue,width=resource.width,height=resource.height;
     QuadPoints points;
