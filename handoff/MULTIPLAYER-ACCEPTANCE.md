@@ -48,7 +48,8 @@ checkout. Its production WASM SHA-256 is:
   both player worlds continue advancing.
 - Permanent Runtime offline replay: 22 matching recorded simulation-frame
   samples of fighter position, health and action. Native `.rep` replays random
-  draws; the live generator state word is intentionally not compared in playback.
+  draws; the live generator state word is intentionally not compared in playback. An additional moving-fighter
+  replay run matched 16 observed combat states.
 - Real permanent Launcher frontend: public TH075MP card, directory create/join,
   two seats, versus label, resource preparation, ready/start and both real WASM
   worlds passed (309/311 frames). Original DATA was installed through the public
@@ -79,6 +80,9 @@ no declared lane. The same failure was reproduced on unchanged Launcher base
 `test-netplay-measured-timing.mjs:25` also fails on that unchanged base because
 its old hybrid-mode assertion disagrees with the current direct-rollback
 normalization. These pre-existing checks were not weakened or labelled PASS.
-The aggregate gate did not reach its cross-repository phase.
+The aggregate gate did not reach its cross-repository phase. Standalone
+publication audit also flags pre-existing Phosphor/UI asset allowlist entries
+and TH20 card artwork on the unchanged base. The MP commits add source,
+documentation and tests only; no original game assets were added.
 
 No test-site or main-site deployment was made for multiplayer in this task.
